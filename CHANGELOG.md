@@ -22,12 +22,11 @@
 -   **Configuração do Supabase:** O erro de inicialização `Invalid supabaseUrl` foi resolvido.
 -   **Qualidade de Código:** Múltiplos erros de tipo em toda a base de código foram corrigidos, garantindo a integridade e a robustez da aplicação.
 
-## 🔑 Acesso
+## 🔑 Segurança
 
--   **Superadmin:** Um script de inicialização foi criado para facilitar a criação de um usuário superadmin para testes.
-    -   **URL:** `/admin/init-db`
-    -   **E-mail:** `admin@tintaszanai.com.br`
-    -   **Senha:** `password123`
+- Credenciais de teste que apareciam em versões históricas desta documentação foram removidas do estado atual do repositório.
+- Qualquer credencial já publicada deve ser considerada comprometida e rotacionada se ainda puder ser válida.
+
 
 ## 📄 Detalhes das Correções
 
