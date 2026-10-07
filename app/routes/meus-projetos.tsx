@@ -39,7 +39,7 @@ export default function MeusProjetos() {
     try {
       localStorage.setItem('studioActiveProjectId', projectId);
     } catch {}
-    navigate(`/studioprorevest?projectId=${projectId}`);
+    navigate(`/studio?projectId=${projectId}`);
   };
   
   // Mock data for quotes
@@ -101,7 +101,7 @@ export default function MeusProjetos() {
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-cormorant font-bold">Projetos Recentes</h2>
               <Link 
-                to="/novo-projeto" 
+                to="/studio"
                 className="bg-gradient-to-r from-primary to-secondary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 Novo Projeto
@@ -128,7 +128,7 @@ export default function MeusProjetos() {
                   Comece criando seu primeiro projeto
                 </p>
                 <Link 
-                  to="/novo-projeto" 
+                  to="/studio"
                   className="bg-gradient-to-r from-primary to-secondary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-md hover:shadow-lg"
                 >
                   Criar Projeto

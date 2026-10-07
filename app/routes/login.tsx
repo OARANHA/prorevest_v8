@@ -1,5 +1,5 @@
 import type { MetaFunction, LoaderFunctionArgs } from "react-router-dom";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 
@@ -21,6 +21,12 @@ export default function Login() {
   const [error, setError] = useState("");
   const { signIn } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+  const requestedRedirect = new URLSearchParams(location.search).get("redirect");
+  const safeRedirect =
+    requestedRedirect && requestedRedirect.startsWith("/") && !requestedRedirect.startsWith("//")
+      ? requestedRedirect
+      : null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,9 +34,7 @@ export default function Login() {
     setError("");
     
     try {
-      console.log("Tentando login com:", { email, password });
-      const { error, data } = await signIn(email, password);
-      console.log("Resultado do login:", { error, data });
+      const { error } = await signIn(email, password);
       
       if (error) {
         // Verificar se o erro é relacionado à confirmação de email
@@ -40,7 +44,11 @@ export default function Login() {
           setError(error.message);
         }
       } else {
-        console.log("Login bem-sucedido, verificando papel do usuário...");
+        if (safeRedirect) {
+          navigate(safeRedirect, { replace: true });
+          return;
+        }
+
         // Verificar se o usuário é administrador para redirecionar corretamente
         const { data: { session } } = await supabase.auth.getSession();
         if (session?.user) {

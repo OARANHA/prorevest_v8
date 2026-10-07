@@ -671,18 +671,23 @@ const canApply = Boolean(activeDesign && aiPrompt && !isGenerating);
       finishType = 'paint'; // Aberturas sempre usam pintura por enquanto
     }
 
-    const res = await editRoomImage({
-      imageDataUrl: displayedImageUrl || activeDesign.originalImageUrl,
-      prompt: aiPrompt,
-      selectionCoordinates: ops.length ? undefined : (selectionCoords ?? { x: 0.5, y: 0.5 }),
-      color: ops.length ? undefined : (activeTab === 'COLOR' ? selectedColor : undefined),
-      ops: ops.length ? ops : undefined,
-      outputFormat: outputFormat,
-      finishType, // NOVO: enviar tipo de acabamento
-      microcementStyle: floorFinishType === 'microcement' ? microcementStyle : undefined, // NOVO: enviar estilo do microcimento
-    });
+    try {
+      const res = await editRoomImage({
+        imageDataUrl: displayedImageUrl || activeDesign.originalImageUrl,
+        prompt: aiPrompt,
+        selectionCoordinates: ops.length ? undefined : (selectionCoords ?? { x: 0.5, y: 0.5 }),
+        color: ops.length ? undefined : (activeTab === 'COLOR' ? selectedColor : undefined),
+        ops: ops.length ? ops : undefined,
+        outputFormat: outputFormat,
+        finishType,
+        microcementStyle: floorFinishType === 'microcement' ? microcementStyle : undefined,
+        meta:
+          activeTab === 'TEXTURE' && selectedTexture?.imageUrl
+            ? { textureUrl: selectedTexture.imageUrl, preserveLighting: true }
+            : undefined,
+      });
 
-    if (res.status === 'ok' && res.processedImage) {
+      if (res.status === 'ok' && res.processedImage) {
       const editId = `${Date.now()}`;
       const historyLabel = activeTab === 'COLOR' ? selectedColor : selectedTexture?.name || 'Edit';
 
@@ -727,10 +732,15 @@ const canApply = Boolean(activeDesign && aiPrompt && !isGenerating);
         console.warn('Falha ao salvar edição no backend, mantendo local:', e);
       }
       setDisplayedImageUrl(finalEditUrl);
-    } else {
-      setError(res.error || 'Falha ao aplicar edição.');
+      } else {
+        setError(res.error || 'Falha ao aplicar edição.');
+      }
+    } catch (error) {
+      console.error('Falha ao processar edição no Studio:', error);
+      setError('Não foi possível processar a imagem. Tente novamente.');
+    } finally {
+      setIsGenerating(false);
     }
-    setIsGenerating(false);
   }, [canApply, activeDesign, displayedImageUrl, aiPrompt, selectionCoords, targetPoints, targetColors, activeTab, selectedColor, activeProjectId, activeDesignId, selectedTexture, user?.id, floorFinishType, TARGETS]);
 
   const handleReset = useCallback(() => {

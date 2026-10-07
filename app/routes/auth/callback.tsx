@@ -22,38 +22,27 @@ export default function AuthCallback() {
     const handleAuthCallback = async () => {
       try {
         
-        // Obter os parâmetros da URL (o Supabase envia os parâmetros no hash)
-        const hash = window.location.hash.substring(1); // Remove o #
-        
-        // Parse dos parâmetros do hash
-        const hashParams = new URLSearchParams(hash);
-        
-        // Extrair parâmetros específicos
+        const callbackUrl = new URL(window.location.href);
+        const hashParams = new URLSearchParams(callbackUrl.hash.substring(1));
         const type = hashParams.get("type");
-        const token = hashParams.get("token");
-        const accessToken = hashParams.get("access_token");
-        
-        console.log("Type:", type);
-        
-        if (type === "recovery" && (token || accessToken)) {
-          // É um link de redefinição de senha
-          // Salvar o token no sessionStorage para usar na página de redefinição
-          if (token) {
-            sessionStorage.setItem('password_reset_token', token);
+        const code = callbackUrl.searchParams.get("code");
+
+        if (code) {
+          const { error: exchangeError } = await supabase.auth.exchangeCodeForSession(code);
+          if (exchangeError) {
+            setError("Erro ao processar autenticação: " + exchangeError.message);
+            setProcessing(false);
+            return;
           }
-          if (accessToken) {
-            sessionStorage.setItem('password_reset_token', accessToken);
-          }
-          
-          console.log("Redirecionando para reset-password");
-          // Redirecionar para a página de redefinição de senha
-          navigate("/reset-password");
+        }
+
+        const { data, error: sessionError } = await supabase.auth.getSession();
+
+        // Compatibilidade com links de recuperação antigos que ainda apontem para /auth/callback.
+        if (type === "recovery" && data.session) {
+          navigate("/reset-password", { replace: true });
           return;
         }
-        
-        // Para outros tipos de callbacks, deixar o Supabase lidar
-        // O Supabase geralmente já atualiza a sessão automaticamente
-        const { data, error: sessionError } = await supabase.auth.getSession();
         
         if (sessionError) {
           setError("Erro ao processar autenticação: " + sessionError.message);

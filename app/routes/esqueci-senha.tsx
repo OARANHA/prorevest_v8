@@ -28,7 +28,7 @@ export default function ForgotPassword() {
     try {
       // Usar o método correto do Supabase para redefinição de senha
       const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/auth/callback`,
+        redirectTo: `${window.location.origin}/reset-password`,
       });
       
       if (error) {
