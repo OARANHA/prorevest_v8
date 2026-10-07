@@ -39,6 +39,7 @@ E-mail institucional oficial: **a confirmar**.
 - Supabase para autenticação/dados/storage.
 - Projeto Supabase oficial da ProRevest: `gtfvhktgxqtdrnaxizch`.
 - Auth URL Configuration confirmada em 2026-10-07: Site URL `https://prorevesttintas.com.br`; redirects permitidos `/auth/callback` e `/reset-password` no domínio oficial.
+- PR #1 de Studio/Auth implantada em produção em 2026-10-07 no commit `301b53edf6aeeac173bf59d9e68526ce18ff9e66`; smoke HTTP pós-deploy aprovado. Recovery/login E2E ainda em validação.
 - Produção atual roda com Node 20.19.5 e PM2.
 - Processo PM2 observado: `prorevest-app`.
 - Build atual: `npm run build`.
