@@ -89,6 +89,7 @@ const routes = [
   route("register", "./routes/register.tsx"),
   route("esqueci-senha", "./routes/esqueci-senha.tsx"),
   route("reset-password", "./routes/reset-password.tsx"),
+  route("auth/callback", "./routes/auth/callback.tsx"),
   route("resend-confirmation", "./routes/resend-confirmation.tsx"),
   route("perfil", "./routes/perfil.tsx"),
   route("meus-projetos", "./routes/meus-projetos.tsx"),
