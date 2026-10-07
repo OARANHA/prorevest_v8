@@ -73,3 +73,5 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - `prorevest-app` voltou `online` e smoke público de Home/Studio/Auth retornou 200.
 - Automação pública não conseguiu reproduzir a paleta completa: sem projeto/imagem ativa viu apenas a grade estática inicial de 6 cores; portanto o E2E do infinite scroll continua pendente no fluxo real do usuário.
 - Pendente imediato: no Studio com imagem/projeto ativo, abrir Paleta ProRevest e rolar além do primeiro lote para confirmar carregamento das próximas cores e ausência de spinner infinito.
+
+- E2E real confirmado pelo usuário após o deploy da PR #2: Paleta ProRevest rolou e carregou novas cores normalmente no Studio, sem spinner infinito. PRV-024 encerrado como RESOLVED.
