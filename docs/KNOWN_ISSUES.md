@@ -28,6 +28,7 @@ Status: `OPEN`, `INVESTIGATING`, `FIXED`, `WONTFIX`.
 | PRV-020 | P0 | OPEN | Segurança | Documentação histórica continha credencial de teste em texto aberto e ela já esteve em histórico público do Git. Estado atual foi saneado; se a credencial ainda puder ser válida, rotacionar antes de considerar o incidente encerrado. |
 | PRV-021 | P0 | OPEN | Auth/Segurança | Existe e-mail de superadmin legado hardcoded em `app/services/databaseService.ts`; revisar junto do fluxo de inicialização/admin e remover dependência de identidade fixa. |
 | PRV-022 | P0 | INVESTIGATING | Navegação | Produção confirmada com 404 em `/studio/project/1` e `/novo-projeto`. Redirects de compatibilidade foram adicionados e validados em smoke HTTP local; pendente de deploy/smoke em produção. |
+| PRV-023 | P0 | INVESTIGATING | Auth/UI | Login, callback e cadastro enviavam usuários comuns para `/meus-projetos`; essa rota também renderizava `SiteHeader`/`SiteFooter` sobre o `AppLayout`, duplicando o cabeçalho e o rodapé. Patch redireciona usuário comum para `/studio` e remove wrappers duplicados nas telas Auth/Projetos. |
 
 ## Como atualizar
 
