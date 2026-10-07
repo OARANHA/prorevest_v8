@@ -1740,17 +1740,34 @@ function usePaginatedColors(initialTerm = '') {
   const [page, setPage] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [term, setTerm] = useState(initialTerm);
+  const loadingRef = useRef(false);
+  const abortRef = useRef<AbortController | null>(null);
+  const requestIdRef = useRef(0);
   const PAGE_SIZE = 60;
 
   const fetchPage = useCallback(async (pageToFetch: number) => {
-    if (isLoading) return;
+    if (loadingRef.current) return;
+
+    const requestId = ++requestIdRef.current;
+    const controller = new AbortController();
+    abortRef.current = controller;
+    loadingRef.current = true;
     setIsLoading(true);
+    setError(null);
+
     const offset = pageToFetch * PAGE_SIZE;
+    let didTimeout = false;
+    const timeoutId = window.setTimeout(() => {
+      didTimeout = true;
+      controller.abort();
+    }, 15000);
+
     try {
       let query = supabase
         .from('colors')
-        .select('id,name,hex_code,pro_revest_code,numeric_code,reference_number,category', { count: 'estimated' })
+        .select('id,name,hex_code,pro_revest_code,numeric_code,reference_number,category')
         .eq('is_archived', false);
 
       const q = term.trim();
@@ -1760,32 +1777,65 @@ function usePaginatedColors(initialTerm = '') {
         );
       }
 
-      query = query.order('name', { ascending: true }).range(offset, offset + PAGE_SIZE - 1);
+      const { data, error: queryError } = await query
+        .order('name', { ascending: true })
+        .order('id', { ascending: true })
+        .range(offset, offset + PAGE_SIZE - 1)
+        .abortSignal(controller.signal);
 
-      const { data, error } = await query;
-      if (error) {
-        console.warn('Erro ao carregar cores:', error.message);
-        setIsLoading(false);
-        return;
-      }
-      const list = data || [];
-      setColors((prev) => (pageToFetch === 0 ? list : [...prev, ...list]));
+      if (requestId !== requestIdRef.current) return;
+      if (queryError) throw queryError;
+
+      const list = (data || []) as PaletteColorRow[];
+      setColors((prev) => {
+        if (pageToFetch === 0) return list;
+        const seen = new Set(prev.map((color) => color.id));
+        return [...prev, ...list.filter((color) => !seen.has(color.id))];
+      });
       setPage(pageToFetch + 1);
       setHasMore(list.length === PAGE_SIZE);
-    } catch (e) {
-      console.warn('Erro geral ao carregar cores:', e);
+    } catch (fetchError) {
+      if (requestId !== requestIdRef.current) return;
+      if (controller.signal.aborted && !didTimeout) return;
+      console.warn('Erro ao carregar cores:', fetchError);
+      setError(didTimeout
+        ? 'A paleta demorou para responder. Tente novamente.'
+        : 'Não foi possível carregar mais cores. Tente novamente.');
     } finally {
-      setIsLoading(false);
+      window.clearTimeout(timeoutId);
+      if (requestId === requestIdRef.current) {
+        loadingRef.current = false;
+        abortRef.current = null;
+        setIsLoading(false);
+      }
     }
-  }, [PAGE_SIZE, term, isLoading]);
+  }, [term]);
+
+  const fetchNextPage = useCallback(() => {
+    if (!hasMore || loadingRef.current) return;
+    void fetchPage(page);
+  }, [fetchPage, hasMore, page]);
 
   const reset = useCallback(() => {
+    requestIdRef.current += 1;
+    abortRef.current?.abort();
+    abortRef.current = null;
+    loadingRef.current = false;
     setColors([]);
     setPage(0);
     setHasMore(true);
+    setIsLoading(false);
+    setError(null);
   }, []);
 
-  return { colors, page, isLoading, hasMore, term, setTerm, fetchPage, reset };
+  useEffect(() => {
+    return () => {
+      requestIdRef.current += 1;
+      abortRef.current?.abort();
+    };
+  }, []);
+
+  return { colors, page, isLoading, hasMore, error, term, setTerm, fetchPage, fetchNextPage, reset };
 }
 
 function ColorItem({ color, onPick }: { color: PaletteColorRow; onPick: (color: PaletteColorRow) => void }) {
@@ -1845,37 +1895,33 @@ function ColorItem({ color, onPick }: { color: PaletteColorRow; onPick: (color: 
 
 
 function ColorPaletteModal({ onClose, onSelectColor }: { onClose: () => void; onSelectColor: (color: PaletteColorRow) => void }) {
-  const { colors, isLoading, hasMore, term, setTerm, fetchPage, reset } = usePaginatedColors('');
+  const { colors, isLoading, hasMore, error, term, setTerm, fetchPage, fetchNextPage, reset } = usePaginatedColors('');
   const sentinelRef = useRef<HTMLDivElement | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    // Carregar primeira página ao abrir
-    fetchPage(0);
-  }, [fetchPage]);
+    const id = window.setTimeout(() => {
+      reset();
+      void fetchPage(0);
+    }, term.trim() ? 300 : 0);
+    return () => window.clearTimeout(id);
+  }, [term, reset, fetchPage]);
 
   useEffect(() => {
     const el = sentinelRef.current;
     if (!el) return;
     const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && hasMore && !isLoading) {
-          fetchPage(Math.max(0, Math.floor((colors.length) / 60)));
-        }
-      });
-    }, { root: scrollRef.current || undefined, threshold: 1.0 });
+      if (entries.some((entry) => entry.isIntersecting) && hasMore && !isLoading && !error) {
+        fetchNextPage();
+      }
+    }, {
+      root: scrollRef.current || undefined,
+      rootMargin: '120px 0px',
+      threshold: 0.01,
+    });
     io.observe(el);
     return () => io.disconnect();
-  }, [colors.length, hasMore, isLoading, fetchPage]);
-
-  // Debounce de busca
-  useEffect(() => {
-    const id = setTimeout(() => {
-      reset();
-      fetchPage(0);
-    }, 350);
-    return () => clearTimeout(id);
-  }, [term, reset, fetchPage]);
+  }, [hasMore, isLoading, error, fetchNextPage]);
 
   return (
     <div className="fixed inset-0 z-50">
@@ -1926,6 +1972,18 @@ function ColorPaletteModal({ onClose, onSelectColor }: { onClose: () => void; on
                   <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
                 </svg>
                 <span>Carregando...</span>
+              </div>
+            )}
+            {error && !isLoading && (
+              <div className="flex items-center justify-between gap-3 rounded-md border border-red-200 bg-red-50 p-2 text-sm text-red-700">
+                <span>{error}</span>
+                <button
+                  type="button"
+                  onClick={fetchNextPage}
+                  className="shrink-0 rounded border border-red-300 bg-white px-2 py-1 text-xs font-medium hover:bg-red-100"
+                >
+                  Tentar novamente
+                </button>
               </div>
             )}
             {!hasMore && colors.length > 0 && (
@@ -2151,42 +2209,33 @@ function SaveModal({ onClose, onConfirm }: { onClose: () => void; onConfirm: () 
 }
 
 function FloatingPalette({ onClose, onSelectColor }: { onClose: () => void; onSelectColor: (color: PaletteColorRow) => void }) {
-  const { colors, isLoading, hasMore, term, setTerm, fetchPage, reset } = usePaginatedColors('');
+  const { colors, isLoading, hasMore, error, term, setTerm, fetchPage, fetchNextPage, reset } = usePaginatedColors('');
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const sentinelRef = useRef<HTMLDivElement | null>(null);
-  const hasInteracted = useRef(false);
+
+  useEffect(() => {
+    const id = window.setTimeout(() => {
+      reset();
+      void fetchPage(0);
+    }, term.trim() ? 300 : 0);
+    return () => window.clearTimeout(id);
+  }, [term, reset, fetchPage]);
 
   useEffect(() => {
     const el = sentinelRef.current;
     if (!el) return;
     const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && hasMore && !isLoading && hasInteracted.current) {
-          fetchPage(Math.max(0, Math.floor((colors.length) / 60)));
-        }
-      });
-    }, { root: scrollRef.current || undefined, threshold: 1.0 });
+      if (entries.some((entry) => entry.isIntersecting) && hasMore && !isLoading && !error) {
+        fetchNextPage();
+      }
+    }, {
+      root: scrollRef.current || undefined,
+      rootMargin: '120px 0px',
+      threshold: 0.01,
+    });
     io.observe(el);
     return () => io.disconnect();
-  }, [colors.length, hasMore, isLoading, fetchPage]);
-
-  const onScroll = useCallback(() => {
-    if (!hasInteracted.current) {
-      hasInteracted.current = true;
-      reset();
-      fetchPage(0);
-    }
-  }, [reset, fetchPage]);
-
-  // Debounce de busca
-  useEffect(() => {
-    if (!hasInteracted.current) return;
-    const id = setTimeout(() => {
-      reset();
-      fetchPage(0);
-    }, 350);
-    return () => clearTimeout(id);
-  }, [term, reset, fetchPage]);
+  }, [hasMore, isLoading, error, fetchNextPage]);
 
   return (
     <div className="absolute top-0 right-0 h-full w-[320px] bg-white/95 backdrop-blur-sm border-l shadow-lg rounded-l-lg z-30 flex flex-col">
@@ -2209,11 +2258,8 @@ function FloatingPalette({ onClose, onSelectColor }: { onClose: () => void; onSe
             className="w-full pl-8 pr-2 py-2 border rounded-md text-sm"
           />
         </div>
-        {!hasInteracted.current && (
-          <p className="text-[11px] text-gray-500 mt-1">Role a paleta para carregar cores.</p>
-        )}
       </div>
-      <div ref={scrollRef} onScroll={onScroll} className="flex-1 overflow-auto p-2">
+      <div ref={scrollRef} className="flex-1 overflow-auto p-2">
         <div className="space-y-2">
           {colors.map((c) => (
             <ColorItem key={c.id} color={c} onPick={onSelectColor} />
@@ -2226,6 +2272,18 @@ function FloatingPalette({ onClose, onSelectColor }: { onClose: () => void; onSe
               <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
             </svg>
             <span>Carregando...</span>
+          </div>
+        )}
+        {error && !isLoading && (
+          <div className="flex items-center justify-between gap-2 rounded-md border border-red-200 bg-red-50 p-2 text-xs text-red-700">
+            <span>{error}</span>
+            <button
+              type="button"
+              onClick={fetchNextPage}
+              className="shrink-0 rounded border border-red-300 bg-white px-2 py-1 font-medium hover:bg-red-100"
+            >
+              Tentar novamente
+            </button>
           </div>
         )}
         {!hasMore && colors.length > 0 && (

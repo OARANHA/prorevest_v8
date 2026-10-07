@@ -29,6 +29,7 @@ Status: `OPEN`, `INVESTIGATING`, `FIXED`, `WONTFIX`.
 | PRV-021 | P0 | OPEN | Auth/Segurança | Existe e-mail de superadmin legado hardcoded em `app/services/databaseService.ts`; revisar junto do fluxo de inicialização/admin e remover dependência de identidade fixa. |
 | PRV-022 | P0 | INVESTIGATING | Navegação | Produção confirmada com 404 em `/studio/project/1` e `/novo-projeto`. Redirects de compatibilidade foram adicionados e validados em smoke HTTP local; pendente de deploy/smoke em produção. |
 | PRV-023 | P0 | INVESTIGATING | Auth/UI | Login, callback e cadastro enviavam usuários comuns para `/meus-projetos`; essa rota também renderizava `SiteHeader`/`SiteFooter` sobre o `AppLayout`, duplicando o cabeçalho e o rodapé. Patch redireciona usuário comum para `/studio` e remove wrappers duplicados nas telas Auth/Projetos. |
+| PRV-024 | P0 | INVESTIGATING | Studio/Paleta | No popup Paleta ProRevest, o scroll podia ficar em `Carregando...` sem avançar para as demais cores. Causa: `fetchPage` dependia de `isLoading`, recriando a função e reativando effects; o modal também disparava cargas iniciais concorrentes. Branch `fix/studio-palette-pagination` corrige paginação, cancelamento/timeout e retry explícito; build cliente+SSR validado com exit 0. Pendente de deploy e E2E real no Studio. |
 
 ## Como atualizar
 

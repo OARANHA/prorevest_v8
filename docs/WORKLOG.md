@@ -57,3 +57,11 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Redirects legados pós-deploy: `/studioprorevest` → `/studio`; `/novo-projeto` → `/studio`; `/studio/project/:id` → `/studio?projectId=:id`.
 - Novo recovery real foi disparado após o deploy para repetir o E2E no código publicado.
 - Pendente: abrir o link mais recente, criar nova senha, validar login → `/studio` e validar Studio com upload/cor/textura.
+
+## 2026-10-07 — Hotfix urgente da Paleta ProRevest
+
+- Relato real: no Studio, abrir Paleta ProRevest e rolar deixava o spinner ativo sem carregar as demais cores.
+- Causa identificada no hook `usePaginatedColors`: `fetchPage` dependia de `isLoading`, recriando callbacks e reacionando effects de carga; havia também duas cargas iniciais no modal.
+- Correção em `fix/studio-palette-pagination`: lock por ref, página seguinte explícita, ordenação estável, cancelamento de requisição anterior, timeout de 15s e UI de retry.
+- Os dois seletores de paleta (modal e floating) passam a usar o mesmo fluxo previsível de carga inicial + infinite scroll.
+- Build cliente+SSR da branch concluído com `BUILD_EXIT=0`. Pendente: revisão final, merge/deploy e E2E real no Studio.
