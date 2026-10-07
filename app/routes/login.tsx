@@ -3,7 +3,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 
-import { SiteFooter } from "../components/SiteFooter";
 import { supabase } from "../lib/supabaseClient";
 
 export const meta: MetaFunction = () => {
@@ -232,7 +231,6 @@ export default function Login() {
           </div>
         </div>
       </div>
-      <SiteFooter />
     </div>
   );
 }
