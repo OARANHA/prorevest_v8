@@ -1,0 +1,5672 @@
+[
+  {
+    "name": "Rosa Pitaia",
+    "hex_code": "#b54d7f",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Chique",
+    "hex_code": "#cc617f",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vermelho Tâmara",
+    "hex_code": "#ab3c51",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Topázio",
+    "hex_code": "#a42e41",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rubí",
+    "hex_code": "#a82e33",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Quarenta graus",
+    "hex_code": "#bf2d32",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vermelho Malícia",
+    "hex_code": "#ad2c34",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Neve de Morango",
+    "hex_code": "#ebd1db",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Bebê",
+    "hex_code": "#e3c0cf",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Envelhecido",
+    "hex_code": "#cb9aad",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Crochê",
+    "hex_code": "#b87e93",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Meu Xodó",
+    "hex_code": "#92576f",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa do Deserto",
+    "hex_code": "#953d68",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Carmim",
+    "hex_code": "#92345b",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pétala de Rosa",
+    "hex_code": "#edd5dd",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Infantil",
+    "hex_code": "#e8c0cf",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Discreto",
+    "hex_code": "#d899b1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Alegria",
+    "hex_code": "#c47b95",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Cetim",
+    "hex_code": "#a2566f",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Amora",
+    "hex_code": "#854158",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Amora Intenso",
+    "hex_code": "#7c3655",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Quarto de Princesa",
+    "hex_code": "#f1d3da",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mouse de Morango",
+    "hex_code": "#efc0cb",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Menina",
+    "hex_code": "#e392a1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Sublime",
+    "hex_code": "#d47c8c",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cereja",
+    "hex_code": "#b04b63",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Desejo",
+    "hex_code": "#ac4362",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Batom Vermelho",
+    "hex_code": "#99324e",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosinha",
+    "hex_code": "#f1d2d7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Roseira",
+    "hex_code": "#f0bcc9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Saúde",
+    "hex_code": "#ab92a3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Buque de Rosas",
+    "hex_code": "#dd7788",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lápis de Cor",
+    "hex_code": "#c84f68",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Contagem Regressiva",
+    "hex_code": "#bd4c5f",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Apaixonado",
+    "hex_code": "#a53a4e",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Para Sempre",
+    "hex_code": "#f2d5d7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Menina Moça",
+    "hex_code": "#f0c1c6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Primeiro Beijo",
+    "hex_code": "#ed939d",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Casa Comigo",
+    "hex_code": "#d66972",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Luna",
+    "hex_code": "#bb4b51",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Surpreendente",
+    "hex_code": "#a42e37",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Coração",
+    "hex_code": "#9d373c",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Quarto de Boneca",
+    "hex_code": "#f1c6c4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Esperança",
+    "hex_code": "#f0b3b2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pequenas Lembranças",
+    "hex_code": "#ed9190",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Moderno",
+    "hex_code": "#d76c6e",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Suave",
+    "hex_code": "#b74e4f",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pare",
+    "hex_code": "#a433834",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vermelho Gueixa",
+    "hex_code": "#9f4442",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mil Motivos",
+    "hex_code": "#f2ccc5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Clássico",
+    "hex_code": "#f0afa8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Pêssego",
+    "hex_code": "#EE9489",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tulipa",
+    "hex_code": "#D9766C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tomate",
+    "hex_code": "#B24743",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Dançante",
+    "hex_code": "#A13B34",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Delícia",
+    "hex_code": "#903934",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Joico",
+    "hex_code": "#E0CDD1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Florescer",
+    "hex_code": "#D2B6BE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa dos Ventos",
+    "hex_code": "#B995A1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vinho Vívido",
+    "hex_code": "#9E6D79",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce Pecado",
+    "hex_code": "#8D5869",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Uva",
+    "hex_code": "#6D344F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Amora Preta",
+    "hex_code": "#533640",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Camponesa",
+    "hex_code": "#E8D4D5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "París",
+    "hex_code": "#DABDC1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Jenuíno",
+    "hex_code": "#C79EA2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vitrine",
+    "hex_code": "#AE8087",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Purpura Celeste",
+    "hex_code": "#9E6B75",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Samba",
+    "hex_code": "#895460",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bordô",
+    "hex_code": "#63333E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Dama",
+    "hex_code": "#EBD1CF",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sorridente",
+    "hex_code": "#DCB6B5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Primncesa Encantada",
+    "hex_code": "#C39393",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ousado",
+    "hex_code": "#A87376",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Roseira",
+    "hex_code": "#995D62",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Afetuoso",
+    "hex_code": "#864C52",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Uva Rara",
+    "hex_code": "#723941",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Canção de Ninar",
+    "hex_code": "#EDD3D2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Poesia",
+    "hex_code": "#E6BDBD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Vintage",
+    "hex_code": "#CF8A8D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Blush",
+    "hex_code": "#BA7176",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pitangueira",
+    "hex_code": "#AD5E65",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Charmosa",
+    "hex_code": "#974953",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Louca de Amor",
+    "hex_code": "#863A42",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Primeiro Lugar",
+    "hex_code": "#EBCECB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Loja de Brinquedo",
+    "hex_code": "#E3B7B1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce de Goiaba",
+    "hex_code": "#CD8E89",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Aroma de Goiaba",
+    "hex_code": "#C37F7A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Avermelhado",
+    "hex_code": "#B56966",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Terra Molhada",
+    "hex_code": "#A0524E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Enseada",
+    "hex_code": "#8E3738",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Romance",
+    "hex_code": "#EBCFC3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bailarina",
+    "hex_code": "#E3B5A8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Baile de Moça",
+    "hex_code": "#CD8E7F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Goiabada",
+    "hex_code": "#BF796E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Salmão Avermelhado",
+    "hex_code": "#B3675D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Interior",
+    "hex_code": "#A0584F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lua de Mel",
+    "hex_code": "#7B3730",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Primeira Dama",
+    "hex_code": "#EACDC1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Saudade",
+    "hex_code": "#E2B6A7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ilha Bela",
+    "hex_code": "#CE9382",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vaso Quebrado",
+    "hex_code": "#B57466",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Colonial",
+    "hex_code": "#A85E53",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Barro Vermelho",
+    "hex_code": "#8F4438",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Fim de Tarde",
+    "hex_code": "#83382A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Maçã",
+    "hex_code": "#C33A36",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Suco de Mamão",
+    "hex_code": "#D7552A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Casca de Laranja",
+    "hex_code": "#E16F3E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Abobora",
+    "hex_code": "#E47237",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Creme de Camarão",
+    "hex_code": "#EC8430",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mini Saia",
+    "hex_code": "#EB882C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Juventude",
+    "hex_code": "#F4A045",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Novata",
+    "hex_code": "#F2D1C3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Alegria",
+    "hex_code": "#F2B8A7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sashimi",
+    "hex_code": "#E79580",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Dia de Festa",
+    "hex_code": "#D87B6A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Jequitibá Vermelho",
+    "hex_code": "#C76356",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pimenta",
+    "hex_code": "#B85444",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Burití",
+    "hex_code": "#B8473D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce Menina",
+    "hex_code": "#F0D1C3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Salmão",
+    "hex_code": "#F3C1AB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Colméia",
+    "hex_code": "#E49780",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Resplandecer",
+    "hex_code": "#DD7861",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caçador",
+    "hex_code": "#C65F47",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Singular",
+    "hex_code": "#B44B34",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Hibisco",
+    "hex_code": "#C04D35",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pessegueiro",
+    "hex_code": "#F3D0BD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Perfume Aveludado",
+    "hex_code": "#F2BDA2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Envolver",
+    "hex_code": "#E2946F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Entardecer de Verão",
+    "hex_code": "#D67C56",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Fogo de Palha",
+    "hex_code": "#C4633E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Terracota Cativante",
+    "hex_code": "#B1533C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vermelho Colonia",
+    "hex_code": "#93402F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pêssego",
+    "hex_code": "#F3D3BF",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vitamina de Pêssego",
+    "hex_code": "#F3C1A3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mamão Papaia",
+    "hex_code": "#E89D6F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bolo de Laranja",
+    "hex_code": "#D57E52",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce de Laranja",
+    "hex_code": "#C56639",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Laranjeira",
+    "hex_code": "#BB613E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ferrolho",
+    "hex_code": "#C35530",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Iogurte de Pêssego",
+    "hex_code": "#F4D3B3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pó de Arroz",
+    "hex_code": "#F4C69F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bege Ligth",
+    "hex_code": "#F2B88C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tangerina",
+    "hex_code": "#F2AC78",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Laranja do Sertão",
+    "hex_code": "#E6955F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Colher de Pau",
+    "hex_code": "#CB7841",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rua de Barro",
+    "hex_code": "#C36F3E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pudim",
+    "hex_code": "#F4D4AF",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Boa Infância",
+    "hex_code": "#F5C894",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pega Pega",
+    "hex_code": "#EFB57A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Festa da Laranja",
+    "hex_code": "#E69F5F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Nozes",
+    "hex_code": "#D88B4D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce de Leite",
+    "hex_code": "#D28240",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Panela de Barro",
+    "hex_code": "#A85E39",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sorrizo Doce",
+    "hex_code": "#F4D9B1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vitamina de Banana",
+    "hex_code": "#F5CF9B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Espumante",
+    "hex_code": "#F5C78E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce de Papaia",
+    "hex_code": "#EFB97B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Amanhecer",
+    "hex_code": "#EAAA62",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Meu Tijolinho",
+    "hex_code": "#DF984E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Toque de Verão",
+    "hex_code": "#D28233",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Toque Suave",
+    "hex_code": "#EDD2C0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Licor de Pêssego",
+    "hex_code": "#E4B9A2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caqui",
+    "hex_code": "#D9987C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Contorno",
+    "hex_code": "#CC896C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Everest",
+    "hex_code": "#C1785C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Estrada de Chão",
+    "hex_code": "#AD654C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cumari",
+    "hex_code": "#994B35",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Francesa",
+    "hex_code": "#ECCFBB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Areia",
+    "hex_code": "#E5B99B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Amazona",
+    "hex_code": "#DB9C7B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Fragrância de Laranja",
+    "hex_code": "#C47B5B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Som de Violão",
+    "hex_code": "#B46848",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cuia",
+    "hex_code": "#A2583A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Argila",
+    "hex_code": "#924E3C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bala Doce",
+    "hex_code": "#EBCCB3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Damasco",
+    "hex_code": "#E0B392",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pele Bronzeada",
+    "hex_code": "#DBA480",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Grão de Areia",
+    "hex_code": "#D4966E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tarde de Pesca",
+    "hex_code": "#C38058",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Moeda de Bronze",
+    "hex_code": "#B46C42",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Poço Artesiano",
+    "hex_code": "#A6613C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tarde de Outono",
+    "hex_code": "#EDD0B6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ipanema",
+    "hex_code": "#E8BE9B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Frisante",
+    "hex_code": "#E3AB7B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vida no Campo",
+    "hex_code": "#D69969",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pequeno Bosque",
+    "hex_code": "#CD8C5D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Toca do Tigre",
+    "hex_code": "#BB7748",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Canela",
+    "hex_code": "#B06C3E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Casa da Vovó",
+    "hex_code": "#F3D9BA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tarde no Interior",
+    "hex_code": "#F0CB97",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cor de Pele",
+    "hex_code": "#E3AC72",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Patê de Figo",
+    "hex_code": "#D7995D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Muro de Tijolos",
+    "hex_code": "#C6884A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caminhos Dourados",
+    "hex_code": "#B6743B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cappuccino",
+    "hex_code": "#B16A37",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Waffles",
+    "hex_code": "#F2D5B0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Praiana",
+    "hex_code": "#EDC38E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pó de Terra",
+    "hex_code": "#E8B87F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mel de Abelha",
+    "hex_code": "#E5AE6B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pólen",
+    "hex_code": "#D59858",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cera de Abelha",
+    "hex_code": "#C78538",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Fortuna",
+    "hex_code": "#B67D3C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bolo de Fubá",
+    "hex_code": "#F5DEBB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pôr do Sol",
+    "hex_code": "#EDC796",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Grão de Bico",
+    "hex_code": "#EABF86",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Refúgio",
+    "hex_code": "#DDAC6D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mesa Posta",
+    "hex_code": "#D69E59",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caldo de Pudim",
+    "hex_code": "#CC9249",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Guaraná",
+    "hex_code": "#BA7F38",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Luz Solar",
+    "hex_code": "#F8AC1D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Raio de Sol",
+    "hex_code": "#FDB702",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tarde Ensolarada",
+    "hex_code": "#FDCC4E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Canário Belga",
+    "hex_code": "#FFC801",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sonho de Verão",
+    "hex_code": "#FED95D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Amarelo Ouro",
+    "hex_code": "#FED340",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce de Banana",
+    "hex_code": "#FECB01",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Redentor",
+    "hex_code": "#F5D6A9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Inocente",
+    "hex_code": "#F6CD8E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tarde no Paraíso",
+    "hex_code": "#F4BF77",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Angar",
+    "hex_code": "#EEB76B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Favo de Mel",
+    "hex_code": "#EBAD5E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Girassol",
+    "hex_code": "#DF9938",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Flor Dourada",
+    "hex_code": "#D88F32",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mingau de Aveia",
+    "hex_code": "#F5DEAF",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Arco Amarelo",
+    "hex_code": "#F7D391",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Minhã de Sol",
+    "hex_code": "#FBD187",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Manteiga",
+    "hex_code": "#FBCB78",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Polenta",
+    "hex_code": "#F7BE5B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cúrcuma",
+    "hex_code": "#F2AF46",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Litoral",
+    "hex_code": "#E39A33",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Creme de Fubá",
+    "hex_code": "#FBE4B3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Luz Amarela",
+    "hex_code": "#FDDFA0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Anel de Ouro",
+    "hex_code": "#FEDF94",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mel de Laranjeira",
+    "hex_code": "#FBD682",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Suco de Manga",
+    "hex_code": "#FBD073",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Aliança",
+    "hex_code": "#F4C454",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Amarelo Alegria",
+    "hex_code": "#FFC723",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Afeto",
+    "hex_code": "#F5E0B1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Milho na Manteiga",
+    "hex_code": "#F6DDA3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Amarelo Doce",
+    "hex_code": "#F6D58F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Licor de Caju",
+    "hex_code": "#c5aa85",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pepino",
+    "hex_code": "#D3DFC3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Singelo",
+    "hex_code": "#BDD0AB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Arranjo Verde",
+    "hex_code": "#A9C095",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vaso de Pátina",
+    "hex_code": "#9DB682",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Picles",
+    "hex_code": "#85A16A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Palmeira",
+    "hex_code": "#648149",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Samanbaia",
+    "hex_code": "#58713F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce Verde",
+    "hex_code": "#CCE2CA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Kiwi",
+    "hex_code": "#AED2B0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ráfia",
+    "hex_code": "#8EC298",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Esmeralda",
+    "hex_code": "#78B185",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ilha Verde",
+    "hex_code": "#68A678",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Montes Verdes",
+    "hex_code": "#498555",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Lírio",
+    "hex_code": "#245E36",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Cravo",
+    "hex_code": "#D1E3D2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Folha de Menta",
+    "hex_code": "#B7D7BF",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bala de Menta",
+    "hex_code": "#9FCDB1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Abacateiro",
+    "hex_code": "#8AC1A1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Suco de Hortelã",
+    "hex_code": "#57AA80",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Floresta",
+    "hex_code": "#348A5D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Espinafre",
+    "hex_code": "#016844",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Aipo",
+    "hex_code": "#E0DDBD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sabedoria",
+    "hex_code": "#CBC99D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Repolho Chinês",
+    "hex_code": "#BBB98A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azevém",
+    "hex_code": "#AEAC7A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Um Dólar",
+    "hex_code": "#95945C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Oliva",
+    "hex_code": "#71713E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Militar",
+    "hex_code": "#5F6033",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Frescor Irresistível",
+    "hex_code": "#DBDDBD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lenço Verde",
+    "hex_code": "#C7CDA8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Jardim Verde",
+    "hex_code": "#ABB486",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Abobrinha Italiana",
+    "hex_code": "#9BA373",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Bambu",
+    "hex_code": "#88915D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Piquenique no Jardim",
+    "hex_code": "#6D7645",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mata Verde",
+    "hex_code": "#576238",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Experiência Verde",
+    "hex_code": "#DAE2CD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Suco de Limão",
+    "hex_code": "#C5D1B2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Encantado",
+    "hex_code": "#A3B48C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Brócolis",
+    "hex_code": "#8FA277",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tempero Verde",
+    "hex_code": "#788D60",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Zona Rural",
+    "hex_code": "#60724F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Oliveiras",
+    "hex_code": "#475842",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Toque Simples",
+    "hex_code": "#CFDDC7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Salada Verde",
+    "hex_code": "#B3CBAA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Aconchego",
+    "hex_code": "#8BA97F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Encantado",
+    "hex_code": "#75946B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caminhos do Sul",
+    "hex_code": "#5E7F57",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rúcula",
+    "hex_code": "#42603C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Floresta Tropical",
+    "hex_code": "#405840",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Jóia de Esmeralda",
+    "hex_code": "#C8D8C4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Singular",
+    "hex_code": "#ACC2A8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Infantil",
+    "hex_code": "#98B092",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lago Verde",
+    "hex_code": "#8EA486",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mata Nativa",
+    "hex_code": "#6C8867",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Arco Verde",
+    "hex_code": "#537150",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Amazônia",
+    "hex_code": "#205134",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Tardio",
+    "hex_code": "#C6D5C9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Agradável",
+    "hex_code": "#AAC2B3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Repousante",
+    "hex_code": "#91AF9D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pátina",
+    "hex_code": "#7D9B89",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Envelhecido",
+    "hex_code": "#61826C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Espinafre",
+    "hex_code": "#4F6A56",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Floresta de Pinheiros",
+    "hex_code": "#3D5541",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Diversão",
+    "hex_code": "#C4D9CE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Aloe Vera",
+    "hex_code": "#ACCABC",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Eucalipto",
+    "hex_code": "#94B5A6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Real Liberdade",
+    "hex_code": "#81A595",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Eco",
+    "hex_code": "#6B927F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Ousado",
+    "hex_code": "#547867",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Jardim Real",
+    "hex_code": "#2A4F43",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Alegria",
+    "hex_code": "#019D6E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Turquesa",
+    "hex_code": "#019187",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mar Calmo",
+    "hex_code": "#019196",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Alto Mar",
+    "hex_code": "#017680",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Sereia",
+    "hex_code": "#01B0BB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lagoa Azul",
+    "hex_code": "#0192C6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Profundo",
+    "hex_code": "#015F97",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ilha do Romance",
+    "hex_code": "#C0E3DA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Maresia",
+    "hex_code": "#A1D4C8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pedra do Mar",
+    "hex_code": "#89C6B7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Paraiso Tropical",
+    "hex_code": "#70BAA7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Jardim Sublime",
+    "hex_code": "#53A38F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caminho do Amor",
+    "hex_code": "#368976",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verde Parreira",
+    "hex_code": "#016C4F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Equilíbrio",
+    "hex_code": "#C1E6DF",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Fonte de Cristal",
+    "hex_code": "#A1D5CB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Joia Rara",
+    "hex_code": "#8AC5BA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Fonte Termal",
+    "hex_code": "#75B9AE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Barragem",
+    "hex_code": "#61A89D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ilha Encantada",
+    "hex_code": "#3B8C80",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rei dos Mares",
+    "hex_code": "#016D60",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Natação",
+    "hex_code": "#C2E5E5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Piscina",
+    "hex_code": "#A7DCDC",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Beira de Praia",
+    "hex_code": "#92D0D0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Boneca Azul",
+    "hex_code": "#6EC2C4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Marujo",
+    "hex_code": "#3AA9AE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Corrente Marítima",
+    "hex_code": "#01858B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Fundo do Mar",
+    "hex_code": "#017478",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Manhã Azul",
+    "hex_code": "#C2E0E3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ilhota",
+    "hex_code": "#A6D0D6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Águas Cristalinas",
+    "hex_code": "#97CBD2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Bebê",
+    "hex_code": "#7DC1CB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Água Doce",
+    "hex_code": "#4DA6B2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Litoral Sul",
+    "hex_code": "#08808E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Imperial",
+    "hex_code": "#01717E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Delicada",
+    "hex_code": "#C6E3E8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Destemido",
+    "hex_code": "#A6D4DE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Calmaria",
+    "hex_code": "#8BC4D1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Férias no Litoral",
+    "hex_code": "#71B8C7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Maldivas",
+    "hex_code": "#34A3B6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Joia Azul",
+    "hex_code": "#018498",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Costa Marítima",
+    "hex_code": "#016E85",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Sereno",
+    "hex_code": "#B4E0E7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Nuvem Azul",
+    "hex_code": "#8FD0DD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ondas do Mar",
+    "hex_code": "#73C0D2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Dia de Praia",
+    "hex_code": "#56B5CA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ilha Paradizíaca",
+    "hex_code": "#01A0B8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Clube Náutico",
+    "hex_code": "#01819E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mar Atlântico",
+    "hex_code": "#016081",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Nevasca Azul",
+    "hex_code": "#B7DFE8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Liberdade",
+    "hex_code": "#A2D5E7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Quarto Infantil",
+    "hex_code": "#89C6DF",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Céu Azul",
+    "hex_code": "#5DB3D4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pescaria",
+    "hex_code": "#289EC4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul França",
+    "hex_code": "#017CA7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Realeza",
+    "hex_code": "#015D87",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Poço do Desejo",
+    "hex_code": "#BFD2C9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Fonte da Juventude",
+    "hex_code": "#A8C1B7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vintage",
+    "hex_code": "#94B2A6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Elegante",
+    "hex_code": "#7EA298",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Filtro dos Sonhos",
+    "hex_code": "#5F887D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mar Agitado",
+    "hex_code": "#476F65",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verdes Vales",
+    "hex_code": "#124A42",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mar Verde",
+    "hex_code": "#C3D7D3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Aquático",
+    "hex_code": "#B4CCC9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Água Verde",
+    "hex_code": "#A3C0BD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Chuvisco",
+    "hex_code": "#8CAEAB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lagoa Verde",
+    "hex_code": "#518682",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Algas",
+    "hex_code": "#2E6864",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cabo Verde",
+    "hex_code": "#01554F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tarde Alegre",
+    "hex_code": "#BEDBD8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Gotas de Alegria",
+    "hex_code": "#9EC6C6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Felicidade Azul",
+    "hex_code": "#90BDBD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mergulho na Piscina",
+    "hex_code": "#7BB1B2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vestido de Gala",
+    "hex_code": "#5C9598",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Floresta Encantada",
+    "hex_code": "#3C797D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Prancha de Surf",
+    "hex_code": "#016367",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ar Puro",
+    "hex_code": "#C7DFE0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Corrente de Ar",
+    "hex_code": "#B0D2D6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vestido Azul",
+    "hex_code": "#9FC5CC",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Netuno",
+    "hex_code": "#84B4BE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caribe",
+    "hex_code": "#5B96A2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Perola Azul",
+    "hex_code": "#217786",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cântico",
+    "hex_code": "#015A6B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Topázio",
+    "hex_code": "#C7D8DB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lenço Azul",
+    "hex_code": "#AFC7CD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Espuma do Mar",
+    "hex_code": "#9FBBC3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Confiante",
+    "hex_code": "#88ABB4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Formal",
+    "hex_code": "#68909D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Estrela Azul",
+    "hex_code": "#427584",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Céu Estrelado",
+    "hex_code": "#175A6C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Beira Mar",
+    "hex_code": "#C5DCE0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Riacho Alegre",
+    "hex_code": "#ADCCD3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Convicto",
+    "hex_code": "#9BBFC9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sinfonia",
+    "hex_code": "#83AFBC",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Sereno",
+    "hex_code": "#5B92A2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Céu Profundo",
+    "hex_code": "#2F778B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Oceânico",
+    "hex_code": "#015D75",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Cristalino",
+    "hex_code": "#C2DAE0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Sublime",
+    "hex_code": "#A9C9D7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Neblina",
+    "hex_code": "#85B0C4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Hidrocor",
+    "hex_code": "#6F9DB3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Jeans",
+    "hex_code": "#5389A1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Casal",
+    "hex_code": "#22657F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Denin",
+    "hex_code": "#01455E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Cobalto",
+    "hex_code": "#016EA7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Crepúsculo",
+    "hex_code": "#015086",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Noturno",
+    "hex_code": "#225288",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lavanda",
+    "hex_code": "#3C4C80",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vaso de Violeta",
+    "hex_code": "#514C7E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Amestista",
+    "hex_code": "#665385",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ameixa",
+    "hex_code": "#795484",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Céu Claro",
+    "hex_code": "#C3DFE8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Gelo",
+    "hex_code": "#B0D6E6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Serenidade Celeste",
+    "hex_code": "#9BC8DE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Onda Celeste",
+    "hex_code": "#7DB5D3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Horizonte",
+    "hex_code": "#5A9EC0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Oceano Azul",
+    "hex_code": "#2377A2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Profundo",
+    "hex_code": "#094C73",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cristal Azul",
+    "hex_code": "#CBD8E1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Brisa Celestial",
+    "hex_code": "#B2C8D8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Seda",
+    "hex_code": "#8EA9C2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Ardósia",
+    "hex_code": "#7C9AB5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Céu de Outono",
+    "hex_code": "#6B8CA9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Enigma Azul",
+    "hex_code": "#4C6B8A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Índigo",
+    "hex_code": "#284A70",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Susurro da Brisa",
+    "hex_code": "#CCDBE5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Nuvem de Sonho",
+    "hex_code": "#B8CDDD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lágrima de Sereia",
+    "hex_code": "#97B3D0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Serenata Azul",
+    "hex_code": "#7498BE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Céu Noturno",
+    "hex_code": "#6487B0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sussurro",
+    "hex_code": "#4E739F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mergulho Noturno",
+    "hex_code": "#164576",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Seda Gélida",
+    "hex_code": "#D8DDE6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Névoa de Algodão",
+    "hex_code": "#C7D1E2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Elegância Celestial",
+    "hex_code": "#BBC5DE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Aurora Azul",
+    "hex_code": "#A7B2D4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Suave Mistério",
+    "hex_code": "#8B98C4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Sereno",
+    "hex_code": "#6572A5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Anoitecer Profundo",
+    "hex_code": "#3E4371",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Suave Violeta",
+    "hex_code": "#DFD9E4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lavanda Gélida",
+    "hex_code": "#D1CBDF",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pérola Suave",
+    "hex_code": "#BDB4DA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bruma Ametista",
+    "hex_code": "#AFA5C7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Violeta Encantada",
+    "hex_code": "#968DB8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Essência do Sucesso",
+    "hex_code": "#716998",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce Desejo",
+    "hex_code": "#4D426E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sereno Pálido",
+    "hex_code": "#DFDCE5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lua de Inverno",
+    "hex_code": "#D2C8DD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ameixa Suave",
+    "hex_code": "#C0AFD0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Neblina Ametista",
+    "hex_code": "#B3A1C6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pausa no Tempo",
+    "hex_code": "#A18AB7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Joia Lilás",
+    "hex_code": "#7E6596",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mistério",
+    "hex_code": "#624977",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lantejoula",
+    "hex_code": "#E5DBE5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pétala Delicada",
+    "hex_code": "#DAC7DA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Romance Lilás",
+    "hex_code": "#C2A4C2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Baronesa",
+    "hex_code": "#A785A7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Veludo",
+    "hex_code": "#937496",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sussurro de Ametista",
+    "hex_code": "#7C5A7E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vinho com Canela",
+    "hex_code": "#5D395F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sopro Celeste",
+    "hex_code": "#C5D8DE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sublime",
+    "hex_code": "#B3C9D3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Descanso",
+    "hex_code": "#97B4C3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Reflexo",
+    "hex_code": "#83A2B4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Serenity",
+    "hex_code": "#6A8EA1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Banho de Chuva",
+    "hex_code": "#43718B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Velejar",
+    "hex_code": "#215772",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Hortênsia",
+    "hex_code": "#CED9DD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Céu de Primavera",
+    "hex_code": "#B2C7D3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sonhador",
+    "hex_code": "#8BA7BB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Nostalgia",
+    "hex_code": "#7B99B0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Anjo da Manhã",
+    "hex_code": "#6A8AA4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Dama Azul",
+    "hex_code": "#506B84",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tempestade",
+    "hex_code": "#25476A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Maré Baixa",
+    "hex_code": "#CBD5DB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Céu de Porcelana",
+    "hex_code": "#BBC7D2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Seda Azul",
+    "hex_code": "#99A7B8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Estrela Cadente",
+    "hex_code": "#8595AA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Névoa da Montanha",
+    "hex_code": "#6C7F9A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Segredo do Mar",
+    "hex_code": "#516582",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Prússia",
+    "hex_code": "#3B496D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Suspiro",
+    "hex_code": "#D6D9DE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Pastel",
+    "hex_code": "#BDC3CD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Jeans",
+    "hex_code": "#99A0B2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Despertar Noturno",
+    "hex_code": "#8990A3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Raven",
+    "hex_code": "#757C91",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cometa",
+    "hex_code": "#5D657B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Roxo Soberano",
+    "hex_code": "#3B3C5A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Zen",
+    "hex_code": "#DAD6DB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Uva Roxa",
+    "hex_code": "#C5C0C9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Suco de Uva",
+    "hex_code": "#A29BAA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cacho de Uva",
+    "hex_code": "#908A9B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Roxo Secreto",
+    "hex_code": "#7E778E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Purpura",
+    "hex_code": "#645E77",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Aroma",
+    "hex_code": "#3E385A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Nuvem",
+    "hex_code": "#E0DADF",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Perfume de Moça",
+    "hex_code": "#D1C6D2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Flor Lilás",
+    "hex_code": "#B0A3B6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ramalhete",
+    "hex_code": "#9A8CA2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rum",
+    "hex_code": "#7A6B85",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Roxo",
+    "hex_code": "#675A75",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cascalho",
+    "hex_code": "#443757",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ostra Roxa",
+    "hex_code": "#DBCFD4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Semente de Algodão",
+    "hex_code": "#CBB8C0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Opera",
+    "hex_code": "#AA8E9A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Final Feliz",
+    "hex_code": "#9B7E8B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ameixa Sofisticada",
+    "hex_code": "#8B6878",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Uvas do Sul",
+    "hex_code": "#7E5A6D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vinho Bordô",
+    "hex_code": "#5F3F54",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Flare Rosa",
+    "hex_code": "#D6C2BE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Nobel",
+    "hex_code": "#C9B0AB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Alvorecer",
+    "hex_code": "#B89D9A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Nude Chique",
+    "hex_code": "#A38887",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Socialite",
+    "hex_code": "#907676",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Final Feliz",
+    "hex_code": "#76595D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Malva Velho",
+    "hex_code": "#5F3D3F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Trufa Branca",
+    "hex_code": "#D7C8C2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Artista Elegante",
+    "hex_code": "#C3B1AC",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cogumelo",
+    "hex_code": "#B6A09A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Realeza",
+    "hex_code": "#A08882",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Duna de Areia",
+    "hex_code": "#8C706A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Café Romano",
+    "hex_code": "#7A5F5A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Congo",
+    "hex_code": "#5A3532",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Flare",
+    "hex_code": "#D6C8C0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Seda",
+    "hex_code": "#C6B3A9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Martini",
+    "hex_code": "#B8A196",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Castanha",
+    "hex_code": "#A2877D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Marron Doce",
+    "hex_code": "#947569",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Chocolate Quente",
+    "hex_code": "#806257",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pinhão Cozido",
+    "hex_code": "#5A382D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Véu de Abalone",
+    "hex_code": "#DBC7BD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Corais",
+    "hex_code": "#CFB4A8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caminhos de Areia",
+    "hex_code": "#C3A497",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Café Doce",
+    "hex_code": "#A8857A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Castanho Escuro",
+    "hex_code": "#9C6E63",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vaso de Argila",
+    "hex_code": "#85594F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ganache",
+    "hex_code": "#5D3831",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Leite Maltado",
+    "hex_code": "#DECABD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Estrada de Areia",
+    "hex_code": "#D1B7A8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lua de Mel",
+    "hex_code": "#C1A392",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Deserto",
+    "hex_code": "#AE8E7E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Marrom Suave",
+    "hex_code": "#9D7868",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Barril de Carvalho",
+    "hex_code": "#896656",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce de Chocolate",
+    "hex_code": "#694336",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bege Suave",
+    "hex_code": "#D9CDC3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bege Genuíno",
+    "hex_code": "#CBB9AB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Castelo de Areia",
+    "hex_code": "#BBA595",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Chocolate",
+    "hex_code": "#A58C7B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sorvete de Café",
+    "hex_code": "#967A6A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Marrom Tabaco",
+    "hex_code": "#715243",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Café Noir",
+    "hex_code": "#4F3426",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Simplicidade",
+    "hex_code": "#D6C7B9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pedra de Areia",
+    "hex_code": "#C5B1A2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Formosa",
+    "hex_code": "#B59F8F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sucesso",
+    "hex_code": "#9C8373",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce de Nozes",
+    "hex_code": "#8E725F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Chocotino",
+    "hex_code": "#785B47",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Avelâ",
+    "hex_code": "#634533",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Seda Bege",
+    "hex_code": "#D3C8BD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Toque Sutil",
+    "hex_code": "#C2B4A7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tom de Bege",
+    "hex_code": "#B5A597",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sandrift",
+    "hex_code": "#A08E7E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sombra",
+    "hex_code": "#907865",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Grão de Café",
+    "hex_code": "#7A6455",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Café com Chocolate",
+    "hex_code": "#5F4B3F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Âmbar Suave",
+    "hex_code": "#D5C7BA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Trufa",
+    "hex_code": "#C6B5A7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bege Escuro",
+    "hex_code": "#B9A796",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tempestade de Areia",
+    "hex_code": "#A58F7B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Corino",
+    "hex_code": "#917864",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Café Francês",
+    "hex_code": "#785F4C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Extra Forte",
+    "hex_code": "#604C3D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bala de Café",
+    "hex_code": "#DAC8B8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bege Familiar",
+    "hex_code": "#CAB3A0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Areia Rosada",
+    "hex_code": "#BFA38D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Café do Porto",
+    "hex_code": "#A3846C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mocha",
+    "hex_code": "#957258",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Urso Marrom",
+    "hex_code": "#815D40",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caminhos Cruzados",
+    "hex_code": "#69482C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mar de Areia",
+    "hex_code": "#D7C5B3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Praticidade",
+    "hex_code": "#C9B29C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Relógio de Areia",
+    "hex_code": "#BCA38B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Amadeirado",
+    "hex_code": "#A88E76",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Estrada do Campo",
+    "hex_code": "#947A62",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Chá Preto",
+    "hex_code": "#7D644D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Expresso",
+    "hex_code": "#65503D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Alto do Morro",
+    "hex_code": "#DCC7B3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Baunilha",
+    "hex_code": "#D2B79E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pó de Rodeio",
+    "hex_code": "#C5A88D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bolo de Nozes",
+    "hex_code": "#B59778",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Marrom Bronza",
+    "hex_code": "#89674A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Boina de Couro",
+    "hex_code": "#725237",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Chocolate Suiço",
+    "hex_code": "#765138",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Praia Mansa",
+    "hex_code": "#DCC7AD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Toalha de Mesa",
+    "hex_code": "#CFB597",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Trigo",
+    "hex_code": "#C1A485",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Trama de Vime",
+    "hex_code": "#B99974",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Marrom Francês",
+    "hex_code": "#A78361",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Couro Marrom",
+    "hex_code": "#946E48",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Argila de Oleiro",
+    "hex_code": "#7B5838",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pro Bege",
+    "hex_code": "#D7C5AE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Noite no Deserto",
+    "hex_code": "#C7B198",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Café Cremoso",
+    "hex_code": "#BAA185",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Café com Creme",
+    "hex_code": "#A78C71",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Café da Manhã",
+    "hex_code": "#9E8163",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rouxinol",
+    "hex_code": "#8A6B4D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Casca de Coco",
+    "hex_code": "#70573F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ostra Bege",
+    "hex_code": "#DFD3C3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lobo de Madeira",
+    "hex_code": "#CFBEA9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Veludo Bege",
+    "hex_code": "#C0AD96",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Areia Movediça",
+    "hex_code": "#AF987F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Parede de Pedra",
+    "hex_code": "#A08568",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Folhas de Outono",
+    "hex_code": "#8F7659",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Carvalho",
+    "hex_code": "#695239",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bronzeado Suave",
+    "hex_code": "#DACAB2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Macadâmia",
+    "hex_code": "#CCB79B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cesto de Vime",
+    "hex_code": "#C0A98B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lentilha",
+    "hex_code": "#AB9579",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bronzeado",
+    "hex_code": "#947F65",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Marron Palha",
+    "hex_code": "#867057",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Licor de Chocolate",
+    "hex_code": "#6E543C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lenço de Lã",
+    "hex_code": "#D9CFBA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Espuma de Leite",
+    "hex_code": "#C8BBA3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cáqui Universal",
+    "hex_code": "#B8A992",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Flores Urbanas",
+    "hex_code": "#A4947E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Estojo de Couro",
+    "hex_code": "#8E7F6A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Semente de Linhaça",
+    "hex_code": "#786957",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Era do Bronze",
+    "hex_code": "#66543E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pedra Oriental",
+    "hex_code": "#E0CFB0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Licor de Jenipapo",
+    "hex_code": "#D0BA94",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Harmonia",
+    "hex_code": "#C6B08A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tesouro Envelhecido",
+    "hex_code": "#B9A47E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tapete de Sisal",
+    "hex_code": "#AC9571",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Baile de Peão",
+    "hex_code": "#9A815E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Baú Dourado",
+    "hex_code": "#7F6743",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bege Abstrato",
+    "hex_code": "#DDD0B6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tecido de Linho",
+    "hex_code": "#CDBB9C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cesto",
+    "hex_code": "#C3B090",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Semiárido",
+    "hex_code": "#B19F80",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Barro Verde",
+    "hex_code": "#9F8E71",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ximango",
+    "hex_code": "#877459",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce de Figo",
+    "hex_code": "#665439",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Arroz Integral",
+    "hex_code": "#DBD0B9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Alpiste",
+    "hex_code": "#CDBDA2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bronze Neutro",
+    "hex_code": "#C1AE91",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sombra da Manhã",
+    "hex_code": "#AC9D83",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Perfume de Mirra",
+    "hex_code": "#998970",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Chá Inglês",
+    "hex_code": "#7E6F59",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vaso de Bronze",
+    "hex_code": "#5D513E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Seda Cinza",
+    "hex_code": "#D1CDBF",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Moderno",
+    "hex_code": "#BFB9AA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Cetim",
+    "hex_code": "#B0AB9C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Via Urbana",
+    "hex_code": "#9D9887",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Noite na Cidade",
+    "hex_code": "#726B5B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Arenito",
+    "hex_code": "#726B5B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ébano",
+    "hex_code": "#5A5243",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Coentro",
+    "hex_code": "#D1CCB9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ninho de Águia",
+    "hex_code": "#C1BCA7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cálice de Prata",
+    "hex_code": "#B2AC96",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Capim Limão",
+    "hex_code": "#9E9985",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Névoa Oliva",
+    "hex_code": "#898473",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Minério de Ferro",
+    "hex_code": "#6B6757",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Portão de Jardim",
+    "hex_code": "#5E5949",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Folha Pálida",
+    "hex_code": "#CECEBD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Folhas ao Vento",
+    "hex_code": "#BBBCA7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Encanto de Jade",
+    "hex_code": "#ACAD97",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ônix Verde",
+    "hex_code": "#989A82",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Camuflagem Verde",
+    "hex_code": "#7F8266",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cacto",
+    "hex_code": "#65684C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Serra da Canastra",
+    "hex_code": "#4F523A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pena Verde",
+    "hex_code": "#D1D3C7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Satisfeito",
+    "hex_code": "#BDC0B3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Alvorecer",
+    "hex_code": "#9FA694",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Dragão Verde",
+    "hex_code": "#909886",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Matinê",
+    "hex_code": "#7A8775",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Aroma de Manjericão",
+    "hex_code": "#626E60",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Musgo de Pedra",
+    "hex_code": "#465448",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rota de Fuga",
+    "hex_code": "#D1D0C6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Folha de Prata",
+    "hex_code": "#BEBFB2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vaso de Prata",
+    "hex_code": "#ABAC9F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Neblina Perene",
+    "hex_code": "#95978A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Folha de Bambu",
+    "hex_code": "#7B8070",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Alecrim Selvagem",
+    "hex_code": "#64695C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sombra do Destino",
+    "hex_code": "#4E5147",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Nuvem de Prata",
+    "hex_code": "#C9C9C0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Nobel",
+    "hex_code": "#B6B5AB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Raro",
+    "hex_code": "#A6A69B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ardósia Antiga",
+    "hex_code": "#949488",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Granito Cinza",
+    "hex_code": "#7F7E72",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caminho Selvagem",
+    "hex_code": "#6D6C62",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Poeira Tempestuosa",
+    "hex_code": "#64645A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Surfar",
+    "hex_code": "#CDD2CA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Conforto",
+    "hex_code": "#BEC3BB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lua de Prata",
+    "hex_code": "#AEB3A9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Acácia",
+    "hex_code": "#969C92",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Fuga",
+    "hex_code": "#7A8076",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Campo Militar",
+    "hex_code": "#5E6259",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azeitona Madura",
+    "hex_code": "#44483D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Folha de Goma",
+    "hex_code": "#C2CDC5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Plenitude",
+    "hex_code": "#ADBBB2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cascata",
+    "hex_code": "#9BAAA2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Jaspe",
+    "hex_code": "#8D9E97",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Poético",
+    "hex_code": "#7C8E87",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rio de Pedra",
+    "hex_code": "#5E706A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Noite na Floresta",
+    "hex_code": "#343B36",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Corrente de Jato",
+    "hex_code": "#C2CFCF",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Fonte Cristalina",
+    "hex_code": "#ABBEBF",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lago Misterioso",
+    "hex_code": "#9BAFB2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Louça Holandesa",
+    "hex_code": "#8B9FA0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Baía dos Golfinhos",
+    "hex_code": "#7A9192",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mármore Azul",
+    "hex_code": "#5D7274",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mineral Azul",
+    "hex_code": "#4A5D5F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sonho Azul",
+    "hex_code": "#BCCBCE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Chuva Fina",
+    "hex_code": "#A4B7BD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ardósia Polida",
+    "hex_code": "#96AAB0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Banheira de Espuma",
+    "hex_code": "#80969D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Refúgio",
+    "hex_code": "#607D84",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bayoux",
+    "hex_code": "#47626A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tempestade",
+    "hex_code": "#244653",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Hora de Ninar",
+    "hex_code": "#CBD4D4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Nevoeiro Azul",
+    "hex_code": "#B6C3C4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Gotas de Orvalho",
+    "hex_code": "#A6B2B5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Cortês",
+    "hex_code": "#90A0A6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Céu Tempestuoso",
+    "hex_code": "#6F848C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Literatura de Cordel",
+    "hex_code": "#536872",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Meia Noite",
+    "hex_code": "#204652",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caminho do Céu",
+    "hex_code": "#CDD2D2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Prata",
+    "hex_code": "#B8BEBE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Abstrato",
+    "hex_code": "#A9B0B1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Farda",
+    "hex_code": "#91999C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Concórdia",
+    "hex_code": "#727C7F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Castelo de Pedra",
+    "hex_code": "#596368",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Noite Cinza",
+    "hex_code": "#23383F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Luau",
+    "hex_code": "#C9D9E0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vento do Litoral",
+    "hex_code": "#B7C9D1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tarde de Tempestade",
+    "hex_code": "#9EB4C0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Meu Jeans",
+    "hex_code": "#8AA3B1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Silêncio da Noite",
+    "hex_code": "#708D9E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Jade Desbotada",
+    "hex_code": "#4E7287",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pedra Bruta",
+    "hex_code": "#32586E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Confins",
+    "hex_code": "#BFC9D0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Fonte Refrescante",
+    "hex_code": "#AABAC6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Alasca",
+    "hex_code": "#98A9B7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tubarão",
+    "hex_code": "#899CAA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Delicado",
+    "hex_code": "#768B9A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Linho Azul",
+    "hex_code": "#5D6F7F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Divino",
+    "hex_code": "#3E5063",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Estrela Guia",
+    "hex_code": "#CAD0D2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caminho de Seixo",
+    "hex_code": "#B8C0C3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cadete Azul",
+    "hex_code": "#ADB5B9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Deixa Chover",
+    "hex_code": "#979FA5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Noite de Chuva",
+    "hex_code": "#7A848D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Transporte",
+    "hex_code": "#606B75",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bandeirantes",
+    "hex_code": "#586168",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Destino",
+    "hex_code": "#CFC9C8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Algodão",
+    "hex_code": "#BDB8B8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pérola Escura",
+    "hex_code": "#AEA9AA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Buque de Orquídea",
+    "hex_code": "#949194",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mafioso",
+    "hex_code": "#7B787D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cometa",
+    "hex_code": "#605E63",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pérola Negra",
+    "hex_code": "#4F4D51",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Malva Silvestre",
+    "hex_code": "#CFC9C8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vestido de Seda",
+    "hex_code": "#BCB6B6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caminho de Pérola",
+    "hex_code": "#ADA5A5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Amizade",
+    "hex_code": "#989192",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Toque Sensual",
+    "hex_code": "#837D7F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Deslumbrante",
+    "hex_code": "#676064",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Viela",
+    "hex_code": "#443E40",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Único",
+    "hex_code": "#CBC9C9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pretensioso",
+    "hex_code": "#B5B1B5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Castelo Cinzento",
+    "hex_code": "#A6A3A9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lendas Urbanas",
+    "hex_code": "#8F8A91",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Aroma de Ameixa",
+    "hex_code": "#736F78",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lembranças",
+    "hex_code": "#5D5962",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Roxo Taupe",
+    "hex_code": "#4A4653",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce Atração",
+    "hex_code": "#CEC9CC",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mitos",
+    "hex_code": "#BDB5B9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Malva Exótica",
+    "hex_code": "#AFA7AC",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Orquídea de Outono",
+    "hex_code": "#9D9093",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Encontro do Destino",
+    "hex_code": "#85777B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Delicadeza",
+    "hex_code": "#695C62",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Encanto Noturno",
+    "hex_code": "#4E4247",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Jacarandá",
+    "hex_code": "#D1C5C4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cadeira de Praia",
+    "hex_code": "#C1B2B3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Doce Flor",
+    "hex_code": "#B3A3A5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pó de Estrela",
+    "hex_code": "#9D8D8E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Verdade Secreta",
+    "hex_code": "#8B7C7E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ameixa Dourada",
+    "hex_code": "#6F5C5F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Castanho Amadeirado",
+    "hex_code": "#4E3132",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Branco Individual",
+    "hex_code": "#D4CDCA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Surreal",
+    "hex_code": "#C2B6B6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ameixa Cinza",
+    "hex_code": "#B1A3A1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Romance",
+    "hex_code": "#9F9291",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Beijo Doce",
+    "hex_code": "#867875",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tarde de Amor",
+    "hex_code": "#6E615F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Chocolate com Ameixa",
+    "hex_code": "#4D3C3C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Angorá",
+    "hex_code": "#D1C5BE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Morsa",
+    "hex_code": "#BFB1AA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Real",
+    "hex_code": "#AC9E97",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Incerto",
+    "hex_code": "#9E9089",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Fogão a Lenha",
+    "hex_code": "#8C7E78",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Sabiá",
+    "hex_code": "#756761",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Manta Marrom",
+    "hex_code": "#56433B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pena Cinza",
+    "hex_code": "#D3D5D3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ágata Cinza",
+    "hex_code": "#C9CCCD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lobo Cinzento",
+    "hex_code": "#B8BCBB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Polido",
+    "hex_code": "#90979B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Avenida Paulista",
+    "hex_code": "#656D73",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Telha de Ardósia",
+    "hex_code": "#606E74",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Azul Fumaça",
+    "hex_code": "#596E79",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Branco Real",
+    "hex_code": "#D4D8D7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lenço do Vovô",
+    "hex_code": "#BEC1C3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Névoa da Manhã",
+    "hex_code": "#A8AEB1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Metrô",
+    "hex_code": "#959BA0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Sério",
+    "hex_code": "#7D848B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cidade de Pedra",
+    "hex_code": "#626970",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Serpente do Mar",
+    "hex_code": "#3E4B54",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pérola Cinza",
+    "hex_code": "#C6CACA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Conectado",
+    "hex_code": "#B0B5B5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Topixa",
+    "hex_code": "#A0A5A7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Exclusivo",
+    "hex_code": "#939899",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Golfinho",
+    "hex_code": "#7F8486",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Tempestade",
+    "hex_code": "#616669",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tecno",
+    "hex_code": "#44484D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Inverno",
+    "hex_code": "#CBCCC9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Argos",
+    "hex_code": "#BDBDB7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Coruja",
+    "hex_code": "#A7A8A2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Aço",
+    "hex_code": "#939591",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vista Urbana",
+    "hex_code": "#7F817E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Grisalho",
+    "hex_code": "#636562",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pimenta Preta",
+    "hex_code": "#585858",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Dia Frio",
+    "hex_code": "#C8CBC4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Magnetismo",
+    "hex_code": "#B2B5AF",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Concreto",
+    "hex_code": "#A3A7A0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Nevoa",
+    "hex_code": "#92948D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Atitude",
+    "hex_code": "#7C7D75",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lobo Cinza",
+    "hex_code": "#63655F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Bosque",
+    "hex_code": "#44493D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Véu de Dama",
+    "hex_code": "#D3CEC4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Bege",
+    "hex_code": "#DCD8D0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Platina",
+    "hex_code": "#B7B7B2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Mineral",
+    "hex_code": "#ABB0AC",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Puro",
+    "hex_code": "#A5A9A8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Chá de Ervas",
+    "hex_code": "#969A96",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Chapéu Cinza",
+    "hex_code": "#666D69",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Delicada",
+    "hex_code": "#D1D2CB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Passeio na Serra",
+    "hex_code": "#CECEC6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Neblina",
+    "hex_code": "#CCCCC5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Malha Cinza",
+    "hex_code": "#C5C8C4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ardósia Pálida",
+    "hex_code": "#C2C0BA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Ruas Urbanas",
+    "hex_code": "#AAA9A4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Concreto Polido",
+    "hex_code": "#A0A09A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Linha do Tempo",
+    "hex_code": "#CFCAC7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Essencial",
+    "hex_code": "#BCB8B6",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Toque Perfeito",
+    "hex_code": "#ADA8A5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pedra Polida",
+    "hex_code": "#9E9793",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Casaco de Vison",
+    "hex_code": "#847B77",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pedra da Sorte",
+    "hex_code": "#6D6562",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Solar do Rei",
+    "hex_code": "#665D57",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Alpaca",
+    "hex_code": "#CCC5BD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Indispensável",
+    "hex_code": "#B9B2A9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Orquídea Cinza",
+    "hex_code": "#ABA39A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Orelha de Elefante",
+    "hex_code": "#988F85",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pano de Fundo",
+    "hex_code": "#867A6F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Lobo Selvagem",
+    "hex_code": "#6F6459",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Marrom Cortês",
+    "hex_code": "#564537",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Popular",
+    "hex_code": "#D4CCC3",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Versátil",
+    "hex_code": "#C1B6AB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Urze",
+    "hex_code": "#B7AB9F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Corda de Sisal",
+    "hex_code": "#A09287",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cidade Cinza",
+    "hex_code": "#8D7F75",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pedra de Arenito",
+    "hex_code": "#756861",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Rosa Ébano",
+    "hex_code": "#544B44",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Agradável",
+    "hex_code": "#D1CBC1",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Branco Cinza",
+    "hex_code": "#BFB6AA",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tarde na Rede",
+    "hex_code": "#ADA295",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Discreto",
+    "hex_code": "#9E9284",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Manguezal",
+    "hex_code": "#887B6C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Dama Marroquina",
+    "hex_code": "#74685A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pena de Bronze",
+    "hex_code": "#5C4D3C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Momento Agradável",
+    "hex_code": "#CCC9C0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tarde de Paz",
+    "hex_code": "#BCB7AD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Executivo",
+    "hex_code": "#ACA79E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Estrutura de Aço",
+    "hex_code": "#9E9991",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Andorinha",
+    "hex_code": "#908A83",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Vaso de Metal",
+    "hex_code": "#78736E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Raposa Negra",
+    "hex_code": "#4F4842",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Internacional",
+    "hex_code": "#CEC6BB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Toque Surpresa",
+    "hex_code": "#BEB5A9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Intelectual",
+    "hex_code": "#A8A093",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Feltro de Lã",
+    "hex_code": "#979083",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Anônimo",
+    "hex_code": "#817A6E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bronze Polido",
+    "hex_code": "#6B645B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bronze Conectado",
+    "hex_code": "#54504A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Útil",
+    "hex_code": "#CFCABD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cinza Analitico",
+    "hex_code": "#BFB6A7",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Areia do Egito",
+    "hex_code": "#AFA696",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Concreto Artístico",
+    "hex_code": "#958D7F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Poncho Gaúcho",
+    "hex_code": "#867E70",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cravo",
+    "hex_code": "#645A4B",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bronze da Realeza",
+    "hex_code": "#554C3E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Marfim",
+    "hex_code": "#D8CFBE",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mármore Grego",
+    "hex_code": "#C0B9A9",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Caminho Cinza",
+    "hex_code": "#B2AC9C",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bem-me-quer",
+    "hex_code": "#AEA594",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cervo Cinzento",
+    "hex_code": "#A7A094",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tricô",
+    "hex_code": "#A19C8F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Montanha de Pedra",
+    "hex_code": "#868578",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Shitake",
+    "hex_code": "#C8BCAB",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Creme de Nozes",
+    "hex_code": "#C4B7A5",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pata de Leão",
+    "hex_code": "#B3A491",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Estrada do Castelo",
+    "hex_code": "#ADA090",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Quero-quero",
+    "hex_code": "#A79582",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Pedra do Segredo",
+    "hex_code": "#9C8A79",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Colina",
+    "hex_code": "#827466",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bege",
+    "hex_code": "#D1C7B8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Bege Equilibrado",
+    "hex_code": "#C0B2A2",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Castanho Claro",
+    "hex_code": "#B1A290",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mariposa",
+    "hex_code": "#A0907F",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Canto da Siriema",
+    "hex_code": "#8A7A6A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Marrom Argila",
+    "hex_code": "#716354",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Fonte de Chocolate",
+    "hex_code": "#564536",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Porcelana",
+    "hex_code": "#DBCEBD",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cesto Bege",
+    "hex_code": "#CDBFB0",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Luva de Camurça",
+    "hex_code": "#CABAA8",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Tenda de Praia",
+    "hex_code": "#C5B6A4",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Cesto de Bambu",
+    "hex_code": "#AC9A8A",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Leite com Avelã",
+    "hex_code": "#A18D7D",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Esteira de Palha",
+    "hex_code": "#826F5E",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Preto Absoluto",
+    "hex_code": "#2F2F30",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Mar Bravo",
+    "hex_code": "#283849",
+    "category": "Plan1",
+    "is_archived": false
+  },
+  {
+    "name": "Açucar Mascavo",
+    "hex_code": "#D9AD7F",
+    "category": "Plan1",
+    "is_archived": false
+  }
+]

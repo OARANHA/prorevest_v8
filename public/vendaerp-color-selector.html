@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste — Seletor de Cores ProRevest (VendaERP)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Nunito, Cormorant Garamond, sans-serif; background: #fafaf9; color: #333; }
+    .header { background: linear-gradient(135deg, #fef3c7, #fff); padding: 20px 30px; border-bottom: 1px solid #fde68a; }
+    .header h1 { font-size: 20px; font-weight: 700; color: #92400e; }
+    .header p { font-size: 13px; color: #999; margin-top: 4px; }
+    .page { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+    .product-placeholder { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+    .product-placeholder h2 { font-size: 18px; margin-bottom: 12px; color: #1a1a1a; }
+    .product-placeholder p { font-size: 14px; color: #666; }
+    .product-placeholder .price { font-size: 24px; font-weight: 700; color: #f59e0b; margin: 12px 0; }
+
+    /* VendaERP attribute simulation */
+    .atributos-sim { margin-top: 20px; padding: 16px; background: #fefce8; border: 1px dashed #fbbf24; border-radius: 8px; }
+    .atributos-sim h3 { font-size: 13px; color: #92400e; margin-bottom: 10px; font-weight: 600; }
+    .atributo-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .atributo-row label { font-size: 12px; color: #6b7280; min-width: 160px; }
+    .atributo-row select, .atributo-row input { flex: 1; padding: 6px 10px; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 13px; }
+
+    .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Paleta ProRevest — Teste do Seletor</h1>
+    <p>Simulação de página de produto do VendaERP para testar o seletor de cores</p>
+  </div>
+
+  <div class="page">
+    <!-- Simula uma página de produto do VendaERP -->
+    <div class="product-placeholder">
+      <h2>Tinta Acrílica Premium ProRevest — 18L</h2>
+      <p>Tinta acrílica de alta performance para paredes internas e externas. Excelente cobertura e durabilidade.</p>
+      <div class="price">R$ 289,90</div>
+
+      <!-- Simula os atributos customizados do VendaERP -->
+      <div class="atributos-sim">
+        <h3>Atributos do Produto (simulação VendaERP)</h3>
+
+        <div class="atributo-row">
+          <label>Cor ProRevest:</label>
+          <select name="cor_prorevest">
+            <option value="">Selecione uma cor...</option>
+          </select>
+        </div>
+
+        <div class="atributo-row">
+          <label>Código ProRevest:</label>
+          <input type="text" name="codigo_cor_prorevest" placeholder="Código da cor" readonly>
+        </div>
+
+        <div class="atributo-row">
+          <label>Hex da Cor:</label>
+          <input type="text" name="hex_cor_prorevest" placeholder="#XXXXXX" readonly>
+        </div>
+
+        <div class="atributo-row">
+          <label>Coleção de Cor:</label>
+          <input type="text" name="colecao_cor" placeholder="Coleção" readonly>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Página de teste — O seletor de cores será carregado abaixo automaticamente.</p>
+  </div>
+
+  <!-- Configuração opcional -->
+  <script>
+    // Descomente para usar API local (dev):
+    // window.PROREVEST_API_URL = 'http://localhost:5174/api';
+
+    // Filtro por coleção (opcional):
+    // window.PROREVEST_COLLECTION = 'Paleta ProRevest';
+
+    // Título do widget:
+    // window.PROREVEST_WIDGET_TITLE = 'Escolha sua Cor ProRevest';
+  </script>
+
+  <!-- Script do seletor de cores -->
+  <script src="./vendaerp-color-selector.js"></script>
+
+  <!-- Listener para debug -->
+  <script>
+    document.addEventListener('prorevest-color-selected', function(e) {
+      console.log('Cor selecionada:', e.detail);
+    });
+  </script>
+
+</body>
+</html>

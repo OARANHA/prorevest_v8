@@ -1,0 +1,8498 @@
+[
+  {
+    "pro_revest_code": "pr001",
+    "hex_code": "b54d7f",
+    "name": "Rosa Pitaia",
+    "numeric_code": 6840,
+    "rgb_info": null,
+    "reference_number": 101.0,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr002",
+    "hex_code": "cc617f",
+    "name": "Rosa Chique",
+    "numeric_code": 6855,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr003",
+    "hex_code": "ab3c51",
+    "name": "Vermelho Tâmara",
+    "numeric_code": 6862,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Vermelhos"
+  },
+  {
+    "pro_revest_code": "pr004",
+    "hex_code": "a42e41",
+    "name": "Topázio",
+    "numeric_code": 6861,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr005",
+    "hex_code": "a82e33",
+    "name": "Rubí",
+    "numeric_code": 6866,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr006",
+    "hex_code": "bf2d32",
+    "name": "Quarenta graus",
+    "numeric_code": 6868,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr007",
+    "hex_code": "ad2c34",
+    "name": "Vermelho Malícia",
+    "numeric_code": 6871,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Vermelhos"
+  },
+  {
+    "pro_revest_code": "pr008",
+    "hex_code": "ebd1db",
+    "name": "Neve de Morango",
+    "numeric_code": 6561,
+    "rgb_info": null,
+    "reference_number": 102.0,
+    "category": "Brancos"
+  },
+  {
+    "pro_revest_code": "pr009",
+    "hex_code": "e3c0cf",
+    "name": "Rosa Bebê",
+    "numeric_code": 6562,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr010",
+    "hex_code": "cb9aad",
+    "name": "Rosa Envelhecido",
+    "numeric_code": 6563,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr011",
+    "hex_code": "b87e93",
+    "name": "Rosa Crochê",
+    "numeric_code": 6564,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr012",
+    "hex_code": "92576f",
+    "name": "Meu Xodó",
+    "numeric_code": 6565,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr013",
+    "hex_code": "953d68",
+    "name": "Rosa do Deserto",
+    "numeric_code": 6841,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr014",
+    "hex_code": "92345b",
+    "name": "Carmim",
+    "numeric_code": 6842,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr015",
+    "hex_code": "edd5dd",
+    "name": "Pétala de Rosa",
+    "numeric_code": 6568,
+    "rgb_info": null,
+    "reference_number": 103.0,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr016",
+    "hex_code": "e8c0cf",
+    "name": "Rosa Infantil",
+    "numeric_code": 6569,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr017",
+    "hex_code": "d899b1",
+    "name": "Rosa Discreto",
+    "numeric_code": 6570,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr018",
+    "hex_code": "c47b95",
+    "name": "Rosa Alegria",
+    "numeric_code": 6571,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr019",
+    "hex_code": "a2566f",
+    "name": "Rosa Cetim",
+    "numeric_code": 6572,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr020",
+    "hex_code": 854158,
+    "name": "Amora",
+    "numeric_code": 6573,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr021",
+    "hex_code": "7c3655",
+    "name": "Amora Intenso",
+    "numeric_code": 6566,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr022",
+    "hex_code": "f1d3da",
+    "name": "Quarto de Princesa",
+    "numeric_code": 6575,
+    "rgb_info": null,
+    "reference_number": 104.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr023",
+    "hex_code": "efc0cb",
+    "name": "Mouse de Morango",
+    "numeric_code": 6576,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr024",
+    "hex_code": "e392a1",
+    "name": "Rosa Menina",
+    "numeric_code": 6577,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr025",
+    "hex_code": "d47c8c",
+    "name": "Rosa Sublime",
+    "numeric_code": 6578,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr026",
+    "hex_code": "b04b63",
+    "name": "Cereja",
+    "numeric_code": 6579,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr027",
+    "hex_code": "ac4362",
+    "name": "Desejo",
+    "numeric_code": 6843,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr028",
+    "hex_code": "99324e",
+    "name": "Batom Vermelho",
+    "numeric_code": 6580,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Vermelhos"
+  },
+  {
+    "pro_revest_code": "pr029",
+    "hex_code": "f1d2d7",
+    "name": "Rosinha",
+    "numeric_code": 6582,
+    "rgb_info": null,
+    "reference_number": 105.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr030",
+    "hex_code": "f0bcc9",
+    "name": "Roseira",
+    "numeric_code": 6583,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr031",
+    "hex_code": "ab92a3",
+    "name": "Rosa Saúde",
+    "numeric_code": 6584,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr032",
+    "hex_code": "dd7788",
+    "name": "Buque de Rosas",
+    "numeric_code": 6585,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr033",
+    "hex_code": "c84f68",
+    "name": "Lápis de Cor",
+    "numeric_code": 6860,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr034",
+    "hex_code": "bd4c5f",
+    "name": "Contagem Regressiva",
+    "numeric_code": 6586,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr035",
+    "hex_code": "a53a4e",
+    "name": "Apaixonado",
+    "numeric_code": 6587,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr036",
+    "hex_code": "f2d5d7",
+    "name": "Para Sempre",
+    "numeric_code": 6589,
+    "rgb_info": null,
+    "reference_number": 106.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr037",
+    "hex_code": "f0c1c6",
+    "name": "Menina Moça",
+    "numeric_code": 6590,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr038",
+    "hex_code": "ed939d",
+    "name": "Primeiro Beijo",
+    "numeric_code": 6591,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr039",
+    "hex_code": "d66972",
+    "name": "Casa Comigo",
+    "numeric_code": 6592,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr040",
+    "hex_code": "bb4b51",
+    "name": "Luna",
+    "numeric_code": 6593,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr041",
+    "hex_code": "a42e37",
+    "name": "Surpreendente",
+    "numeric_code": 7588,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr042",
+    "hex_code": "9d373c",
+    "name": "Coração",
+    "numeric_code": 6594,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr043",
+    "hex_code": "f1c6c4",
+    "name": "Quarto de Boneca",
+    "numeric_code": 6596,
+    "rgb_info": null,
+    "reference_number": 107.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr044",
+    "hex_code": "f0b3b2",
+    "name": "Esperança",
+    "numeric_code": 6597,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr045",
+    "hex_code": "ed9190",
+    "name": "Pequenas Lembranças",
+    "numeric_code": 6598,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr046",
+    "hex_code": "d76c6e",
+    "name": "Rosa Moderno",
+    "numeric_code": 6599,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr047",
+    "hex_code": "b74e4f",
+    "name": "Rosa Suave",
+    "numeric_code": 6600,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr048",
+    "hex_code": "a433834",
+    "name": "Pare",
+    "numeric_code": 6601,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr049",
+    "hex_code": "9f4442",
+    "name": "Vermelho Gueixa",
+    "numeric_code": 7587,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Vermelhos"
+  },
+  {
+    "pro_revest_code": "pr050",
+    "hex_code": "f2ccc5",
+    "name": "Mil Motivos",
+    "numeric_code": 6603,
+    "rgb_info": null,
+    "reference_number": 108.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr051",
+    "hex_code": "f0afa8",
+    "name": "Rosa Clássico",
+    "numeric_code": 6604,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr052",
+    "hex_code": "EE9489",
+    "name": "Rosa Pêssego",
+    "numeric_code": 6605,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr053",
+    "hex_code": "D9766C",
+    "name": "Tulipa",
+    "numeric_code": 6606,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr054",
+    "hex_code": "B24743",
+    "name": "Tomate",
+    "numeric_code": 6607,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr055",
+    "hex_code": "A13B34",
+    "name": "Dançante",
+    "numeric_code": 6608,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr056",
+    "hex_code": 903934,
+    "name": "Delícia",
+    "numeric_code": 7600,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr057",
+    "hex_code": "E0CDD1",
+    "name": "Joico",
+    "numeric_code": 6288,
+    "rgb_info": null,
+    "reference_number": 109.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr058",
+    "hex_code": "D2B6BE",
+    "name": "Florescer",
+    "numeric_code": 6289,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr059",
+    "hex_code": "B995A1",
+    "name": "Rosa dos Ventos",
+    "numeric_code": 6290,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr060",
+    "hex_code": "9E6D79",
+    "name": "Vinho Vívido",
+    "numeric_code": 6291,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr061",
+    "hex_code": "8D5869",
+    "name": "Doce Pecado",
+    "numeric_code": 6292,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr062",
+    "hex_code": "6D344F",
+    "name": "Uva",
+    "numeric_code": 6293,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr063",
+    "hex_code": 533640,
+    "name": "Amora Preta",
+    "numeric_code": 7577,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr064",
+    "hex_code": "E8D4D5",
+    "name": "Camponesa",
+    "numeric_code": 6295,
+    "rgb_info": null,
+    "reference_number": 110.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr065",
+    "hex_code": "DABDC1",
+    "name": "París",
+    "numeric_code": 6296,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr066",
+    "hex_code": "C79EA2",
+    "name": "Jenuíno",
+    "numeric_code": 6297,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr067",
+    "hex_code": "AE8087",
+    "name": "Vitrine",
+    "numeric_code": 9001,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr068",
+    "hex_code": "9E6B75",
+    "name": "Purpura Celeste",
+    "numeric_code": 6298,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr069",
+    "hex_code": 895460,
+    "name": "Samba",
+    "numeric_code": 6299,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr070",
+    "hex_code": "63333E",
+    "name": "Bordô",
+    "numeric_code": 6300,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr071",
+    "hex_code": "EBD1CF",
+    "name": "Dama",
+    "numeric_code": 6302,
+    "rgb_info": null,
+    "reference_number": 111.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr072",
+    "hex_code": "DCB6B5",
+    "name": "Sorridente",
+    "numeric_code": 6303,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr073",
+    "hex_code": "C39393",
+    "name": "Primncesa Encantada",
+    "numeric_code": 6304,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr074",
+    "hex_code": "A87376",
+    "name": "Ousado",
+    "numeric_code": 9002,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr075",
+    "hex_code": "995D62",
+    "name": "Roseira",
+    "numeric_code": 6305,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr076",
+    "hex_code": "864C52",
+    "name": "Afetuoso",
+    "numeric_code": 6306,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr077",
+    "hex_code": 723941,
+    "name": "Uva Rara",
+    "numeric_code": 6307,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr078",
+    "hex_code": "EDD3D2",
+    "name": "Canção de Ninar",
+    "numeric_code": 6309,
+    "rgb_info": null,
+    "reference_number": 112.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr079",
+    "hex_code": "E6BDBD",
+    "name": "Poesia",
+    "numeric_code": 6310,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr080",
+    "hex_code": "CF8A8D",
+    "name": "Rosa Vintage",
+    "numeric_code": 6311,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr081",
+    "hex_code": "BA7176",
+    "name": "Blush",
+    "numeric_code": 9003,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr082",
+    "hex_code": "AD5E65",
+    "name": "Pitangueira",
+    "numeric_code": 6312,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr083",
+    "hex_code": 974953,
+    "name": "Charmosa",
+    "numeric_code": 6313,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr084",
+    "hex_code": "863A42",
+    "name": "Louca de Amor",
+    "numeric_code": 6314,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr085",
+    "hex_code": "EBCECB",
+    "name": "Primeiro Lugar",
+    "numeric_code": 6316,
+    "rgb_info": null,
+    "reference_number": 113.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr086",
+    "hex_code": "E3B7B1",
+    "name": "Loja de Brinquedo",
+    "numeric_code": 6317,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr087",
+    "hex_code": "CD8E89",
+    "name": "Doce de Goiaba",
+    "numeric_code": 6318,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr088",
+    "hex_code": "C37F7A",
+    "name": "Aroma de Goiaba",
+    "numeric_code": 9004,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr089",
+    "hex_code": "B56966",
+    "name": "Avermelhado",
+    "numeric_code": 6319,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr090",
+    "hex_code": "A0524E",
+    "name": "Terra Molhada",
+    "numeric_code": 6320,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr091",
+    "hex_code": "8E3738",
+    "name": "Enseada",
+    "numeric_code": 6321,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr092",
+    "hex_code": "EBCFC3",
+    "name": "Romance",
+    "numeric_code": 6323,
+    "rgb_info": null,
+    "reference_number": 114.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr093",
+    "hex_code": "E3B5A8",
+    "name": "Bailarina",
+    "numeric_code": 6324,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr094",
+    "hex_code": "CD8E7F",
+    "name": "Baile de Moça",
+    "numeric_code": 6325,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr095",
+    "hex_code": "BF796E",
+    "name": "Goiabada",
+    "numeric_code": 9005,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr096",
+    "hex_code": "B3675D",
+    "name": "Salmão Avermelhado",
+    "numeric_code": 6326,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr097",
+    "hex_code": "A0584F",
+    "name": "Interior",
+    "numeric_code": 6327,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr098",
+    "hex_code": "7B3730",
+    "name": "Lua de Mel",
+    "numeric_code": 6328,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr099",
+    "hex_code": "EACDC1",
+    "name": "Primeira Dama",
+    "numeric_code": 6330,
+    "rgb_info": null,
+    "reference_number": 115.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr100",
+    "hex_code": "E2B6A7",
+    "name": "Rosa Saudade",
+    "numeric_code": 6331,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr101",
+    "hex_code": "CE9382",
+    "name": "Ilha Bela",
+    "numeric_code": 6332,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr102",
+    "hex_code": "B57466",
+    "name": "Vaso Quebrado",
+    "numeric_code": 9006,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr103",
+    "hex_code": "A85E53",
+    "name": "Colonial",
+    "numeric_code": 6333,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr104",
+    "hex_code": "8F4438",
+    "name": "Barro Vermelho",
+    "numeric_code": 6334,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Vermelhos"
+  },
+  {
+    "pro_revest_code": "pr105",
+    "hex_code": "83382A",
+    "name": "Fim de Tarde",
+    "numeric_code": 6335,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr106",
+    "hex_code": "C33A36",
+    "name": "Maçã",
+    "numeric_code": 6869,
+    "rgb_info": null,
+    "reference_number": 116.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr107",
+    "hex_code": "D7552A",
+    "name": "Suco de Mamão",
+    "numeric_code": 6884,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr108",
+    "hex_code": "E16F3E",
+    "name": "Casca de Laranja",
+    "numeric_code": 6885,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr109",
+    "hex_code": "E47237",
+    "name": "Abobora",
+    "numeric_code": 6886,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr110",
+    "hex_code": "EC8430",
+    "name": "Creme de Camarão",
+    "numeric_code": 6887,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr111",
+    "hex_code": "EB882C",
+    "name": "Mini Saia",
+    "numeric_code": 6892,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr112",
+    "hex_code": "F4A045",
+    "name": "Juventude",
+    "numeric_code": 6890,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr113",
+    "hex_code": "F2D1C3",
+    "name": "Novata",
+    "numeric_code": 6610,
+    "rgb_info": null,
+    "reference_number": 117.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr114",
+    "hex_code": "F2B8A7",
+    "name": "Alegria",
+    "numeric_code": 6611,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr115",
+    "hex_code": "E79580",
+    "name": "Sashimi",
+    "numeric_code": 6612,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr116",
+    "hex_code": "D87B6A",
+    "name": "Dia de Festa",
+    "numeric_code": 6613,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr117",
+    "hex_code": "C76356",
+    "name": "Jequitibá Vermelho",
+    "numeric_code": 6614,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Vermelhos"
+  },
+  {
+    "pro_revest_code": "pr118",
+    "hex_code": "B85444",
+    "name": "Pimenta",
+    "numeric_code": 6615,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr119",
+    "hex_code": "B8473D",
+    "name": "Burití",
+    "numeric_code": 7589,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr120",
+    "hex_code": "F0D1C3",
+    "name": "Doce Menina",
+    "numeric_code": 6617,
+    "rgb_info": null,
+    "reference_number": 118.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr121",
+    "hex_code": "F3C1AB",
+    "name": "Salmão",
+    "numeric_code": 6618,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr122",
+    "hex_code": "E49780",
+    "name": "Colméia",
+    "numeric_code": 6619,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr123",
+    "hex_code": "DD7861",
+    "name": "Resplandecer",
+    "numeric_code": 6620,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr124",
+    "hex_code": "C65F47",
+    "name": "Caçador",
+    "numeric_code": 6621,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr125",
+    "hex_code": "B44B34",
+    "name": "Singular",
+    "numeric_code": 6622,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr126",
+    "hex_code": "C04D35",
+    "name": "Hibisco",
+    "numeric_code": 6881,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr127",
+    "hex_code": "F3D0BD",
+    "name": "Pessegueiro",
+    "numeric_code": 6624,
+    "rgb_info": null,
+    "reference_number": 119.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr128",
+    "hex_code": "F2BDA2",
+    "name": "Perfume Aveludado",
+    "numeric_code": 6625,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr129",
+    "hex_code": "E2946F",
+    "name": "Envolver",
+    "numeric_code": 6626,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr130",
+    "hex_code": "D67C56",
+    "name": "Entardecer de Verão",
+    "numeric_code": 6627,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr131",
+    "hex_code": "C4633E",
+    "name": "Fogo de Palha",
+    "numeric_code": 6628,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr132",
+    "hex_code": "B1533C",
+    "name": "Terracota Cativante",
+    "numeric_code": 6629,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr133",
+    "hex_code": "93402F",
+    "name": "Vermelho Colonia",
+    "numeric_code": 7599,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Vermelhos"
+  },
+  {
+    "pro_revest_code": "pr134",
+    "hex_code": "F3D3BF",
+    "name": "Pêssego",
+    "numeric_code": 6631,
+    "rgb_info": null,
+    "reference_number": 120.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr135",
+    "hex_code": "F3C1A3",
+    "name": "Vitamina de Pêssego",
+    "numeric_code": 6632,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr136",
+    "hex_code": "E89D6F",
+    "name": "Mamão Papaia",
+    "numeric_code": 6633,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr137",
+    "hex_code": "D57E52",
+    "name": "Bolo de Laranja",
+    "numeric_code": 6634,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr138",
+    "hex_code": "C56639",
+    "name": "Doce de Laranja",
+    "numeric_code": 6635,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr139",
+    "hex_code": "BB613E",
+    "name": "Laranjeira",
+    "numeric_code": 6636,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr140",
+    "hex_code": "C35530",
+    "name": "Ferrolho",
+    "numeric_code": 6883,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr141",
+    "hex_code": "F4D3B3",
+    "name": "Iogurte de Pêssego",
+    "numeric_code": 6638,
+    "rgb_info": null,
+    "reference_number": 121.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr142",
+    "hex_code": "F4C69F",
+    "name": "Pó de Arroz",
+    "numeric_code": 6639,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr143",
+    "hex_code": "F2B88C",
+    "name": "Bege Ligth",
+    "numeric_code": 9007,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr144",
+    "hex_code": "F2AC78",
+    "name": "Tangerina",
+    "numeric_code": 6640,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr145",
+    "hex_code": "E6955F",
+    "name": "Laranja do Sertão",
+    "numeric_code": 6641,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr146",
+    "hex_code": "CB7841",
+    "name": "Colher de Pau",
+    "numeric_code": 6642,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr147",
+    "hex_code": "C36F3E",
+    "name": "Rua de Barro",
+    "numeric_code": 6643,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr148",
+    "hex_code": "F4D4AF",
+    "name": "Pudim",
+    "numeric_code": 6652,
+    "rgb_info": null,
+    "reference_number": 122.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr149",
+    "hex_code": "F5C894",
+    "name": "Boa Infância",
+    "numeric_code": 6653,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr150",
+    "hex_code": "EFB57A",
+    "name": "Pega Pega",
+    "numeric_code": 6654,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr151",
+    "hex_code": "E69F5F",
+    "name": "Festa da Laranja",
+    "numeric_code": 6655,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr152",
+    "hex_code": "D88B4D",
+    "name": "Nozes",
+    "numeric_code": 6656,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr153",
+    "hex_code": "D28240",
+    "name": "Doce de Leite",
+    "numeric_code": 6657,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr154",
+    "hex_code": "A85E39",
+    "name": "Panela de Barro",
+    "numeric_code": 7703,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr155",
+    "hex_code": "F4D9B1",
+    "name": "Sorrizo Doce",
+    "numeric_code": 6659,
+    "rgb_info": null,
+    "reference_number": 123.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr156",
+    "hex_code": "F5CF9B",
+    "name": "Vitamina de Banana",
+    "numeric_code": 6660,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr157",
+    "hex_code": "F5C78E",
+    "name": "Espumante",
+    "numeric_code": 9008,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr158",
+    "hex_code": "EFB97B",
+    "name": "Doce de Papaia",
+    "numeric_code": 6661,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr159",
+    "hex_code": "EAAA62",
+    "name": "Amanhecer",
+    "numeric_code": 6662,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr160",
+    "hex_code": "DF984E",
+    "name": "Meu Tijolinho",
+    "numeric_code": 6663,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr161",
+    "hex_code": "D28233",
+    "name": "Toque de Verão",
+    "numeric_code": 6664,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr162",
+    "hex_code": "EDD2C0",
+    "name": "Toque Suave",
+    "numeric_code": 6337,
+    "rgb_info": null,
+    "reference_number": 124.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr163",
+    "hex_code": "E4B9A2",
+    "name": "Licor de Pêssego",
+    "numeric_code": 6338,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr164",
+    "hex_code": "D9987C",
+    "name": "Caqui",
+    "numeric_code": 6339,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr165",
+    "hex_code": "CC896C",
+    "name": "Contorno",
+    "numeric_code": 9009,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr166",
+    "hex_code": "C1785C",
+    "name": "Everest",
+    "numeric_code": 6340,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr167",
+    "hex_code": "AD654C",
+    "name": "Estrada de Chão",
+    "numeric_code": 6341,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr168",
+    "hex_code": "994B35",
+    "name": "Cumari",
+    "numeric_code": 6342,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr169",
+    "hex_code": "ECCFBB",
+    "name": "Francesa",
+    "numeric_code": 6344,
+    "rgb_info": null,
+    "reference_number": 125.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr170",
+    "hex_code": "E5B99B",
+    "name": "Areia",
+    "numeric_code": 6345,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr171",
+    "hex_code": "DB9C7B",
+    "name": "Amazona",
+    "numeric_code": 6346,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr172",
+    "hex_code": "C47B5B",
+    "name": "Fragrância de Laranja",
+    "numeric_code": 6347,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr173",
+    "hex_code": "B46848",
+    "name": "Som de Violão",
+    "numeric_code": 6348,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr174",
+    "hex_code": "A2583A",
+    "name": "Cuia",
+    "numeric_code": 6349,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr175",
+    "hex_code": "924E3C",
+    "name": "Argila",
+    "numeric_code": 7598,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr176",
+    "hex_code": "EBCCB3",
+    "name": "Bala Doce",
+    "numeric_code": 6351,
+    "rgb_info": null,
+    "reference_number": 126.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr177",
+    "hex_code": "E0B392",
+    "name": "Damasco",
+    "numeric_code": 6352,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr178",
+    "hex_code": "DBA480",
+    "name": "Pele Bronzeada",
+    "numeric_code": 9010,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr179",
+    "hex_code": "D4966E",
+    "name": "Grão de Areia",
+    "numeric_code": 6353,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr180",
+    "hex_code": "C38058",
+    "name": "Tarde de Pesca",
+    "numeric_code": 6354,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr181",
+    "hex_code": "B46C42",
+    "name": "Moeda de Bronze",
+    "numeric_code": 6355,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr182",
+    "hex_code": "A6613C",
+    "name": "Poço Artesiano",
+    "numeric_code": 6356,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr183",
+    "hex_code": "EDD0B6",
+    "name": "Tarde de Outono",
+    "numeric_code": 6358,
+    "rgb_info": null,
+    "reference_number": 127.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr184",
+    "hex_code": "E8BE9B",
+    "name": "Ipanema",
+    "numeric_code": 6359,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr185",
+    "hex_code": "E3AB7B",
+    "name": "Frisante",
+    "numeric_code": 9011,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr186",
+    "hex_code": "D69969",
+    "name": "Vida no Campo",
+    "numeric_code": 6360,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr187",
+    "hex_code": "CD8C5D",
+    "name": "Pequeno Bosque",
+    "numeric_code": 6361,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr188",
+    "hex_code": "BB7748",
+    "name": "Toca do Tigre",
+    "numeric_code": 6362,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr189",
+    "hex_code": "B06C3E",
+    "name": "Canela",
+    "numeric_code": 6363,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr190",
+    "hex_code": "F3D9BA",
+    "name": "Casa da Vovó",
+    "numeric_code": 6365,
+    "rgb_info": null,
+    "reference_number": 128.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr191",
+    "hex_code": "F0CB97",
+    "name": "Tarde no Interior",
+    "numeric_code": 6366,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr192",
+    "hex_code": "E3AC72",
+    "name": "Cor de Pele",
+    "numeric_code": 6367,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr193",
+    "hex_code": "D7995D",
+    "name": "Patê de Figo",
+    "numeric_code": 6368,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr194",
+    "hex_code": "C6884A",
+    "name": "Muro de Tijolos",
+    "numeric_code": 6369,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr195",
+    "hex_code": "B6743B",
+    "name": "Caminhos Dourados",
+    "numeric_code": 6370,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr196",
+    "hex_code": "B16A37",
+    "name": "Cappuccino",
+    "numeric_code": 7709,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr197",
+    "hex_code": "F2D5B0",
+    "name": "Waffles",
+    "numeric_code": 6372,
+    "rgb_info": null,
+    "reference_number": 129.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr198",
+    "hex_code": "EDC38E",
+    "name": "Praiana",
+    "numeric_code": 6373,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr199",
+    "hex_code": "E8B87F",
+    "name": "Pó de Terra",
+    "numeric_code": 9012,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr200",
+    "hex_code": "E5AE6B",
+    "name": "Mel de Abelha",
+    "numeric_code": 6374,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr201",
+    "hex_code": "D59858",
+    "name": "Pólen",
+    "numeric_code": 6375,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr202",
+    "hex_code": "C78538",
+    "name": "Cera de Abelha",
+    "numeric_code": 6376,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr203",
+    "hex_code": "B67D3C",
+    "name": "Fortuna",
+    "numeric_code": 6377,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr204",
+    "hex_code": "F5DEBB",
+    "name": "Bolo de Fubá",
+    "numeric_code": 6379,
+    "rgb_info": null,
+    "reference_number": 130.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr205",
+    "hex_code": "EDC796",
+    "name": "Pôr do Sol",
+    "numeric_code": 6380,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr206",
+    "hex_code": "EABF86",
+    "name": "Grão de Bico",
+    "numeric_code": 7682,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr207",
+    "hex_code": "DDAC6D",
+    "name": "Refúgio",
+    "numeric_code": 6381,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr208",
+    "hex_code": "D69E59",
+    "name": "Mesa Posta",
+    "numeric_code": 6382,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr209",
+    "hex_code": "CC9249",
+    "name": "Caldo de Pudim",
+    "numeric_code": 6383,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr210",
+    "hex_code": "BA7F38",
+    "name": "Guaraná",
+    "numeric_code": 6384,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr211",
+    "hex_code": "F8AC1D",
+    "name": "Luz Solar",
+    "numeric_code": 6904,
+    "rgb_info": null,
+    "reference_number": 131.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr212",
+    "hex_code": "FDB702",
+    "name": "Raio de Sol",
+    "numeric_code": 6905,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr213",
+    "hex_code": "FDCC4E",
+    "name": "Tarde Ensolarada",
+    "numeric_code": 6902,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr214",
+    "hex_code": "FFC801",
+    "name": "Canário Belga",
+    "numeric_code": 6907,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr215",
+    "hex_code": "FED95D",
+    "name": "Sonho de Verão",
+    "numeric_code": 6909,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr216",
+    "hex_code": "FED340",
+    "name": "Amarelo Ouro",
+    "numeric_code": 6910,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Amarelos"
+  },
+  {
+    "pro_revest_code": "pr217",
+    "hex_code": "FECB01",
+    "name": "Doce de Banana",
+    "numeric_code": 6911,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr218",
+    "hex_code": "F5D6A9",
+    "name": "Redentor",
+    "numeric_code": 6666,
+    "rgb_info": null,
+    "reference_number": 132.0,
+    "category": "Vermelhos"
+  },
+  {
+    "pro_revest_code": "pr219",
+    "hex_code": "F6CD8E",
+    "name": "Inocente",
+    "numeric_code": 6667,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr220",
+    "hex_code": "F4BF77",
+    "name": "Tarde no Paraíso",
+    "numeric_code": 6668,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr221",
+    "hex_code": "EEB76B",
+    "name": "Angar",
+    "numeric_code": 9013,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr222",
+    "hex_code": "EBAD5E",
+    "name": "Favo de Mel",
+    "numeric_code": 6669,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr223",
+    "hex_code": "DF9938",
+    "name": "Girassol",
+    "numeric_code": 6670,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr224",
+    "hex_code": "D88F32",
+    "name": "Flor Dourada",
+    "numeric_code": 6671,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr225",
+    "hex_code": "F5DEAF",
+    "name": "Mingau de Aveia",
+    "numeric_code": 6673,
+    "rgb_info": null,
+    "reference_number": 133.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr226",
+    "hex_code": "F7D391",
+    "name": "Arco Amarelo",
+    "numeric_code": 6674,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Amarelos"
+  },
+  {
+    "pro_revest_code": "pr227",
+    "hex_code": "FBD187",
+    "name": "Minhã de Sol",
+    "numeric_code": 9014,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr228",
+    "hex_code": "FBCB78",
+    "name": "Manteiga",
+    "numeric_code": 6675,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr229",
+    "hex_code": "F7BE5B",
+    "name": "Polenta",
+    "numeric_code": 6676,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr230",
+    "hex_code": "F2AF46",
+    "name": "Cúrcuma",
+    "numeric_code": 6677,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr231",
+    "hex_code": "E39A33",
+    "name": "Litoral",
+    "numeric_code": 6678,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr232",
+    "hex_code": "FBE4B3",
+    "name": "Creme de Fubá",
+    "numeric_code": 9015,
+    "rgb_info": null,
+    "reference_number": 134.0,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr233",
+    "hex_code": "FDDFA0",
+    "name": "Luz Amarela",
+    "numeric_code": 9016,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr234",
+    "hex_code": "FEDF94",
+    "name": "Anel de Ouro",
+    "numeric_code": 9017,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr235",
+    "hex_code": "FBD682",
+    "name": "Mel de Laranjeira",
+    "numeric_code": 9018,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr236",
+    "hex_code": "FBD073",
+    "name": "Suco de Manga",
+    "numeric_code": 9019,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr237",
+    "hex_code": "F4C454",
+    "name": "Aliança",
+    "numeric_code": 9020,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr238",
+    "hex_code": "FFC723",
+    "name": "Amarelo Alegria",
+    "numeric_code": 6903,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Amarelos"
+  },
+  {
+    "pro_revest_code": "pr239",
+    "hex_code": "F5E0B1",
+    "name": "Afeto",
+    "numeric_code": 6680,
+    "rgb_info": null,
+    "reference_number": 135.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr240",
+    "hex_code": "F6DDA3",
+    "name": "Milho na Manteiga",
+    "numeric_code": 6681,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr241",
+    "hex_code": "F6D58F",
+    "name": "Amarelo Doce",
+    "numeric_code": 9021,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Amarelos"
+  },
+  {
+    "pro_revest_code": "pr283",
+    "hex_code": "c5aa85",
+    "name": "Licor de Caju",
+    "numeric_code": 6122,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr351",
+    "hex_code": "D3DFC3",
+    "name": "Pepino",
+    "numeric_code": 6722,
+    "rgb_info": null,
+    "reference_number": 151.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr352",
+    "hex_code": "#BDD0AB",
+    "name": "Verde Singelo",
+    "numeric_code": 6723,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr353",
+    "hex_code": "A9C095",
+    "name": "Arranjo Verde",
+    "numeric_code": 9034,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr354",
+    "hex_code": "#9DB682",
+    "name": "Vaso de Pátina",
+    "numeric_code": 6724,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr355",
+    "hex_code": "#85A16A",
+    "name": "Picles",
+    "numeric_code": 6725,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr356",
+    "hex_code": "#648149",
+    "name": "Palmeira",
+    "numeric_code": 6726,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr357",
+    "hex_code": "#58713F",
+    "name": "Samanbaia",
+    "numeric_code": 6727,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr358",
+    "hex_code": "#CCE2CA",
+    "name": "Doce Verde",
+    "numeric_code": 6736,
+    "rgb_info": null,
+    "reference_number": 152.0,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr359",
+    "hex_code": "#AED2B0",
+    "name": "Kiwi",
+    "numeric_code": 6737,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr360",
+    "hex_code": "#8EC298",
+    "name": "Ráfia",
+    "numeric_code": 6738,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr361",
+    "hex_code": "#78B185",
+    "name": "Esmeralda",
+    "numeric_code": 9035,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr362",
+    "hex_code": "#68A678",
+    "name": "Ilha Verde",
+    "numeric_code": 6739,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr363",
+    "hex_code": "#498555",
+    "name": "Montes Verdes",
+    "numeric_code": 6740,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr364",
+    "hex_code": "#245E36",
+    "name": "Verde Lírio",
+    "numeric_code": 6741,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr365",
+    "hex_code": "#D1E3D2",
+    "name": "Verde Cravo",
+    "numeric_code": 6743,
+    "rgb_info": null,
+    "reference_number": 153.0,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr366",
+    "hex_code": "#B7D7BF",
+    "name": "Folha de Menta",
+    "numeric_code": 6744,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr367",
+    "hex_code": "#9FCDB1",
+    "name": "Bala de Menta",
+    "numeric_code": 9036,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr368",
+    "hex_code": "#8AC1A1",
+    "name": "Abacateiro",
+    "numeric_code": 6745,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr369",
+    "hex_code": "#57AA80",
+    "name": "Suco de Hortelã",
+    "numeric_code": 6746,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr370",
+    "hex_code": "#348A5D",
+    "name": "Verde Floresta",
+    "numeric_code": 6747,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr371",
+    "hex_code": "#016844",
+    "name": "Verde Espinafre",
+    "numeric_code": 6748,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr372",
+    "hex_code": "#E0DDBD",
+    "name": "Verde Aipo",
+    "numeric_code": 6421,
+    "rgb_info": null,
+    "reference_number": 154.0,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr373",
+    "hex_code": "#CBC99D",
+    "name": "Sabedoria",
+    "numeric_code": 6422,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr374",
+    "hex_code": "#BBB98A",
+    "name": "Repolho Chinês",
+    "numeric_code": 9037,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr375",
+    "hex_code": "#AEAC7A",
+    "name": "Azevém",
+    "numeric_code": 6423,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr376",
+    "hex_code": "#95945C",
+    "name": "Um Dólar",
+    "numeric_code": 6424,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr377",
+    "hex_code": "#71713E",
+    "name": "Oliva",
+    "numeric_code": 6425,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr378",
+    "hex_code": "#5F6033",
+    "name": "Verde Militar",
+    "numeric_code": 6426,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr379",
+    "hex_code": "#DBDDBD",
+    "name": "Frescor Irresistível",
+    "numeric_code": 6428,
+    "rgb_info": null,
+    "reference_number": 155.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr380",
+    "hex_code": "#C7CDA8",
+    "name": "Lenço Verde",
+    "numeric_code": 6429,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr381",
+    "hex_code": "#ABB486",
+    "name": "Jardim Verde",
+    "numeric_code": 6430,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr382",
+    "hex_code": "#9BA373",
+    "name": "Abobrinha Italiana",
+    "numeric_code": 9038,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr383",
+    "hex_code": "#88915D",
+    "name": "Verde Bambu",
+    "numeric_code": 6431,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr384",
+    "hex_code": "#6D7645",
+    "name": "Piquenique no Jardim",
+    "numeric_code": 6432,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr385",
+    "hex_code": "#576238",
+    "name": "Mata Verde",
+    "numeric_code": 6433,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr386",
+    "hex_code": "#DAE2CD",
+    "name": "Experiência Verde",
+    "numeric_code": 6435,
+    "rgb_info": null,
+    "reference_number": 156.0,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr387",
+    "hex_code": "#C5D1B2",
+    "name": "Suco de Limão",
+    "numeric_code": 6436,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr388",
+    "hex_code": "#A3B48C",
+    "name": "Verde Encantado",
+    "numeric_code": 6437,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr389",
+    "hex_code": "#8FA277",
+    "name": "Brócolis",
+    "numeric_code": 9039,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr390",
+    "hex_code": "#788D60",
+    "name": "Tempero Verde",
+    "numeric_code": 6438,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr391",
+    "hex_code": "#60724F",
+    "name": "Zona Rural",
+    "numeric_code": 6439,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr392",
+    "hex_code": "#475842",
+    "name": "Oliveiras",
+    "numeric_code": 6440,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr393",
+    "hex_code": "#CFDDC7",
+    "name": "Toque Simples",
+    "numeric_code": 6442,
+    "rgb_info": null,
+    "reference_number": 157.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr394",
+    "hex_code": "#B3CBAA",
+    "name": "Salada Verde",
+    "numeric_code": 6443,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr395",
+    "hex_code": "#8BA97F",
+    "name": "Aconchego",
+    "numeric_code": 6444,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr396",
+    "hex_code": "#75946B",
+    "name": "Verde Encantado",
+    "numeric_code": 9040,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr397",
+    "hex_code": "#5E7F57",
+    "name": "Caminhos do Sul",
+    "numeric_code": 6445,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr398",
+    "hex_code": "#42603C",
+    "name": "Rúcula",
+    "numeric_code": 6446,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr399",
+    "hex_code": "#405840",
+    "name": "Floresta Tropical",
+    "numeric_code": 6447,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr400",
+    "hex_code": "#C8D8C4",
+    "name": "Jóia de Esmeralda",
+    "numeric_code": 6449,
+    "rgb_info": null,
+    "reference_number": 158.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr401",
+    "hex_code": "#ACC2A8",
+    "name": "Verde Singular",
+    "numeric_code": 6450,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr402",
+    "hex_code": "#98B092",
+    "name": "Verde Infantil",
+    "numeric_code": 6451,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr403",
+    "hex_code": "#8EA486",
+    "name": "Lago Verde",
+    "numeric_code": 7742,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr404",
+    "hex_code": "#6C8867",
+    "name": "Mata Nativa",
+    "numeric_code": 6452,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr405",
+    "hex_code": "#537150",
+    "name": "Arco Verde",
+    "numeric_code": 6453,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr406",
+    "hex_code": "#205134",
+    "name": "Amazônia",
+    "numeric_code": 6454,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr407",
+    "hex_code": "#C6D5C9",
+    "name": "Verde Tardio",
+    "numeric_code": 6456,
+    "rgb_info": null,
+    "reference_number": 159.0,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr408",
+    "hex_code": "#AAC2B3",
+    "name": "Agradável",
+    "numeric_code": 6457,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr409",
+    "hex_code": "#91AF9D",
+    "name": "Repousante",
+    "numeric_code": 6458,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr410",
+    "hex_code": "#7D9B89",
+    "name": "Pátina",
+    "numeric_code": 9041,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr411",
+    "hex_code": "#61826C",
+    "name": "Verde Envelhecido",
+    "numeric_code": 6459,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr412",
+    "hex_code": "#4F6A56",
+    "name": "Espinafre",
+    "numeric_code": 6460,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr413",
+    "hex_code": "#3D5541",
+    "name": "Floresta de Pinheiros",
+    "numeric_code": 6461,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr414",
+    "hex_code": "#C4D9CE",
+    "name": "Diversão",
+    "numeric_code": 6463,
+    "rgb_info": null,
+    "reference_number": 160.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr415",
+    "hex_code": "#ACCABC",
+    "name": "Aloe Vera",
+    "numeric_code": 6464,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr416",
+    "hex_code": "#94B5A6",
+    "name": "Eucalipto",
+    "numeric_code": 6465,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr417",
+    "hex_code": "#81A595",
+    "name": "Real Liberdade",
+    "numeric_code": 9042,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr418",
+    "hex_code": "#6B927F",
+    "name": "Verde Eco",
+    "numeric_code": 6466,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr419",
+    "hex_code": "#547867",
+    "name": "Verde Ousado",
+    "numeric_code": 6467,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr420",
+    "hex_code": "#2A4F43",
+    "name": "Jardim Real",
+    "numeric_code": 6468,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr421",
+    "hex_code": "#019D6E",
+    "name": "Verde Alegria",
+    "numeric_code": 6987,
+    "rgb_info": null,
+    "reference_number": 161.0,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr422",
+    "hex_code": "#019187",
+    "name": "Turquesa",
+    "numeric_code": 6941,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr423",
+    "hex_code": "#019196",
+    "name": "Mar Calmo",
+    "numeric_code": 6942,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr424",
+    "hex_code": "#017680",
+    "name": "Alto Mar",
+    "numeric_code": 6943,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr425",
+    "hex_code": "#01B0BB",
+    "name": "Azul Sereia",
+    "numeric_code": 6950,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr426",
+    "hex_code": "#0192C6",
+    "name": "Lagoa Azul",
+    "numeric_code": 6958,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr427",
+    "hex_code": "#015F97",
+    "name": "Azul Profundo",
+    "numeric_code": 6965,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr428",
+    "hex_code": "#C0E3DA",
+    "name": "Ilha do Romance",
+    "numeric_code": 6750,
+    "rgb_info": null,
+    "reference_number": 162.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr429",
+    "hex_code": "#A1D4C8",
+    "name": "Maresia",
+    "numeric_code": 6751,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr430",
+    "hex_code": "#89C6B7",
+    "name": "Pedra do Mar",
+    "numeric_code": 9043,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr431",
+    "hex_code": "#70BAA7",
+    "name": "Paraiso Tropical",
+    "numeric_code": 6752,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr432",
+    "hex_code": "#53A38F",
+    "name": "Jardim Sublime",
+    "numeric_code": 6753,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr433",
+    "hex_code": "#368976",
+    "name": "Caminho do Amor",
+    "numeric_code": 6754,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr434",
+    "hex_code": "#016C4F",
+    "name": "Verde Parreira",
+    "numeric_code": 6755,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr435",
+    "hex_code": "#C1E6DF",
+    "name": "Equilíbrio",
+    "numeric_code": 6757,
+    "rgb_info": null,
+    "reference_number": 163.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr436",
+    "hex_code": "#A1D5CB",
+    "name": "Fonte de Cristal",
+    "numeric_code": 6758,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr437",
+    "hex_code": "#8AC5BA",
+    "name": "Joia Rara",
+    "numeric_code": 9044,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr438",
+    "hex_code": "#75B9AE",
+    "name": "Fonte Termal",
+    "numeric_code": 6759,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr439",
+    "hex_code": "#61A89D",
+    "name": "Barragem",
+    "numeric_code": 6760,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr440",
+    "hex_code": "#3B8C80",
+    "name": "Ilha Encantada",
+    "numeric_code": 6761,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr441",
+    "hex_code": "#016D60",
+    "name": "Rei dos Mares",
+    "numeric_code": 6762,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr442",
+    "hex_code": "#C2E5E5",
+    "name": "Natação",
+    "numeric_code": 6764,
+    "rgb_info": null,
+    "reference_number": 164.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr443",
+    "hex_code": "#A7DCDC",
+    "name": "Azul Piscina",
+    "numeric_code": 6765,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr444",
+    "hex_code": "#92D0D0",
+    "name": "Beira de Praia",
+    "numeric_code": 9045,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr445",
+    "hex_code": "#6EC2C4",
+    "name": "Boneca Azul",
+    "numeric_code": 6766,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr446",
+    "hex_code": "#3AA9AE",
+    "name": "Marujo",
+    "numeric_code": 6767,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr447",
+    "hex_code": "#01858B",
+    "name": "Corrente Marítima",
+    "numeric_code": 6768,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr448",
+    "hex_code": "#017478",
+    "name": "Fundo do Mar",
+    "numeric_code": 6769,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr449",
+    "hex_code": "#C2E0E3",
+    "name": "Manhã Azul",
+    "numeric_code": 6771,
+    "rgb_info": null,
+    "reference_number": 165.0,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr450",
+    "hex_code": "#A6D0D6",
+    "name": "Ilhota",
+    "numeric_code": 6772,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr451",
+    "hex_code": "#97CBD2",
+    "name": "Águas Cristalinas",
+    "numeric_code": 9046,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr452",
+    "hex_code": "#7DC1CB",
+    "name": "Azul Bebê",
+    "numeric_code": 6773,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr453",
+    "hex_code": "#4DA6B2",
+    "name": "Água Doce",
+    "numeric_code": 6774,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr454",
+    "hex_code": "#08808E",
+    "name": "Litoral Sul",
+    "numeric_code": 6775,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr455",
+    "hex_code": "#01717E",
+    "name": "Azul Imperial",
+    "numeric_code": 6776,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr456",
+    "hex_code": "#C6E3E8",
+    "name": "Delicada",
+    "numeric_code": 6778,
+    "rgb_info": null,
+    "reference_number": 166.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr457",
+    "hex_code": "#A6D4DE",
+    "name": "Destemido",
+    "numeric_code": 6779,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr458",
+    "hex_code": "#8BC4D1",
+    "name": "Calmaria",
+    "numeric_code": 9047,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr459",
+    "hex_code": "#71B8C7",
+    "name": "Férias no Litoral",
+    "numeric_code": 6780,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr460",
+    "hex_code": "#34A3B6",
+    "name": "Maldivas",
+    "numeric_code": 6781,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr461",
+    "hex_code": "#018498",
+    "name": "Joia Azul",
+    "numeric_code": 6782,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr462",
+    "hex_code": "#016E85",
+    "name": "Costa Marítima",
+    "numeric_code": 6783,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr463",
+    "hex_code": "#B4E0E7",
+    "name": "Azul Sereno",
+    "numeric_code": 6785,
+    "rgb_info": null,
+    "reference_number": 167.0,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr464",
+    "hex_code": "#8FD0DD",
+    "name": "Nuvem Azul",
+    "numeric_code": 6786,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr465",
+    "hex_code": "#73C0D2",
+    "name": "Ondas do Mar",
+    "numeric_code": 9048,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr466",
+    "hex_code": "#56B5CA",
+    "name": "Dia de Praia",
+    "numeric_code": 6787,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr467",
+    "hex_code": "#01A0B8",
+    "name": "Ilha Paradizíaca",
+    "numeric_code": 6788,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr468",
+    "hex_code": "#01819E",
+    "name": "Clube Náutico",
+    "numeric_code": 6789,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr469",
+    "hex_code": "#016081",
+    "name": "Mar Atlântico",
+    "numeric_code": 6790,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr470",
+    "hex_code": "#B7DFE8",
+    "name": "Nevasca Azul",
+    "numeric_code": 6792,
+    "rgb_info": null,
+    "reference_number": 168.0,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr471",
+    "hex_code": "#A2D5E7",
+    "name": "Liberdade",
+    "numeric_code": 6793,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr472",
+    "hex_code": "#89C6DF",
+    "name": "Quarto Infantil",
+    "numeric_code": 9049,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr473",
+    "hex_code": "#5DB3D4",
+    "name": "Céu Azul",
+    "numeric_code": 6794,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr474",
+    "hex_code": "#289EC4",
+    "name": "Pescaria",
+    "numeric_code": 6795,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr475",
+    "hex_code": "#017CA7",
+    "name": "Azul França",
+    "numeric_code": 6796,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr476",
+    "hex_code": "#015D87",
+    "name": "Azul Realeza",
+    "numeric_code": 6797,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr477",
+    "hex_code": "#BFD2C9",
+    "name": "Poço do Desejo",
+    "numeric_code": 6470,
+    "rgb_info": null,
+    "reference_number": 169.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr478",
+    "hex_code": "#A8C1B7",
+    "name": "Fonte da Juventude",
+    "numeric_code": 6471,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr479",
+    "hex_code": "#94B2A6",
+    "name": "Vintage",
+    "numeric_code": 9050,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr480",
+    "hex_code": "#7EA298",
+    "name": "Elegante",
+    "numeric_code": 6472,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr481",
+    "hex_code": "#5F887D",
+    "name": "Filtro dos Sonhos",
+    "numeric_code": 6473,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr482",
+    "hex_code": "#476F65",
+    "name": "Mar Agitado",
+    "numeric_code": 6474,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr483",
+    "hex_code": "#124A42",
+    "name": "Verdes Vales",
+    "numeric_code": 6475,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr484",
+    "hex_code": "#C3D7D3",
+    "name": "Mar Verde",
+    "numeric_code": 6477,
+    "rgb_info": null,
+    "reference_number": 170.0,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr485",
+    "hex_code": "#B4CCC9",
+    "name": "Aquático",
+    "numeric_code": 6478,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr486",
+    "hex_code": "#A3C0BD",
+    "name": "Água Verde",
+    "numeric_code": 9051,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr487",
+    "hex_code": "#8CAEAB",
+    "name": "Chuvisco",
+    "numeric_code": 6479,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr488",
+    "hex_code": "#518682",
+    "name": "Lagoa Verde",
+    "numeric_code": 6480,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr489",
+    "hex_code": "#2E6864",
+    "name": "Algas",
+    "numeric_code": 6481,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr490",
+    "hex_code": "#01554F",
+    "name": "Cabo Verde",
+    "numeric_code": 6482,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr491",
+    "hex_code": "#BEDBD8",
+    "name": "Tarde Alegre",
+    "numeric_code": 6484,
+    "rgb_info": null,
+    "reference_number": 171.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr492",
+    "hex_code": "#9EC6C6",
+    "name": "Gotas de Alegria",
+    "numeric_code": 6485,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr493",
+    "hex_code": "#90BDBD",
+    "name": "Felicidade Azul",
+    "numeric_code": 9052,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr494",
+    "hex_code": "#7BB1B2",
+    "name": "Mergulho na Piscina",
+    "numeric_code": 6486,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr495",
+    "hex_code": "#5C9598",
+    "name": "Vestido de Gala",
+    "numeric_code": 6487,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr496",
+    "hex_code": "#3C797D",
+    "name": "Floresta Encantada",
+    "numeric_code": 6488,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr497",
+    "hex_code": "#016367",
+    "name": "Prancha de Surf",
+    "numeric_code": 6489,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr498",
+    "hex_code": "#C7DFE0",
+    "name": "Ar Puro",
+    "numeric_code": 6491,
+    "rgb_info": null,
+    "reference_number": 172.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr499",
+    "hex_code": "#B0D2D6",
+    "name": "Corrente de Ar",
+    "numeric_code": 6492,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr500",
+    "hex_code": "#9FC5CC",
+    "name": "Vestido Azul",
+    "numeric_code": 9053,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr501",
+    "hex_code": "#84B4BE",
+    "name": "Netuno",
+    "numeric_code": 6493,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr502",
+    "hex_code": "#5B96A2",
+    "name": "Caribe",
+    "numeric_code": 6494,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr503",
+    "hex_code": "#217786",
+    "name": "Perola Azul",
+    "numeric_code": 6495,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr504",
+    "hex_code": "#015A6B",
+    "name": "Cântico",
+    "numeric_code": 6496,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr505",
+    "hex_code": "#C7D8DB",
+    "name": "Topázio",
+    "numeric_code": 9054,
+    "rgb_info": null,
+    "reference_number": 173.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr506",
+    "hex_code": "#AFC7CD",
+    "name": "Lenço Azul",
+    "numeric_code": 9055,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr507",
+    "hex_code": "#9FBBC3",
+    "name": "Espuma do Mar",
+    "numeric_code": 9056,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr508",
+    "hex_code": "#88ABB4",
+    "name": "Azul Confiante",
+    "numeric_code": 9057,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr509",
+    "hex_code": "#68909D",
+    "name": "Formal",
+    "numeric_code": 9058,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr510",
+    "hex_code": "#427584",
+    "name": "Estrela Azul",
+    "numeric_code": 9059,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr511",
+    "hex_code": "#175A6C",
+    "name": "Céu Estrelado",
+    "numeric_code": 9060,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr512",
+    "hex_code": "#C5DCE0",
+    "name": "Beira Mar",
+    "numeric_code": 6498,
+    "rgb_info": null,
+    "reference_number": 174.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr513",
+    "hex_code": "#ADCCD3",
+    "name": "Riacho Alegre",
+    "numeric_code": 6499,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr514",
+    "hex_code": "#9BBFC9",
+    "name": "Convicto",
+    "numeric_code": 9061,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr515",
+    "hex_code": "#83AFBC",
+    "name": "Sinfonia",
+    "numeric_code": 6500,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr516",
+    "hex_code": "#5B92A2",
+    "name": "Azul Sereno",
+    "numeric_code": 6501,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr517",
+    "hex_code": "#2F778B",
+    "name": "Céu Profundo",
+    "numeric_code": 6502,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr518",
+    "hex_code": "#015D75",
+    "name": "Azul Oceânico",
+    "numeric_code": 6503,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr519",
+    "hex_code": "#C2DAE0",
+    "name": "Azul Cristalino",
+    "numeric_code": 6505,
+    "rgb_info": null,
+    "reference_number": 175.0,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr520",
+    "hex_code": "#A9C9D7",
+    "name": "Azul Sublime",
+    "numeric_code": 6506,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr521",
+    "hex_code": "#85B0C4",
+    "name": "Azul Neblina",
+    "numeric_code": 6507,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr522",
+    "hex_code": "#6F9DB3",
+    "name": "Azul Hidrocor",
+    "numeric_code": 9062,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr523",
+    "hex_code": "#5389A1",
+    "name": "Azul Jeans",
+    "numeric_code": 6508,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr524",
+    "hex_code": "#22657F",
+    "name": "Casal",
+    "numeric_code": 6509,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr525",
+    "hex_code": "#01455E",
+    "name": "Azul Denin",
+    "numeric_code": 6510,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr526",
+    "hex_code": "#016EA7",
+    "name": "Azul Cobalto",
+    "numeric_code": 6959,
+    "rgb_info": null,
+    "reference_number": 176.0,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr527",
+    "hex_code": "#015086",
+    "name": "Azul Crepúsculo",
+    "numeric_code": 6966,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr528",
+    "hex_code": "#225288",
+    "name": "Azul Noturno",
+    "numeric_code": 6967,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr529",
+    "hex_code": "#3C4C80",
+    "name": "Lavanda",
+    "numeric_code": 6971,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr530",
+    "hex_code": "#514C7E",
+    "name": "Vaso de Violeta",
+    "numeric_code": 6983,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr531",
+    "hex_code": "#665385",
+    "name": "Amestista",
+    "numeric_code": 6982,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr532",
+    "hex_code": "#795484",
+    "name": "Ameixa",
+    "numeric_code": 6981,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr533",
+    "hex_code": "#C3DFE8",
+    "name": "Céu Claro",
+    "numeric_code": 6799,
+    "rgb_info": null,
+    "reference_number": 177.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr534",
+    "hex_code": "#B0D6E6",
+    "name": "Azul Gelo",
+    "numeric_code": 6800,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr535",
+    "hex_code": "#9BC8DE",
+    "name": "Serenidade Celeste",
+    "numeric_code": 9063,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr536",
+    "hex_code": "#7DB5D3",
+    "name": "Onda Celeste",
+    "numeric_code": 6801,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr537",
+    "hex_code": "#5A9EC0",
+    "name": "Horizonte",
+    "numeric_code": 6802,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr538",
+    "hex_code": "#2377A2",
+    "name": "Oceano Azul",
+    "numeric_code": 6803,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr539",
+    "hex_code": "#094C73",
+    "name": "Profundo",
+    "numeric_code": 6804,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr540",
+    "hex_code": "#CBD8E1",
+    "name": "Cristal Azul",
+    "numeric_code": 6526,
+    "rgb_info": null,
+    "reference_number": 178.0,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr541",
+    "hex_code": "#B2C8D8",
+    "name": "Brisa Celestial",
+    "numeric_code": 6527,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr542",
+    "hex_code": "#8EA9C2",
+    "name": "Azul Seda",
+    "numeric_code": 6528,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr543",
+    "hex_code": "#7C9AB5",
+    "name": "Azul Ardósia",
+    "numeric_code": 9064,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr544",
+    "hex_code": "#6B8CA9",
+    "name": "Céu de Outono",
+    "numeric_code": 6529,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr545",
+    "hex_code": "#4C6B8A",
+    "name": "Enigma Azul",
+    "numeric_code": 6530,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr546",
+    "hex_code": "#284A70",
+    "name": "Índigo",
+    "numeric_code": 6531,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr547",
+    "hex_code": "#CCDBE5",
+    "name": "Susurro da Brisa",
+    "numeric_code": 6806,
+    "rgb_info": null,
+    "reference_number": 179.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr548",
+    "hex_code": "#B8CDDD",
+    "name": "Nuvem de Sonho",
+    "numeric_code": 6807,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr549",
+    "hex_code": "#97B3D0",
+    "name": "Lágrima de Sereia",
+    "numeric_code": 6808,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr550",
+    "hex_code": "#7498BE",
+    "name": "Serenata Azul",
+    "numeric_code": 6809,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr551",
+    "hex_code": "#6487B0",
+    "name": "Céu Noturno",
+    "numeric_code": 9065,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr552",
+    "hex_code": "#4E739F",
+    "name": "Sussurro",
+    "numeric_code": 6810,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr553",
+    "hex_code": "#164576",
+    "name": "Mergulho Noturno",
+    "numeric_code": 6811,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr554",
+    "hex_code": "#D8DDE6",
+    "name": "Seda Gélida",
+    "numeric_code": 6813,
+    "rgb_info": null,
+    "reference_number": 180.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr555",
+    "hex_code": "#C7D1E2",
+    "name": "Névoa de Algodão",
+    "numeric_code": 6814,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr556",
+    "hex_code": "#BBC5DE",
+    "name": "Elegância Celestial",
+    "numeric_code": 9066,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr557",
+    "hex_code": "#A7B2D4",
+    "name": "Aurora Azul",
+    "numeric_code": 6815,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr558",
+    "hex_code": "#8B98C4",
+    "name": "Suave Mistério",
+    "numeric_code": 6816,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr559",
+    "hex_code": "#6572A5",
+    "name": "Azul Sereno",
+    "numeric_code": 6817,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr560",
+    "hex_code": "#3E4371",
+    "name": "Anoitecer Profundo",
+    "numeric_code": 6818,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr561",
+    "hex_code": "#DFD9E4",
+    "name": "Suave Violeta",
+    "numeric_code": 6820,
+    "rgb_info": null,
+    "reference_number": 181.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr562",
+    "hex_code": "#D1CBDF",
+    "name": "Lavanda Gélida",
+    "numeric_code": 6821,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr563",
+    "hex_code": "#BDB4DA",
+    "name": "Pérola Suave",
+    "numeric_code": 6822,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr564",
+    "hex_code": "#AFA5C7",
+    "name": "Bruma Ametista",
+    "numeric_code": 9067,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr565",
+    "hex_code": "#968DB8",
+    "name": "Violeta Encantada",
+    "numeric_code": 6823,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr566",
+    "hex_code": "#716998",
+    "name": "Essência do Sucesso",
+    "numeric_code": 6824,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr567",
+    "hex_code": "#4D426E",
+    "name": "Doce Desejo",
+    "numeric_code": 6825,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr568",
+    "hex_code": "#DFDCE5",
+    "name": "Sereno Pálido",
+    "numeric_code": 6827,
+    "rgb_info": null,
+    "reference_number": 182.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr569",
+    "hex_code": "#D2C8DD",
+    "name": "Lua de Inverno",
+    "numeric_code": 6828,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr570",
+    "hex_code": "#C0AFD0",
+    "name": "Ameixa Suave",
+    "numeric_code": 6829,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr571",
+    "hex_code": "#B3A1C6",
+    "name": "Neblina Ametista",
+    "numeric_code": 9068,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr572",
+    "hex_code": "#A18AB7",
+    "name": "Pausa no Tempo",
+    "numeric_code": 6830,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr573",
+    "hex_code": "#7E6596",
+    "name": "Joia Lilás",
+    "numeric_code": 6831,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr574",
+    "hex_code": "#624977",
+    "name": "Mistério",
+    "numeric_code": 6832,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr575",
+    "hex_code": "#E5DBE5",
+    "name": "Lantejoula",
+    "numeric_code": 6834,
+    "rgb_info": null,
+    "reference_number": 183.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr576",
+    "hex_code": "#DAC7DA",
+    "name": "Pétala Delicada",
+    "numeric_code": 6835,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr577",
+    "hex_code": "#C2A4C2",
+    "name": "Romance Lilás",
+    "numeric_code": 6836,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr578",
+    "hex_code": "#A785A7",
+    "name": "Baronesa",
+    "numeric_code": 6837,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr579",
+    "hex_code": "#937496",
+    "name": "Veludo",
+    "numeric_code": 9069,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr580",
+    "hex_code": "#7C5A7E",
+    "name": "Sussurro de Ametista",
+    "numeric_code": 6838,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr581",
+    "hex_code": "#5D395F",
+    "name": "Vinho com Canela",
+    "numeric_code": 6839,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr582",
+    "hex_code": "#C5D8DE",
+    "name": "Sopro Celeste",
+    "numeric_code": 6512,
+    "rgb_info": null,
+    "reference_number": 184.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr583",
+    "hex_code": "#B3C9D3",
+    "name": "Sublime",
+    "numeric_code": 6513,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr584",
+    "hex_code": "#97B4C3",
+    "name": "Azul Descanso",
+    "numeric_code": 6514,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr585",
+    "hex_code": "#83A2B4",
+    "name": "Reflexo",
+    "numeric_code": 9070,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr586",
+    "hex_code": "#6A8EA1",
+    "name": "Azul Serenity",
+    "numeric_code": 6515,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr587",
+    "hex_code": "#43718B",
+    "name": "Banho de Chuva",
+    "numeric_code": 6516,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr588",
+    "hex_code": "#215772",
+    "name": "Velejar",
+    "numeric_code": 6517,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr589",
+    "hex_code": "#CED9DD",
+    "name": "Azul Hortênsia",
+    "numeric_code": 6519,
+    "rgb_info": null,
+    "reference_number": 185.0,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr590",
+    "hex_code": "#B2C7D3",
+    "name": "Céu de Primavera",
+    "numeric_code": 6520,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr591",
+    "hex_code": "#8BA7BB",
+    "name": "Sonhador",
+    "numeric_code": 6521,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr592",
+    "hex_code": "#7B99B0",
+    "name": "Azul Nostalgia",
+    "numeric_code": 9071,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr593",
+    "hex_code": "#6A8AA4",
+    "name": "Anjo da Manhã",
+    "numeric_code": 6522,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr594",
+    "hex_code": "#506B84",
+    "name": "Dama Azul",
+    "numeric_code": 6523,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr595",
+    "hex_code": "#25476A",
+    "name": "Tempestade",
+    "numeric_code": 6524,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr596",
+    "hex_code": "#CBD5DB",
+    "name": "Maré Baixa",
+    "numeric_code": 6533,
+    "rgb_info": null,
+    "reference_number": 186.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr597",
+    "hex_code": "#BBC7D2",
+    "name": "Céu de Porcelana",
+    "numeric_code": 6534,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr598",
+    "hex_code": "#99A7B8",
+    "name": "Seda Azul",
+    "numeric_code": 6535,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr599",
+    "hex_code": "#8595AA",
+    "name": "Estrela Cadente",
+    "numeric_code": 9072,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr600",
+    "hex_code": "#6C7F9A",
+    "name": "Névoa da Montanha",
+    "numeric_code": 6536,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr601",
+    "hex_code": "#516582",
+    "name": "Segredo do Mar",
+    "numeric_code": 6537,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Vermelhos"
+  },
+  {
+    "pro_revest_code": "pr602",
+    "hex_code": "#3B496D",
+    "name": "Azul Prússia",
+    "numeric_code": 6538,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr603",
+    "hex_code": "#D6D9DE",
+    "name": "Suspiro",
+    "numeric_code": 6540,
+    "rgb_info": null,
+    "reference_number": 187.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr604",
+    "hex_code": "#BDC3CD",
+    "name": "Azul Pastel",
+    "numeric_code": 6541,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr605",
+    "hex_code": "#99A0B2",
+    "name": "Jeans",
+    "numeric_code": 6542,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr606",
+    "hex_code": "#8990A3",
+    "name": "Despertar Noturno",
+    "numeric_code": 9073,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr607",
+    "hex_code": "#757C91",
+    "name": "Raven",
+    "numeric_code": 6543,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr608",
+    "hex_code": "#5D657B",
+    "name": "Cometa",
+    "numeric_code": 6544,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr609",
+    "hex_code": "#3B3C5A",
+    "name": "Roxo Soberano",
+    "numeric_code": 6545,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr610",
+    "hex_code": "#DAD6DB",
+    "name": "Zen",
+    "numeric_code": 6547,
+    "rgb_info": null,
+    "reference_number": 188.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr611",
+    "hex_code": "#C5C0C9",
+    "name": "Uva Roxa",
+    "numeric_code": 6548,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr612",
+    "hex_code": "#A29BAA",
+    "name": "Suco de Uva",
+    "numeric_code": 6549,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr613",
+    "hex_code": "#908A9B",
+    "name": "Cacho de Uva",
+    "numeric_code": 9074,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr614",
+    "hex_code": "#7E778E",
+    "name": "Roxo Secreto",
+    "numeric_code": 6550,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr615",
+    "hex_code": "#645E77",
+    "name": "Purpura",
+    "numeric_code": 6551,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr616",
+    "hex_code": "#3E385A",
+    "name": "Aroma",
+    "numeric_code": 6552,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr617",
+    "hex_code": "#E0DADF",
+    "name": "Nuvem",
+    "numeric_code": 6554,
+    "rgb_info": null,
+    "reference_number": 189.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr618",
+    "hex_code": "#D1C6D2",
+    "name": "Perfume de Moça",
+    "numeric_code": 6555,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr619",
+    "hex_code": "#B0A3B6",
+    "name": "Flor Lilás",
+    "numeric_code": 6556,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr620",
+    "hex_code": "#9A8CA2",
+    "name": "Ramalhete",
+    "numeric_code": 9075,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr621",
+    "hex_code": "#7A6B85",
+    "name": "Rum",
+    "numeric_code": 6557,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr622",
+    "hex_code": "#675A75",
+    "name": "Roxo",
+    "numeric_code": 6558,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr623",
+    "hex_code": "#443757",
+    "name": "Cascalho",
+    "numeric_code": 6559,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr624",
+    "hex_code": "#DBCFD4",
+    "name": "Ostra Roxa",
+    "numeric_code": 6281,
+    "rgb_info": null,
+    "reference_number": 190.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr625",
+    "hex_code": "#CBB8C0",
+    "name": "Semente de Algodão",
+    "numeric_code": 6282,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr626",
+    "hex_code": "#AA8E9A",
+    "name": "Opera",
+    "numeric_code": 6283,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr627",
+    "hex_code": "#9B7E8B",
+    "name": "Final Feliz",
+    "numeric_code": 9076,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr628",
+    "hex_code": "#8B6878",
+    "name": "Ameixa Sofisticada",
+    "numeric_code": 6284,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr629",
+    "hex_code": "#7E5A6D",
+    "name": "Uvas do Sul",
+    "numeric_code": 6285,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr630",
+    "hex_code": "#5F3F54",
+    "name": "Vinho Bordô",
+    "numeric_code": 6286,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr631",
+    "hex_code": "#D6C2BE",
+    "name": "Flare Rosa",
+    "numeric_code": 6022,
+    "rgb_info": null,
+    "reference_number": 191.0,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr632",
+    "hex_code": "#C9B0AB",
+    "name": "Nobel",
+    "numeric_code": 6023,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr633",
+    "hex_code": "#B89D9A",
+    "name": "Alvorecer",
+    "numeric_code": 6024,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr634",
+    "hex_code": "#A38887",
+    "name": "Nude Chique",
+    "numeric_code": 9077,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr635",
+    "hex_code": "#907676",
+    "name": "Socialite",
+    "numeric_code": 6025,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr636",
+    "hex_code": "#76595D",
+    "name": "Final Feliz",
+    "numeric_code": 6026,
+    "rgb_info": "RGB 118/89/93",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr637",
+    "hex_code": "#5F3D3F",
+    "name": "Malva Velho",
+    "numeric_code": 6027,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr638",
+    "hex_code": "#D7C8C2",
+    "name": "Trufa Branca",
+    "numeric_code": 6029,
+    "rgb_info": "rgb 215/200/194",
+    "reference_number": 192.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr639",
+    "hex_code": "#C3B1AC",
+    "name": "Artista Elegante",
+    "numeric_code": 6030,
+    "rgb_info": "RGB 195/177/172",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr640",
+    "hex_code": "#B6A09A",
+    "name": "Cogumelo",
+    "numeric_code": 6031,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr641",
+    "hex_code": "#A08882",
+    "name": "Realeza",
+    "numeric_code": 9078,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr642",
+    "hex_code": "#8C706A",
+    "name": "Duna de Areia",
+    "numeric_code": 6032,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr643",
+    "hex_code": "#7A5F5A",
+    "name": "Café Romano",
+    "numeric_code": 6033,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr644",
+    "hex_code": "#5A3532",
+    "name": "Congo",
+    "numeric_code": 6034,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr645",
+    "hex_code": "#D6C8C0",
+    "name": "Flare ",
+    "numeric_code": 6043,
+    "rgb_info": null,
+    "reference_number": 193.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr646",
+    "hex_code": "#C6B3A9",
+    "name": "Seda",
+    "numeric_code": 6044,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr647",
+    "hex_code": "#B8A196",
+    "name": "Martini ",
+    "numeric_code": 6045,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr648",
+    "hex_code": "#A2877D",
+    "name": "Castanha",
+    "numeric_code": 9079,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr649",
+    "hex_code": "#947569",
+    "name": "Marron Doce",
+    "numeric_code": 6046,
+    "rgb_info": "RGB 148/117/105",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr650",
+    "hex_code": "#806257",
+    "name": "Chocolate Quente",
+    "numeric_code": 6047,
+    "rgb_info": "RGB 128/98/87",
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr651",
+    "hex_code": "#5A382D",
+    "name": "Pinhão Cozido",
+    "numeric_code": 6048,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr652",
+    "hex_code": "#DBC7BD",
+    "name": "Véu de Abalone",
+    "numeric_code": 6050,
+    "rgb_info": "RGB 219/199/189",
+    "reference_number": 194.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr653",
+    "hex_code": "#CFB4A8",
+    "name": "Corais",
+    "numeric_code": 6051,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr654",
+    "hex_code": "#C3A497",
+    "name": "Caminhos de Areia",
+    "numeric_code": 6052,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr655",
+    "hex_code": "#A8857A",
+    "name": "Café Doce",
+    "numeric_code": 9080,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr656",
+    "hex_code": "#9C6E63",
+    "name": "Castanho Escuro",
+    "numeric_code": 6053,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr657",
+    "hex_code": "#85594F",
+    "name": "Vaso de Argila",
+    "numeric_code": 6054,
+    "rgb_info": "RGB 133/89/79",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr658",
+    "hex_code": "#5D3831",
+    "name": "Ganache",
+    "numeric_code": 6055,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr659",
+    "hex_code": "#DECABD",
+    "name": "Leite Maltado",
+    "numeric_code": 6057,
+    "rgb_info": "RGB 222,202,189",
+    "reference_number": 195.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr660",
+    "hex_code": "#D1B7A8",
+    "name": "Estrada de Areia",
+    "numeric_code": 6058,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr661",
+    "hex_code": "#C1A392",
+    "name": "Lua de Mel",
+    "numeric_code": 6059,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr662",
+    "hex_code": "#AE8E7E",
+    "name": "Deserto",
+    "numeric_code": 9081,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr663",
+    "hex_code": "#9D7868",
+    "name": "Marrom Suave",
+    "numeric_code": 6060,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr664",
+    "hex_code": "#896656",
+    "name": "Barril de Carvalho",
+    "numeric_code": 6061,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr665",
+    "hex_code": "#694336",
+    "name": "Doce de Chocolate",
+    "numeric_code": 6062,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr666",
+    "hex_code": "#D9CDC3",
+    "name": "Bege Suave",
+    "numeric_code": 6064,
+    "rgb_info": null,
+    "reference_number": 196.0,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr667",
+    "hex_code": "#CBB9AB",
+    "name": "Bege Genuíno",
+    "numeric_code": 6065,
+    "rgb_info": "RGB 203/185/171",
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr668",
+    "hex_code": "#BBA595",
+    "name": "Castelo de Areia",
+    "numeric_code": 6066,
+    "rgb_info": "RGB 187/165/149",
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr669",
+    "hex_code": "#A58C7B",
+    "name": "Chocolate",
+    "numeric_code": 9082,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr670",
+    "hex_code": "#967A6A",
+    "name": "Sorvete de Café",
+    "numeric_code": 6067,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr671",
+    "hex_code": "#715243",
+    "name": "Marrom Tabaco",
+    "numeric_code": 6068,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr672",
+    "hex_code": "#4F3426",
+    "name": "Café Noir",
+    "numeric_code": 6069,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr673",
+    "hex_code": "#D6C7B9",
+    "name": "Simplicidade",
+    "numeric_code": 6085,
+    "rgb_info": null,
+    "reference_number": 197.0,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr674",
+    "hex_code": "#C5B1A2",
+    "name": "Pedra de Areia",
+    "numeric_code": 6086,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr675",
+    "hex_code": "#B59F8F",
+    "name": "Formosa",
+    "numeric_code": 6087,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr676",
+    "hex_code": "#9C8373",
+    "name": "Sucesso",
+    "numeric_code": 9083,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr677",
+    "hex_code": "#8E725F",
+    "name": "Doce de Nozes",
+    "numeric_code": 6088,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr678",
+    "hex_code": "#785B47",
+    "name": "Chocotino",
+    "numeric_code": 6089,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr679",
+    "hex_code": "#634533",
+    "name": "Avelâ",
+    "numeric_code": 6090,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr680",
+    "hex_code": "#D3C8BD",
+    "name": "Seda Bege",
+    "numeric_code": 6078,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr681",
+    "hex_code": "#C2B4A7",
+    "name": "Toque Sutil",
+    "numeric_code": 6079,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr682",
+    "hex_code": "#B5A597",
+    "name": "Tom de Bege",
+    "numeric_code": 6080,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr683",
+    "hex_code": "#A08E7E",
+    "name": "Sandrift",
+    "numeric_code": 9084,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr684",
+    "hex_code": "#907865",
+    "name": "Sombra",
+    "numeric_code": 6081,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr685",
+    "hex_code": "#7A6455",
+    "name": "Grão de Café",
+    "numeric_code": 6082,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr686",
+    "hex_code": "#5F4B3F",
+    "name": "Café com Chocolate",
+    "numeric_code": 6083,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr687",
+    "hex_code": "#D5C7BA",
+    "name": "Âmbar Suave",
+    "numeric_code": 9085,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr688",
+    "hex_code": "#C6B5A7",
+    "name": "Trufa",
+    "numeric_code": 9086,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr689",
+    "hex_code": "#B9A796",
+    "name": "Bege Escuro",
+    "numeric_code": 9087,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr690",
+    "hex_code": "#A58F7B",
+    "name": "Tempestade de Areia",
+    "numeric_code": 9088,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr691",
+    "hex_code": "#917864",
+    "name": "Corino",
+    "numeric_code": 9089,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr692",
+    "hex_code": "#785F4C",
+    "name": "Café Francês",
+    "numeric_code": 9090,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr693",
+    "hex_code": "#604C3D",
+    "name": "Extra Forte",
+    "numeric_code": 9091,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr694",
+    "hex_code": "#DAC8B8",
+    "name": "Bala de Café",
+    "numeric_code": 6092,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr695",
+    "hex_code": "#CAB3A0",
+    "name": "Bege Familiar",
+    "numeric_code": 6093,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr696",
+    "hex_code": "#BFA38D",
+    "name": "Areia Rosada",
+    "numeric_code": 6094,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr697",
+    "hex_code": "#A3846C",
+    "name": "Café do Porto",
+    "numeric_code": 9092,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr698",
+    "hex_code": "#957258",
+    "name": "Mocha",
+    "numeric_code": 6095,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr699",
+    "hex_code": "#815D40",
+    "name": "Urso Marrom",
+    "numeric_code": 6096,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr700",
+    "hex_code": "#69482C",
+    "name": "Caminhos Cruzados",
+    "numeric_code": 6097,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr701",
+    "hex_code": "#D7C5B3",
+    "name": "Mar de Areia",
+    "numeric_code": 6099,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr702",
+    "hex_code": "#C9B29C",
+    "name": "Praticidade",
+    "numeric_code": 6100,
+    "rgb_info": "RGB 201/178/156",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr703",
+    "hex_code": "#BCA38B",
+    "name": "Relógio de Areia",
+    "numeric_code": 6101,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr704",
+    "hex_code": "#A88E76",
+    "name": "Amadeirado",
+    "numeric_code": 9093,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr705",
+    "hex_code": "#947A62",
+    "name": "Estrada do Campo",
+    "numeric_code": 6102,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr706",
+    "hex_code": "#7D644D",
+    "name": "Chá Preto",
+    "numeric_code": 6103,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Pretos"
+  },
+  {
+    "pro_revest_code": "pr707",
+    "hex_code": "#65503D",
+    "name": "Expresso",
+    "numeric_code": 6104,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr708",
+    "hex_code": "#DCC7B3",
+    "name": "Alto do Morro",
+    "numeric_code": 9094,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr709",
+    "hex_code": "#D2B79E",
+    "name": "Baunilha",
+    "numeric_code": 9095,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr710",
+    "hex_code": "#C5A88D",
+    "name": "Pó de Rodeio",
+    "numeric_code": 9096,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr711",
+    "hex_code": "#B59778",
+    "name": "Bolo de Nozes",
+    "numeric_code": 9097,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr712",
+    "hex_code": "#89674A",
+    "name": "Marrom Bronza",
+    "numeric_code": 9098,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr713",
+    "hex_code": "#725237",
+    "name": "Boina de Couro",
+    "numeric_code": 9099,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr714",
+    "hex_code": "#765138",
+    "name": "Chocolate Suiço",
+    "numeric_code": 9100,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr715",
+    "hex_code": "#DCC7AD",
+    "name": "Praia Mansa",
+    "numeric_code": 9101,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr716",
+    "hex_code": "#CFB597",
+    "name": "Toalha de Mesa",
+    "numeric_code": 9102,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr717",
+    "hex_code": "#C1A485",
+    "name": "Trigo",
+    "numeric_code": 9103,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr718",
+    "hex_code": "#B99974",
+    "name": "Trama de Vime",
+    "numeric_code": 9104,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr719",
+    "hex_code": "#A78361",
+    "name": "Marrom Francês",
+    "numeric_code": 9105,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr720",
+    "hex_code": "#946E48",
+    "name": "Couro Marrom",
+    "numeric_code": 9106,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr721",
+    "hex_code": "#7B5838",
+    "name": "Argila de Oleiro",
+    "numeric_code": 9107,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr722",
+    "hex_code": "#D7C5AE",
+    "name": "Pro Bege",
+    "numeric_code": 6106,
+    "rgb_info": "RGB 215/197/174",
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr723",
+    "hex_code": "#C7B198",
+    "name": "Noite no Deserto",
+    "numeric_code": 6107,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr724",
+    "hex_code": "#BAA185",
+    "name": "Café Cremoso",
+    "numeric_code": 6108,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr725",
+    "hex_code": "#A78C71",
+    "name": "Café com Creme",
+    "numeric_code": 9108,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr726",
+    "hex_code": "#9E8163",
+    "name": "Café da Manhã",
+    "numeric_code": 6109,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr727",
+    "hex_code": "#8A6B4D",
+    "name": "Rouxinol",
+    "numeric_code": 6110,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr728",
+    "hex_code": "#70573F",
+    "name": "Casca de Coco",
+    "numeric_code": 6111,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr729",
+    "hex_code": "#DFD3C3",
+    "name": "Ostra Bege",
+    "numeric_code": 9109,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr730",
+    "hex_code": "#CFBEA9",
+    "name": "Lobo de Madeira",
+    "numeric_code": 9110,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr731",
+    "hex_code": "#C0AD96",
+    "name": "Veludo Bege",
+    "numeric_code": 9111,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr732",
+    "hex_code": "#AF987F",
+    "name": "Areia Movediça",
+    "numeric_code": 9112,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr733",
+    "hex_code": "#A08568",
+    "name": "Parede de Pedra",
+    "numeric_code": 9113,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Vermelhos"
+  },
+  {
+    "pro_revest_code": "pr734",
+    "hex_code": "#8F7659",
+    "name": "Folhas de Outono",
+    "numeric_code": 9114,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr735",
+    "hex_code": "#695239",
+    "name": "Carvalho",
+    "numeric_code": 9115,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr736",
+    "hex_code": "#DACAB2",
+    "name": "Bronzeado Suave",
+    "numeric_code": 6141,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr737",
+    "hex_code": "#CCB79B",
+    "name": "Macadâmia",
+    "numeric_code": 6142,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr738",
+    "hex_code": "#C0A98B",
+    "name": "Cesto de Vime",
+    "numeric_code": 6143,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr739",
+    "hex_code": "#AB9579",
+    "name": "Lentilha",
+    "numeric_code": 9116,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr740",
+    "hex_code": "#947F65",
+    "name": "Bronzeado",
+    "numeric_code": 6144,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr741",
+    "hex_code": "#867057",
+    "name": "Marron Palha",
+    "numeric_code": 6145,
+    "rgb_info": "RGB 134/112/87",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr742",
+    "hex_code": "#6E543C",
+    "name": "Licor de Chocolate",
+    "numeric_code": 6146,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr743",
+    "hex_code": "#D9CFBA",
+    "name": "Lenço de Lã",
+    "numeric_code": 6148,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr744",
+    "hex_code": "#C8BBA3",
+    "name": "Espuma de Leite",
+    "numeric_code": 6149,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr745",
+    "hex_code": "#B8A992",
+    "name": "Cáqui Universal",
+    "numeric_code": 6150,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr746",
+    "hex_code": "#A4947E",
+    "name": "Flores Urbanas",
+    "numeric_code": 9117,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr747",
+    "hex_code": "#8E7F6A",
+    "name": "Estojo de Couro",
+    "numeric_code": 6151,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr748",
+    "hex_code": "#786957",
+    "name": "Semente de Linhaça",
+    "numeric_code": 6152,
+    "rgb_info": "RGB 120/105/87",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr749",
+    "hex_code": "#66543E",
+    "name": "Era do Bronze",
+    "numeric_code": 6153,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr750",
+    "hex_code": "#E0CFB0",
+    "name": "Pedra Oriental",
+    "numeric_code": 6134,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr751",
+    "hex_code": "#D0BA94",
+    "name": "Licor de Jenipapo",
+    "numeric_code": 6135,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr752",
+    "hex_code": "#C6B08A",
+    "name": "Harmonia",
+    "numeric_code": 6136,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr753",
+    "hex_code": "#B9A47E",
+    "name": "Tesouro Envelhecido",
+    "numeric_code": 9118,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr754",
+    "hex_code": "#AC9571",
+    "name": "Tapete de Sisal",
+    "numeric_code": 6137,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr755",
+    "hex_code": "#9A815E",
+    "name": "Baile de Peão",
+    "numeric_code": 6138,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr756",
+    "hex_code": "#7F6743",
+    "name": "Baú Dourado",
+    "numeric_code": 6139,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr757",
+    "hex_code": "#DDD0B6",
+    "name": "Bege Abstrato",
+    "numeric_code": 9119,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr758",
+    "hex_code": "#CDBB9C",
+    "name": "Tecido de Linho",
+    "numeric_code": 9120,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr759",
+    "hex_code": "#C3B090",
+    "name": "Cesto",
+    "numeric_code": 9121,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr760",
+    "hex_code": "#B19F80",
+    "name": "Semiárido",
+    "numeric_code": 9122,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr761",
+    "hex_code": "#9F8E71",
+    "name": "Barro Verde",
+    "numeric_code": 9123,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr762",
+    "hex_code": "#877459",
+    "name": "Ximango",
+    "numeric_code": 9124,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr763",
+    "hex_code": "#665439",
+    "name": "Doce de Figo",
+    "numeric_code": 9125,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr764",
+    "hex_code": "#DBD0B9",
+    "name": "Arroz Integral",
+    "numeric_code": 6155,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr765",
+    "hex_code": "#CDBDA2",
+    "name": "Alpiste",
+    "numeric_code": 6156,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr766",
+    "hex_code": "#C1AE91",
+    "name": "Bronze Neutro",
+    "numeric_code": 6157,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr767",
+    "hex_code": "#AC9D83",
+    "name": "Sombra da Manhã",
+    "numeric_code": 7544,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr768",
+    "hex_code": "#998970",
+    "name": "Perfume de Mirra",
+    "numeric_code": 6158,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr769",
+    "hex_code": "#7E6F59",
+    "name": "Chá Inglês",
+    "numeric_code": 6159,
+    "rgb_info": "RGB 126/111/89",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr770",
+    "hex_code": "#5D513E",
+    "name": "Vaso de Bronze",
+    "numeric_code": 6160,
+    "rgb_info": "Rgb 93/81/62",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr771",
+    "hex_code": "#D1CDBF",
+    "name": "Seda Cinza",
+    "numeric_code": 6169,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr772",
+    "hex_code": "#BFB9AA",
+    "name": "Cinza Moderno",
+    "numeric_code": 6170,
+    "rgb_info": "RGB 191/185/170",
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr773",
+    "hex_code": "#B0AB9C",
+    "name": "Cinza Cetim",
+    "numeric_code": 6171,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr774",
+    "hex_code": "#9D9887",
+    "name": "Via Urbana",
+    "numeric_code": 9126,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr775",
+    "hex_code": "#726B5B",
+    "name": "Noite na Cidade",
+    "numeric_code": 6172,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr776",
+    "hex_code": "#726B5B",
+    "name": "Arenito",
+    "numeric_code": 6173,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr777",
+    "hex_code": "#5A5243",
+    "name": "Ébano",
+    "numeric_code": 7745,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr778",
+    "hex_code": "#D1CCB9",
+    "name": "Coentro",
+    "numeric_code": 6162,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr779",
+    "hex_code": "#C1BCA7",
+    "name": "Ninho de Águia",
+    "numeric_code": 6163,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr780",
+    "hex_code": "#B2AC96",
+    "name": "Cálice de Prata",
+    "numeric_code": 6164,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr781",
+    "hex_code": "#9E9985",
+    "name": "Capim Limão",
+    "numeric_code": 9127,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr782",
+    "hex_code": "#898473",
+    "name": "Névoa Oliva",
+    "numeric_code": 6165,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr783",
+    "hex_code": "#6B6757",
+    "name": "Minério de Ferro",
+    "numeric_code": 6166,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr784",
+    "hex_code": "#5E5949",
+    "name": "Portão de Jardim",
+    "numeric_code": 6167,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr785",
+    "hex_code": "#CECEBD",
+    "name": "Folha Pálida",
+    "numeric_code": 6176,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr786",
+    "hex_code": "#BBBCA7",
+    "name": "Folhas ao Vento",
+    "numeric_code": 6177,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr787",
+    "hex_code": "#ACAD97",
+    "name": "Encanto de Jade",
+    "numeric_code": 6178,
+    "rgb_info": "RGB 172/173/151",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr788",
+    "hex_code": "#989A82",
+    "name": "Ônix Verde",
+    "numeric_code": 9128,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr789",
+    "hex_code": "#7F8266",
+    "name": "Camuflagem Verde",
+    "numeric_code": 6179,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr790",
+    "hex_code": "#65684C",
+    "name": "Cacto",
+    "numeric_code": 6180,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr791",
+    "hex_code": "#4F523A",
+    "name": "Serra da Canastra",
+    "numeric_code": 6181,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr792",
+    "hex_code": "#D1D3C7",
+    "name": "Pena Verde",
+    "numeric_code": 6190,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr793",
+    "hex_code": "#BDC0B3",
+    "name": "Satisfeito",
+    "numeric_code": 6191,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr794",
+    "hex_code": "#9FA694",
+    "name": "Alvorecer",
+    "numeric_code": 6192,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr795",
+    "hex_code": "#909886",
+    "name": "Dragão Verde",
+    "numeric_code": 9129,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Verdes"
+  },
+  {
+    "pro_revest_code": "pr796",
+    "hex_code": "#7A8775",
+    "name": "Matinê",
+    "numeric_code": 6193,
+    "rgb_info": "RGB 122/135/117",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr797",
+    "hex_code": "#626E60",
+    "name": "Aroma de Manjericão",
+    "numeric_code": 6194,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr798",
+    "hex_code": "#465448",
+    "name": "Musgo de Pedra",
+    "numeric_code": 6195,
+    "rgb_info": "RGB 70/84/72",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr799",
+    "hex_code": "#D1D0C6",
+    "name": "Rota de Fuga",
+    "numeric_code": 6183,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr800",
+    "hex_code": "#BEBFB2",
+    "name": "Folha de Prata",
+    "numeric_code": 6184,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr801",
+    "hex_code": "#ABAC9F",
+    "name": "Vaso de Prata",
+    "numeric_code": 6185,
+    "rgb_info": "RGB  171/172/159",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr802",
+    "hex_code": "#95978A",
+    "name": "Neblina Perene",
+    "numeric_code": 9130,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr803",
+    "hex_code": "#7B8070",
+    "name": "Folha de Bambu",
+    "numeric_code": 6186,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr804",
+    "hex_code": "#64695C",
+    "name": "Alecrim Selvagem",
+    "numeric_code": 6187,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr805",
+    "hex_code": "#4E5147",
+    "name": "Sombra do Destino",
+    "numeric_code": 6188,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr806",
+    "hex_code": "#C9C9C0",
+    "name": "Nuvem de Prata",
+    "numeric_code": 6197,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr807",
+    "hex_code": "#B6B5AB",
+    "name": "Nobel",
+    "numeric_code": 6198,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr808",
+    "hex_code": "#A6A69B",
+    "name": "Cinza Raro",
+    "numeric_code": 6199,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr809",
+    "hex_code": "#949488",
+    "name": "Ardósia Antiga",
+    "numeric_code": 9131,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr810",
+    "hex_code": "#7F7E72",
+    "name": "Granito Cinza",
+    "numeric_code": 6200,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr811",
+    "hex_code": "#6D6C62",
+    "name": "Caminho Selvagem",
+    "numeric_code": 6201,
+    "rgb_info": "RGB 109/108/98",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr812",
+    "hex_code": "#64645A",
+    "name": "Poeira Tempestuosa",
+    "numeric_code": 6202,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr813",
+    "hex_code": "#CDD2CA",
+    "name": "Surfar",
+    "numeric_code": 6204,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr814",
+    "hex_code": "#BEC3BB",
+    "name": "Conforto",
+    "numeric_code": 6205,
+    "rgb_info": "RGB 190/195/187",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr815",
+    "hex_code": "#AEB3A9",
+    "name": "Lua de Prata",
+    "numeric_code": 6206,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr816",
+    "hex_code": "#969C92",
+    "name": "Acácia",
+    "numeric_code": 9132,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr817",
+    "hex_code": "#7A8076",
+    "name": "Fuga",
+    "numeric_code": 6207,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr818",
+    "hex_code": "#5E6259",
+    "name": "Campo Militar",
+    "numeric_code": 6208,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr819",
+    "hex_code": "#44483D",
+    "name": "Azeitona Madura",
+    "numeric_code": 6209,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr820",
+    "hex_code": "#C2CDC5",
+    "name": "Folha de Goma",
+    "numeric_code": 6211,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr821",
+    "hex_code": "#ADBBB2",
+    "name": "Plenitude",
+    "numeric_code": 6212,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr822",
+    "hex_code": "#9BAAA2",
+    "name": "Cascata",
+    "numeric_code": 6213,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr823",
+    "hex_code": "#8D9E97",
+    "name": "Jaspe",
+    "numeric_code": 9133,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr824",
+    "hex_code": "#7C8E87",
+    "name": "Cinza Poético",
+    "numeric_code": 6214,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr825",
+    "hex_code": "#5E706A",
+    "name": "Rio de Pedra",
+    "numeric_code": 6215,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr826",
+    "hex_code": "#343B36",
+    "name": "Noite na Floresta",
+    "numeric_code": 6216,
+    "rgb_info": "RGB 52/59/54",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr827",
+    "hex_code": "#C2CFCF",
+    "name": "Corrente de Jato",
+    "numeric_code": 6218,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr828",
+    "hex_code": "#ABBEBF",
+    "name": "Fonte Cristalina",
+    "numeric_code": 6219,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr829",
+    "hex_code": "#9BAFB2",
+    "name": "Lago Misterioso",
+    "numeric_code": 6220,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr830",
+    "hex_code": "#8B9FA0",
+    "name": "Louça Holandesa",
+    "numeric_code": 9134,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr831",
+    "hex_code": "#7A9192",
+    "name": "Baía dos Golfinhos",
+    "numeric_code": 6221,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr832",
+    "hex_code": "#5D7274",
+    "name": "Mármore Azul",
+    "numeric_code": 6222,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr833",
+    "hex_code": "#4A5D5F",
+    "name": "Mineral Azul",
+    "numeric_code": 6223,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr834",
+    "hex_code": "#BCCBCE",
+    "name": "Sonho Azul",
+    "numeric_code": 6225,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr835",
+    "hex_code": "#A4B7BD",
+    "name": "Chuva Fina",
+    "numeric_code": 6226,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr836",
+    "hex_code": "#96AAB0",
+    "name": "Ardósia Polida",
+    "numeric_code": 6227,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr837",
+    "hex_code": "#80969D",
+    "name": "Banheira de Espuma",
+    "numeric_code": 9135,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr838",
+    "hex_code": "#607D84",
+    "name": "Refúgio",
+    "numeric_code": 6228,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr839",
+    "hex_code": "#47626A",
+    "name": "Bayoux",
+    "numeric_code": 6229,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr840",
+    "hex_code": "#244653",
+    "name": "Tempestade",
+    "numeric_code": 6230,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr841",
+    "hex_code": "#CBD4D4",
+    "name": "Hora de Ninar",
+    "numeric_code": 9136,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr842",
+    "hex_code": "#B6C3C4",
+    "name": "Nevoeiro Azul",
+    "numeric_code": 9137,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr843",
+    "hex_code": "#A6B2B5",
+    "name": "Gotas de Orvalho",
+    "numeric_code": 9138,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr844",
+    "hex_code": "#90A0A6",
+    "name": "Cinza Cortês",
+    "numeric_code": 9139,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr845",
+    "hex_code": "#6F848C",
+    "name": "Céu Tempestuoso",
+    "numeric_code": 9140,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr846",
+    "hex_code": "#536872",
+    "name": "Literatura de Cordel",
+    "numeric_code": 9141,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr847",
+    "hex_code": "#204652",
+    "name": "Meia Noite",
+    "numeric_code": 9142,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr848",
+    "hex_code": "#CDD2D2",
+    "name": "Caminho do Céu",
+    "numeric_code": 6232,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr849",
+    "hex_code": "#B8BEBE",
+    "name": "Cinza Prata",
+    "numeric_code": 6233,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr850",
+    "hex_code": "#A9B0B1",
+    "name": "Abstrato",
+    "numeric_code": 6234,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr851",
+    "hex_code": "#91999C",
+    "name": "Cinza Farda",
+    "numeric_code": 9143,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr852",
+    "hex_code": "#727C7F",
+    "name": "Concórdia",
+    "numeric_code": 6235,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr853",
+    "hex_code": "#596368",
+    "name": "Castelo de Pedra",
+    "numeric_code": 6236,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr854",
+    "hex_code": "#23383F",
+    "name": "Noite Cinza",
+    "numeric_code": 6237,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr855",
+    "hex_code": "#C9D9E0",
+    "name": "Luau",
+    "numeric_code": 9144,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr856",
+    "hex_code": "#B7C9D1",
+    "name": "Vento do Litoral",
+    "numeric_code": 9145,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr857",
+    "hex_code": "#9EB4C0",
+    "name": "Tarde de Tempestade",
+    "numeric_code": 9146,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr858",
+    "hex_code": "#8AA3B1",
+    "name": "Meu Jeans",
+    "numeric_code": 9147,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr859",
+    "hex_code": "#708D9E",
+    "name": "Silêncio da Noite",
+    "numeric_code": 9148,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr860",
+    "hex_code": "#4E7287",
+    "name": "Jade Desbotada",
+    "numeric_code": 9149,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr861",
+    "hex_code": "#32586E",
+    "name": "Pedra Bruta",
+    "numeric_code": 9150,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr862",
+    "hex_code": "#BFC9D0",
+    "name": "Confins",
+    "numeric_code": 6239,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr863",
+    "hex_code": "#AABAC6",
+    "name": "Fonte Refrescante",
+    "numeric_code": 6240,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr864",
+    "hex_code": "#98A9B7",
+    "name": "Cinza Alasca",
+    "numeric_code": 6241,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr865",
+    "hex_code": "#899CAA",
+    "name": "Tubarão",
+    "numeric_code": 9151,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr866",
+    "hex_code": "#768B9A",
+    "name": "Azul Delicado",
+    "numeric_code": 6242,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr867",
+    "hex_code": "#5D6F7F",
+    "name": "Linho Azul",
+    "numeric_code": 6243,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr868",
+    "hex_code": "#3E5063",
+    "name": "Azul Divino",
+    "numeric_code": 7602,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr869",
+    "hex_code": "#CAD0D2",
+    "name": "Estrela Guia",
+    "numeric_code": 6246,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr870",
+    "hex_code": "#B8C0C3",
+    "name": "Caminho de Seixo",
+    "numeric_code": 6247,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr871",
+    "hex_code": "#ADB5B9",
+    "name": "Cadete Azul",
+    "numeric_code": 6248,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr872",
+    "hex_code": "#979FA5",
+    "name": "Deixa Chover",
+    "numeric_code": 9152,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr873",
+    "hex_code": "#7A848D",
+    "name": "Noite de Chuva",
+    "numeric_code": 6249,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr874",
+    "hex_code": "#606B75",
+    "name": "Cinza Transporte",
+    "numeric_code": 6250,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr875",
+    "hex_code": "#586168",
+    "name": "Bandeirantes",
+    "numeric_code": 6251,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr876",
+    "hex_code": "#CFC9C8",
+    "name": "Destino",
+    "numeric_code": 6274,
+    "rgb_info": "RGB 207/201/200",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr877",
+    "hex_code": "#BDB8B8",
+    "name": "Cinza Algodão",
+    "numeric_code": 6275,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr878",
+    "hex_code": "#AEA9AA",
+    "name": "Pérola Escura",
+    "numeric_code": 6276,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr879",
+    "hex_code": "#949194",
+    "name": "Buque de Orquídea",
+    "numeric_code": 9153,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr880",
+    "hex_code": "#7B787D",
+    "name": "Mafioso",
+    "numeric_code": 6277,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr881",
+    "hex_code": "#605E63",
+    "name": "Cometa",
+    "numeric_code": 6278,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr882",
+    "hex_code": "#4F4D51",
+    "name": "Pérola Negra",
+    "numeric_code": 9154,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr883",
+    "hex_code": "#CFC9C8",
+    "name": "Malva Silvestre",
+    "numeric_code": 7078,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr884",
+    "hex_code": "#BCB6B6",
+    "name": "Vestido de Seda",
+    "numeric_code": 7079,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr885",
+    "hex_code": "#ADA5A5",
+    "name": "Caminho de Pérola",
+    "numeric_code": 7080,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr886",
+    "hex_code": "#989192",
+    "name": "Amizade",
+    "numeric_code": 9155,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr887",
+    "hex_code": "#837D7F",
+    "name": "Toque Sensual",
+    "numeric_code": 7081,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr888",
+    "hex_code": "#676064",
+    "name": "Deslumbrante",
+    "numeric_code": 7082,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr889",
+    "hex_code": "#443E40",
+    "name": "Viela",
+    "numeric_code": 7083,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr890",
+    "hex_code": "#CBC9C9",
+    "name": "Cinza Único",
+    "numeric_code": 6260,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr891",
+    "hex_code": "#B5B1B5",
+    "name": "Pretensioso",
+    "numeric_code": 6261,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr892",
+    "hex_code": "#A6A3A9",
+    "name": "Castelo Cinzento",
+    "numeric_code": 6262,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr893",
+    "hex_code": "#8F8A91",
+    "name": "Lendas Urbanas",
+    "numeric_code": 9156,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr894",
+    "hex_code": "#736F78",
+    "name": "Aroma de Ameixa",
+    "numeric_code": 6263,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr895",
+    "hex_code": "#5D5962",
+    "name": "Lembranças",
+    "numeric_code": 6264,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr896",
+    "hex_code": "#4A4653",
+    "name": "Roxo Taupe",
+    "numeric_code": 6265,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr897",
+    "hex_code": "#CEC9CC",
+    "name": "Doce Atração",
+    "numeric_code": 6267,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr898",
+    "hex_code": "#BDB5B9",
+    "name": "Mitos",
+    "numeric_code": 6268,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr899",
+    "hex_code": "#AFA7AC",
+    "name": "Malva Exótica",
+    "numeric_code": 6269,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr900",
+    "hex_code": "#9D9093",
+    "name": "Orquídea de Outono",
+    "numeric_code": 9157,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr901",
+    "hex_code": "#85777B",
+    "name": "Encontro do Destino",
+    "numeric_code": 6270,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr902",
+    "hex_code": "#695C62",
+    "name": "Delicadeza",
+    "numeric_code": 6271,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr903",
+    "hex_code": "#4E4247",
+    "name": "Encanto Noturno",
+    "numeric_code": 6272,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr904",
+    "hex_code": "#D1C5C4",
+    "name": "Jacarandá",
+    "numeric_code": 6015,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr905",
+    "hex_code": "#C1B2B3",
+    "name": "Cadeira de Praia",
+    "numeric_code": 6016,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr906",
+    "hex_code": "#B3A3A5",
+    "name": "Doce Flor",
+    "numeric_code": 6017,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr907",
+    "hex_code": "#9D8D8E",
+    "name": "Pó de Estrela",
+    "numeric_code": 9158,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr908",
+    "hex_code": "#8B7C7E",
+    "name": "Verdade Secreta",
+    "numeric_code": 6018,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr909",
+    "hex_code": "#6F5C5F",
+    "name": "Ameixa Dourada",
+    "numeric_code": 6019,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr910",
+    "hex_code": "#4E3132",
+    "name": "Castanho Amadeirado",
+    "numeric_code": 6020,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr911",
+    "hex_code": "#D4CDCA",
+    "name": "Branco Individual",
+    "numeric_code": 6008,
+    "rgb_info": "RGB 212/205/202",
+    "reference_number": null,
+    "category": "Brancos"
+  },
+  {
+    "pro_revest_code": "pr912",
+    "hex_code": "#C2B6B6",
+    "name": "Surreal",
+    "numeric_code": 6009,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr913",
+    "hex_code": "#B1A3A1",
+    "name": "Ameixa Cinza",
+    "numeric_code": 6010,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr914",
+    "hex_code": "#9F9291",
+    "name": "Romance",
+    "numeric_code": 9159,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr915",
+    "hex_code": "#867875",
+    "name": "Beijo Doce",
+    "numeric_code": 6011,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr916",
+    "hex_code": "#6E615F",
+    "name": "Tarde de Amor",
+    "numeric_code": 6012,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr917",
+    "hex_code": "#4D3C3C",
+    "name": "Chocolate com Ameixa",
+    "numeric_code": 6013,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr918",
+    "hex_code": "#D1C5BE",
+    "name": "Angorá",
+    "numeric_code": 6036,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr919",
+    "hex_code": "#BFB1AA",
+    "name": "Cinza Morsa",
+    "numeric_code": 6037,
+    "rgb_info": "RGB 191/177/170",
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr920",
+    "hex_code": "#AC9E97",
+    "name": "Cinza Real",
+    "numeric_code": 6038,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr921",
+    "hex_code": "#9E9089",
+    "name": "Incerto",
+    "numeric_code": 9160,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr922",
+    "hex_code": "#8C7E78",
+    "name": "Fogão a Lenha",
+    "numeric_code": 6039,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr923",
+    "hex_code": "#756761",
+    "name": "Sabiá",
+    "numeric_code": 6040,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr924",
+    "hex_code": "#56433B",
+    "name": "Manta Marrom",
+    "numeric_code": 6041,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr925",
+    "hex_code": "#D3D5D3",
+    "name": "Pena Cinza",
+    "numeric_code": 7661,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr926",
+    "hex_code": "#C9CCCD",
+    "name": "Ágata Cinza",
+    "numeric_code": 7662,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr927",
+    "hex_code": "#B8BCBB",
+    "name": "Lobo Cinzento",
+    "numeric_code": 7663,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr928",
+    "hex_code": "#90979B",
+    "name": "Cinza Polido",
+    "numeric_code": 7664,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr929",
+    "hex_code": "#656D73",
+    "name": "Avenida Paulista",
+    "numeric_code": 7665,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr930",
+    "hex_code": "#606E74",
+    "name": "Telha de Ardósia",
+    "numeric_code": 7624,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr931",
+    "hex_code": "#596E79",
+    "name": "Azul Fumaça",
+    "numeric_code": 7604,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Azuis"
+  },
+  {
+    "pro_revest_code": "pr932",
+    "hex_code": "#D4D8D7",
+    "name": "Branco Real",
+    "numeric_code": 6253,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Brancos"
+  },
+  {
+    "pro_revest_code": "pr933",
+    "hex_code": "#BEC1C3",
+    "name": "Lenço do Vovô",
+    "numeric_code": 6254,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr934",
+    "hex_code": "#A8AEB1",
+    "name": "Névoa da Manhã",
+    "numeric_code": 6255,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr935",
+    "hex_code": "#959BA0",
+    "name": "Cinza Metrô",
+    "numeric_code": 9161,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr936",
+    "hex_code": "#7D848B",
+    "name": "Cinza Sério",
+    "numeric_code": 6256,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr937",
+    "hex_code": "#626970",
+    "name": "Cidade de Pedra",
+    "numeric_code": 6257,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr938",
+    "hex_code": "#3E4B54",
+    "name": "Serpente do Mar",
+    "numeric_code": 7615,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr939",
+    "hex_code": "#C6CACA",
+    "name": "Pérola Cinza",
+    "numeric_code": 7071,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr940",
+    "hex_code": "#B0B5B5",
+    "name": "Conectado",
+    "numeric_code": 7072,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr941",
+    "hex_code": "#A0A5A7",
+    "name": "Cinza Topixa",
+    "numeric_code": 7073,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr942",
+    "hex_code": "#939899",
+    "name": "Cinza Exclusivo",
+    "numeric_code": 9162,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr943",
+    "hex_code": "#7F8486",
+    "name": "Cinza Golfinho",
+    "numeric_code": 7074,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr944",
+    "hex_code": "#616669",
+    "name": "Cinza Tempestade",
+    "numeric_code": 7075,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr945",
+    "hex_code": "#44484D",
+    "name": "Tecno",
+    "numeric_code": 7076,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr946",
+    "hex_code": "#CBCCC9",
+    "name": "Cinza Inverno",
+    "numeric_code": 7064,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr947",
+    "hex_code": "#BDBDB7",
+    "name": "Argos",
+    "numeric_code": 7065,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr948",
+    "hex_code": "#A7A8A2",
+    "name": "Cinza Coruja",
+    "numeric_code": 7066,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr949",
+    "hex_code": "#939591",
+    "name": "Cinza Aço",
+    "numeric_code": 9163,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr950",
+    "hex_code": "#7F817E",
+    "name": "Vista Urbana",
+    "numeric_code": 7067,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr951",
+    "hex_code": "#636562",
+    "name": "Cinza Grisalho",
+    "numeric_code": 7068,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr952",
+    "hex_code": "#585858",
+    "name": "Pimenta Preta",
+    "numeric_code": 7674,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr953",
+    "hex_code": "#C8CBC4",
+    "name": "Dia Frio",
+    "numeric_code": 7057,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr954",
+    "hex_code": "#B2B5AF",
+    "name": "Magnetismo",
+    "numeric_code": 7058,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr955",
+    "hex_code": "#A3A7A0",
+    "name": "Cinza Concreto",
+    "numeric_code": 7059,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr956",
+    "hex_code": "#92948D",
+    "name": "Cinza Nevoa",
+    "numeric_code": 9164,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr957",
+    "hex_code": "#7C7D75",
+    "name": "Atitude",
+    "numeric_code": 7060,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr958",
+    "hex_code": "#63655F",
+    "name": "Lobo Cinza",
+    "numeric_code": 7061,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr959",
+    "hex_code": "#44493D",
+    "name": "Cinza Bosque",
+    "numeric_code": 7749,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr960",
+    "hex_code": "#D3CEC4",
+    "name": "Véu de Dama",
+    "numeric_code": 9165,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr961",
+    "hex_code": "#DCD8D0",
+    "name": "Cinza Bege",
+    "numeric_code": 9166,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr962",
+    "hex_code": "#B7B7B2",
+    "name": "Cinza Platina",
+    "numeric_code": 7658,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr963",
+    "hex_code": "#ABB0AC",
+    "name": "Cinza Mineral",
+    "numeric_code": 7652,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr964",
+    "hex_code": "#A5A9A8",
+    "name": "Cinza Puro",
+    "numeric_code": 7659,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr965",
+    "hex_code": "#969A96",
+    "name": "Chá de Ervas",
+    "numeric_code": 7660,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr966",
+    "hex_code": "#666D69",
+    "name": "Chapéu Cinza",
+    "numeric_code": 7622,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr967",
+    "hex_code": "#D1D2CB",
+    "name": "Delicada",
+    "numeric_code": 7653,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr968",
+    "hex_code": "#CECEC6",
+    "name": "Passeio na Serra",
+    "numeric_code": 7654,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr969",
+    "hex_code": "#CCCCC5",
+    "name": "Cinza Neblina",
+    "numeric_code": 7651,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr970",
+    "hex_code": "#C5C8C4",
+    "name": "Malha Cinza",
+    "numeric_code": 7657,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr971",
+    "hex_code": "#C2C0BA",
+    "name": "Ardósia Pálida",
+    "numeric_code": 7649,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr972",
+    "hex_code": "#AAA9A4",
+    "name": "Ruas Urbanas",
+    "numeric_code": 7650,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr973",
+    "hex_code": "#A0A09A",
+    "name": "Concreto Polido",
+    "numeric_code": 7655,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr974",
+    "hex_code": "#CFCAC7",
+    "name": "Linha do Tempo",
+    "numeric_code": 6001,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr975",
+    "hex_code": "#BCB8B6",
+    "name": "Essencial",
+    "numeric_code": 6002,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr976",
+    "hex_code": "#ADA8A5",
+    "name": "Toque Perfeito",
+    "numeric_code": 6003,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr977",
+    "hex_code": "#9E9793",
+    "name": "Pedra Polida",
+    "numeric_code": 9167,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr978",
+    "hex_code": "#847B77",
+    "name": "Casaco de Vison",
+    "numeric_code": 6004,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr979",
+    "hex_code": "#6D6562",
+    "name": "Pedra da Sorte",
+    "numeric_code": 6005,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr980",
+    "hex_code": "#665D57",
+    "name": "Solar do Rei",
+    "numeric_code": 7505,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr981",
+    "hex_code": "#CCC5BD",
+    "name": "Alpaca",
+    "numeric_code": 7022,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr982",
+    "hex_code": "#B9B2A9",
+    "name": "Indispensável",
+    "numeric_code": 7023,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr983",
+    "hex_code": "#ABA39A",
+    "name": "Orquídea Cinza",
+    "numeric_code": 7024,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr984",
+    "hex_code": "#988F85",
+    "name": "Orelha de Elefante",
+    "numeric_code": 9168,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr985",
+    "hex_code": "#867A6F",
+    "name": "Pano de Fundo",
+    "numeric_code": 7025,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr986",
+    "hex_code": "#6F6459",
+    "name": "Lobo Selvagem",
+    "numeric_code": 7026,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr987",
+    "hex_code": "#564537",
+    "name": "Marrom Cortês",
+    "numeric_code": 7027,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr988",
+    "hex_code": "#D4CCC3",
+    "name": "Cinza Popular",
+    "numeric_code": 6071,
+    "rgb_info": "RGB 212/204/195",
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr989",
+    "hex_code": "#C1B6AB",
+    "name": "Cinza Versátil",
+    "numeric_code": 6072,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr990",
+    "hex_code": "#B7AB9F",
+    "name": "Cinza Urze",
+    "numeric_code": 6073,
+    "rgb_info": "RGB 183/171/159",
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr991",
+    "hex_code": "#A09287",
+    "name": "Corda de Sisal",
+    "numeric_code": 9169,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr992",
+    "hex_code": "#8D7F75",
+    "name": "Cidade Cinza",
+    "numeric_code": 6074,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr993",
+    "hex_code": "#756861",
+    "name": "Pedra de Arenito",
+    "numeric_code": 6075,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr994",
+    "hex_code": "#544B44",
+    "name": "Rosa Ébano",
+    "numeric_code": 7510,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Rosas"
+  },
+  {
+    "pro_revest_code": "pr995",
+    "hex_code": "#D1CBC1",
+    "name": "Cinza Agradável",
+    "numeric_code": 7029,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr996",
+    "hex_code": "#BFB6AA",
+    "name": "Branco Cinza",
+    "numeric_code": 7030,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Brancos"
+  },
+  {
+    "pro_revest_code": "pr997",
+    "hex_code": "#ADA295",
+    "name": "Tarde na Rede",
+    "numeric_code": 7031,
+    "rgb_info": "RGB  173/162/149",
+    "reference_number": null,
+    "category": "Vermelhos"
+  },
+  {
+    "pro_revest_code": "pr998",
+    "hex_code": "#9E9284",
+    "name": "Cinza Discreto",
+    "numeric_code": 7504,
+    "rgb_info": "RGB 158/146/132",
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr999",
+    "hex_code": "#887B6C",
+    "name": "Manguezal",
+    "numeric_code": 7032,
+    "rgb_info": "RGB 136/123/108",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1000",
+    "hex_code": "#74685A",
+    "name": "Dama Marroquina",
+    "numeric_code": 7033,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1001",
+    "hex_code": "#5C4D3C",
+    "name": "Pena de Bronze",
+    "numeric_code": 7034,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1002",
+    "hex_code": "#CCC9C0",
+    "name": "Momento Agradável",
+    "numeric_code": 7015,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1003",
+    "hex_code": "#BCB7AD",
+    "name": "Tarde de Paz",
+    "numeric_code": 7016,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1004",
+    "hex_code": "#ACA79E",
+    "name": "Cinza Executivo",
+    "numeric_code": 7017,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr1005",
+    "hex_code": "#9E9991",
+    "name": "Estrutura de Aço",
+    "numeric_code": 9170,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1006",
+    "hex_code": "#908A83",
+    "name": "Cinza Andorinha",
+    "numeric_code": 7018,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr1007",
+    "hex_code": "#78736E",
+    "name": "Vaso de Metal",
+    "numeric_code": 7019,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1008",
+    "hex_code": "#4F4842",
+    "name": "Raposa Negra",
+    "numeric_code": 7020,
+    "rgb_info": "RGB 79/72/66",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1009",
+    "hex_code": "#CEC6BB",
+    "name": "Cinza Internacional",
+    "numeric_code": 7043,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr1010",
+    "hex_code": "#BEB5A9",
+    "name": "Toque Surpresa",
+    "numeric_code": 7044,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1011",
+    "hex_code": "#A8A093",
+    "name": "Cinza Intelectual",
+    "numeric_code": 7045,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr1012",
+    "hex_code": "#979083",
+    "name": "Feltro de Lã",
+    "numeric_code": 9171,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1013",
+    "hex_code": "#817A6E",
+    "name": "Anônimo",
+    "numeric_code": 7046,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1014",
+    "hex_code": "#6B645B",
+    "name": "Bronze Polido",
+    "numeric_code": 7047,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1015",
+    "hex_code": "#54504A",
+    "name": "Bronze Conectado",
+    "numeric_code": 7048,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1016",
+    "hex_code": "#CFCABD",
+    "name": "Cinza Útil",
+    "numeric_code": 7050,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr1017",
+    "hex_code": "#BFB6A7",
+    "name": "Cinza Analitico",
+    "numeric_code": 7051,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr1018",
+    "hex_code": "#AFA696",
+    "name": "Areia do Egito",
+    "numeric_code": 7052,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr1019",
+    "hex_code": "#958D7F",
+    "name": "Concreto Artístico",
+    "numeric_code": 9172,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1020",
+    "hex_code": "#867E70",
+    "name": "Poncho Gaúcho",
+    "numeric_code": 7053,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1021",
+    "hex_code": "#645A4B",
+    "name": "Cravo",
+    "numeric_code": 7054,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1022",
+    "hex_code": "#554C3E",
+    "name": "Bronze da Realeza",
+    "numeric_code": 7055,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1023",
+    "hex_code": "#D8CFBE",
+    "name": "Marfim",
+    "numeric_code": 7541,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1024",
+    "hex_code": "#C0B9A9",
+    "name": "Mármore Grego",
+    "numeric_code": 7638,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1025",
+    "hex_code": "#B2AC9C",
+    "name": "Caminho Cinza",
+    "numeric_code": 7644,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Cinzas"
+  },
+  {
+    "pro_revest_code": "pr1026",
+    "hex_code": "#AEA594",
+    "name": "Bem-me-quer",
+    "numeric_code": 7639,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1027",
+    "hex_code": "#A7A094",
+    "name": "Cervo Cinzento",
+    "numeric_code": 7640,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1028",
+    "hex_code": "#A19C8F",
+    "name": "Tricô",
+    "numeric_code": 7746,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1029",
+    "hex_code": "#868578",
+    "name": "Montanha de Pedra",
+    "numeric_code": 7743,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1030",
+    "hex_code": "#C8BCAB",
+    "name": "Shitake",
+    "numeric_code": 9173,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1031",
+    "hex_code": "#C4B7A5",
+    "name": "Creme de Nozes",
+    "numeric_code": 7506,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr1032",
+    "hex_code": "#B3A491",
+    "name": "Pata de Leão",
+    "numeric_code": 7507,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1033",
+    "hex_code": "#ADA090",
+    "name": "Estrada do Castelo",
+    "numeric_code": 7633,
+    "rgb_info": "RGB 173/160/144",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1034",
+    "hex_code": "#A79582",
+    "name": "Quero-quero",
+    "numeric_code": 7513,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1035",
+    "hex_code": "#9C8A79",
+    "name": "Pedra do Segredo",
+    "numeric_code": 7508,
+    "rgb_info": "RGB156/138/121",
+    "reference_number": null,
+    "category": "Vermelhos"
+  },
+  {
+    "pro_revest_code": "pr1036",
+    "hex_code": "#827466",
+    "name": "Colina",
+    "numeric_code": 7514,
+    "rgb_info": "RGB 130/116/102",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1037",
+    "hex_code": "#D1C7B8",
+    "name": "Bege",
+    "numeric_code": 7036,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr1038",
+    "hex_code": "#C0B2A2",
+    "name": "Bege Equilibrado",
+    "numeric_code": 7037,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr1039",
+    "hex_code": "#B1A290",
+    "name": "Castanho Claro",
+    "numeric_code": 7038,
+    "rgb_info": "RGB 177/162/144",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1040",
+    "hex_code": "#A0907F",
+    "name": "Mariposa",
+    "numeric_code": 9174,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1041",
+    "hex_code": "#8A7A6A",
+    "name": "Canto da Siriema",
+    "numeric_code": 7039,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1042",
+    "hex_code": "#716354",
+    "name": "Marrom Argila",
+    "numeric_code": 7040,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr1043",
+    "hex_code": "#564536",
+    "name": "Fonte de Chocolate",
+    "numeric_code": 7041,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Marrons"
+  },
+  {
+    "pro_revest_code": "pr1044",
+    "hex_code": "#DBCEBD",
+    "name": "Porcelana",
+    "numeric_code": 7517,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1045",
+    "hex_code": "#CDBFB0",
+    "name": "Cesto Bege",
+    "numeric_code": 7511,
+    "rgb_info": "RGB205/191/176",
+    "reference_number": null,
+    "category": "Neutros"
+  },
+  {
+    "pro_revest_code": "pr1046",
+    "hex_code": "#CABAA8",
+    "name": "Luva de Camurça",
+    "numeric_code": 7524,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1047",
+    "hex_code": "#C5B6A4",
+    "name": "Tenda de Praia",
+    "numeric_code": 7512,
+    "rgb_info": "197/182/164",
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1048",
+    "hex_code": "#AC9A8A",
+    "name": "Cesto de Bambu",
+    "numeric_code": 7501,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1049",
+    "hex_code": "#A18D7D",
+    "name": "Leite com Avelã",
+    "numeric_code": 7502,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1050",
+    "hex_code": "#826F5E",
+    "name": "Esteira de Palha",
+    "numeric_code": 7509,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  },
+  {
+    "pro_revest_code": "pr1051",
+    "hex_code": "#2F2F30",
+    "name": "Preto Absoluto",
+    "numeric_code": 6258,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Pretos"
+  },
+  {
+    "pro_revest_code": "pr1067",
+    "hex_code": "#283849",
+    "name": "Mar Bravo",
+    "numeric_code": 9178,
+    "rgb_info": null,
+    "reference_number": null,
+    "category": "Especiais"
+  }
+]

@@ -1,0 +1,1315 @@
+@import "tailwindcss";
+
+/* Custom color palette - Black and White only */
+:root {
+  --color-background: #f8f9fa; /* Branco gelo */
+  --color-foreground: #000000;
+  --color-card: #ffffff;
+  --color-card-transparent: rgba(255, 255, 255, 0.95);
+  --color-border: #000000;
+  --color-muted: #808080;
+  --color-muted-foreground: #666666;
+  --color-primary: #F87B00; /* Laranja */
+  --color-primary-foreground: #ffffff; /* White */
+  --color-secondary: #000000; /* Black */
+  --color-secondary-foreground: #ffffff; /* White */
+  --color-accent: #000000; /* Black */
+  --color-accent-foreground: #ffffff; /* White */
+  --color-destructive: #000000; /* Black */
+  --color-destructive-foreground: #ffffff; /* White */
+  
+  /* Dark mode colors - Black and White */
+  --color-dark-background: #000000; /* Black */
+  --color-dark-foreground: #ffffff; /* White */
+  --color-dark-card: #111111; /* Dark gray */
+  --color-dark-card-transparent: rgba(17, 17, 17, 0.95); /* Dark gray with transparency */
+  --color-dark-border: #333333; /* Dark gray */
+  --color-dark-muted: #808080; /* Gray */
+  --color-dark-muted-foreground: #999999; /* Light Gray */
+  --color-dark-primary: #F87B00; /* Laranja */
+  --color-dark-primary-foreground: #000000; /* Black */
+  --color-dark-secondary: #ffffff; /* White */
+  --color-dark-secondary-foreground: #000000; /* Black */
+  --color-dark-accent: #ffffff; /* White */
+  --color-dark-accent-foreground: #000000; /* Black */
+  
+  /* Typography */
+  --font-family-cormorant: "Nunito", "Quicksand", "Inter", sans-serif;
+  --font-family-inter: "Nunito", "Quicksand", "Inter", sans-serif;
+  --font-family-rounded: "Nunito", "Quicksand", "Inter", sans-serif;
+  --font-family-Barlow: 'Barlow', 'Nunito', 'Quicksand', 'Inter', sans-serif;
+  --font-family-circular-std: 'Circular Std', 'Nunito', 'Quicksand', 'Inter', sans-serif;
+  --font-family-google-sans: 'Google Sans', 'Nunito', 'Quicksand', 'Inter', sans-serif;
+  --font-family-baloo-chettan: 'Baloo Chettan 2', 'Nunito', 'Quicksand', 'Inter', sans-serif;
+  --font-family-default: var(--font-family-rounded);
+  
+  /* Animation durations */
+  --transition-duration: 300ms;
+  --transition-slow: 500ms;
+}
+
+/* Garantir que html e body ocupem 100% da altura */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Seasonal theme colors - Black and White variants */
+/* Spring */
+.spring {
+  --color-primary: #F87B00;
+  --color-secondary: #000000;
+}
+
+/* Summer */
+.summer {
+  --color-primary: #F87B00;
+  --color-secondary: #000000;
+}
+
+/* Autumn */
+.autumn {
+  --color-primary: #F87B00;
+  --color-secondary: #000000;
+}
+
+/* Winter */
+.winter {
+  --color-primary: #F87B00;
+  --color-secondary: #000000;
+}
+
+/* Dark mode seasonal variants */
+.dark.spring {
+  --color-primary: #F87B00;
+  --color-secondary: #ffffff;
+}
+
+.dark.summer {
+  --color-primary: #F87B00;
+  --color-secondary: #ffffff;
+}
+
+.dark.autumn {
+  --color-primary: #F87B00;
+  --color-secondary: #ffffff;
+}
+
+.dark.winter {
+  --color-primary: #F87B00;
+  --color-secondary: #ffffff;
+}
+
+/* Global styles */
+body {
+  font-family: var(--font-family-default);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  transition: background-color, color var(--transition-duration) ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+.dark body {
+  background-color: var(--color-dark-background);
+  color: var(--color-dark-foreground);
+}
+
+/* Rounded fonts for all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-rounded);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Rounded and robust fonts for entire layout */
+* {
+  font-family: var(--font-family-rounded);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom utility classes */
+/* Hero overlay com color-mix */
+@supports (color:color-mix(in lab,red,red)) {
+    .hero-overlay {
+        background-color: color-mix(in oklab, rgba(248, 253, 224, 0.937) 50%, transparent);
+    }
+}
+
+.bg-card {
+  background-color: var(--color-card);
+}
+
+.dark .bg-card {
+  background-color: var(--color-dark-card);
+}
+
+/* Fix for light/dark mode background colors */
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.dark .bg-background {
+  background-color: var(--color-dark-background);
+}
+
+.border-border {
+  border-color: var(--color-border);
+}
+
+.dark .border-border {
+  border-color: var(--color-dark-border);
+}
+
+.text-muted-foreground {
+  color: var(--color-muted-foreground);
+}
+
+.dark .text-muted-foreground {
+  color: var(--color-dark-muted-foreground);
+}
+
+.bg-muted {
+  background-color: var(--color-muted);
+}
+
+.dark .bg-muted {
+  background-color: var(--color-dark-muted);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.dark .bg-primary {
+  background-color: var(--color-dark-primary);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.dark .text-primary {
+  color: var(--color-dark-primary);
+}
+
+.bg-primary-foreground {
+  background-color: var(--color-primary-foreground);
+}
+
+.dark .bg-primary-foreground {
+  background-color: var(--color-dark-primary-foreground);
+}
+
+.btn-budget:hover {
+  background-color: #e06e00;
+  transform: scale(1.05);
+}
+
+/* Transparent header styles */
+.header-transparent {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  z-index: 60 !important;
+  position: fixed !important;
+  width: 100% !important;
+}
+
+/* Estilos para o header com barra de pesquisa */
+.header-spaced {
+  top: 110px !important;
+}
+
+/* Reading Progress Bar */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px; /* fino e discreto */
+  z-index: 9999; /* acima do header */
+  pointer-events: none; /* não intercepta cliques */
+}
+
+.reading-progress__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
+  will-change: transform;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    #fb923c,
+    #ec4899,
+    #22d3ee,
+    #22c55e
+  );
+  background-size: 200% 100%;
+  animation: progress-gradient 6s linear infinite;
+}
+
+@keyframes progress-gradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress__bar {
+    animation: none;
+  }
+}
+
+/* Garantir visibilidade da barra de pesquisa */
+.search-bar {
+  z-index: 70 !important;
+  position: relative !important;
+}
+
+/* Ajuste para a barra de pesquisa fixa */
+.fixed {
+  z-index: 70 !important;
+}
+
+.top-bar-initial {
+  margin-top: 60px;
+}
+
+.top-bar-transparent {
+  margin-top: 60px;
+}
+
+/* Ajuste para o header fixo com a barra de pesquisa */
+.header-initial {
+  top: 110px !important;
+}
+
+/* Header com efeito de transparência e blur */
+.header-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+.dark .header-blur {
+  background-color: rgba(17, 17, 17, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+
+.dark .header-transparent {
+  background-color: rgba(17, 17, 17, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.5s ease;
+}
+
+/* Garantir visibilidade do header transparente */
+.header-transparent {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.5s ease;
+}
+
+/* Garantir que o header seja sempre visível */
+.header-blur {
+  z-index: 60 !important;
+  position: fixed !important;
+  width: 100% !important;
+}
+
+/* Garantir que o header seja sempre visível */
+.header-blur {
+  z-index: 60 !important;
+}
+
+/* Ajuste para o efeito de menu transparente sobre a imagem */
+.header-transparent {
+  z-index: 60 !important;
+  position: fixed !important;
+  width: 100% !important;
+}
+
+/* Garantir visibilidade do header */
+.header-blur {
+  z-index: 60 !important;
+  position: fixed !important;
+  width: 100% !important;
+}
+
+/* Ajuste para o header fixo */
+.fixed {
+  z-index: 60 !important;
+}
+
+/* Garantir que elementos fixos fiquem acima do conteúdo */
+.fixed-top {
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 60 !important;
+}
+
+/* Garantir visibilidade do header */
+.header-visible {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ajuste para o posicionamento do sidebar no catálogo */
+.sticky {
+  position: sticky;
+}
+
+.top-24 {
+  top: 6rem;
+}
+
+/* Improved filter section styling */
+.filter-section {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-card);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dark .filter-section {
+  background-color: var(--color-dark-card);
+  border-color: var(--color-dark-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Filter title styling */
+.filter-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-foreground);
+}
+
+.dark .filter-title {
+  color: var(--color-dark-foreground);
+}
+
+/* Filter item styling */
+.filter-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.filter-item:last-child {
+  margin-bottom: 0;
+}
+
+.filter-item input[type="radio"] {
+  margin-top: 0.25rem;
+}
+
+.filter-item-content {
+  margin-left: 0.75rem;
+}
+
+.filter-item-label {
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--color-foreground);
+}
+
+.dark .filter-item-label {
+  color: var(--color-dark-foreground);
+}
+
+.filter-item-description {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  margin-top: 0.25rem;
+}
+
+.dark .filter-item-description {
+  color: var(--color-dark-muted-foreground);
+}
+
+/* Ajustes para corrigir o posicionamento dos elementos */
+.pt-header-search {
+  padding-top: 110px;
+}
+
+/* Ajuste para o padding do main content */
+.pt-header-main {
+  padding-top: 80px !important;
+}
+
+/* Animações 3D para cards de tecnologia */
+.technology-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.5s ease;
+}
+
+.technology-card:hover {
+  transform: rotateY(10deg) rotateX(5deg);
+}
+
+/* Efeito de levitação para cards do blog */
+.blog-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Animação de flip para depoimentos */
+.testimonial-card {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.testimonial-card.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Efeito de parallax para hero section */
+.hero-parallax {
+  transform: translateZ(-1px) scale(1.05);
+}
+
+/* Gradiente overlay para hero section */
+.hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 5 !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%) !important;
+}
+
+/* Animações para elementos flutuantes */
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-element.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.floating-element.delay-2 {
+  animation-delay: 1s;
+}
+
+.floating-element.delay-3 {
+  animation-delay: 1.5s;
+}
+
+.floating-element.delay-4 {
+  animation-delay: 2s;
+}
+
+/* Efeito de ripple para botões */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+
+.ripple:active::after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}
+
+/* Efeito de hover suave para links */
+.smooth-hover {
+  transition: all 0.3s ease;
+}
+
+.smooth-hover:hover {
+  transform: translateY(-2px);
+}
+
+.hero-button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Texto do hero section */
+.hero-text {
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+  font-weight: 600 !important;
+}
+
+/* Botões do hero section */
+.hero-button {
+  color: white !important;
+  border-color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+  font-weight: 500 !important;
+}
+
+/* Animação de preenchimento para indicador de scroll */
+.scroll-progress {
+  transition: height 0.2s ease;
+}
+
+/* Efeito de brilho para elementos ativos */
+.glow {
+  box-shadow: 0 0 15px rgba(248, 123, 0, 0.5);
+}
+
+/* Animação de pulso suave */
+.pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(248, 123, 0, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(248, 123, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(248, 123, 0, 0);
+  }
+}
+
+/* Efeito de transição suave para seções */
+.section-transition {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-transition.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ajuste para garantir visibilidade do header e barra de pesquisa */
+.header-fixed {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: 60 !important;
+}
+
+.search-bar-fixed {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: 70 !important;
+}
+
+/* Tema Dark Uniforme para área administrativa */
+.admin-dark-theme {
+  --bg-primary: #0f172a;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #0f172a;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-color: #1e293b;
+  --border-hover: #334155;
+  --hover-bg: #1e293b;
+}
+
+/* Aplicar tema dark uniforme em rotas admin */
+.admin-route,
+.admin-route * {
+  background-color: #0f172a00 !important;
+  color: #f1f5f9 !important;
+}
+
+.admin-route .bg-card,
+.admin-route .bg-background,
+.admin-route .bg-white,
+.admin-route [class*="bg-"] {
+  background-color: #0f172a !important;
+}
+
+.admin-route .border-border,
+.admin-route .border-gray-300,
+.admin-route .border-gray-200,
+.admin-route [class*="border-"] {
+  border-color: #1e293b !important;
+}
+
+.admin-route .text-muted-foreground,
+.admin-route .text-gray-700,
+.admin-route .text-gray-600,
+.admin-route .text-gray-500 {
+  color: #94a3b8 !important;
+}
+
+.admin-route .bg-muted,
+.admin-route .bg-gray-100,
+.admin-route .bg-gray-50 {
+  background-color: #0f172a !important;
+}
+
+.admin-route input,
+.admin-route textarea,
+.admin-route select {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-color: #1e293b !important;
+}
+
+.admin-route input:focus,
+.admin-route textarea:focus,
+.admin-route select:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
+}
+
+.admin-route table {
+  background-color: #0f172a !important;
+}
+
+.admin-route thead,
+.admin-route .bg-muted\/30 {
+  background-color: #0f172a !important;
+}
+
+.admin-route tbody {
+  background-color: #0f172a !important;
+}
+
+.admin-route tr {
+  border-color: #1e293b !important;
+}
+
+.admin-route td,
+.admin-route th {
+  border-color: #1e293b !important;
+}
+
+.admin-route .hover\:bg-muted\/10:hover,
+.admin-route .hover\:bg-gray-50:hover {
+  background-color: #1e293b !important;
+}
+
+/* Forçar tema dark uniforme em elementos específicos */
+.admin-route div[class*="bg-white"],
+.admin-route div[class*="bg-gray-50"],
+.admin-route div[class*="bg-gray-100"],
+.admin-route div[class*="bg-card"] {
+  background-color: #0f172a !important;
+}
+
+.admin-route span[class*="bg-white"],
+.admin-route span[class*="bg-gray-50"],
+.admin-route span[class*="bg-gray-100"] {
+  background-color: #0f172a !important;
+}
+
+/* Garantir que textos fiquem claros */
+.admin-route h1, .admin-route h2, .admin-route h3,
+.admin-route h4, .admin-route h5, .admin-route h6 {
+  color: #f1f5f9 !important;
+}
+
+.admin-route p, .admin-route span, .admin-route div {
+  color: #f1f5f9 !important;
+}
+
+/* Fundo uniforme para todos os elementos */
+.admin-route .bg-card,
+.admin-route .bg-muted,
+.admin-route .bg-background,
+.admin-route table,
+.admin-route thead,
+.admin-route tbody,
+.admin-route div[class*="bg-"] {
+  background-color: #0f172a !important;
+}
+
+/* Efeitos neon criativos nos cards */
+.admin-route .bg-card {
+  background-color: #0f172a !important;
+  border: 1px solid #334155 !important;
+  box-shadow:
+    0 0 20px rgba(59, 130, 246, 0.1),
+    inset 0 0 20px rgba(59, 130, 246, 0.05) !important;
+  transition: all 0.3s ease !important;
+}
+
+.admin-route .bg-card:hover {
+  border: 1px solid #3b82f6 !important;
+  box-shadow:
+    0 0 30px rgba(59, 130, 246, 0.2),
+    0 0 60px rgba(59, 130, 246, 0.1),
+    inset 0 0 30px rgba(59, 130, 246, 0.1) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Efeitos neon nas métricas com fundo uniforme */
+.admin-route .grid > div {
+  background-color: #0f172a !important;
+  border: 1px solid #334155 !important;
+  box-shadow:
+    0 0 15px rgba(168, 85, 247, 0.1),
+    inset 0 0 15px rgba(168, 85, 247, 0.05) !important;
+  transition: all 0.3s ease !important;
+}
+
+.admin-route .grid > div:hover {
+  border: 1px solid #a855f7 !important;
+  box-shadow:
+    0 0 25px rgba(168, 85, 247, 0.2),
+    0 0 50px rgba(168, 85, 247, 0.1),
+    inset 0 0 25px rgba(168, 85, 247, 0.1) !important;
+  transform: translateY(-3px) scale(1.02) !important;
+}
+
+/* Efeitos neon na tabela */
+.admin-route table {
+  background-color: #0f172a !important;
+  border: 1px solid #334155 !important;
+  box-shadow:
+    0 0 20px rgba(34, 197, 94, 0.1),
+    inset 0 0 20px rgba(34, 197, 94, 0.05) !important;
+}
+
+.admin-route table:hover {
+  border: 1px solid #22c55e !important;
+  box-shadow:
+    0 0 30px rgba(34, 197, 94, 0.2),
+    0 0 60px rgba(34, 197, 94, 0.1),
+    inset 0 0 30px rgba(34, 197, 94, 0.1) !important;
+}
+
+/* Efeitos neon nos títulos das seções */
+.admin-route h1, .admin-route h2, .admin-route h3 {
+  color: #f1f5f9 !important;
+  text-shadow:
+    0 0 10px rgba(59, 130, 246, 0.5),
+    0 0 20px rgba(59, 130, 246, 0.3),
+    0 0 30px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Efeitos neon nos ícones */
+.admin-route svg {
+  filter: drop-shadow(0 0 5px rgba(168, 85, 247, 0.3)) !important;
+  transition: all 0.3s ease !important;
+}
+
+.admin-route svg:hover {
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.6)) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Efeitos neon nos botões de ação */
+.admin-route button {
+  transition: all 0.3s ease !important;
+}
+
+.admin-route button:hover {
+  box-shadow:
+    0 0 15px rgba(239, 68, 68, 0.3),
+    0 0 30px rgba(239, 68, 68, 0.1) !important;
+}
+
+.admin-route .text-blue-400:hover {
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.8) !important;
+}
+
+.admin-route .text-green-400:hover {
+  text-shadow: 0 0 10px rgba(34, 197, 94, 0.8) !important;
+}
+
+.admin-route .text-red-400:hover {
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.8) !important;
+}
+
+/* Efeito neon sutil no header admin */
+.admin-route header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  border-bottom: 1px solid #334155 !important;
+  box-shadow:
+    0 0 20px rgba(59, 130, 246, 0.1),
+    0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Efeito neon na sidebar */
+.admin-route aside {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%) !important;
+  border-right: 1px solid #334155 !important;
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(59, 130, 246, 0.05) !important;
+}
+
+/* Animação de pulso neon para elementos ativos */
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 20px rgba(59, 130, 246, 0.1),
+      inset 0 0 20px rgba(59, 130, 246, 0.05);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(59, 130, 246, 0.2),
+      0 0 60px rgba(59, 130, 246, 0.1),
+      inset 0 0 30px rgba(59, 130, 246, 0.1);
+  }
+}
+
+.admin-route .bg-blue-600 {
+  animation: neon-pulse 2s infinite !important;
+}
+
+/* Efeito neon nas linhas da tabela ao hover */
+.admin-route tr:hover {
+  background-color: #1e293b !important;
+  box-shadow:
+    0 0 15px rgba(168, 85, 247, 0.1),
+    inset 0 0 15px rgba(168, 85, 247, 0.05) !important;
+  transform: scale(1.01) !important;
+}
+
+/* Efeito neon nos badges com fundo uniforme */
+.admin-route span[class*="bg-"] {
+  background-color: #0f172a !important;
+  border: 1px solid #475569 !important;
+  box-shadow:
+    0 0 10px rgba(59, 130, 246, 0.1),
+    inset 0 0 10px rgba(59, 130, 246, 0.05) !important;
+  transition: all 0.3s ease !important;
+}
+
+.admin-route span[class*="bg-"]:hover {
+  border: 1px solid #3b82f6 !important;
+  box-shadow:
+    0 0 15px rgba(59, 130, 246, 0.2),
+    0 0 30px rgba(59, 130, 246, 0.1),
+    inset 0 0 15px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Efeitos neon específicos para diferentes elementos */
+
+/* Cards de métricas com cores diferentes */
+.admin-route .grid > div:nth-child(1) {
+  box-shadow:
+    0 0 15px rgba(59, 130, 246, 0.15),
+    inset 0 0 15px rgba(59, 130, 246, 0.05) !important;
+}
+
+.admin-route .grid > div:nth-child(1):hover {
+  border: 1px solid #3b82f6 !important;
+  box-shadow:
+    0 0 25px rgba(59, 130, 246, 0.3),
+    0 0 50px rgba(59, 130, 246, 0.15),
+    inset 0 0 25px rgba(59, 130, 246, 0.15) !important;
+}
+
+.admin-route .grid > div:nth-child(2) {
+  box-shadow:
+    0 0 15px rgba(245, 158, 11, 0.15),
+    inset 0 0 15px rgba(245, 158, 11, 0.05) !important;
+}
+
+.admin-route .grid > div:nth-child(2):hover {
+  border: 1px solid #f59e0b !important;
+  box-shadow:
+    0 0 25px rgba(245, 158, 11, 0.3),
+    0 0 50px rgba(245, 158, 11, 0.15),
+    inset 0 0 25px rgba(245, 158, 11, 0.15) !important;
+}
+
+.admin-route .grid > div:nth-child(3) {
+  box-shadow:
+    0 0 15px rgba(168, 85, 247, 0.15),
+    inset 0 0 15px rgba(168, 85, 247, 0.05) !important;
+}
+
+.admin-route .grid > div:nth-child(3):hover {
+  border: 1px solid #a855f7 !important;
+  box-shadow:
+    0 0 25px rgba(168, 85, 247, 0.3),
+    0 0 50px rgba(168, 85, 247, 0.15),
+    inset 0 0 25px rgba(168, 85, 247, 0.15) !important;
+}
+
+.admin-route .grid > div:nth-child(4) {
+  box-shadow:
+    0 0 15px rgba(34, 197, 94, 0.15),
+    inset 0 0 15px rgba(34, 197, 94, 0.05) !important;
+}
+
+.admin-route .grid > div:nth-child(4):hover {
+  border: 1px solid #22c55e !important;
+  box-shadow:
+    0 0 25px rgba(34, 197, 94, 0.3),
+    0 0 50px rgba(34, 197, 94, 0.15),
+    inset 0 0 25px rgba(34, 197, 94, 0.15) !important;
+}
+
+/* Efeito neon pulsante para elementos ativos */
+@keyframes cyberpunk-glow {
+  0%, 100% {
+    box-shadow:
+      0 0 20px rgba(59, 130, 246, 0.2),
+      0 0 40px rgba(59, 130, 246, 0.1),
+      inset 0 0 20px rgba(59, 130, 246, 0.05);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(59, 130, 246, 0.4),
+      0 0 60px rgba(59, 130, 246, 0.2),
+      0 0 90px rgba(59, 130, 246, 0.1),
+      inset 0 0 30px rgba(59, 130, 246, 0.1);
+  }
+}
+
+.admin-route .bg-blue-600 {
+  animation: cyberpunk-glow 3s infinite !important;
+}
+
+/* Efeito neon para gráficos */
+.admin-route .bg-primary {
+  box-shadow:
+    0 0 15px rgba(248, 123, 0, 0.3),
+    inset 0 0 15px rgba(248, 123, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.admin-route .bg-primary:hover {
+  box-shadow:
+    0 0 25px rgba(248, 123, 0, 0.5),
+    0 0 50px rgba(248, 123, 0, 0.2),
+    inset 0 0 25px rgba(248, 123, 0, 0.2) !important;
+  transform: scale(1.05) !important;
+}
+
+.admin-route .bg-secondary {
+  box-shadow:
+    0 0 15px rgba(100, 116, 139, 0.3),
+    inset 0 0 15px rgba(100, 116, 139, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.admin-route .bg-secondary:hover {
+  box-shadow:
+    0 0 25px rgba(100, 116, 139, 0.5),
+    0 0 50px rgba(100, 116, 139, 0.2),
+    inset 0 0 25px rgba(100, 116, 139, 0.2) !important;
+  transform: scale(1.05) !important;
+}
+
+/* Efeito neon para elementos de navegação ativos */
+.admin-route .bg-blue-600 {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%) !important;
+  box-shadow:
+    0 0 20px rgba(59, 130, 246, 0.4),
+    0 0 40px rgba(59, 130, 246, 0.2),
+    inset 0 0 20px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Efeito neon para campos de input */
+.admin-route input:focus,
+.admin-route textarea:focus,
+.admin-route select:focus {
+  border-color: #3b82f6 !important;
+  box-shadow:
+    0 0 0 2px rgba(59, 130, 246, 0.5),
+    0 0 20px rgba(59, 130, 246, 0.2),
+    inset 0 0 10px rgba(59, 130, 246, 0.05) !important;
+}
+
+/* Efeito neon para scrollbar */
+.admin-route ::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.admin-route ::-webkit-scrollbar-track {
+  background: #1e293b !important;
+  border-radius: 4px !important;
+}
+
+.admin-route ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3b82f6, #a855f7) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3) !important;
+}
+
+.admin-route ::-webkit-scrollbar-thumb:hover {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5) !important;
+}
+
+/* Efeito neon para tooltips e modals */
+.admin-route [role="tooltip"],
+.admin-route [class*="modal"],
+.admin-route [class*="popup"] {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  border: 1px solid #334155 !important;
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(59, 130, 246, 0.1),
+    inset 0 0 20px rgba(59, 130, 246, 0.05) !important;
+}
+
+/* Animação de entrada neon para elementos */
+@keyframes neon-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    box-shadow:
+      0 0 10px rgba(59, 130, 246, 0.1),
+      inset 0 0 10px rgba(59, 130, 246, 0.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow:
+      0 0 20px rgba(59, 130, 246, 0.2),
+      inset 0 0 20px rgba(59, 130, 246, 0.05);
+  }
+}
+
+.admin-route .bg-card,
+.admin-route .grid > div,
+.admin-route table {
+  animation: neon-fade-in 0.6s ease-out !important;
+}
+
+/* Efeito neon para elementos de loading */
+@keyframes neon-spin {
+  0% {
+    transform: rotate(0deg);
+    box-shadow:
+      0 0 20px rgba(59, 130, 246, 0.3),
+      0 0 40px rgba(59, 130, 246, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(168, 85, 247, 0.4),
+      0 0 60px rgba(168, 85, 247, 0.2);
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow:
+      0 0 20px rgba(59, 130, 246, 0.3),
+      0 0 40px rgba(59, 130, 246, 0.1);
+  }
+}
+
+.admin-route svg.animate-spin {
+  animation: neon-spin 2s linear infinite !important;
+}
+
+/* Animação para botão de admin flutuante */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+/* Custom padding para div do logotipo na sidebar */
+.custom-logo-padding {
+  padding: 6px !important;
+}
+
+/* ===== Workflow de Recipientes (página de post do blog) ===== */
+.workflow {
+  position: relative;
+}
+.workflow::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(251, 146, 60, 0.35), rgba(249, 115, 22, 0.35));
+}
+/* preenchimento do progresso do trilho */
+.workflow::after {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 0;
+  width: 2px;
+  height: var(--rail-progress-px, 0px);
+  background: linear-gradient(180deg, #fb923c, #f97316);
+  box-shadow: 0 0 12px rgba(249, 115, 22, 0.35);
+}
+
+.workflow-stage {
+  position: relative;
+  margin: 1rem 0 1.25rem 0;
+  opacity: 1;
+  transform: none;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+.workflow-stage.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+.workflow-stage::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fb923c, #f97316);
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.2);
+}
+
+.workflow-stage-inner {
+  position: relative;
+  padding: 18px 16px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--workflow-bg, rgba(255,255,255,0.75)), var(--workflow-bg, rgba(255,255,255,0.75))) padding-box,
+    linear-gradient(120deg, var(--grad-a, #ffedd5), var(--grad-b, #fdba74), var(--grad-c, #fda4af)) border-box;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: workflowBorderFlow 10s linear infinite;
+  counter-reset: substep;
+}
+.workflow-stage-inner > :first-child { margin-top: 0; }
+.workflow-stage-inner > :last-child { margin-bottom: 0; }
+
+/* subetapas (H3) como chips numerados */
+.workflow-stage-inner h3 {
+  position: relative;
+  padding-left: 40px;
+}
+.workflow-stage-inner h3::before {
+  counter-increment: substep;
+  content: counter(substep);
+  position: absolute;
+  left: 0;
+  top: 0.125em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 24px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7c2d12;
+  background: linear-gradient(180deg, #fed7aa, #fdba74);
+  border: 1px solid #fdba74;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+
+.workflow-stage-label {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #9a3412; /* orange-800 */
+  background: linear-gradient(180deg, #ffedd5, #fed7aa);
+  border: 1px solid #fdba74;
+  border-radius: 999px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+
+.workflow-stage-inner:hover {
+  transform: translateY(-1px);
+  transition: transform 200ms ease;
+}
+
+/* estado ativo da etapa */
+.workflow-stage.active .workflow-stage-label {
+  animation: pulseGlow 1.6s ease-in-out infinite;
+}
+.workflow-stage.active::before {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 5px rgba(251, 146, 60, 0.28);
+}
+.workflow-stage.active .workflow-stage-inner {
+  filter: saturate(1.1);
+}
+
+@keyframes workflowBorderFlow {
+  0% { background-position: 0% 0%, 0% 0%; }
+  100% { background-position: 0% 0%, 200% 0%; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: translateY(-1px) scale(1); box-shadow: 0 1px 0 rgba(0,0,0,0.06); }
+  50% { transform: translateY(-1px) scale(1.04); box-shadow: 0 0 0 4px rgba(251, 146, 60, 0.22); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workflow-stage-inner { animation: none; }
+  .workflow-stage.active .workflow-stage-label { animation: none; }
+}
+
+.dark .workflow::before {
+  background: linear-gradient(180deg, rgba(251,146,60,0.25), rgba(249,115,22,0.25));
+}
+.dark .workflow-stage-inner {
+  --workflow-bg: rgba(2, 6, 23, 0.55);
+  --grad-a: #7c2d12; /* orange-900 */
+  --grad-b: #ea580c; /* orange-600 */
+  --grad-c: #9f1239; /* rose-900 */
+}
+.dark .workflow-stage-label {
+  color: #fed7aa;
+  background: linear-gradient(180deg, rgba(120,53,15,0.8), rgba(124,45,18,0.6));
+  border-color: rgba(234,88,12,0.6);
+}
+.dark .workflow::after {
+  background: linear-gradient(180deg, #ea580c, #f97316);
+  box-shadow: 0 0 10px rgba(234, 88, 12, 0.28);
+}

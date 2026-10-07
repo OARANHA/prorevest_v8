@@ -1,0 +1,43 @@
+# Dependencies / builds
+node_modules/
+build/
+dist/
+.react-router/
+.cache/
+.vite/
+
+# Runtime / logs
+logs/
+*.log
+*.pid
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+
+# Local tooling / scratch
+.claude/
+.doc/
+tmp/
+.DS_Store
+*.local
+
+# Database/backups
+*.db
+*.sqlite
+*.sql
+*.dump
+*.bak
+*.tar
+*.tar.gz
+*.zip
+
+# Generated Vite config snapshots
+vite.config.ts.timestamp-*
