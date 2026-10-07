@@ -75,12 +75,10 @@ export default function Register() {
             console.log("Usuário é administrador, redirecionando para /admin");
             navigate("/admin");
           } else {
-            console.log("Usuário não é administrador, redirecionando para /meus-projetos");
-            navigate("/meus-projetos");
+            navigate("/studio", { replace: true });
           }
         } else {
-          console.log("Sessão não encontrada, redirecionando para /meus-projetos");
-          navigate("/meus-projetos");
+          navigate("/studio", { replace: true });
         }
       }
     } catch (err) {
