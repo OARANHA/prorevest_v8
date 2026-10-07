@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { SiteHeader } from '../components/SiteHeader';
-import { SiteFooter } from '../components/SiteFooter';
 import RequireAuth from '../components/auth/RequireAuth';
 import { useAuth } from '../contexts/AuthContext';
 import { ProjectService, type Project } from '../services/projectService';
@@ -59,7 +57,6 @@ export default function MeusProjetos() {
   return (
     <RequireAuth>
       <div className="min-h-screen bg-background">
-        <SiteHeader />
       <div className="container mx-auto px-4 py-8 pt-20">
         {/* Page Header */}
         <div className="mb-8">
@@ -261,7 +258,6 @@ export default function MeusProjetos() {
           </div>
         )}
       </div>
-        <SiteFooter />
       </div>
     </RequireAuth>
   );
