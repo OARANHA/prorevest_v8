@@ -35,6 +35,8 @@ Registro cronológico curto do trabalho real. Não usar como changelog de cada l
 - Build cliente+SSR repetido com `BUILD_EXIT=0` usando 768 MB no broker.
 - Smoke HTTP local executado com `HOST=127.0.0.1`: `/studio` 200; redirects legados 302 corretos; `/login?redirect=/studio` 200; `/reset-password` 200.
 - Revisão comparada com a documentação atual do Supabase confirmou o fluxo `resetPasswordForEmail` → `PASSWORD_RECOVERY` → `updateUser`.
+- E2E real de recuperação: o e-mail foi enviado; ao abrir o link a sessão foi criada (header autenticado), porém `/auth/callback` retornou 404 em produção.
+- Causa confirmada: `app/routes/auth/callback.tsx` existia, mas `app/routes.ts` não registrava `auth/callback`. Rota adicionada à PR #1.
 
 ## Próximo trabalho
 
