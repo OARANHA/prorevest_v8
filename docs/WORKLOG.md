@@ -30,6 +30,11 @@ Registro cronológico curto do trabalho real. Não usar como changelog de cada l
 - Build completo cliente+SSR validado com `BUILD_EXIT=0` usando `NODE_OPTIONS=--max-old-space-size=768` e `--minify false` no broker limitado.
 - Build minificado do cliente também compilou; tentativas anteriores do ciclo completo esbarraram no limite de memória do broker, não em erro de código.
 - Adicionados redirects de compatibilidade para `/novo-projeto`, `/studio/project/:projectId` e `/studioprorevest`.
+- PR draft #1 criada no GitHub para revisão antes de merge/deploy.
+- Branch local sincronizada com o commit remoto reconstruído via Git Data API; árvore local/remota idêntica.
+- Build cliente+SSR repetido com `BUILD_EXIT=0` usando 768 MB no broker.
+- Smoke HTTP local executado com `HOST=127.0.0.1`: `/studio` 200; redirects legados 302 corretos; `/login?redirect=/studio` 200; `/reset-password` 200.
+- Revisão comparada com a documentação atual do Supabase confirmou o fluxo `resetPasswordForEmail` → `PASSWORD_RECOVERY` → `updateUser`.
 
 ## Próximo trabalho
 
