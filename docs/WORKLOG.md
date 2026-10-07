@@ -41,3 +41,6 @@ Registro cronológico curto do trabalho real. Não usar como changelog de cada l
 ## Próximo trabalho
 
 Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
+
+- Build cliente+SSR após registrar `auth/callback`: `BUILD_EXIT=0`.
+- Smoke local de `/auth/callback` retornou 200; `/reset-password` também retornou 200.
