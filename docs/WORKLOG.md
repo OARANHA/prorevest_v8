@@ -65,3 +65,11 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Correção em `fix/studio-palette-pagination`: lock por ref, página seguinte explícita, ordenação estável, cancelamento de requisição anterior, timeout de 15s e UI de retry.
 - Os dois seletores de paleta (modal e floating) passam a usar o mesmo fluxo previsível de carga inicial + infinite scroll.
 - Build cliente+SSR da branch concluído com `BUILD_EXIT=0`. Pendente: revisão final, merge/deploy e E2E real no Studio.
+
+## 2026-10-07 — Deploy hotfix PR #2
+
+- PR #2 foi squash-merged em `main` no commit `3fe89677a6b37505c15b522192d29530af06bcc1`.
+- Deploy controlado concluído com backup em `/opt/wandora/ops-workspace/prorevest-deploy-backups/20261007-165005-3fe89677a6b37505c15b522192d29530af06bcc1`.
+- `prorevest-app` voltou `online` e smoke público de Home/Studio/Auth retornou 200.
+- Automação pública não conseguiu reproduzir a paleta completa: sem projeto/imagem ativa viu apenas a grade estática inicial de 6 cores; portanto o E2E do infinite scroll continua pendente no fluxo real do usuário.
+- Pendente imediato: no Studio com imagem/projeto ativo, abrir Paleta ProRevest e rolar além do primeiro lote para confirmar carregamento das próximas cores e ausência de spinner infinito.
