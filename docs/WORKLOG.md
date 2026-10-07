@@ -44,3 +44,7 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 
 - Build cliente+SSR após registrar `auth/callback`: `BUILD_EXIT=0`.
 - Smoke local de `/auth/callback` retornou 200; `/reset-password` também retornou 200.
+
+- Diagnóstico adicional: login, callback e cadastro ainda enviavam usuário comum para `/meus-projetos`; regra alterada para `/studio`.
+- Causa do header sobreposto em `/meus-projetos`: o `AppLayout` já renderizava `Header`/`SiteFooter`, enquanto a rota adicionava `SiteHeader`/`SiteFooter` novamente.
+- Wrappers duplicados removidos de `/meus-projetos`, `/esqueci-senha`, `/reset-password` e `/auth/callback` para usar o layout global oficial.
