@@ -2,8 +2,6 @@ import type { MetaFunction, LoaderFunctionArgs } from "react-router-dom";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { supabase } from "../../lib/supabaseClient";
-import { SiteHeader } from "../../components/SiteHeader";
-import { SiteFooter } from "../../components/SiteFooter";
 
 export const meta: MetaFunction = () => {
   return [
@@ -62,8 +60,7 @@ export default function AuthCallback() {
             console.log("Usuário é administrador, redirecionando para /admin");
             navigate("/admin");
           } else {
-            console.log("Usuário não é administrador, redirecionando para /meus-projetos");
-            navigate("/meus-projetos");
+            navigate("/studio", { replace: true });
           }
         } else {
           // Não há sessão, redirecionar para login
@@ -82,7 +79,6 @@ export default function AuthCallback() {
   if (error) {
     return (
       <div className="min-h-screen bg-background">
-        <SiteHeader />
         <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 pt-20">
           <div className="text-center p-8 bg-card border border-border rounded-2xl">
             <h1 className="text-2xl font-bold text-foreground mb-4">Erro de Autenticação</h1>
@@ -95,7 +91,6 @@ export default function AuthCallback() {
             </Link>
           </div>
         </div>
-        <SiteFooter />
       </div>
     );
   }
@@ -103,7 +98,6 @@ export default function AuthCallback() {
   if (processing) {
     return (
       <div className="min-h-screen bg-background">
-        <SiteHeader />
         <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 pt-20">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
@@ -111,20 +105,17 @@ export default function AuthCallback() {
             <p className="text-muted-foreground mt-2">Aguarde um momento</p>
           </div>
         </div>
-        <SiteFooter />
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-background">
-      <SiteHeader />
       <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 pt-20">
         <div className="text-center">
           <h2 className="text-xl font-medium text-foreground">Redirecionando...</h2>
         </div>
       </div>
-      <SiteFooter />
     </div>
   );
 }
