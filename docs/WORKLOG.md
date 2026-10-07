@@ -48,3 +48,12 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Diagnóstico adicional: login, callback e cadastro ainda enviavam usuário comum para `/meus-projetos`; regra alterada para `/studio`.
 - Causa do header sobreposto em `/meus-projetos`: o `AppLayout` já renderizava `Header`/`SiteFooter`, enquanto a rota adicionava `SiteHeader`/`SiteFooter` novamente.
 - Wrappers duplicados removidos de `/meus-projetos`, `/esqueci-senha`, `/reset-password` e `/auth/callback` para usar o layout global oficial.
+## 2026-10-07 — Deploy PR #1
+
+- PR #1 foi squash-merged em `main` no commit `301b53edf6aeeac173bf59d9e68526ce18ff9e66`.
+- Deploy controlado executado com backup em `/opt/wandora/ops-workspace/prorevest-deploy-backups/20261007-161028-301b53edf6aeeac173bf59d9e68526ce18ff9e66`.
+- `prorevest-app` reiniciado de forma direcionada e retornou `online`.
+- Smoke público pós-deploy: `/`, `/studio`, `/auth/callback`, `/reset-password`, `/login` e `/meus-projetos` retornaram 200.
+- Redirects legados pós-deploy: `/studioprorevest` → `/studio`; `/novo-projeto` → `/studio`; `/studio/project/:id` → `/studio?projectId=:id`.
+- Novo recovery real foi disparado após o deploy para repetir o E2E no código publicado.
+- Pendente: abrir o link mais recente, criar nova senha, validar login → `/studio` e validar Studio com upload/cor/textura.
