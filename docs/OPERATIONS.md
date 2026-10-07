@@ -47,6 +47,8 @@ NODE_OPTIONS=--max-old-space-size=768 npm run build
 
 Isso foi necessário no broker Wandora por limite de memória da sessão. Em 2026-10-07, `NODE_OPTIONS=--max-old-space-size=768 npx react-router build --minify false` concluiu cliente+SSR com exit 0. Essa configuração é apenas de validação no broker; o deploy de produção continua exigindo build normal/minificado e smoke test.
 
+Para smoke local dentro do Agent Mesh, definir `HOST=127.0.0.1` ao iniciar `react-router-serve`; sem `HOST`, o runtime do broker pode falhar ao enumerar interfaces de rede (`uv_interface_addresses`).
+
 ## Deploy atual conhecido
 
 Historicamente era feito:
