@@ -37,6 +37,8 @@ E-mail institucional oficial: **a confirmar**.
 
 - React 18 + React Router 7 + TypeScript + Vite.
 - Supabase para autenticação/dados/storage.
+- Projeto Supabase oficial da ProRevest: `gtfvhktgxqtdrnaxizch`.
+- Auth URL Configuration confirmada em 2026-10-07: Site URL `https://prorevesttintas.com.br`; redirects permitidos `/auth/callback` e `/reset-password` no domínio oficial.
 - Produção atual roda com Node 20.19.5 e PM2.
 - Processo PM2 observado: `prorevest-app`.
 - Build atual: `npm run build`.

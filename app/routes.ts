@@ -89,9 +89,11 @@ const routes = [
   route("register", "./routes/register.tsx"),
   route("esqueci-senha", "./routes/esqueci-senha.tsx"),
   route("reset-password", "./routes/reset-password.tsx"),
+  route("auth/callback", "./routes/auth/callback.tsx"),
   route("resend-confirmation", "./routes/resend-confirmation.tsx"),
   route("perfil", "./routes/perfil.tsx"),
   route("meus-projetos", "./routes/meus-projetos.tsx"),
+  route("novo-projeto", "./routes/novo-projeto-redirect.tsx"),
   route("projects", "./routes/projects.tsx"),
   route("projects/:slug", "./routes/projects.$slug.tsx"),
   route("inspiracao", "./routes/inspiracao.tsx"),
@@ -119,10 +121,11 @@ const routes = [
   route("api/vendaerp/processar", "./routes/api/vendaerp/processar.ts"),
 
   // Studio ProRevest routes
-  route("studio", "./routes/studio.tsx"),
+  route("studio", "./routes/studioprorevest.tsx"),
+  route("studio/project/:projectId", "./routes/studio-project-redirect.tsx"),
   route("studio/new-project", "./routes/studio/new-project.tsx"),
   route("studio/editor/:projectSlug", "./routes/studio/editor/[projectSlug].tsx"),
-  route("studioprorevest", "./routes/studioprorevest.tsx"),
+  route("studioprorevest", "./routes/studioprorevest-redirect.tsx"),
 ] satisfies RouteConfig;
 
 export default routes;

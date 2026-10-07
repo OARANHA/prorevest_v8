@@ -81,7 +81,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const getSession = async () => {
       console.log("Obtendo sessão do Supabase...");
       const { data: { session } } = await supabase.auth.getSession();
-      console.log("Sessão obtida:", session);
       setSession(session);
       setUser(session?.user || null);
       
@@ -113,7 +112,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       
       // Listen for auth changes
       const { data: { subscription } } = await supabase.auth.onAuthStateChange((_event, session) => {
-        console.log("Estado de autenticação alterado:", _event, session);
         setSession(session);
         setUser(session?.user || null);
         
@@ -161,9 +159,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const signIn = async (email: string, password: string) => {
-    console.log("Tentando fazer login com:", email);
     const result = await supabase.auth.signInWithPassword({ email, password });
-    console.log("Resultado do login:", result);
     
     // Melhorar a mensagem de erro para email não confirmado
     if (result.error && result.error.message.includes("Email not confirmed")) {
@@ -185,7 +181,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
     });
     
-    console.log("Resultado do registro:", result);
     return result;
   };
 

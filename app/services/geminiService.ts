@@ -87,11 +87,25 @@ export async function editRoomImage(options: EditRoomImageOptions): Promise<Edit
 
   const endpoint = isTextureMode ? '/api/ai/upgrade-texture' : '/api/ai/upgrade-realista';
 
-  const res = await fetch(endpoint, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
-  });
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), 120_000);
+
+  let res: Response;
+  try {
+    res = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+  } catch (error) {
+    if (error instanceof DOMException && error.name === 'AbortError') {
+      return { status: 'error', error: 'O processamento demorou mais de 2 minutos. Tente novamente.' };
+    }
+    return { status: 'error', error: 'Falha de conexão durante o processamento da imagem. Tente novamente.' };
+  } finally {
+    window.clearTimeout(timeoutId);
+  }
 
   if (!res.ok) {
     const errText = await res.text();

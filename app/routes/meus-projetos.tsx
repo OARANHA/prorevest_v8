@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { SiteHeader } from '../components/SiteHeader';
-import { SiteFooter } from '../components/SiteFooter';
 import RequireAuth from '../components/auth/RequireAuth';
 import { useAuth } from '../contexts/AuthContext';
 import { ProjectService, type Project } from '../services/projectService';
@@ -39,7 +37,7 @@ export default function MeusProjetos() {
     try {
       localStorage.setItem('studioActiveProjectId', projectId);
     } catch {}
-    navigate(`/studioprorevest?projectId=${projectId}`);
+    navigate(`/studio?projectId=${projectId}`);
   };
   
   // Mock data for quotes
@@ -59,7 +57,6 @@ export default function MeusProjetos() {
   return (
     <RequireAuth>
       <div className="min-h-screen bg-background">
-        <SiteHeader />
       <div className="container mx-auto px-4 py-8 pt-20">
         {/* Page Header */}
         <div className="mb-8">
@@ -101,7 +98,7 @@ export default function MeusProjetos() {
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-cormorant font-bold">Projetos Recentes</h2>
               <Link 
-                to="/novo-projeto" 
+                to="/studio"
                 className="bg-gradient-to-r from-primary to-secondary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 Novo Projeto
@@ -128,7 +125,7 @@ export default function MeusProjetos() {
                   Comece criando seu primeiro projeto
                 </p>
                 <Link 
-                  to="/novo-projeto" 
+                  to="/studio"
                   className="bg-gradient-to-r from-primary to-secondary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-md hover:shadow-lg"
                 >
                   Criar Projeto
@@ -261,7 +258,6 @@ export default function MeusProjetos() {
           </div>
         )}
       </div>
-        <SiteFooter />
       </div>
     </RequireAuth>
   );

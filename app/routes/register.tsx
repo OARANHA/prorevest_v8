@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 
-import { SiteFooter } from "../components/SiteFooter";
 import { supabase } from "../lib/supabaseClient";
 
 export const meta: MetaFunction = () => {
@@ -75,12 +74,10 @@ export default function Register() {
             console.log("Usuário é administrador, redirecionando para /admin");
             navigate("/admin");
           } else {
-            console.log("Usuário não é administrador, redirecionando para /meus-projetos");
-            navigate("/meus-projetos");
+            navigate("/studio", { replace: true });
           }
         } else {
-          console.log("Sessão não encontrada, redirecionando para /meus-projetos");
-          navigate("/meus-projetos");
+          navigate("/studio", { replace: true });
         }
       }
     } catch (err) {
@@ -299,7 +296,6 @@ export default function Register() {
 
         </div>
       </div>
-      <SiteFooter />
     </div>
   );
 }

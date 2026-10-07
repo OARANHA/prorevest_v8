@@ -2,8 +2,6 @@ import type { MetaFunction, LoaderFunctionArgs } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { supabase } from "../lib/supabaseClient";
-import { SiteHeader } from "../components/SiteHeader";
-import { SiteFooter } from "../components/SiteFooter";
 
 export const meta: MetaFunction = () => {
   return [
@@ -16,93 +14,87 @@ export default function ResetPassword() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isRecoveryReady, setIsRecoveryReady] = useState(false);
+  const [isCheckingRecovery, setIsCheckingRecovery] = useState(true);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
-  const [token, setToken] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Verificar se há um token no sessionStorage (vindo do callback)
-    const storedToken = sessionStorage.getItem('password_reset_token');
-    if (storedToken) {
-      console.log("Token encontrado no sessionStorage:", storedToken);
-      setToken(storedToken);
-      // Não remover ainda, vamos remover após usar com sucesso
-    } else {
-      // Verificar se há token na URL (caso o usuário tenha vindo diretamente)
-      const hash = window.location.hash.substring(1);
-      const urlParams = new URLSearchParams(hash || window.location.search);
-      const urlToken = urlParams.get("token") || urlParams.get("access_token");
-      if (urlToken) {
-        console.log("Token encontrado na URL:", urlToken);
-        setToken(urlToken);
-      } else {
-        console.log("Nenhum token encontrado");
-        setError("Token de redefinição de senha não encontrado. Por favor, solicite um novo link.");
+    let mounted = true;
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (!mounted) return;
+      if (event === "PASSWORD_RECOVERY" && session) {
+        setIsRecoveryReady(true);
+        setIsCheckingRecovery(false);
+        setError("");
       }
-    }
+    });
+
+    supabase.auth.getSession().then(({ data, error: sessionError }) => {
+      if (!mounted) return;
+      if (sessionError) {
+        setError("Não foi possível validar o link de recuperação. Solicite um novo link.");
+      } else if (data.session) {
+        setIsRecoveryReady(true);
+        setError("");
+      } else {
+        setError("Link de redefinição inválido ou expirado. Solicite um novo link.");
+      }
+      setIsCheckingRecovery(false);
+    });
+
+    return () => {
+      mounted = false;
+      subscription.unsubscribe();
+    };
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Validar senhas
+
     if (password !== confirmPassword) {
       setError("As senhas não coincidem.");
       return;
     }
-    
+
     if (password.length < 6) {
       setError("A senha deve ter pelo menos 6 caracteres.");
       return;
     }
-    
-    if (!token) {
-      setError("Token de redefinição de senha não encontrado. Por favor, solicite um novo link.");
+
+    if (!isRecoveryReady) {
+      setError("O link de recuperação não está mais válido. Solicite um novo link.");
       return;
     }
-    
+
     setIsLoading(true);
     setError("");
     setMessage("");
-    
+
     try {
-      console.log("Tentando atualizar senha com token:", token);
-      
-      // Primeiro, vamos definir a sessão com o token de acesso
-      // Isso é necessário para o Supabase reconhecer que estamos em um processo de redefinição
-      const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
-      console.log("Sessão atual:", sessionData);
-      
-      // Atualizar a senha do usuário usando o token
-      const { data, error: updateError } = await supabase.auth.updateUser({ 
-        password: password
-      });
-      
-      console.log("Resultado da atualização:", data, updateError);
-      
+      const { error: updateError } = await supabase.auth.updateUser({ password });
+
       if (updateError) {
         setError(updateError.message);
-      } else {
-        // Remover o token do sessionStorage após uso bem-sucedido
-        sessionStorage.removeItem('password_reset_token');
-        setMessage("Senha redefinida com sucesso! Você será redirecionado para a página de login.");
-        // Redirecionar para login após 3 segundos
-        setTimeout(() => {
-          navigate("/login");
-        }, 3000);
+        return;
       }
-    } catch (err) {
-      console.error("Erro ao redefinir senha:", err);
+
+      setMessage("Senha redefinida com sucesso. Você será direcionado para o login.");
+      await supabase.auth.signOut({ scope: "local" });
+
+      window.setTimeout(() => {
+        navigate("/login", { replace: true });
+      }, 1500);
+    } catch {
       setError("Ocorreu um erro ao redefinir sua senha. Por favor, tente novamente.");
     } finally {
       setIsLoading(false);
     }
   };
-
   return (
     <div className="min-h-screen bg-background">
-      <SiteHeader />
       <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 pt-20">
         <div className="max-w-md w-full space-y-8">
           <div className="text-center">
@@ -130,10 +122,15 @@ export default function ResetPassword() {
               </div>
             )}
             
-            {!token ? (
+            {isCheckingRecovery ? (
+              <div className="text-center py-6">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4" />
+                <p className="text-muted-foreground">Validando seu link de recuperação...</p>
+              </div>
+            ) : !isRecoveryReady ? (
               <div className="text-center">
                 <p className="text-destructive mb-4">
-                  Token de redefinição de senha não encontrado. Por favor, solicite um novo link.
+                  Link de redefinição inválido ou expirado. Por favor, solicite um novo link.
                 </p>
                 <Link 
                   to="/esqueci-senha" 
@@ -216,7 +213,6 @@ export default function ResetPassword() {
           </div>
         </div>
       </div>
-      <SiteFooter />
     </div>
   );
 }
