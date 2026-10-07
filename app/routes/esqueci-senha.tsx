@@ -2,8 +2,6 @@ import type { MetaFunction, LoaderFunctionArgs } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { supabase } from "../lib/supabaseClient";
-import { SiteHeader } from "../components/SiteHeader";
-import { SiteFooter } from "../components/SiteFooter";
 
 export const meta: MetaFunction = () => {
   return [
@@ -45,7 +43,6 @@ export default function ForgotPassword() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SiteHeader />
       <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 pt-20">
         <div className="max-w-md w-full space-y-8">
           <div className="text-center">
@@ -125,7 +122,6 @@ export default function ForgotPassword() {
           </div>
         </div>
       </div>
-      <SiteFooter />
     </div>
   );
 }
