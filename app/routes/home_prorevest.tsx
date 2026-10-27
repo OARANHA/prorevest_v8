@@ -9,7 +9,7 @@ import CalculadoraMagica from '../components/CalculadoraMagica';
 import { FeaturedProducts } from '../components/FeaturedProducts';
 import InstagramSection from '../components/InstagramSection';
 import HomeDigitalCatalogs from '../components/HomeDigitalCatalogs';
-import CatalogLaunchHero from '../components/CatalogLaunchHero';
+import HomeHeroCarousel from '../components/HomeHeroCarousel';
 
 // Tipos
 interface Product {
@@ -1267,8 +1267,8 @@ const ProrevestApp = () => {
     <div className="relative min-h-screen bg-gradient-to-br from-orange-50 via-white to-blue-50">
       <div className="absolute inset-0 bg-gradient-to-br from-orange-100/30 to-blue-100/30 pointer-events-none"></div>
       
-      {/* Temporary campaign switch: previous Studio hero remains available for rollback. */}
-      {true ? <CatalogLaunchHero /> : <HeroSection />}
+      {/* Studio remains slide 1; catalog campaign is slide 2. */}
+      <HomeHeroCarousel studioSlide={<HeroSection />} />
       <HomeDigitalCatalogs />
       <FeaturedProducts
         products={featuredProducts.map(convertProductForFeatured)}
