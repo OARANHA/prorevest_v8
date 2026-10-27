@@ -75,3 +75,11 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Pendente imediato: no Studio com imagem/projeto ativo, abrir Paleta ProRevest e rolar além do primeiro lote para confirmar carregamento das próximas cores e ausência de spinner infinito.
 
 - E2E real confirmado pelo usuário após o deploy da PR #2: Paleta ProRevest rolou e carregou novas cores normalmente no Studio, sem spinner infinito. PRV-024 encerrado como RESOLVED.
+
+## 2026-10-27 — Fundação documental dos catálogos PIACERI e FLUA (sem deploy)
+
+- Revisados AGENTS.md e documentação viva; main verificado em `c327e745` antes da branch.
+- Canva confirmou PIACERI (38 páginas, DAHYAXZ36LY) e FLUA (17 páginas, DAHYAqdRfNI).
+- Diretriz do responsável: fidelidade estrita ao layout Canva; viewer interativo, PDF e QR Code; vínculos opcionais futuros a produtos e Studio.
+- Criada branch `feat/catalogos-digitais-foundation`; especificação em `docs/CATALOGOS_DIGITAIS.md`.
+- Nenhuma migração, asset, alteração de rota ou deploy feitos. Implementação funcional e testes seguem pendentes.
