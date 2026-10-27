@@ -106,3 +106,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Adicionada dependência `qrcode` e tipos em `package.json`. **PENDÊNCIA BLOQUEANTE:** sincronizar `package-lock.json` com `npm install --package-lock-only`, revisar diff, commitar na branch, e só então executar `npm ci && npm run build`. Não fazer merge/deploy antes do teste.
 - A fonte de título usa `font-serif` (aproximação); fonte exata do Canva ainda não foi identificada/licenciada para web; não afirmar correspondência tipográfica perfeita.
 - Não houve build/teste E2E neste ciclo por acesso remoto limitado; esta mudança é implementação NÃO VALIDADA em runtime.
+
+## 2026-10-27 — Refinamento de UX catálogos (sem deploy)
+
+- Redesenhada a rota `/catalogos` com capas originais dos dois catálogos, tipografia editorial, paleta neutra e links de PDF.
+- No visualizador, barra flutuante de ações e coleções reposicionada à esquerda no desktop; controles incluídos dentro do elemento de fullscreen (anterior/próxima, índice e QR), preservando acesso durante tela cheia.
+- Sobreposição mobile do menu com barra de paginação foi ajustada. Código gravado na branch `feat/catalogos-digitais-foundation`.
+- Build/E2E responsivo ainda pendentes; não houve merge/deploy. Revisar especialmente browser Fullscreen API, disposição mobile e lockfile do pacote QR.
