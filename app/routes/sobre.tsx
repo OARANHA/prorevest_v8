@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Paintbrush, Phone, MapPin } from "lucide-react";
+import { ArrowRight, Paintbrush, Phone } from "lucide-react";
 
 const numbers = [
   { value: "20+", label: "Anos de experiência" },
