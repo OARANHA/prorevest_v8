@@ -1,7 +1,7 @@
 import type { MetaFunction, LoaderFunctionArgs } from "react-router-dom";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { AdminHeader } from "../components/AdminHeader";
 import AdminSidebarSimple from "../components/AdminSidebarSimple";
 import {
