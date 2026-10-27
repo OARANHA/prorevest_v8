@@ -666,16 +666,7 @@ const ColorSection = () => {
                   gradient: "from-lime-500 to-emerald-500",
                   bgGradient: "from-lime-50 to-emerald-50"
                 },
-                {
-                  id: "simulador",
-                  name: "Simulador de Cores",
-                  description: "Experimente cores em tempo real antes de aplicar",
-                  icon: <Palette className="h-6 w-6" />,
-                  image: "https://images.unsplash.com/photo-1513519880230-81f35f6cf9c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-                  link: "/simulador",
-                  gradient: "from-violet-500 to-purple-500",
-                  bgGradient: "from-violet-50 to-purple-50"
-                }
+
               ].map((inspiration, index) => (
                 <Link
                   key={inspiration.id}
