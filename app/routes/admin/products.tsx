@@ -4,6 +4,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { Plus, Edit, Trash2, Search, X, LogOut, Package, DollarSign, Star, Shield, Image as ImageIcon } from "lucide-react";
 import { productService, type ProductWithDetails, type Category, type Finish, type Texture, type Color } from "../../services/productService";
 import { ImageUpload } from "../../components/ImageUpload";
+import { useAuth } from "../../contexts/AuthContext";
 
 export const meta: MetaFunction = () => {
   return [
@@ -14,6 +15,9 @@ export const meta: MetaFunction = () => {
 
 export default function AdminProducts() {
   const navigate = useNavigate();
+  const { signOut } = useAuth();
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [loadAttempt, setLoadAttempt] = useState(0);
   const [products, setProducts] = useState<ProductWithDetails[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
@@ -107,7 +111,7 @@ export default function AdminProducts() {
   // Carregar produtos e verificar parâmetro de edição
   useEffect(() => {
     const loadProducts = async () => {
-      console.log("🔍 AdminProducts: Iniciando carregamento de produtos...");
+      setLoadError(null);
       try {
         console.log("📞 AdminProducts: Chamando productService.getProducts()...");
         const productsData = await productService.getProducts();
@@ -137,7 +141,8 @@ export default function AdminProducts() {
           }
         }
       } catch (error) {
-        console.error("❌ AdminProducts: Erro ao carregar produtos:", error);
+        console.error("Erro ao carregar produtos:", error);
+        setLoadError("Não foi possível carregar os produtos. Verifique a conexão e tente novamente.");
       } finally {
         console.log("🏁 AdminProducts: Finalizando carregamento, setLoading(false)");
         setLoading(false);
@@ -145,7 +150,7 @@ export default function AdminProducts() {
     };
 
     loadProducts();
-  }, []);
+  }, [loadAttempt]);
 
   // Filtrar produtos com base no termo de busca
   useEffect(() => {
@@ -159,6 +164,9 @@ export default function AdminProducts() {
       setFilteredProducts(filtered);
     }
   }, [searchTerm, products]);
+
+  useEffect(() => { setCurrentPage(1); }, [searchTerm]);
+  useEffect(() => { setCurrentPage(p => Math.min(p, Math.max(1, Math.ceil(filteredProducts.length / itemsPerPage)))); }, [filteredProducts.length, itemsPerPage]);
 
   const handleDelete = async (id: string) => {
     if (confirm("Tem certeza que deseja excluir este produto?")) {
@@ -174,9 +182,15 @@ export default function AdminProducts() {
   };
 
   // Função para sair/logout
-  const handleLogout = () => {
-    if (confirm("Tem certeza que deseja sair?")) {
+  const handleLogout = async () => {
+    if (!confirm("Tem certeza que deseja sair?")) return;
+    try {
+      const { error } = await signOut();
+      if (error) throw error;
       navigate("/login");
+    } catch (error) {
+      console.error("Erro ao encerrar a sessão:", error);
+      alert("Não foi possível encerrar a sessão. Tente novamente.");
     }
   };
 
@@ -320,25 +334,6 @@ export default function AdminProducts() {
     }
   };
 
-  // Função para deletar variante
-  const handleDeleteVariant = async (variantId: string) => {
-    if (confirm("Tem certeza que deseja excluir esta variante?")) {
-      try {
-        // Aqui você precisaria implementar a exclusão de variante no productService
-        console.log("Excluir variante:", variantId);
-        // Recarregar produtos
-        const loadProducts = async () => {
-          const productsData = await productService.getProducts();
-          setProducts(productsData);
-          setFilteredProducts(productsData);
-        };
-        loadProducts();
-      } catch (error) {
-        console.error("Erro ao excluir variante:", error);
-      }
-    }
-  };
-
   // Função para abrir modal de nova variante
   const handleNewVariant = (productId: string) => {
     setEditingVariant(null);
@@ -388,6 +383,8 @@ export default function AdminProducts() {
       </div>
     );
   }
+
+  if (loadError) return <div role="alert" className="mx-auto max-w-3xl p-8 text-slate-100"><p>{loadError}</p><button type="button" className="mt-4 rounded-lg bg-blue-600 px-4 py-2 text-white" onClick={() => { setLoading(true); setLoadAttempt(n => n + 1); }}>Tentar novamente</button></div>;
 
   return (
     <div className="p-12 max-w-7xl mx-auto">
@@ -463,7 +460,7 @@ export default function AdminProducts() {
               <tr key={product.id} className="hover:bg-slate-700/50 transition-colors">
                 <td className="px-6 py-3 whitespace-nowrap">
                   <div className="font-semibold text-slate-100 text-sm">{product.name}</div>
-                  <div className="text-xs text-slate-400 mt-1">{product.description.substring(0, 50)}...</div>
+                  <div className="text-xs text-slate-400 mt-1">{(product.description || "").length > 50 ? `${product.description.slice(0, 50)}…` : (product.description || "Sem descrição")}</div>
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">
                   <span className="px-2 py-1 bg-blue-600/20 text-blue-400 rounded-full text-xs font-medium">
@@ -544,7 +541,7 @@ export default function AdminProducts() {
       {/* Paginação */}
       <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div className="text-lg text-slate-300">
-          Mostrando {startIndex + 1} a {Math.min(endIndex, filteredProducts.length)} de {filteredProducts.length} resultados
+          Mostrando {filteredProducts.length === 0 ? 0 : startIndex + 1} a {Math.min(endIndex, filteredProducts.length)} de {filteredProducts.length} resultados
         </div>
         <div className="flex flex-wrap gap-2">
           <button
@@ -572,7 +569,7 @@ export default function AdminProducts() {
 
           <button
             onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
+            disabled={currentPage >= totalPages || totalPages === 0}
             className="px-4 py-2 border border-slate-600 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-700/50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             Próximo
