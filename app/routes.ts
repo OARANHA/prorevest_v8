@@ -67,6 +67,10 @@ const routes = [
     route("tinting-machines", "./routes/admin/tinting-machines.tsx"),
   ]),
 
+  // Digital catalogs (no production publication until approved)
+  route("catalogos", "./routes/catalogos.tsx"),
+  route("catalogos/:slug", "./routes/catalogo-digital.tsx"),
+
   // Outras rotas
   route("catalogo", "./routes/catalogo.tsx"),
   route("cores", "./routes/cores.tsx"),
