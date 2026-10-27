@@ -199,3 +199,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Reestruturados apenas os quatro diferenciais da seção About em `home_prorevest.tsx`: removidos ícones corporativos genéricos; aplicados tiles pastel contrastantes, numeração editorial 01–04, formas abstratas geométricas e animação discreta em hover.
 - Mantidos textos dos diferenciais, descrição institucional, CTAs e números 20+/50k+/200+/98% que o usuário confirmou como corretos.
 - Diferença de UI proposta para público de arquitetos e engenheiros, sem mudança dos demais componentes. Build e checagem visual desktop/mobile pendentes; sem merge/deploy.
+
+## 2026-10-27 — Redesign da rota institucional /sobre
+
+- Refeita `app/routes/sobre.tsx` na branch `feat/home-digital-catalog-launch`, seguindo tiles cromáticos numerados e estética editorial da Home. Hero institucional, métricas, história real da origem de Mateus Dias, diferenciais, linha do tempo, fundador, sustentabilidade, Studio e CTAs.
+- Preservados marcos cronológicos e principais informações da história preexistente, com copy resumida para leitura; valores passam a ser 20+/50k+/200+ cores/98% conforme números confirmados pelo responsável na Home (substituem métricas divergentes antes exibidas nesta rota).
+- Removido `<Layout showHeaderFooter={false}>` interno: `app/root.tsx` já aplica Layout global, evitando layout duplicado. Imagem `/images/factory.png` é existente referenciada pela implementação anterior e merece conferência visual.
+- Build, revisão de diff e testes mobile/desktop pendentes. Sem merge/deploy.
