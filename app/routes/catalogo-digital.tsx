@@ -97,13 +97,13 @@ export default function DigitalCatalogViewer() {
         <span className="text-xs tabular-nums opacity-75">{page} / {catalog.pages}</span>
       </header>
       <div className="relative mx-auto max-w-6xl">
-        <div ref={stageRef} className="relative bg-black/30">
-          <div className={zoom ? "max-h-[84vh] overflow-auto" : "overflow-hidden"}>
+        <div ref={stageRef} className="relative flex flex-col justify-center bg-black/30" style={fullScreen ? { background:theme.body, height:"100dvh", padding:"12px 60px" } : undefined}>
+          <div className={zoom ? "max-h-[84vh] overflow-auto" : "overflow-hidden"} style={fullScreen && !zoom ? { maxHeight:"calc(100dvh - 110px)", display:"flex", alignItems:"center" } : undefined}>
             {loadFailed ?
               <div className="flex aspect-video flex-col items-center justify-center gap-2 p-6 text-center"><h2 className="font-semibold">Página indisponível</h2><p className="text-sm opacity-75">Não foi possível carregar o arquivo original.</p></div> :
-              <img key={url} src={url} alt={`Página ${page} de ${catalog.pages} do catálogo ${catalog.title}`} onError={() => setLoadFailed(true)} loading="eager" className={zoom ? "mx-auto w-[1920px] max-w-none" : "block h-auto w-full"} />}
+              <img key={url} src={url} alt={`Página ${page} de ${catalog.pages} do catálogo ${catalog.title}`} onError={() => setLoadFailed(true)} loading="eager" className={zoom ? "mx-auto w-[1920px] max-w-none" : fullScreen ? "mx-auto block h-auto max-h-[calc(100dvh-110px)] w-full object-contain" : "block h-auto w-full"} />}
           </div>
-          <nav aria-label="Ferramentas do catálogo" className="fixed bottom-3 left-1/2 z-30 flex -translate-x-1/2 gap-1 rounded-2xl border border-white/40 p-2 shadow-2xl backdrop-blur-xl md:absolute md:bottom-auto md:left-auto md:right-3 md:top-1/2 md:-translate-y-1/2 md:translate-x-1/2 md:flex-col" style={{ background: theme.paper + "ee" }}>
+          <nav aria-label="Ferramentas do catálogo" className="absolute bottom-2 left-1/2 z-30 flex -translate-x-1/2 gap-1 rounded-2xl border border-white/40 p-2 shadow-2xl backdrop-blur-xl md:bottom-auto md:left-3 md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:flex-col" style={{ background: theme.paper + "ee" }}>
             {action("Coleções", Layers, () => setPanel(p => p === "collections" ? null : "collections"), panel === "collections")}
             {action("Compartilhar", Share2, () => setPanel(p => p === "share" ? null : "share"), panel === "share")}
             {action("QR Code", QrCode, () => setPanel(p => p === "qr" ? null : "qr"), panel === "qr")}
@@ -111,13 +111,14 @@ export default function DigitalCatalogViewer() {
             {action(zoom ? "Reduzir zoom" : "Ampliar zoom", zoom ? ZoomOut : ZoomIn, () => setZoom(v => !v), zoom)}
             {action(fullScreen ? "Sair da tela cheia" : "Tela cheia", fullScreen ? Minimize : Maximize, fullscreen, fullScreen)}
           </nav>
-        </div>
-        {panel && <section role="dialog" aria-label={panel === "collections" ? "Coleções" : panel === "qr" ? "QR Code" : "Compartilhar"} className="fixed inset-x-3 bottom-20 z-40 mx-auto max-w-sm rounded-2xl p-5 shadow-2xl md:absolute md:bottom-auto md:left-auto md:right-10 md:top-8 md:mx-0" style={{background:theme.paper,color:theme.ink}}>
+          {fullScreen && <nav aria-label="Navegação em tela cheia" className="absolute bottom-2 left-1/2 z-30 flex -translate-x-1/2 items-center gap-4 rounded-full px-4 py-2 text-sm shadow-xl" style={{background:theme.paper,color:theme.ink}}><button disabled={page===1} aria-label="Página anterior" className="disabled:opacity-30" onClick={()=>setPage(p=>Math.max(1,p-1))}><ArrowLeft size={22}/></button><span className="tabular-nums">{page} / {catalog.pages}</span><button disabled={page===catalog.pages} aria-label="Próxima página" className="disabled:opacity-30" onClick={()=>setPage(p=>Math.min(catalog.pages,p+1))}><ArrowRight size={22}/></button><button title="Criar QR Code" aria-label="Criar QR Code" onClick={()=>setPanel("qr")}><QrCode size={20}/></button></nav>}
+          {panel && <section role="dialog" aria-label={panel === "collections" ? "Coleções" : panel === "qr" ? "QR Code" : "Compartilhar"} className="absolute bottom-20 left-2 right-2 z-40 mx-auto max-w-sm rounded-2xl p-5 shadow-2xl md:bottom-auto md:left-16 md:right-auto md:top-8 md:mx-0" style={{background:theme.paper,color:theme.ink}}>
           <div className="mb-4 flex items-center justify-between"><h2 className="font-serif text-2xl">{panel === "collections" ? "Coleções" : panel === "share" ? "Compartilhar" : "QR Code"}</h2><button aria-label="Fechar" onClick={() => setPanel(null)}><X size={20}/></button></div>
           {panel === "collections" && <div className="max-h-[58vh] overflow-y-auto">{catalog.sections.map(s => <button key={s.title} onClick={() => { setPage(s.firstPage); setPanel(null); }} className="flex w-full items-center justify-between border-b border-current/20 py-3 text-left font-serif text-xl hover:opacity-60">{s.title}<ArrowRight size={17}/></button>)}</div>}
           {panel === "share" && <div className="space-y-3"><p className="text-sm">Compartilhe o endereço permanente deste catálogo.</p><input aria-label="Link do catálogo" readOnly value={publicUrl} className="w-full rounded-lg border border-current/20 bg-transparent p-2 text-sm"/><button className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm" style={{background:theme.ink,color:theme.paper}} onClick={() => share()}>{copied ? <Check size={16}/> : <Copy size={16}/>} {copied ? "Link copiado" : "Copiar ou compartilhar"}</button></div>}
           {panel === "qr" && <div className="flex flex-col items-center gap-3"><p className="text-center text-sm">Aponte a câmera para abrir o catálogo.</p>{qrImage ? <><img className="h-48 w-48" src={qrImage} alt={`QR Code para abrir o catálogo ${catalog.title}`}/><a download={`QR-ProRevest-${catalog.title}.png`} href={qrImage} className="rounded-lg px-4 py-2 text-sm" style={{background:theme.ink,color:theme.paper}}>Baixar QR Code PNG</a></> : <p className="text-sm">Gerando QR Code…</p>}</div>}
         </section>}
+        </div>
       </div>
       <nav aria-label="Navegação das páginas" className="mt-5 flex items-center justify-center gap-5 text-sm">
         <button disabled={page === 1} aria-label="Página anterior" className="rounded-xl border border-white/30 p-2 disabled:opacity-25" onClick={() => setPage(p => Math.max(1, p - 1))}><ArrowLeft size={20}/></button>
