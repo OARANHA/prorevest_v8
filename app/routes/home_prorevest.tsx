@@ -136,13 +136,13 @@ const AboutSection = () => {
     { value: "98%", label: "Satisfação dos Clientes" }
   ];
   const features = [
-    { icon: "ri-lightbulb-line", title: "Inovação", description: "Tecnologia e novas possibilidades para cores, tintas e acabamentos." },
-    { icon: "ri-shield-check-line", title: "Qualidade", description: "Atenção aos materiais, ao desempenho e à durabilidade dos revestimentos." },
-    { icon: "ri-leaf-line", title: "Sustentabilidade", description: "Compromisso com escolhas mais conscientes em nossos processos e soluções." },
-    { icon: "ri-customer-service-line", title: "Suporte", description: "Orientação para escolher soluções adequadas a cada ambiente e projeto." }
+    { number: "01", title: "Inovação", description: "Tecnologia e novas possibilidades para cores, tintas e acabamentos.", bg: "bg-[#f6d9fb]", accent: "text-[#7b2fc0]", shape: "rounded-[45%_55%_70%_30%]" },
+    { number: "02", title: "Qualidade", description: "Atenção aos materiais, ao desempenho e à durabilidade dos revestimentos.", bg: "bg-[#daf0fa]", accent: "text-[#156b99]", shape: "rounded-[65%_35%_40%_60%]" },
+    { number: "03", title: "Sustentabilidade", description: "Compromisso com escolhas mais conscientes em nossos processos e soluções.", bg: "bg-[#def6e7]", accent: "text-[#18865a]", shape: "rounded-[35%_65%_50%_50%]" },
+    { number: "04", title: "Suporte", description: "Orientação para escolher soluções adequadas a cada ambiente e projeto.", bg: "bg-[#ffe6c8]", accent: "text-[#b44e14]", shape: "rounded-[60%_40%_65%_35%]" }
   ];
   return (
-    <section id="sobre" aria-labelledby="sobre-prorevest-title" className="relative overflow-hidden bg-[#f8f7f4] py-20 lg:py-28">
+    <section id="sobre" aria-labelledby="sobre-prorevest-title" className="relative overflow-hidden bg-[#faf8f5] py-20 lg:py-28">
       <div className="pointer-events-none absolute -right-32 top-0 h-80 w-80 rounded-full bg-orange-200/20 blur-3xl" aria-hidden="true" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-16">
@@ -166,14 +166,21 @@ const AboutSection = () => {
               </Link>
             </div>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {features.map((feature) => (
-              <article key={feature.title} className="rounded-2xl border border-[#eae5df] bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50 text-orange-600">
-                  <i className={`${feature.icon} text-2xl`} aria-hidden="true"></i>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {features.map((feature, index) => (
+              <article key={feature.title} className={`group relative min-h-[215px] overflow-hidden rounded-[1.7rem] p-6 transition-transform duration-300 hover:-translate-y-1 focus-within:-translate-y-1 ${feature.bg}`}>
+                <div className={`pointer-events-none absolute -right-10 -top-10 h-40 w-40 rotate-12 border-[18px] border-white/40 ${feature.shape}`} aria-hidden="true" />
+                <div className="relative flex h-full flex-col justify-between gap-6">
+                  <div className="flex items-start justify-between">
+                    <span className={`text-5xl font-black tracking-[-.09em] ${feature.accent}`} aria-hidden="true">{feature.number}</span>
+                    <span className={`rounded-full border border-current/20 bg-white/50 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] ${feature.accent}`}>ProRevest</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold tracking-tight text-[#262320]">{feature.title}</h3>
+                    <p className="mt-2 max-w-[30ch] text-sm leading-relaxed text-[#3f4144]">{feature.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-[#302924]">{feature.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-600">{feature.description}</p>
+                <div className={`absolute bottom-0 left-6 right-6 h-1 origin-left scale-x-0 rounded-full bg-current transition-transform duration-300 group-hover:scale-x-100 ${feature.accent}`} aria-hidden="true" />
               </article>
             ))}
           </div>
