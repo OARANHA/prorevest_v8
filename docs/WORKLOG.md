@@ -181,3 +181,9 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - `HomeDigitalCatalogs.tsx` passou a usar esses dois assets promocionais, com títulos, descrição e CTAs separados em HTML, sem embutir botões na imagem.
 - `home_prorevest.tsx` agora renderiza a faixa imediatamente abaixo de `HomeHeroCarousel`, sem incorporar a faixa ao slider ou mudar a Hero aprovada.
 - Revisar visual desktop e mobile, qualidade do recorte PIACERI e legibilidade, seguido de `npm ci`, `npm run build` e aprovação; merge/deploy NÃO executados.
+
+## 2026-10-27 — Header harmonizado para entrega dos catálogos (sem deploy)
+
+- `app/components/Header.tsx` refatorado como cabeçalho responsivo único consumido pelo `Layout`: navegação centralizada com logotipo compacto fixo entre os grupos de links, versão mobile com menu acessível, links e estados de login mantidos.
+- Retirada a dependência da imagem do logo no `localStorage` ou busca dinâmica no Supabase para o cabeçalho público, de modo a evitar divergências por navegador. Passa a usar o asset versionado `public/images/catalog-launch/prorevest-logo.png`, confirmado previamente na branch. O fluxo administrativo legado de upload da marca não foi removido, mas não controla mais o Header; reavaliar esse contrato em PR específica se necessário.
+- Nenhum ajuste à Hero ou faixa. Atenção: renderização desktop/mobile e signOut precisam de smoke; `npm ci`/`npm run build` ainda pendentes. Não houve merge/deploy.
