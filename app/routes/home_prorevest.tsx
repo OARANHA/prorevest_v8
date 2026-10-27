@@ -8,7 +8,6 @@ import { supabase } from '../lib/supabaseClient';
 import CalculadoraMagica from '../components/CalculadoraMagica';
 import { FeaturedProducts } from '../components/FeaturedProducts';
 import InstagramSection from '../components/InstagramSection';
-import HomeDigitalCatalogs from '../components/HomeDigitalCatalogs';
 import HomeHeroCarousel from '../components/HomeHeroCarousel';
 
 // Tipos
@@ -1269,7 +1268,6 @@ const ProrevestApp = () => {
       
       {/* Studio remains slide 1; catalog campaign is slide 2. */}
       <HomeHeroCarousel studioSlide={<HeroSection />} />
-      <HomeDigitalCatalogs />
       <FeaturedProducts
         products={featuredProducts.map(convertProductForFeatured)}
       />
