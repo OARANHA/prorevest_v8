@@ -16,6 +16,7 @@ const routes = [
     route("init-profiles", "./routes/admin/init-profiles.tsx"),
     route("make-admin", "./routes/admin/make-admin.tsx"),
     route("products", "./routes/admin/products.tsx"),
+    route("produtos", "./routes/admin/products-redirect.tsx"),
     route("colors", "./routes/admin/colors.tsx"),
     route("textures", "./routes/admin/textures.tsx"),
     route("quotes", "./routes/admin/quotes/index.tsx"),
