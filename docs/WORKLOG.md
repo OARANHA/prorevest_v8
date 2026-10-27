@@ -139,3 +139,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Ajustado HomeDigitalCatalogs para layout horizontal compacto, imediatamente após HeroSection, com texto e CTAs HTML e prévias reais dos slides PIACERI p5 e FLUA p9; ações para `/catalogos` e as páginas individuais.
 - A imagem mockup da faixa é referência estética, NÃO usada no produto. A arte promocional da Hero com logotipo reduzido e símbolo central removido continua em revisão e NÃO foi colocada no repositório.
 - Pendente conferir proporções responsivas, build e revisão da arte antes de qualquer deploy.
+
+## 2026-10-27 — Hero de lançamento decomposta (branch, sem deploy)
+
+- Criado `app/components/CatalogLaunchHero.tsx` com fundo em CSS, marca como asset independente, chamadas em HTML, CTA funcional para `/catalogos`, ícones e imagem promocional separada.
+- Home passou a renderizar `CatalogLaunchHero` antes da faixa `HomeDigitalCatalogs`, mantendo `HeroSection` original acessível via switch local para rollback; não mesclar/publicar sem reavaliar destaque do Studio.
+- Arquivos binários necessários (`public/images/catalog-launch/catalogs-scene.webp` e `prorevest-logo.png`) empacotados externamente para GitHub Desktop. Estes assets **NÃO estão commitados na branch**; devem ser copiados pelo responsável antes de build/E2E/PR. Marca composta a partir das imagens enviadas; cenário recortado de mockup gerado e deve ser tratado como arte promocional ilustrativa, não fotografia dos catálogos reais.
+- Nenhum merge/deploy. Validar responsividade e acessibilidade, build, alteração da Home e imagens antes de aprovação final.
