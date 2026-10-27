@@ -1,17 +1,16 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { catalogPageUrl } from "../lib/digitalCatalogs";
 
 /**
- * Faixa imediatamente abaixo da Hero. Conteúdo, links e capas oficiais são
- * elementos independentes; a campanha visual da Hero aguarda aprovação.
+ * Faixa independente imediatamente abaixo do carrossel.
+ * Textos e links são elementos HTML; imagens promocionais são decorativas.
  */
 export default function HomeDigitalCatalogs() {
   const entries = [
-    { slug: "piaceri" as const, title: "PIACERI", line: "Texturas que inspiram e tornam cada ambiente único.", bg: "bg-[#e6ded5]", image: catalogPageUrl("piaceri", 5) },
-    { slug: "flua" as const, title: "FLUA", line: "Superfícies que fluem com a vida.", bg: "bg-[#d7e6e9]", image: catalogPageUrl("flua", 9) }
+    { slug: "piaceri" as const, title: "PIACERI", line: "Texturas que inspiram e tornam cada ambiente único.", bg: "bg-[#e6ded5]", image: "/images/catalog-launch/piaceri-faixa.webp" },
+    { slug: "flua" as const, title: "FLUA", line: "Superfícies que fluem com a vida.", bg: "bg-[#d7e6e9]", image: "/images/catalog-launch/flua-faixa.webp" }
   ];
-  return <section id="catalogos-digitais" aria-labelledby="catalogos-digitais-titulo" className="bg-white py-7 sm:py-9">
+  return <section id="catalogos-digitais" aria-labelledby="catalogos-digitais-titulo" className="relative bg-[#fcfaf7] py-7 sm:py-9">
     <div className="mx-auto grid max-w-[1440px] items-center gap-6 px-4 md:grid-cols-[minmax(240px,0.9fr)_minmax(0,2fr)] md:gap-8 lg:px-8">
       <div className="max-w-md">
         <p className="mb-3 text-xs font-bold uppercase tracking-[.23em] text-orange-600">Inspiração para cada detalhe</p>
