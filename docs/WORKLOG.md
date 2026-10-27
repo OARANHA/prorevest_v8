@@ -133,3 +133,9 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Adicionado componente `HomeDigitalCatalogs` após a Hero da Home, com capas originais PIACERI e FLUA, links às rotas digitais e download dos PDFs, alinhado à linguagem visual clara/gradientes da Home.
 - **Arte promocional para a Hero criada apenas para avaliação do responsável; NÃO adicionada ao código, assets ou produção.** A arte é conceito visual, não fiel às capas oficiais, e depende de aprovação/ajuste para uso institucional.
 - Sem merge/deploy. Build e testes responsivos pendentes; validar também a estratégia de release das rotas/base da branch antes de integrar.
+
+## 2026-10-27 — Faixa compacta após Hero, sem publicar arte
+
+- Ajustado HomeDigitalCatalogs para layout horizontal compacto, imediatamente após HeroSection, com texto e CTAs HTML e prévias reais dos slides PIACERI p5 e FLUA p9; ações para `/catalogos` e as páginas individuais.
+- A imagem mockup da faixa é referência estética, NÃO usada no produto. A arte promocional da Hero com logotipo reduzido e símbolo central removido continua em revisão e NÃO foi colocada no repositório.
+- Pendente conferir proporções responsivas, build e revisão da arte antes de qualquer deploy.
