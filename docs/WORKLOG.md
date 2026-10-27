@@ -174,3 +174,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Após screenshot do usuário mostrando cenário confinado à metade direita e logomarca desproporcional, `CatalogLaunchHero.tsx` atualizado para cenário promocional ocupar 100% da área da Hero com `object-cover` e gradiente na esquerda para leitura; removido `<img>` de logotipo sobreposto. Não altera o arquivo WebP em si.
 - `HomeHeroCarousel.tsx`: slide 1 agora lançamento PIACERI/FLUA e slide 2 Studio original. Indicadores e setas seguem a ordem nova, sem remover o Studio.
 - O `object-cover` pode recortar laterais em diferentes proporções; revisar se os livros continuam inteiros no desktop/mobile e ajustar `object-position`/art direction após screenshot. Build/testes locais ainda não executados; sem merge/deploy.
+
+## 2026-10-27 — Faixa PIACERI/FLUA ativada abaixo da Hero (sem deploy)
+
+- Confirmados na branch os assets `public/images/catalog-launch/piaceri-faixa.webp` e `flua-faixa.webp` enviados pelo usuário.
+- `HomeDigitalCatalogs.tsx` passou a usar esses dois assets promocionais, com títulos, descrição e CTAs separados em HTML, sem embutir botões na imagem.
+- `home_prorevest.tsx` agora renderiza a faixa imediatamente abaixo de `HomeHeroCarousel`, sem incorporar a faixa ao slider ou mudar a Hero aprovada.
+- Revisar visual desktop e mobile, qualidade do recorte PIACERI e legibilidade, seguido de `npm ci`, `npm run build` e aprovação; merge/deploy NÃO executados.
