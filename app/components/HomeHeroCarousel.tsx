@@ -39,7 +39,7 @@ export default function HomeHeroCarousel({ studioSlide }: HomeHeroCarouselProps)
   const go = (index: number) => setActive((index + 2) % 2);
   return (
     <div
-      className="relative isolate min-h-screen overflow-hidden bg-[#211b19]"
+      className="relative isolate overflow-hidden bg-[#211b19]"
       aria-roledescription="carrossel"
       aria-label="Destaques da ProRevest"
       onMouseEnter={() => setHovered(true)}
@@ -50,16 +50,14 @@ export default function HomeHeroCarousel({ studioSlide }: HomeHeroCarouselProps)
       }}
     >
       <div
-        className={`relative min-h-screen ${active === 0 ? "" : "absolute inset-0"}`}
+        className={active === 0 ? "relative" : "hidden"}
         aria-hidden={active !== 0}
-        style={{ visibility: active === 0 ? "visible" : "hidden" }}
       >
         {studioSlide}
       </div>
       <div
-        className={`relative min-h-screen ${active === 1 ? "" : "absolute inset-0"}`}
+        className={active === 1 ? "relative" : "hidden"}
         aria-hidden={active !== 1}
-        style={{ visibility: active === 1 ? "visible" : "hidden" }}
       >
         <CatalogLaunchHero />
       </div>
