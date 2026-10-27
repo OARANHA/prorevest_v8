@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight, BookOpen, Download, Sparkles, ArrowLeft } from "lucide-react";
+import { ArrowUpRight, BookOpen, Download } from "lucide-react";
 import { catalogs, catalogPageUrl, catalogPdfUrl, type CatalogSlug } from "../lib/digitalCatalogs";
 
 const presentation: Record<CatalogSlug, { eyebrow: string; statement: string; color: string; surface: string }> = {
@@ -10,8 +10,8 @@ const presentation: Record<CatalogSlug, { eyebrow: string; statement: string; co
 export default function DigitalCatalogLibrary() {
   return <main className="min-h-screen bg-gradient-to-br from-white via-indigo-50/35 to-purple-50/40 text-gray-800">
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-10">
-      <div className="mb-12 max-w-3xl"><Link to="/" className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-gray-600 transition-colors hover:text-indigo-600"><ArrowLeft size={16}/> Voltar à Home</Link>
-        <div className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-indigo-600"><Sparkles size={15}/> ProRevest · Editorial</div>
+      <div className="mb-12 max-w-3xl">
+        
         <h1 className="font-light tracking-tight text-5xl leading-tight sm:text-6xl">Coleções que<br/><span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">transformam espaços.</span></h1>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-gray-600 sm:text-lg">Explore os catálogos digitais ProRevest. Descubra texturas, cores e inspirações por meio de apresentações que preservam sua identidade original.</p>
       </div>
