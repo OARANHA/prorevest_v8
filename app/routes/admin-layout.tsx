@@ -120,14 +120,8 @@ const AdminNavLink = ({ to, icon: Icon, children, collapsed }: { to: string; ico
 };
 
 export default function AdminDashboard() {
-  const { user, isAdmin, signOut } = useAuth(); // Adicionado isAdmin
-  const [loading, setLoading] = useState(true);
+  const { user, isAdmin, loading } = useAuth();
   const [collapsed, setCollapsed] = useState(false);
-
-  useEffect(() => {
-    // A verificação de administrador agora é feita no contexto de autenticação
-    setLoading(false);
-  }, [user]);
 
   if (loading) {
     return (
