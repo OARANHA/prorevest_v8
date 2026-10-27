@@ -135,110 +135,63 @@ const AboutSection = () => {
     { value: "200+", label: "Cores Disponíveis" },
     { value: "98%", label: "Satisfação dos Clientes" }
   ];
-
   const features = [
-    {
-      icon: "ri-lightbulb-line",
-      title: "Inovação",
-      description: "Sempre à frente com as mais novas tecnologias em tintas e acabamentos",
-      gradient: "from-purple-500 to-pink-500",
-      bgLight: "from-purple-50 to-pink-50"
-    },
-    {
-      icon: "ri-shield-check-line",
-      title: "Qualidade",
-      description: "Produtos testados e certificados com os mais altos padrões de durabilidade",
-      gradient: "from-blue-500 to-cyan-500",
-      bgLight: "from-blue-50 to-cyan-50"
-    },
-    {
-      icon: "ri-leaf-line",
-      title: "Sustentabilidade",
-      description: "Compromisso com o meio ambiente em todas as nossas formulações",
-      gradient: "from-green-500 to-emerald-500",
-      bgLight: "from-green-50 to-emerald-50"
-    },
-    {
-      icon: "ri-customer-service-line",
-      title: "Suporte",
-      description: "Atendimento especializado em todas as etapas do seu projeto",
-      gradient: "from-orange-500 to-amber-500",
-      bgLight: "from-orange-50 to-amber-50"
-    }
+    { icon: "ri-lightbulb-line", title: "Inovação", description: "Tecnologia e novas possibilidades para cores, tintas e acabamentos." },
+    { icon: "ri-shield-check-line", title: "Qualidade", description: "Atenção aos materiais, ao desempenho e à durabilidade dos revestimentos." },
+    { icon: "ri-leaf-line", title: "Sustentabilidade", description: "Compromisso com escolhas mais conscientes em nossos processos e soluções." },
+    { icon: "ri-customer-service-line", title: "Suporte", description: "Orientação para escolher soluções adequadas a cada ambiente e projeto." }
   ];
-
   return (
-    <section id="sobre" className="py-24 relative overflow-hidden">
-      {/* Background delicado com elementos flutuantes */}
-      <div className="absolute inset-0 bg-gradient-to-br from-violet-50 via-white to-pink-50"></div>
-      <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full opacity-10 animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-br from-blue-300 to-cyan-300 rounded-full opacity-10 animate-pulse" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-gradient-to-br from-orange-300 to-amber-300 rounded-full opacity-10 animate-bounce" style={{ animationDelay: '2s' }}></div>
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full mb-6 shadow-lg">
-            <i className="ri-building-line text-xl mr-3"></i>
-            <span className="font-bold text-lg">SOBRE NÓS</span>
+    <section id="sobre" aria-labelledby="sobre-prorevest-title" className="relative overflow-hidden bg-[#f8f7f4] py-20 lg:py-28">
+      <div className="pointer-events-none absolute -right-32 top-0 h-80 w-80 rounded-full bg-orange-200/20 blur-3xl" aria-hidden="true" />
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-16">
+          <div>
+            <p className="mb-5 text-xs font-bold uppercase tracking-[.24em] text-orange-600">Nossa essência</p>
+            <h2 id="sobre-prorevest-title" className="max-w-xl font-serif text-4xl leading-[1.12] text-[#262320] sm:text-5xl lg:text-6xl">
+              Mais que tintas. <span className="text-orange-600">Soluções que transformam espaços.</span>
+            </h2>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-gray-600">
+              Há mais de 20 anos, a ProRevest combina experiência, inovação e soluções em tintas e revestimentos para transformar ambientes.
+            </p>
+            <p className="mt-4 max-w-xl leading-relaxed text-gray-600">
+              Cores, texturas e acabamentos que valorizam projetos e ajudam a criar espaços com identidade própria.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/sobre" className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-700">
+                Conheça nossa história <i className="ri-arrow-right-line" aria-hidden="true"></i>
+              </Link>
+              <Link to="/catalogo" className="inline-flex items-center gap-2 rounded-full border border-[#d8cfc6] bg-white px-6 py-3 text-sm font-semibold text-[#47352c] transition-colors hover:bg-orange-50">
+                Explore nossos produtos
+              </Link>
+            </div>
           </div>
-          <h2 className="text-4xl md:text-6xl font-light text-gray-900 mb-6">
-            Sobre a <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-bold">Prorevest</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Há mais de 20 anos transformando ambientes com tintas inovadoras, combinando tecnologia de ponta com formulações sustentáveis para criar o futuro da pintura.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {features.map((feature, index) => (
-            <div 
-              key={index}
-              className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 cursor-pointer"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Card com gradiente sutil */}
-              <div className={`bg-gradient-to-br ${feature.bgLight} p-1 rounded-3xl`}>
-                <div className="bg-white rounded-3xl p-8 h-full">
-                  {/* Ícone com gradiente vibrante */}
-                  <div className={`w-20 h-20 flex items-center justify-center bg-gradient-to-r ${feature.gradient} rounded-2xl mb-6 mx-auto shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
-                    <i className={`${feature.icon} text-4xl text-white`}></i>
-                  </div>
-                  
-                  <h3 className="text-2xl font-light text-gray-900 mb-4 text-center group-hover:text-gray-800 transition-colors">{feature.title}</h3>
-                  <p className="text-gray-600 text-center leading-relaxed">{feature.description}</p>
-                  
-                  {/* Elemento decorativo sutil */}
-                  <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${feature.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}></div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {features.map((feature) => (
+              <article key={feature.title} className="rounded-2xl border border-[#eae5df] bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50 text-orange-600">
+                  <i className={`${feature.icon} text-2xl`} aria-hidden="true"></i>
                 </div>
-              </div>
-            </div>
-          ))}
+                <h3 className="text-lg font-semibold text-[#302924]">{feature.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">{feature.description}</p>
+              </article>
+            ))}
+          </div>
         </div>
-        
-        {/* Stats com design moderno */}
-        <div className="relative">
-          <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 rounded-3xl p-12 text-white shadow-2xl overflow-hidden">
-            {/* Elementos decorativos */}
-            <div className="absolute top-0 left-0 w-full h-full bg-white/10 backdrop-blur-sm"></div>
-            <div className="absolute top-10 right-10 w-20 h-20 bg-white/20 rounded-full animate-pulse"></div>
-            <div className="absolute bottom-10 left-10 w-16 h-16 bg-white/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-            
-            <div className="relative z-10">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-light mb-2">Nossas Conquistas</h3>
-                <p className="text-white/80">Números que falam por si só</p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-                {stats.map((stat, index) => (
-                  <div key={index} className="group">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
-                      <h3 className="text-5xl font-light mb-2 group-hover:scale-110 transition-transform duration-300">{stat.value}</h3>
-                      <p className="text-white/90">{stat.label}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+        <div className="mt-14 overflow-hidden rounded-3xl bg-gradient-to-r from-[#613853] via-[#a64c77] to-[#e96b28] p-7 text-white shadow-xl sm:p-10 lg:mt-20">
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-2">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[.24em] text-white/80">Nossa trajetória</p>
+              <h3 className="mt-2 font-serif text-2xl sm:text-3xl">Números que contam nossa história</h3>
             </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.label} className="rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm sm:p-5">
+                <p className="text-3xl font-semibold tracking-tight sm:text-4xl">{stat.value}</p>
+                <p className="mt-2 text-xs leading-snug text-white/90 sm:text-sm">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
