@@ -88,3 +88,9 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Confirmado `app/routes.ts` só possuía `/admin/products` e os menus consultados usam `/admin/products`.
 - Criado `app/routes/admin/products-redirect.tsx` e alias `produtos` filho da rota admin, redirecionando com `Navigate replace` para `/admin/products` preservando query/hash.
 - Aviso IA modo simulado não relacionado a 404. Sem build/E2E, merge ou deploy.
+
+## 2026-10-27 — Diagnóstico de Acesso Restrito no Admin
+
+- Usuário acessou `/admin/produtos` e encontrou `Acesso Restrito` após o alias de roteamento.
+- Confirmado `AdminDashboard` mantinha estado `loading` local que encerrava ao observar `user`, sem aguardar conclusão do `AuthContext.loading`; corrigido layout para usar diretamente loading do contexto. Nenhuma permissão foi concedida ou bypass criado.
+- Autorização continua exigindo usuário logado e `profiles.role === 'admin'`; falta inspecionar sessão/perfil real no projeto Supabase oficial para determinar se o usuário é admin ou se uma consulta/RLS falha. Teste funcional local e build pendentes.
