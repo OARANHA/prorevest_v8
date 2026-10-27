@@ -83,3 +83,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Diretriz do responsável: fidelidade estrita ao layout Canva; viewer interativo, PDF e QR Code; vínculos opcionais futuros a produtos e Studio.
 - Criada branch `feat/catalogos-digitais-foundation`; especificação em `docs/CATALOGOS_DIGITAIS.md`.
 - Nenhuma migração, asset, alteração de rota ou deploy feitos. Implementação funcional e testes seguem pendentes.
+
+## 2026-10-27 — Viewer inicial para PIACERI e FLUA (sem assets/deploy)
+
+- Criados `app/lib/digitalCatalogs.ts`, `app/routes/catalogos.tsx` e `app/routes/catalogo-digital.tsx` com rotas `/catalogos` e `/catalogos/:slug`, paginação, navegação por teclado, zoom e verificação de PDF oficial.
+- Páginas funcionam somente após imagens originais Canva aprovadas serem exportadas e publicadas como `/catalogs/{slug}/pages/0001.webp` etc. PDFs como `/catalogs/{slug}/catalog.pdf`. Não foram fornecidas miniaturas temporárias nem imagens inventadas.
+- Índices de coleção permanecem vazios até conferência exata das páginas originais.
+- **Pendente:** exportação/autorização dos 55 slides originais, assets finais, hotspots, QR, admin, armazenamento e validações automáticas. Build/SSR/E2E não executados neste ciclo; não afirmar sucesso funcional. Branch não enviada para produção.
