@@ -6,7 +6,7 @@ interface HomeHeroCarouselProps {
   studioSlide: React.ReactNode;
 }
 
-const SLIDE_LABELS = ["Studio ProRevest", "Lançamento dos catálogos"];
+const SLIDE_LABELS = ["Lançamento dos catálogos", "Studio ProRevest"];
 
 export default function HomeHeroCarousel({ studioSlide }: HomeHeroCarouselProps) {
   const [active, setActive] = useState(0);
@@ -50,14 +50,14 @@ export default function HomeHeroCarousel({ studioSlide }: HomeHeroCarouselProps)
       }}
     >
       <div
-        className={active === 0 ? "absolute inset-0" : "hidden"}
-        aria-hidden={active !== 0}
+        className={active === 1 ? "absolute inset-0" : "hidden"}
+        aria-hidden={active !== 1}
       >
         {studioSlide}
       </div>
       <div
-        className={active === 1 ? "absolute inset-0" : "hidden"}
-        aria-hidden={active !== 1}
+        className={active === 0 ? "absolute inset-0" : "hidden"}
+        aria-hidden={active !== 0}
       >
         <CatalogLaunchHero />
       </div>
