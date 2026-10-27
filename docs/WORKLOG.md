@@ -98,3 +98,11 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Gerado pacote ZIP independente com 55 WebPs e 2 PDFs + manifesto e instruções, para extração MANUAL via GitHub Desktop na branch `feat/catalogos-digitais-foundation`. O pacote não foi adicionado ao repositório remoto nesta sessão.
 - Mapeadas seções confirmadas pelos PDFs: PIACERI Laghi p3, Puglia p8, Luce p11, Vulcani p17, Rovine p23, Vino p29, Firmata p33; FLUA p3 e Paraíso p13.
 - **Não houve build do projeto nem E2E em navegador**, PR, merge ou deploy. Antes de publicar: usuário precisa inserir assets via GitHub Desktop, com commit/push; depois executar build/testes, revisão e obter aprovação para merge/deploy.
+
+## 2026-10-27 — Refinamento visual do visualizador (branch; não implantado)
+
+- Implementado menu flutuante premium, índice de coleções em painel, zoom, tela cheia, compartilhamento com fallback de cópia e QR Code PNG client-side nos catálogos PIACERI/FLUA; mantém imagens originais do Canva inalteradas.
+- QR aponta para URL canônica permanente `https://prorevesttintas.com.br/catalogos/{slug}`; roteamento já existente em branch, NÃO publicado em produção.
+- Adicionada dependência `qrcode` e tipos em `package.json`. **PENDÊNCIA BLOQUEANTE:** sincronizar `package-lock.json` com `npm install --package-lock-only`, revisar diff, commitar na branch, e só então executar `npm ci && npm run build`. Não fazer merge/deploy antes do teste.
+- A fonte de título usa `font-serif` (aproximação); fonte exata do Canva ainda não foi identificada/licenciada para web; não afirmar correspondência tipográfica perfeita.
+- Não houve build/teste E2E neste ciclo por acesso remoto limitado; esta mudança é implementação NÃO VALIDADA em runtime.
