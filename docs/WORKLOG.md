@@ -75,3 +75,9 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Pendente imediato: no Studio com imagem/projeto ativo, abrir Paleta ProRevest e rolar além do primeiro lote para confirmar carregamento das próximas cores e ausência de spinner infinito.
 
 - E2E real confirmado pelo usuário após o deploy da PR #2: Paleta ProRevest rolou e carregou novas cores normalmente no Studio, sem spinner infinito. PRV-024 encerrado como RESOLVED.
+
+## 2026-10-27 — Home e diagnóstico do Admin Produtos (branch, sem deploy)
+
+- Removido exclusivamente o card `Simulador de Cores` do grid `Explore Ambientes Únicos` em `app/routes/home_prorevest.tsx`. Mantidos os outros sete cards e CTA final de simulador, fora do escopo solicitado.
+- Auditado código de `app/routes/admin/products.tsx`, `app/services/productService.ts` e gate administrativo. Achados e plano priorizado registrados em `docs/ADMIN_PRODUCTS_AUDIT_2026-10-27.md`.
+- Nenhuma alteração no comportamento de produtos ou Supabase neste ciclo. Build e testes E2E pendentes. Não houve merge ou deploy.
