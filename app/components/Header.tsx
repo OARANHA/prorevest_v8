@@ -65,11 +65,17 @@ export const Header = () => {
 
   return <header className={`fixed inset-x-0 top-0 z-[60] h-16 border-b border-white/70 bg-white/95 shadow-sm transition-shadow duration-300 ${scrolled ? "shadow-md" : ""}`}>
     <div className="mx-auto flex h-full max-w-[1600px] items-center justify-between gap-3 px-4 lg:px-8">
-      <Link to="/" aria-label="ProRevest — página inicial" className="flex shrink-0 items-center gap-2 lg:w-40">
+      <Link to="/" aria-label="ProRevest — página inicial" className="flex shrink-0 items-center gap-2 lg:hidden">
         <img src="/images/catalog-launch/prorevest-logo.png" alt="ProRevest" className="h-9 w-auto max-w-[130px] object-contain" />
       </Link>
-      <nav aria-label="Navegação principal" className="hidden items-center justify-center gap-1 lg:flex">{links}</nav>
-      <div className="hidden shrink-0 items-center justify-end gap-2 lg:flex lg:w-48">{account}</div>
+      <div className="hidden min-w-0 flex-1 items-center justify-end gap-1 lg:flex">{links.slice(0, 4)}</div>
+      <Link to="/" aria-label="ProRevest — página inicial" className="hidden w-28 shrink-0 justify-center lg:flex">
+        <img src="/images/catalog-launch/prorevest-logo.png" alt="ProRevest" className="h-10 w-auto max-w-28 object-contain" />
+      </Link>
+      <div className="hidden min-w-0 flex-1 items-center justify-start gap-1 lg:flex">
+        <nav aria-label="Navegação principal" className="flex items-center gap-1">{links.slice(4)}</nav>
+        <div className="ml-auto flex shrink-0 items-center gap-1">{account}</div>
+      </div>
       <button type="button" aria-expanded={open} aria-controls="mobile-primary-nav" aria-label={open ? "Fechar menu" : "Abrir menu"} onClick={() => setOpen(v => !v)}
         className="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-lg border border-gray-200 text-gray-800 lg:hidden">
         {open ? <X size={23}/> : <Menu size={23}/>}
