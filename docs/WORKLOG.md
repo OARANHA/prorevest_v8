@@ -126,3 +126,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - A biblioteca `/catalogos` e as molduras dos viewers PIACERI/FLUA receberam paleta clara (white/indigo/purple), tipografia leve, cards com bordas e sombras suaves conforme componentes já existentes na Home.
 - Não alteradas imagens Canva, páginas, URLs PDF/QR, navegação, estado fullscreen ou lógica de compartilhamento.
 - Alterações registradas na branch `feat/catalogos-digitais-foundation`. Build/E2E e aprovação visual pendentes. Nenhum merge/deploy.
+
+## 2026-10-27 — Vitrine de catálogos na Home (branch sem deploy)
+
+- Criada branch `feat/home-digital-catalog-launch` derivada de `feat/catalogos-digitais-foundation` para reaproveitar as rotas/assets originais.
+- Adicionado componente `HomeDigitalCatalogs` após a Hero da Home, com capas originais PIACERI e FLUA, links às rotas digitais e download dos PDFs, alinhado à linguagem visual clara/gradientes da Home.
+- **Arte promocional para a Hero criada apenas para avaliação do responsável; NÃO adicionada ao código, assets ou produção.** A arte é conceito visual, não fiel às capas oficiais, e depende de aprovação/ajuste para uso institucional.
+- Sem merge/deploy. Build e testes responsivos pendentes; validar também a estratégia de release das rotas/base da branch antes de integrar.
