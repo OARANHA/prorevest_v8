@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, ArrowRight, BookOpen, Check, Copy, Download, Home, Layers, Maximize, Minimize, QrCode, Share2, X, ZoomIn, ZoomOut } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Copy, Download, Home, Layers, Maximize, Minimize, QrCode, Share2, X, ZoomIn, ZoomOut } from "lucide-react";
 import { catalogs, catalogPageUrl, catalogPdfUrl, type CatalogSlug } from "../lib/digitalCatalogs";
 
 type Panel = "collections" | "share" | "qr" | null;
@@ -51,7 +51,7 @@ export default function DigitalCatalogViewer() {
     return () => window.removeEventListener("keydown", handler);
   }, [catalog?.slug]);
 
-  const publicUrl = typeof window === "undefined" || !catalog ? "" : `${window.location.origin}/catalogos/${catalog.slug}`;
+  const publicUrl = !catalog ? "" : `https://prorevesttintas.com.br/catalogos/${catalog.slug}`;
   useEffect(() => {
     let cancelled = false;
     if (panel !== "qr" || !publicUrl) return;
