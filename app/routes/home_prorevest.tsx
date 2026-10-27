@@ -41,7 +41,7 @@ interface Testimonial {
 // Componente HeroSection — nova hero com imagem do Studio Prorevest
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <section id="hero" className="relative flex h-full min-h-0 items-center overflow-hidden">
       {/* Imagem de fundo */}
       <div
         className="absolute inset-0 bg-cover bg-center"
