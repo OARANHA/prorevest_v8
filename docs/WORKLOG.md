@@ -193,3 +193,9 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Em `app/routes/home_prorevest.tsx`, substituída apenas a seção `AboutSection` por composição editorial com texto institucional, 4 pilares (Inovação, Qualidade, Sustentabilidade, Suporte), CTAs para `/sobre` e `/catalogo` e uma faixa de resultados em degradê.
 - Métricas **preservadas integralmente** após confirmação explícita do responsável: `20+` anos, `50k+` projetos, `200+` cores, `98%` satisfação; sem conversão de unidades nem exclusão dos indicadores.
 - Sem alteração na Hero, carrossel ou faixa dos catálogos. Build, testes responsivos e aceite visual pendentes, sem merge/deploy. Reversível por diff do commit da seção.
+
+## 2026-10-27 — Sobre: peças gráficas jovens para arquitetos e engenheiros
+
+- Reestruturados apenas os quatro diferenciais da seção About em `home_prorevest.tsx`: removidos ícones corporativos genéricos; aplicados tiles pastel contrastantes, numeração editorial 01–04, formas abstratas geométricas e animação discreta em hover.
+- Mantidos textos dos diferenciais, descrição institucional, CTAs e números 20+/50k+/200+/98% que o usuário confirmou como corretos.
+- Diferença de UI proposta para público de arquitetos e engenheiros, sem mudança dos demais componentes. Build e checagem visual desktop/mobile pendentes; sem merge/deploy.
