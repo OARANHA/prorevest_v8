@@ -11,7 +11,7 @@ export default function CatalogLaunchHero() {
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover object-center"
       />
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-[#15130f]/95 via-[#211a15]/85 via-[43%] to-transparent" />
+      <div aria-hidden="true" className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(19,17,14,.94) 0%, rgba(24,20,16,.84) 30%, rgba(26,20,16,.4) 52%, rgba(26,20,16,0) 76%)" }} />
       <div className="relative z-10 flex h-full w-full items-center px-6 pb-16 pt-10 sm:px-12 lg:px-[7%]">
         <div className="max-w-[600px]">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[.35em] text-orange-400 sm:text-sm">Lançamento</p>
