@@ -81,3 +81,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Branch `fix/admin-products-reliability` isolada da main para correções conservadoras do painel.
 - `app/routes/admin/products.tsx`: logout agora aguarda `AuthContext.signOut()`; erro ao carregar lista exibido com retry; reset e clamp da paginação ao filtrar produtos; estado vazio com contagem correta; proteção contra descrição nula; removida função interna de exclusão de variante que apenas registrava console, sem operação de banco (verificar eventual affordance de UI antes de habilitar exclusão real).
 - Sem migração, exclusão de dados ou alteração de políticas Supabase. E2E e build ainda NÃO executados; não aprovar merge/deploy sem validação. Auditoria UX mais ampla documentada na branch `fix/home-remove-simulator-card`.
+
+## 2026-10-27 — Alias /admin/produtos
+
+- Erro relatado no ambiente local Windows: `No route matches URL /admin/produtos`.
+- Confirmado `app/routes.ts` só possuía `/admin/products` e os menus consultados usam `/admin/products`.
+- Criado `app/routes/admin/products-redirect.tsx` e alias `produtos` filho da rota admin, redirecionando com `Navigate replace` para `/admin/products` preservando query/hash.
+- Aviso IA modo simulado não relacionado a 404. Sem build/E2E, merge ou deploy.
