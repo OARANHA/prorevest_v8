@@ -187,3 +187,9 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - `app/components/Header.tsx` refatorado como cabeçalho responsivo único consumido pelo `Layout`: navegação centralizada com logotipo compacto fixo entre os grupos de links, versão mobile com menu acessível, links e estados de login mantidos.
 - Retirada a dependência da imagem do logo no `localStorage` ou busca dinâmica no Supabase para o cabeçalho público, de modo a evitar divergências por navegador. Passa a usar o asset versionado `public/images/catalog-launch/prorevest-logo.png`, confirmado previamente na branch. O fluxo administrativo legado de upload da marca não foi removido, mas não controla mais o Header; reavaliar esse contrato em PR específica se necessário.
 - Nenhum ajuste à Hero ou faixa. Atenção: renderização desktop/mobile e signOut precisam de smoke; `npm ci`/`npm run build` ainda pendentes. Não houve merge/deploy.
+
+## 2026-10-27 — Redesign da seção Sobre a ProRevest (branch, sem deploy)
+
+- Em `app/routes/home_prorevest.tsx`, substituída apenas a seção `AboutSection` por composição editorial com texto institucional, 4 pilares (Inovação, Qualidade, Sustentabilidade, Suporte), CTAs para `/sobre` e `/catalogo` e uma faixa de resultados em degradê.
+- Métricas **preservadas integralmente** após confirmação explícita do responsável: `20+` anos, `50k+` projetos, `200+` cores, `98%` satisfação; sem conversão de unidades nem exclusão dos indicadores.
+- Sem alteração na Hero, carrossel ou faixa dos catálogos. Build, testes responsivos e aceite visual pendentes, sem merge/deploy. Reversível por diff do commit da seção.
