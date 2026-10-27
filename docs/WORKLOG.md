@@ -90,3 +90,11 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Páginas funcionam somente após imagens originais Canva aprovadas serem exportadas e publicadas como `/catalogs/{slug}/pages/0001.webp` etc. PDFs como `/catalogs/{slug}/catalog.pdf`. Não foram fornecidas miniaturas temporárias nem imagens inventadas.
 - Índices de coleção permanecem vazios até conferência exata das páginas originais.
 - **Pendente:** exportação/autorização dos 55 slides originais, assets finais, hotspots, QR, admin, armazenamento e validações automáticas. Build/SSR/E2E não executados neste ciclo; não afirmar sucesso funcional. Branch não enviada para produção.
+
+## 2026-10-27 — Exportações oficiais PIACERI/FLUA preparadas para GitHub Desktop
+
+- Recebidos ZIPs PNG e PDFs exportados do Canva: PIACERI 38 páginas e FLUA 17 páginas; imagens 1920×1080.
+- Gerados assets web em `/public/catalogs/{slug}/pages/{NNNN}.webp` e PDF otimizado em `/public/catalogs/{slug}/catalog.pdf`, preservando composição original e ordenação.
+- Gerado pacote ZIP independente com 55 WebPs e 2 PDFs + manifesto e instruções, para extração MANUAL via GitHub Desktop na branch `feat/catalogos-digitais-foundation`. O pacote não foi adicionado ao repositório remoto nesta sessão.
+- Mapeadas seções confirmadas pelos PDFs: PIACERI Laghi p3, Puglia p8, Luce p11, Vulcani p17, Rovine p23, Vino p29, Firmata p33; FLUA p3 e Paraíso p13.
+- **Não houve build do projeto nem E2E em navegador**, PR, merge ou deploy. Antes de publicar: usuário precisa inserir assets via GitHub Desktop, com commit/push; depois executar build/testes, revisão e obter aprovação para merge/deploy.
