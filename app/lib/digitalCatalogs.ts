@@ -10,7 +10,7 @@ export interface CatalogEntry {
 export const catalogs: Record<CatalogSlug, CatalogEntry> = {
   piaceri: {
     slug: "piaceri", title: "PIACERI", pages: 38, canvaDesignId: "DAHYAXZ36LY",
-    sections: [{title:"Linea Laghi",firstPage:3},{title:"Linea Puglia",firstPage:11},{title:"Linea Luce",firstPage:15},{title:"Linea Vulcani",firstPage:24},{title:"Linea Rovine",firstPage:33}]
+    sections: [] // index pages must be mapped from exported originals before activation
   },
   flua: {
     slug:"flua",title:"FLUA",pages:17,canvaDesignId:"DAHYAqdRfNI",
