@@ -161,3 +161,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Causa no CSS do carrossel: contêiner e wrappers forçavam `min-h-screen` com slides de alturas diferentes; elementos ocultos absolutos e fundo escuro criavam espaço excedente.
 - Corrigido em `app/components/HomeHeroCarousel.tsx`: somente o slide ativo ocupa o fluxo (`relative`/`hidden`), e a altura externa acompanha a altura efetiva do slide. Preservada imagem original do Studio, slide promocional, botões, indicadores e alternância.
 - Build e E2E visual desktop/mobile ainda pendentes; sem merge/deploy.
+
+## 2026-10-27 — Hotfix de proporção do carrossel da Home
+
+- Evidência enviada pelo usuário: captura completa da Home mostrou o Studio ocupando apenas parte do início do carrossel com faixa preta grande e a campanha também com proporções incorretas.
+- Alterado o container `HomeHeroCarousel` para uma altura delimitada pela viewport, com cada slide ativo absolutamente posicionado para preencher a área, e ocultação real do slide inativo.
+- `HeroSection` (Studio) passou a ter `h-full` sem seu `min-h-screen`/padding superior próprios. `CatalogLaunchHero` recebeu `h-full` com grade responsiva confinada à mesma altura, e cenário em `object-cover` dentro da área visual.
+- Sem alteração das artes e sem renderizar a faixa abaixo da Hero. Build e inspeção local desktop/mobile pendentes; especialmente verificar corte do CTA em telas pequenas e viewport com header; nenhum merge/deploy.
