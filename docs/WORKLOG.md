@@ -120,3 +120,9 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - `/catalogos`: substituída paleta editorial marrom/bege por base branca/cinza muito claro, acentos laranja/índigo, botões e tipografia similares à Home ProRevest; mantidas capas originais.
 - `/catalogos/{slug}`: chrome do visualizador alinhado à mesma paleta institucional, cabeçalho neutro, moldura branca e controles claros; slides WebP originais e ações de navegação/QR/download mantidos. Modo fullscreen permanece com fundo escuro para leitura imersiva.
 - Nenhuma alteração Supabase, conteúdo dos PDFs, dados ou deploy. Build/E2E e revisão visual em navegador ainda pendentes; verificar dependência QR/lockfile.
+
+## 2026-10-27 — Harmonização visual catálogos com Home
+
+- A biblioteca `/catalogos` e as molduras dos viewers PIACERI/FLUA receberam paleta clara (white/indigo/purple), tipografia leve, cards com bordas e sombras suaves conforme componentes já existentes na Home.
+- Não alteradas imagens Canva, páginas, URLs PDF/QR, navegação, estado fullscreen ou lógica de compartilhamento.
+- Alterações registradas na branch `feat/catalogos-digitais-foundation`. Build/E2E e aprovação visual pendentes. Nenhum merge/deploy.
