@@ -154,3 +154,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - `HomeDigitalCatalogs` continua versionado, porém foi retirado da renderização da Home nesta etapa, seguindo pedido de concluir Hero antes da faixa.
 - O slide promocional requer assets enviados pelo usuário em `/public/images/catalog-launch/catalogs-scene.webp` e `prorevest-logo.png`. É necessário confirmar se ambos já estão commitados na branch.
 - Revisão de diff realizada; build e teste visual/responsivo, teclado e navegação do carrossel ainda pendentes. Nenhum merge/deploy.
+
+## 2026-10-27 — Correção de faixas escuras no carrossel da Hero
+
+- Relato no navegador local: grande faixa escura abaixo do slide Studio e acima do slide PIACERI/FLUA.
+- Causa no CSS do carrossel: contêiner e wrappers forçavam `min-h-screen` com slides de alturas diferentes; elementos ocultos absolutos e fundo escuro criavam espaço excedente.
+- Corrigido em `app/components/HomeHeroCarousel.tsx`: somente o slide ativo ocupa o fluxo (`relative`/`hidden`), e a altura externa acompanha a altura efetiva do slide. Preservada imagem original do Studio, slide promocional, botões, indicadores e alternância.
+- Build e E2E visual desktop/mobile ainda pendentes; sem merge/deploy.
