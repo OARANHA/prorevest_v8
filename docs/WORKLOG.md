@@ -168,3 +168,9 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Alterado o container `HomeHeroCarousel` para uma altura delimitada pela viewport, com cada slide ativo absolutamente posicionado para preencher a área, e ocultação real do slide inativo.
 - `HeroSection` (Studio) passou a ter `h-full` sem seu `min-h-screen`/padding superior próprios. `CatalogLaunchHero` recebeu `h-full` com grade responsiva confinada à mesma altura, e cenário em `object-cover` dentro da área visual.
 - Sem alteração das artes e sem renderizar a faixa abaixo da Hero. Build e inspeção local desktop/mobile pendentes; especialmente verificar corte do CTA em telas pequenas e viewport com header; nenhum merge/deploy.
+
+## 2026-10-27 — Hero campanha full-bleed e slide inicial
+
+- Após screenshot do usuário mostrando cenário confinado à metade direita e logomarca desproporcional, `CatalogLaunchHero.tsx` atualizado para cenário promocional ocupar 100% da área da Hero com `object-cover` e gradiente na esquerda para leitura; removido `<img>` de logotipo sobreposto. Não altera o arquivo WebP em si.
+- `HomeHeroCarousel.tsx`: slide 1 agora lançamento PIACERI/FLUA e slide 2 Studio original. Indicadores e setas seguem a ordem nova, sem remover o Studio.
+- O `object-cover` pode recortar laterais em diferentes proporções; revisar se os livros continuam inteiros no desktop/mobile e ajustar `object-position`/art direction após screenshot. Build/testes locais ainda não executados; sem merge/deploy.
