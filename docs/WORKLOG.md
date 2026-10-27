@@ -75,3 +75,9 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Pendente imediato: no Studio com imagem/projeto ativo, abrir Paleta ProRevest e rolar além do primeiro lote para confirmar carregamento das próximas cores e ausência de spinner infinito.
 
 - E2E real confirmado pelo usuário após o deploy da PR #2: Paleta ProRevest rolou e carregou novas cores normalmente no Studio, sem spinner infinito. PRV-024 encerrado como RESOLVED.
+
+## 2026-10-27 — Correções iniciais do Admin Produtos (branch; sem deploy)
+
+- Branch `fix/admin-products-reliability` isolada da main para correções conservadoras do painel.
+- `app/routes/admin/products.tsx`: logout agora aguarda `AuthContext.signOut()`; erro ao carregar lista exibido com retry; reset e clamp da paginação ao filtrar produtos; estado vazio com contagem correta; proteção contra descrição nula; removida função interna de exclusão de variante que apenas registrava console, sem operação de banco (verificar eventual affordance de UI antes de habilitar exclusão real).
+- Sem migração, exclusão de dados ou alteração de políticas Supabase. E2E e build ainda NÃO executados; não aprovar merge/deploy sem validação. Auditoria UX mais ampla documentada na branch `fix/home-remove-simulator-card`.
