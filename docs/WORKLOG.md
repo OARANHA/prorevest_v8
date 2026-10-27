@@ -146,3 +146,11 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Home passou a renderizar `CatalogLaunchHero` antes da faixa `HomeDigitalCatalogs`, mantendo `HeroSection` original acessível via switch local para rollback; não mesclar/publicar sem reavaliar destaque do Studio.
 - Arquivos binários necessários (`public/images/catalog-launch/catalogs-scene.webp` e `prorevest-logo.png`) empacotados externamente para GitHub Desktop. Estes assets **NÃO estão commitados na branch**; devem ser copiados pelo responsável antes de build/E2E/PR. Marca composta a partir das imagens enviadas; cenário recortado de mockup gerado e deve ser tratado como arte promocional ilustrativa, não fotografia dos catálogos reais.
 - Nenhum merge/deploy. Validar responsividade e acessibilidade, build, alteração da Home e imagens antes de aprovação final.
+
+## 2026-10-27 — Hero em carrossel com Studio preservado (sem deploy)
+
+- Criado `app/components/HomeHeroCarousel.tsx`: dois slides, Studio original primeiro e campanha dos catálogos segundo, alternância automática a cada 8 segundos, anterior/próximo, indicadores, pausa/retomada e suspensão quando foco/hover/aba oculta ou preferência de movimento reduzido.
+- Atualizado `app/routes/home_prorevest.tsx` para renderizar o carrossel em vez do switch que escondia a Hero original. Mantidos links e CTAs dos dois slides.
+- `HomeDigitalCatalogs` continua versionado, porém foi retirado da renderização da Home nesta etapa, seguindo pedido de concluir Hero antes da faixa.
+- O slide promocional requer assets enviados pelo usuário em `/public/images/catalog-launch/catalogs-scene.webp` e `prorevest-logo.png`. É necessário confirmar se ambos já estão commitados na branch.
+- Revisão de diff realizada; build e teste visual/responsivo, teclado e navegação do carrossel ainda pendentes. Nenhum merge/deploy.
