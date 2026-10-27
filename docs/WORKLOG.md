@@ -113,3 +113,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - No visualizador, barra flutuante de ações e coleções reposicionada à esquerda no desktop; controles incluídos dentro do elemento de fullscreen (anterior/próxima, índice e QR), preservando acesso durante tela cheia.
 - Sobreposição mobile do menu com barra de paginação foi ajustada. Código gravado na branch `feat/catalogos-digitais-foundation`.
 - Build/E2E responsivo ainda pendentes; não houve merge/deploy. Revisar especialmente browser Fullscreen API, disposição mobile e lockfile do pacote QR.
+
+## 2026-10-27 — Ajuste de identidade visual dos catálogos
+
+- A pedido do usuário, mantida a navegação funcional dos visualizadores PIACERI/FLUA.
+- `/catalogos`: substituída paleta editorial marrom/bege por base branca/cinza muito claro, acentos laranja/índigo, botões e tipografia similares à Home ProRevest; mantidas capas originais.
+- `/catalogos/{slug}`: chrome do visualizador alinhado à mesma paleta institucional, cabeçalho neutro, moldura branca e controles claros; slides WebP originais e ações de navegação/QR/download mantidos. Modo fullscreen permanece com fundo escuro para leitura imersiva.
+- Nenhuma alteração Supabase, conteúdo dos PDFs, dados ou deploy. Build/E2E e revisão visual em navegador ainda pendentes; verificar dependência QR/lockfile.
