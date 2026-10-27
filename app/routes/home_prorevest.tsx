@@ -8,6 +8,7 @@ import { supabase } from '../lib/supabaseClient';
 import CalculadoraMagica from '../components/CalculadoraMagica';
 import { FeaturedProducts } from '../components/FeaturedProducts';
 import InstagramSection from '../components/InstagramSection';
+import HomeDigitalCatalogs from '../components/HomeDigitalCatalogs';
 
 // Tipos
 interface Product {
@@ -1266,6 +1267,7 @@ const ProrevestApp = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-orange-100/30 to-blue-100/30 pointer-events-none"></div>
       
       <HeroSection />
+      <HomeDigitalCatalogs />
       <FeaturedProducts
         products={featuredProducts.map(convertProductForFeatured)}
       />
