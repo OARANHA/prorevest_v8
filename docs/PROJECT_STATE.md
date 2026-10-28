@@ -1,6 +1,6 @@
 # Estado atual do projeto
 
-Última atualização: 2026-10-07
+Última atualização: 2026-10-28
 
 ## Objetivo principal
 
@@ -47,6 +47,14 @@ E-mail institucional oficial: **a confirmar**.
 - Baseline de produção sanitizado criado em 2026-10-07.
 - Segredos encontrados em scripts antigos foram removidos do baseline versionável.
 - Node 22 do Agent Mesh está isolado em `/opt/wandora/node22`; não substituir o Node global da aplicação sem plano de migração.
+
+## Release operacional encerrada — 2026-10-28
+
+- Produção publicada no commit `28d1e0e8f6b059b082664bad2bbf62bfc4677966`, com PRs #5 e #6 integradas.
+- Blog editorial, seleção Paleta → Studio e aplicação com Gemini testados e aprovados pelo responsável no navegador oficial.
+- Smoke público de Home, Blog, Paleta, Studio, Login e Catálogos: 6/6 HTTP 200; `prorevest-app` online.
+- Backup da release anterior: `/opt/wandora/ops-workspace/prorevest-deploy-backups/20261028-003021-28d1e0e8f6b059b082664bad2bbf62bfc4677966`.
+- Próximos trabalhos devem partir desta base estável em novas branches e seguir o fluxo obrigatório.
 
 ## Prioridade imediata
 
