@@ -211,3 +211,14 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 
 - Investigado crash de login/produtos após PR #3: frontend criado sem variáveis VITE Supabase na etapa de build. Operador realizou rollback e relatou recuperação do catálogo/login; Studio seguia sem gate de visitante.
 - Branch `fix/supabase-build-studio-auth-20261027`: gate no `/studio`, script preflight para build não prosseguir sem variáveis públicas. Teste de falha sem variáveis passou, e build diagnóstico sem minificação com **placeholders não produtivos** concluiu com exit 0. Nenhum deploy do hotfix.
+
+## 2026-10-28 — Fechamento operacional da release consolidada
+
+- PR #5 (Blog editorial) e PR #6 (Paleta → Studio) integradas à `main`; commit publicado `28d1e0e8f6b059b082664bad2bbf62bfc4677966`.
+- Release isolada em `/opt/wandora/ops-workspace/prorevest-release-20261028`; `npm ci` com 751 pacotes e build final minificado com variáveis públicas Supabase presentes, validado pelo responsável (`RELEASE CONSOLIDADA OK`).
+- Dependências atualizadas juntamente com o build (incluindo `qrcode`), evitando reutilização da árvore anterior.
+- Deploy controlado em 2026-10-28 via `/opt/wandora/ops-workspace/deploy-prorevest-20261028.sh`; backup em `/opt/wandora/ops-workspace/prorevest-deploy-backups/20261028-003021-28d1e0e8f6b059b082664bad2bbf62bfc4677966`.
+- Staging validado nas rotas `/`, `/blog`, `/paleta-cores`, `/studio`, `/login`, `/catalogos` (HTTP 200); produção validada nas mesmas seis rotas (HTTP 200); PM2 `prorevest-app` online.
+- Responsável confirmou no navegador os seis testes pós-deploy: Home/menus, Blog, Paleta→Studio, aplicação de cor com IA, login/recuperação de senha e catálogos (miniaturas/PDFs). Release aceita e operacionalmente encerrada.
+- Segredos não registrados na documentação. As configurações de ambiente permanecem gerenciadas fora do Git.
+- Trabalho futuro separado: alimentação das miniaturas de Instagram, dependente de acesso à conta oficial.
