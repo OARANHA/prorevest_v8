@@ -141,28 +141,21 @@ export default function BlogPage() {
   };
 
   return (
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section vibrante */}
-        <section className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-orange-500 to-pink-600 opacity-90" />
-          <div className="relative py-16 md:py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center text-white">
-                <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/20 backdrop-blur-sm mb-4">
-                  <span className="uppercase tracking-wide">Insights</span>
-                </div>
-                <h1 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-md">
-                  Insights ProRevest
-                </h1>
-                <p className="text-lg md:text-xl max-w-3xl mx-auto opacity-95">
-                  Tendências, guias e ideias sobre tintas, cores e acabamentos para aplicações industriais.
-                </p>
-              </div>
+      <div className="min-h-screen bg-[#f7f5f1]">
+        {/* Editorial masthead */}
+        <section className="relative overflow-hidden bg-[#111a25] text-white">
+          <div className="pointer-events-none absolute -right-24 -top-32 h-96 w-96 rounded-full bg-orange-500/10 blur-3xl" />
+          <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
+            <div className="mb-7 flex items-center gap-4 text-xs font-bold uppercase tracking-[0.3em] text-orange-300"><span className="h-px w-12 bg-orange-400" /> ProRevest Journal <span className="text-slate-400">/ Ideias & materiais</span></div>
+            <h1 className="max-w-5xl text-5xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-7xl lg:text-[6.3rem]">Espaços que <span className="font-serif italic font-normal text-orange-300">inspiram.</span><br />Materiais que transformam.</h1>
+            <div className="mt-9 flex flex-col gap-6 border-t border-white/20 pt-7 md:flex-row md:items-center md:justify-between">
+              <p className="max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">Um olhar sobre arquitetura, cores, texturas e as ideias por trás de cada ambiente.</p>
+              <a href="#artigos" className="inline-flex items-center gap-3 self-start rounded-full border border-white/40 px-6 py-3 text-sm font-semibold transition hover:border-orange-300 hover:text-orange-300">Explorar artigos <ArrowRight className="h-4 w-4" /></a>
             </div>
           </div>
         </section>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14">
           {/* Search and Filters */}
           <div className="mb-8">
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
@@ -211,8 +204,13 @@ export default function BlogPage() {
             </div>
           </div>
 
+          {/* Editorial section heading */}
+          <div id="artigos" className="mb-10 flex flex-col gap-3 border-b border-slate-300 pb-6 sm:flex-row sm:items-end sm:justify-between">
+            <div><p className="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-orange-600">Biblioteca de ideias</p><h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-5xl">Últimas histórias</h2></div>
+            <p className="text-sm text-slate-500">{totalPosts} {totalPosts === 1 ? 'artigo publicado' : 'artigos publicados'}</p>
+          </div>
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+          <div className="hidden">
             <div className="bg-white rounded-lg shadow-md p-6 text-center">
               <div className="text-3xl font-bold text-primary">{totalPosts}</div>
               <div className="text-sm text-gray-600">Posts Publicados</div>
@@ -232,18 +230,18 @@ export default function BlogPage() {
           </div>
 
           {/* Posts Grid com cards modernos (sempre claro) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mb-14">
             {filteredPosts.map((post) => (
               <article
                 key={post.id}
-                className="group relative overflow-hidden rounded-2xl border border-gray-200/70 bg-white/70 backdrop-blur-sm shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+                className="group relative overflow-hidden rounded-2xl border border-[#e7e1d7] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/10"
               >
                 {/* Featured Image */}
-                <div className="relative h-48">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={post.featured_image || "/images/hero-bg.jpg"}
                     alt={post.title || 'Post sem título'}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
                     onError={(e) => {
                       const img = e.currentTarget as HTMLImageElement;
                       img.onerror = null;
@@ -257,11 +255,11 @@ export default function BlogPage() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-7">
                   {/* Title */}
                   <Link to={`/blog/${post.slug}`} className="block mb-3">
-                    <h2 className="text-xl font-bold tracking-tight line-clamp-2">
-                      <span className="bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent group-hover:from-primary group-hover:to-pink-600 transition-colors">
+                    <h2 className="text-2xl font-semibold leading-tight tracking-tight line-clamp-2">
+                      <span className="text-slate-900 transition-colors group-hover:text-orange-600">
                         {post.title}
                       </span>
                     </h2>
@@ -361,23 +359,14 @@ export default function BlogPage() {
             </div>
           )}
 
-          {/* Newsletter */}
-          <div className="bg-primary text-white rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">Receba nossas novidades</h2>
-            <p className="mb-6 max-w-2xl mx-auto">
-              Cadastre-se em nossa newsletter e receba em primeira mão as últimas dicas, tendências e guias sobre tintas e acabamentos.
-            </p>
-            <div className="flex justify-center">
-              <input
-                type="email"
-                placeholder="Seu melhor e-mail"
-                className="px-4 py-2 rounded-l-lg border border-orange-200 focus:outline-none focus:ring-1 focus:ring-orange-300 focus:border-orange-300 text-gray-900 placeholder-gray-500 bg-white"
-              />
-              <button className="bg-white text-primary px-6 py-2 rounded-r-lg font-semibold hover:bg-gray-100 transition-colors">
-                Cadastrar
-              </button>
+          {/* Relevant next step, without pretending to subscribe users */}
+          <section className="relative overflow-hidden rounded-3xl bg-[#162232] px-7 py-12 text-white sm:px-12 sm:py-16">
+            <div className="absolute -right-14 -top-24 h-72 w-72 rounded-full bg-orange-500/15 blur-3xl" />
+            <div className="relative flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
+              <div className="max-w-2xl"><p className="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-orange-300">Da inspiração à prática</p><h2 className="mb-4 text-3xl font-semibold tracking-tight sm:text-5xl">Sua próxima ideia começa com uma cor.</h2><p className="text-slate-300">Explore as cores ProRevest e visualize possibilidades para seu ambiente.</p></div>
+              <Link to="/paleta-cores" className="inline-flex shrink-0 items-center justify-center gap-3 self-start rounded-full bg-orange-500 px-7 py-4 font-semibold text-white transition hover:bg-orange-600">Explorar cores <ArrowRight className="h-5 w-5" /></Link>
             </div>
-          </div>
+          </section>
         </div>
       </div>
   );
