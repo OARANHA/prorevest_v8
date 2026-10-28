@@ -1,5 +1,6 @@
 import { type LoaderFunctionArgs } from "react-router-dom";
 import { useLoaderData, Link, useNavigate, useSearchParams } from "react-router-dom";
+import { savePendingStudioColor } from "~/lib/pendingStudioColor";
 import { useState, useMemo, useEffect, useRef } from "react";
 import { supabase } from "~/lib/supabaseClient";
 import 'remixicon/fonts/remixicon.css';
@@ -488,7 +489,14 @@ export default function PaletaCores() {
                 )}
 
                 <div className="flex gap-4 pt-6">
-                  <button className="flex-1 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 py-4 px-6 rounded-xl hover:from-gray-200 hover:to-gray-300 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105">
+                  <button className="flex-1 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 py-4 px-6 rounded-xl hover:from-gray-200 hover:to-gray-300 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105" onClick={() => {
+                      if (!selectedColor?.hex_code || !savePendingStudioColor({
+                        name: selectedColor.name,
+                        hex: selectedColor.hex_code,
+                        code: selectedColor.pro_revest_code || selectedColor.ral_code || undefined
+                      })) return;
+                      navigate('/studio');
+                    }}>
                     Adicionar ao Projeto
                   </button>
                 </div>
