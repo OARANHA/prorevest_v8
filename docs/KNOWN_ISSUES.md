@@ -44,3 +44,9 @@ Ao corrigir um item:
 - **P0, Auth/Catálogo:** build isolado sem `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` produziu cliente `supabase=null`, quebrando login e carregamento de produtos. Foi realizado rollback em produção e login/produtos voltaram a funcionar conforme relato do operador. O hotfix adiciona preflight obrigatório de variáveis públicas ao build, sem imprimir valores.
 - **P0, Studio:** `/studio` aponta direto ao editor, independentemente de sessão. Hotfix adiciona gateway que mostra a apresentação para visitante e o editor para autenticado; autenticação precisa de E2E com ambiente oficial antes do próximo deploy.
 - **Obrigatório antes de republicar:** identificar fonte confiável das variáveis públicas usadas na compilação antiga, disponibilizá-las apenas ao processo de build, executar build real e E2E de login/produtos/Studio. Não publicar artefato compilado com placeholders.
+
+## 2026-10-27 — Paleta de cores → Studio (diagnóstico)
+
+- **P1, OPEN:** na rota `/paleta-cores`, o botão “Adicionar ao Projeto” no modal de cor não possui `onClick` e não salva/navega para o Studio. A interface promete ação ainda inexistente.
+- Fluxo a implementar em branch própria, sem interferir no redesign do blog: selecionar cor (id, nome, hexadecimal, código ProRevest), iniciar intenção contextual, preservar escolha ao passar pela apresentação/login, exibir confirmação no Studio e permitir aplicar a um projeto/parede específica. Nunca criar projeto automaticamente ou considerar a cor aplicada sem confirmação.
+- Validar entrada de visitante e autenticado, persistência durante redirect/login, seleção de projeto, estado sem projeto, falhas de carga e compatibilidade com cores do banco. Não transferir dados de usuário por query string nem contornar a proteção de autenticação.
