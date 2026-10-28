@@ -125,7 +125,7 @@ const routes = [
   route("api/vendaerp/processar", "./routes/api/vendaerp/processar.ts"),
 
   // Studio ProRevest routes
-  route("studio", "./routes/studioprorevest.tsx"),
+  route("studio", "./routes/studio-gateway.tsx"),
   route("studio/project/:projectId", "./routes/studio-project-redirect.tsx"),
   route("studio/new-project", "./routes/studio/new-project.tsx"),
   route("studio/editor/:projectSlug", "./routes/studio/editor/[projectSlug].tsx"),
