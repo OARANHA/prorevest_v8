@@ -38,3 +38,9 @@ Ao corrigir um item:
 2. registrar commit/data;
 3. adicionar nota curta do teste executado;
 4. registrar no `WORKLOG.md`.
+
+## 2026-10-27 — Regressão pós-PR #3 (hotfix em andamento)
+
+- **P0, Auth/Catálogo:** build isolado sem `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` produziu cliente `supabase=null`, quebrando login e carregamento de produtos. Foi realizado rollback em produção e login/produtos voltaram a funcionar conforme relato do operador. O hotfix adiciona preflight obrigatório de variáveis públicas ao build, sem imprimir valores.
+- **P0, Studio:** `/studio` aponta direto ao editor, independentemente de sessão. Hotfix adiciona gateway que mostra a apresentação para visitante e o editor para autenticado; autenticação precisa de E2E com ambiente oficial antes do próximo deploy.
+- **Obrigatório antes de republicar:** identificar fonte confiável das variáveis públicas usadas na compilação antiga, disponibilizá-las apenas ao processo de build, executar build real e E2E de login/produtos/Studio. Não publicar artefato compilado com placeholders.
