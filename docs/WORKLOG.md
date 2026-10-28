@@ -206,3 +206,8 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Preservados marcos cronológicos e principais informações da história preexistente, com copy resumida para leitura; valores passam a ser 20+/50k+/200+ cores/98% conforme números confirmados pelo responsável na Home (substituem métricas divergentes antes exibidas nesta rota).
 - Removido `<Layout showHeaderFooter={false}>` interno: `app/root.tsx` já aplica Layout global, evitando layout duplicado. Imagem `/images/factory.png` é existente referenciada pela implementação anterior e merece conferência visual.
 - Build, revisão de diff e testes mobile/desktop pendentes. Sem merge/deploy.
+
+## 2026-10-27 — Hotfix auth/build/Studio (em revisão)
+
+- Investigado crash de login/produtos após PR #3: frontend criado sem variáveis VITE Supabase na etapa de build. Operador realizou rollback e relatou recuperação do catálogo/login; Studio seguia sem gate de visitante.
+- Branch `fix/supabase-build-studio-auth-20261027`: gate no `/studio`, script preflight para build não prosseguir sem variáveis públicas. Teste de falha sem variáveis passou, e build diagnóstico sem minificação com **placeholders não produtivos** concluiu com exit 0. Nenhum deploy do hotfix.
