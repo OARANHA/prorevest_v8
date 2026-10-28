@@ -94,3 +94,9 @@ Ainda deve ser complementado com health check, smoke test e rollback antes de vi
 ## Rollback
 
 Ainda não formalizado. Criar procedimento antes do primeiro deploy funcional relevante desta nova fase.
+
+## Hotfix de pré-verificação de Supabase no build (2026-10-27)
+
+`npm run build` agora falha se `VITE_SUPABASE_URL`/`VITE_SUPABASE_ANON_KEY` não estiverem definidas no ambiente de compilação. Elas são chaves **públicas de frontend**, mas não devem ser copiadas em logs, prompts ou repositórios. Encontrar fonte autorizada no ambiente administrativo e injetar diretamente no build. O check evita o caso de build bem-sucedido que gera `supabase=null`. A presença das variáveis sozinha não substitui E2E de login, catálogo e Studio.
+
+O target correto é `prorevest-managed-admin` (`serv`); o broker de execução teve MemoryMax=1G após reboot e builds minificados podem exigir novo procedimento autorizado de ampliação temporária (não reaplicar por conta própria). Após aprovação, criar release isolado, compilar com env real, validar browser/E2E e somente então atualizar produção com rollback de build, source e node_modules.
