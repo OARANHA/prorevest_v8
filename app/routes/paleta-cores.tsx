@@ -1,5 +1,6 @@
 import { type LoaderFunctionArgs } from "react-router-dom";
 import { useLoaderData, Link, useNavigate, useSearchParams } from "react-router-dom";
+import { savePendingStudioColor } from "~/lib/pendingStudioColor";
 import { useState, useMemo, useEffect, useRef } from "react";
 import { supabase } from "~/lib/supabaseClient";
 import 'remixicon/fonts/remixicon.css';
@@ -112,6 +113,8 @@ export async function loader({ request }: LoaderFunctionArgs) {
 export default function PaletaCores() {
   const { colors, totalCount, currentPage, totalPages, searchTerm, selectedCategory, allColors } = useLoaderData<typeof loader>();
   const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const [addProjectError, setAddProjectError] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<Color | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -488,9 +491,29 @@ export default function PaletaCores() {
                 )}
 
                 <div className="flex gap-4 pt-6">
-                  <button className="flex-1 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 py-4 px-6 rounded-xl hover:from-gray-200 hover:to-gray-300 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105">
+                  <button className="flex-1 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 py-4 px-6 rounded-xl hover:from-gray-200 hover:to-gray-300 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105" onClick={() => {
+                      const hex = selectedColor?.hex_code?.trim();
+                      if (!selectedColor || !hex) {
+                        setAddProjectError('Esta cor não possui código hexadecimal válido.');
+                        return;
+                      }
+                      const normalizedHex = /^#[0-9a-f]{3}$/i.test(hex)
+                        ? '#' + [...hex.slice(1)].map((digit) => digit + digit).join('')
+                        : hex;
+                      if (!savePendingStudioColor({
+                        name: selectedColor.name,
+                        hex: normalizedHex,
+                        code: selectedColor.pro_revest_code || selectedColor.ral_code || undefined
+                      })) {
+                        setAddProjectError('Não foi possível preparar esta cor. Verifique o código da cor e as permissões do navegador.');
+                        return;
+                      }
+                      setAddProjectError(null);
+                      navigate('/studio');
+                    }}>
                     Adicionar ao Projeto
                   </button>
+                  {addProjectError && <p role="alert" className="text-sm text-red-700">{addProjectError}</p>}
                 </div>
               </div>
             </div>
