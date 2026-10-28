@@ -11,6 +11,7 @@ import { AuthModal } from '../components/auth/AuthModal';
 import { jsPDF } from 'jspdf';
 import { ProjectService } from '../services/projectService';
 import { DesignService } from '../services/designService';
+import { readPendingStudioColor, clearPendingStudioColor, type PendingStudioColor } from '../lib/pendingStudioColor';
 
 // Tipos locais básicos
 type EditEntry = { id: string; prompt: string; imageUrl: string };
@@ -74,6 +75,7 @@ export default function StudioProRevest() {
   const [selectionCoords, setSelectionCoords] = useState<{ x: number; y: number } | null>(null);
   const [activeTab, setActiveTab] = useState<SelectionTab>('COLOR');
   const [selectedColor, setSelectedColor] = useState<string>('#f1e9da');
+  const [pendingPaletteColor, setPendingPaletteColor] = useState<PendingStudioColor | null>(null);
   const [selectedTexture, setSelectedTexture] = useState<{ name: string; imageUrl: string } | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -162,6 +164,21 @@ export default function StudioProRevest() {
   // NOVO: Estado para tipo de acabamento de piso
   const [floorFinishType, setFloorFinishType] = useState<'epoxy' | 'microcement' | 'paint'>('epoxy');
   const [microcementStyle, setMicrocementStyle] = useState<'polido' | 'rústico'>('polido');
+
+  useEffect(() => { setPendingPaletteColor(readPendingStudioColor()); }, []);
+
+  const selectPendingPaletteColor = () => {
+    if (!pendingPaletteColor) return;
+    setActiveTab('COLOR');
+    setSelectedColor(pendingPaletteColor.hex);
+    setTargetColors(prev => ({ ...prev, [activeTarget]: pendingPaletteColor.hex }));
+    setTargetColorMeta(prev => ({
+      ...prev,
+      [activeTarget]: { name: pendingPaletteColor.name, hex: pendingPaletteColor.hex, code: pendingPaletteColor.code }
+    }));
+    clearPendingStudioColor();
+    setPendingPaletteColor(null);
+  };
 
   // Nome derivado da cor selecionada (exibe nome ao lado do hex)
   const selectedColorName = useMemo(() => {
@@ -941,6 +958,21 @@ const canApply = Boolean(activeDesign && aiPrompt && !isGenerating);
   return (
     <Layout showHeaderFooter={false}>
       <div className="min-h-screen bg-gray-50">
+        {pendingPaletteColor && (
+          <div role="status" className="mx-auto my-4 flex max-w-6xl flex-wrap items-center justify-between gap-4 rounded-xl border border-orange-200 bg-orange-50 p-4 text-slate-900">
+            <div className="flex items-center gap-3">
+              <span className="h-11 w-11 shrink-0 rounded-lg border border-slate-200" style={{ backgroundColor: pendingPaletteColor.hex }} />
+              <div>
+                <p className="font-semibold">Cor recebida da Paleta ProRevest: {pendingPaletteColor.name}</p>
+                <p className="text-sm text-slate-600">{pendingPaletteColor.code ? pendingPaletteColor.code + ' · ' : ''}{pendingPaletteColor.hex} — escolha o projeto e a superfície antes de aplicar.</p>
+              </div>
+            </div>
+            <div className="flex gap-2">
+              <button type="button" onClick={selectPendingPaletteColor} className="rounded-lg bg-orange-600 px-4 py-2 font-semibold text-white hover:bg-orange-700">Usar na seleção atual</button>
+              <button type="button" onClick={() => { clearPendingStudioColor(); setPendingPaletteColor(null); }} className="rounded-lg border border-slate-300 px-4 py-2 font-medium">Descartar</button>
+            </div>
+          </div>
+        )}
         {/* Header */}
         <header className="bg-white border-b border-gray-200 shadow-sm">
           <div className="max-w-screen-2xl xl:max-w-none mx-auto px-4 sm:px-6 lg:px-8">
