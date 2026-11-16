@@ -333,3 +333,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Contagens oficiais informadas: **18 contas Auth, 18 perfis, 0 contas sem perfil, 0 perfis órfãos**.
 - O erro P0001 indica apenas a guarda de não sobrescrita; a origem/ordem de instalação da função/gatilho não é identificável nos resultados. Não aplicar outro DDL/backfill por conta do erro.
 - Dados reconciliados no banco. **Ainda não comprovados:** cadastro novo E2E, RLS/visibilidade para uma sessão administrativa e uma comum, negação de UPDATE role na API, build minificado com variáveis reais, merge/deploy. Produção web não alterada.
+
+## 2026-11-16 — Validação de branch pós-reconciliação DB
+
+- A PR #8 e documentação viva foram atualizadas com a evidência administrativa de Auth/Profiles 18/18, 0 ausências e trigger habilitado. A origem/instante da instalação da função não foi inferida.
+- `node scripts/test-admin-auth-static.mjs` rodou novamente no checkout isolado com **37/37 PASS, exit 0**.
+- Tentativa de `npm run build` minificado com variáveis **sintéticas** em broker VPS perdeu a sessão (`BROKER_DENIED: session_not_found`) antes de devolver exit code. **Não contar como build aprovado**. O build sem minificação anterior foi validado; produção exige build oficial com ambiente autorizado.
+- Ainda faltam E2E autenticado com conta administradora e cliente, teste de novo cadastro, confirmação do role RLS, build release minificado e autorização expressa de merge/deploy.
