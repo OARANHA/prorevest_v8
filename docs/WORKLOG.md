@@ -376,3 +376,11 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - A auditoria encontrou `FeaturedProducts` e `ProductsSection` duplicando os destaques na Home, com preços, avaliações, `7 anos` e contagens `200+` sem fonte verificável, além de `fallbackProducts` inventado quando o Supabase falhava.
 - Removida `ProductsSection` duplicada, preservada âncora `#produtos` na única vitrine. `FeaturedProducts` refeito sem atributos comerciais/durabilidade/avaliação fictícios, com imagens e metadados cadastrados, e fallback apenas de navegação ao catálogo.
 - Consulta de destaque usa apenas `is_featured=true` e `is_archived=false`. Scripts de regressão expandidos a **36 verificações**. Build/testes da Home após a mudança precisam ser repetidos.
+
+### Fechamento da revisão da PR #9 — validação depois da vitrine Home
+
+- `node scripts/test-blog-products-static.mjs` após a alteração da Home: **36/36 PASS**, exit 0.
+- `tsc --noEmit` global: 86 diagnósticos, **zero** nos arquivos atualizados de Blog, catálogo, produto, Home e renderizador Markdown. Problemas globais antigos fora do escopo continuam.
+- `fetch_pr_patch` e comparação com `main`: alterações limitadas a Blog/Produtos/Home, services de leitura, testes e documentação; nenhuma linha adicionada detectada como chave privada, `service_role` ou chamada administrativa privilegiada.
+- Build e 6 smokes HTTP com env **sintético** foram concluídos antes do ajuste final da Home. A repetição do build sem minificação após a Home iniciou, mas a leitura de resultado pelo conector retornou erro interno. **Não classificar a última compilação como aprovada**.
+- PR #9 permanece **Draft**, sem merge/deploy; para produção ainda faltam build oficial/minificado com variáveis públicas corretas, smoke e E2E visual com dados reais de artigos e produtos, revisão de conteúdo legado HTML, aceite explícito do responsável.
