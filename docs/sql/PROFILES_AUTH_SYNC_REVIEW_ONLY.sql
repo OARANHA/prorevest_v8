@@ -74,6 +74,23 @@ revoke all on function public.prorevest_create_auth_profile()
 
 do $trigger$
 begin
+  -- Se um gatilho com esse nome já existir, precisa apontar para esta função
+  -- e estar habilitado para INSERT AFTER ROW. Nunca reutilizar às cegas.
+  if exists (
+    select 1 from pg_trigger
+    where tgrelid = 'auth.users'::regclass
+      and tgname = 'prorevest_profile_after_auth_insert'
+      and (
+        tgfoid <> 'public.prorevest_create_auth_profile()'::regprocedure
+        or (tgtype & 4) <> 4
+        or (tgtype & 2) <> 0
+        or (tgtype & 1) <> 1
+        or tgenabled <> 'O'
+      )
+  ) then
+    raise exception 'Gatilho ProRevest anterior divergente; revisar sem sobrescrever';
+  end if;
+
   if not exists (
     select 1 from pg_trigger
     where tgrelid = 'auth.users'::regclass
