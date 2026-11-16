@@ -96,3 +96,11 @@ diagnóstico → proposta → alteração em Git → diff/revisão → build/tes
 - Backup informado: `/opt/wandora/ops-workspace/prorevest-deploy-backups/20261116-183307-pr8-7a15951bf2a2649aabede0de89fa54247311f63a`. Não reexecutar automaticamente o script fixado neste SHA como procedimento de atualizações futuras.
 - Supabase oficial: última evidência de 2026-11-16 continua 18 contas Auth / 18 perfis, zero contas sem perfil, trigger de criação habilitado. Migração `PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` não deve ser reexecutada; função já existia.
 - **E2E autenticado ainda pendente:** testar cadastro novo/confirmação de e-mail/primeiro login, listagem `/admin/users` sob sessão admin, bloqueio de acesso e de edição de `role` por conta comum e fluxos Studio. HTTP 200 não demonstra autorização, contagem visual ou fluxo de formulário.
+
+## Blog e catálogo institucional — auditoria e melhorias em revisão (2026-11-16)
+
+- Branch **`feat/blog-products-experience-20261116`** a partir de `main`. Estado **não publicado**; a versão de produção permanece no deploy da PR #8 (`7a15951`).
+- Blog com busca/categoria/tag por URL, filtros derivados apenas de posts publicados, paginação preservando filtros, sem fallback fictício; artigo com 404 para slug não publicado, sem UPDATE em GET e Markdown seguro no SSR.
+- Catálogo `/catalogo` e produto `/produto/:slug` sem preço, frete ou avaliações inventadas; dados públicos e categorias/acabamentos reais via Supabase, produto arquivado bloqueado, informações técnicas cadastradas, CTAs ao Studio e WhatsApp.
+- Evidências técnicas: `node scripts/test-blog-products-static.mjs` **30 PASS**; teste dinâmico de payloads XSS/Markdown **PASS**; build cliente+SSR **sem minificação** com variáveis sintéticas **exit 0**; staging sintético **6/6 HTTP 200**. TSC geral possui erros anteriores fora das rotas editadas.
+- Auditoria detalhada: `docs/BLOG_PRODUCTS_AUDIT.md`. **Pendências:** revisão editorial de conteúdo e fichas existentes, testes reais e responsivos no navegador, build minificado com env oficial e aprovação para merge/deploy.
