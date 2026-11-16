@@ -38,7 +38,13 @@ begin
     where n.nspname = 'public'
       and p.proname = 'is_admin_user'
       and p.pronargs = 0
-      and 'search_path=' = any(p.proconfig)
+      -- PostgreSQL representa o search_path vazio como search_path=""
+      -- em pg_proc.proconfig. Aceitar tambem a variante sem aspas.
+      and exists (
+        select 1
+        from unnest(coalesce(p.proconfig, array[]::text[])) as setting
+        where replace(setting, '"', '') = 'search_path='
+      )
   ) then
     raise exception 'PRV-028: is_admin_user ainda nao tem search_path seguro';
   end if;
