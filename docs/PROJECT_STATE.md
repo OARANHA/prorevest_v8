@@ -108,3 +108,11 @@ diagnóstico → proposta → alteração em Git → diff/revisão → build/tes
 - **Ampliação da auditoria de produtos na Home (branch em revisão):** as duas vitrines repetidas foram consolidadas em uma; removidas avaliações, preços, alegações de durabilidade, números `200+` e produtos fallback fictícios. A vitrine usa destaques reais não arquivados e mantém `#produtos`. A validação oficial e aprovação de deploy continuam pendentes.
 
 - **Ajuste pré-publicação do Blog:** consulta de slug passou a restringir `published` apenas na rota pública; Admin mantém edição de drafts e pré-visualização dentro da página de edição com Markdown seguro. Nenhuma prévia de rascunho por URL pública.
+
+## Produção atualizada — PR #9 Blog/Produtos/Home (2026-11-16)
+
+- **Estado efetivo (substitui estados 'em revisão' acima):** PR #9 integrada à `main` e publicada no site institucional com SHA de merge `c90fe9bc672077ceb0016d2cb8c224343023f0d1`. O responsável executou `/opt/wandora/ops-workspace/deploy-prorevest-pr9-20261116.sh` como root e enviou saída `DEPLOY SUCCESS` com `pm2=online`.
+- Backup indicado no log: `/opt/wandora/ops-workspace/prorevest-deploy-backups/20261116-194453-pr9-c90fe9bc672077ceb0016d2cb8c224343023f0d1`. Preservar para rollback; script fixado em SHA não deve ser reutilizado numa release futura.
+- Smoke público após deploy: **10/10 rotas com HTTP 200** (`/`, `/blog`, `/catalogo`, `/catalogos`, `/studio`, `/paleta-cores`, `/login`, `/register`, `/admin`, `/admin/users`) e **3/3 rotas removidas com HTTP 404** (`/admin/make-admin`, `/admin/init-profiles`, `/debug-user`).
+- Blog: pesquisa, filtros, paginação, conteúdo somente publicado e tratamento de indisponibilidade; Markdown seguro e prévia de rascunho dentro do Admin. Catálogo: dados reais, categoria, acabamento, busca e paginação; detalhes técnicos sem frete/preço/avaliações fictícias. Home: vitrine única de produtos realmente destacados.
+- **Pendente:** E2E no navegador com artigos e produtos reais, pesquisa e paginação multi-página, responsividade/imagens, prévia e edição de rascunhos, validação de login e das permissões no Admin. HTTP 200 não comprova esses fluxos.
