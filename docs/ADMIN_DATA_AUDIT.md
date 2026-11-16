@@ -82,6 +82,14 @@ order by ordinal_position;
 
 Não executar inserções, atualizações, criação de triggers ou alteração de RLS antes de inspecionar a estrutura e o processo de cadastro. Não compartilhar e-mails, IDs de usuários, chaves ou dados de autenticação.
 
+### Estrutura de `public.profiles` confirmada — 2026-11-16
+
+Resultado encaminhado pelo responsável a partir de `information_schema.columns`: `id uuid NOT NULL`, `full_name text NULL`, `company_name text NULL`, `role text NOT NULL DEFAULT`, `created_at timestamptz NULL DEFAULT`, `email text NULL`. **Não existe `updated_at`** nessa tabela.
+
+Consequência no código: o `UserService` da PR #8 foi ajustado para não enviar `updated_at` em atualizações e para refletir as colunas existentes no tipo `UserProfile`. Não foi aplicada migração nem preenchimento de perfis.
+
+**Ainda necessários, do mesmo bloco de auditoria:** saída dos gatilhos não internos da tabela `auth.users` e resultado de `rls_ativa`, `rls_forcada` e `numero_politicas` para `public.profiles`.
+
 ## Antes de mostrar “Total de usuários cadastrados”
 
 1. Confirmar as quatro contagens acima na instância oficial.
