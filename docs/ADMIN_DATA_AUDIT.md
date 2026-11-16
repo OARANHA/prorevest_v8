@@ -201,7 +201,7 @@ Em 2026-11-16, o responsável executou a etapa de bloqueio de UPDATE em `profile
 
 Esses valores correspondem às pós-condições esperadas da etapa 1. Não representam, por si só, E2E autenticado nem comprovação de que nenhum perfil foi promovido antes da correção.
 
-**Etapa 2 ainda não executada:** o script `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` foi ajustado para reconhecer a codificação `search_path=""` em `pg_proc.proconfig` (sem esse ajuste a guarda abortaria indevidamente). Executar somente a versão atual da branch, **não uma cópia anterior**. Verificar backup/rollback, confirmar projeto `gtfvhktgxqtdrnaxizch`, executar o arquivo integralmente no SQL Editor e enviar a saída de `contas_auth`, `perfis`, `contas_sem_perfil`, `perfis_sem_conta`. Se houver erro, não executar correções improvisadas nem uma segunda tentativa sem revisar o erro.
+**Etapa 2 ainda não executada:** o script `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` foi ajustado para reconhecer a codificação `search_path=""` em `pg_proc.proconfig` (sem esse ajuste a guarda abortaria indevidamente). Executar somente a versão atual da branch, **não uma cópia anterior**. Verificar backup/rollback, confirmar projeto `gtfvhktgxqtdrnaxizch`, executar o arquivo integralmente no SQL Editor. A consulta de conferência roda **depois do COMMIT** e apresenta `contas_auth`, `perfis`, `contas_sem_perfil`, `perfis_sem_conta` e `gatilho_ativo` (esperado: `true`). Se houver erro, não executar correções improvisadas nem uma segunda tentativa sem revisar o erro.
 
 ### Ordem obrigatória da publicação
 
