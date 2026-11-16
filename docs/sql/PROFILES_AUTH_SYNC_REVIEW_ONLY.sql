@@ -24,6 +24,11 @@ begin
     raise exception 'public.profiles.id ausente; abortando';
   end if;
 
+  -- Não substituir uma função previamente instalada sob o mesmo nome.
+  if to_regprocedure('public.prorevest_create_auth_profile()') is not null then
+    raise exception 'Funcao prorevest_create_auth_profile ja existe; revisar antes de aplicar';
+  end if;
+
   if not exists (
     select 1
     from pg_index idx
@@ -49,7 +54,7 @@ $guard$;
 
 -- Chamada apenas pelo gatilho; search_path fechado.
 -- Role inicial segura, independente de raw_user_meta_data.
-create or replace function public.prorevest_create_auth_profile()
+create function public.prorevest_create_auth_profile()
 returns trigger
 language plpgsql
 security definer
