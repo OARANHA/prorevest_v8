@@ -237,7 +237,7 @@ export default function AdminUsers() {
                       <User className="h-5 w-5 text-primary" />
                     </div>
                     <div className="ml-4">
-                      <div className="font-medium">{user.full_name || user.email}</div>
+                      <div className="font-medium">{user.full_name || user.email || 'Perfil sem nome'}</div>
                     </div>
                   </div>
                 </td>
@@ -283,15 +283,7 @@ export default function AdminUsers() {
       {/* Paginação */}
       <div className="mt-6 flex items-center justify-between">
         <div className="text-sm text-muted-foreground">
-          Mostrando {filteredUsers.length} perfil(is) acessível(is) após o filtro
-        </div>
-        <div className="flex space-x-2">
-          <button className="px-3 py-1 border border-border rounded-md text-sm font-medium hover:bg-muted/50">
-            Anterior
-          </button>
-          <button className="px-3 py-1 border border-border rounded-md text-sm font-medium hover:bg-muted/50">
-            Próximo
-          </button>
+          Exibindo {filteredUsers.length} perfil(is) retornado(s) e acessível(is) após o filtro
         </div>
       </div>
 
