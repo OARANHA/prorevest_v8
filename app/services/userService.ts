@@ -210,27 +210,13 @@ export class UserService {
         } catch (fallbackError) {
           console.error('Erro no fallback:', fallbackError);
           
-          // Último recurso: dados mock para não quebrar a interface
-          console.log("Usando dados mock para não quebrar a interface...");
-          return [
-            {
-              id: 'admin-demo',
-              email: '[execute migration 20251211020000_add_email_to_profiles.sql]',
-              full_name: 'Administrador Demo',
-              role: 'admin',
-              created_at: new Date().toISOString(),
-              last_sign_in_at: new Date().toISOString(),
-              user_metadata: {},
-              email_confirmed_at: new Date().toISOString(),
-              phone: null,
-              updated_at: new Date().toISOString()
-            }
-          ];
+          // Não inventar usuários quando a consulta real falhar.
+          throw new Error('Não foi possível consultar os perfis cadastrados.', { cause: fallbackError });
         }
       }
     } catch (error) {
       console.error('Erro geral ao buscar usuários:', error);
-      return [];
+      throw error;
     }
   }
 
