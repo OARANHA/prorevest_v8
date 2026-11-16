@@ -87,3 +87,12 @@ diagnóstico → proposta → alteração em Git → diff/revisão → build/tes
 
 - **2026-11-16 — Sincronização Auth/Profiles regularizada no Supabase oficial (resultado read-only do responsável):** `auth.users=18`, `profiles=18`, `contas_sem_perfil=0`, `perfis_sem_conta=0`; função `prorevest_create_auth_profile()` com `SECURITY DEFINER`, `search_path` vazio, execução pública negada, e trigger `AFTER INSERT` habilitado. Não reaplicar o SQL: a função já existia e a tentativa de reexecução retornou P0001. Não há evidência de quando ela foi instalada.
 - **PR #8 segue Draft, sem merge/deploy.** Para publicação ainda faltam E2E autenticado de cadastro/confirmar e-mail/login/visibilidade no Admin e controle RLS, build minificado com env oficial e aprovação expressa do responsável.
+
+## Produção atualizada — 2026-11-16 (substitui os estados de pré-deploy acima)
+
+- **PR #8 integrada na `main`** no merge commit `7a15951bf2a2649aabede0de89fa54247311f63a`, após confirmação do responsável para prosseguir com publicação. Checkout isolado de build no commit `13e8fe3e26b3dbc73c37235b4c2749a46600c8b4`, com árvore Git idêntica à do merge.
+- Build minificado **com configuração oficial** concluído no shell root da VPS pelo responsável (`✓ built in 27.47s`). Staging isolado 10/10: 7 rotas HTTP 200, 3 rotas antigas 404.
+- Responsável executou `deploy-prorevest-pr8-20261116.sh` em `serv` e compartilhou saída `DEPLOY SUCCESS`, SHA `7a15951bf2a2649aabede0de89fa54247311f63a`, `pm2=online`. Smoke público: **9 rotas HTTP 200**, **3 rotas antigas HTTP 404**.
+- Backup informado: `/opt/wandora/ops-workspace/prorevest-deploy-backups/20261116-183307-pr8-7a15951bf2a2649aabede0de89fa54247311f63a`. Não reexecutar automaticamente o script fixado neste SHA como procedimento de atualizações futuras.
+- Supabase oficial: última evidência de 2026-11-16 continua 18 contas Auth / 18 perfis, zero contas sem perfil, trigger de criação habilitado. Migração `PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` não deve ser reexecutada; função já existia.
+- **E2E autenticado ainda pendente:** testar cadastro novo/confirmação de e-mail/primeiro login, listagem `/admin/users` sob sessão admin, bloqueio de acesso e de edição de `role` por conta comum e fluxos Studio. HTTP 200 não demonstra autorização, contagem visual ou fluxo de formulário.
