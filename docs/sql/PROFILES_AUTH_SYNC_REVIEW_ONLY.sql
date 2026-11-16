@@ -42,8 +42,8 @@ begin
       -- em pg_proc.proconfig. Aceitar tambem a variante sem aspas.
       and exists (
         select 1
-        from unnest(coalesce(p.proconfig, array[]::text[])) as setting
-        where replace(setting, '"', '') = 'search_path='
+        from unnest(coalesce(p.proconfig, array[]::text[])) as cfg(setting)
+        where replace(cfg.setting, '"', '') = 'search_path='
       )
   ) then
     raise exception 'PRV-028: is_admin_user ainda nao tem search_path seguro';
