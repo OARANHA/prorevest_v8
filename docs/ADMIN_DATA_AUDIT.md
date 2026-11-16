@@ -158,6 +158,19 @@ Use `docs/sql/AUTH_PROFILE_PREFLIGHT_READ_ONLY.sql` no SQL Editor do projeto ofi
 
 Revise eventuais expressões de política antes de compartilhar capturas, caso incluam alguma identidade pessoal fixa.
 
+### Diagnóstico de RLS e risco de elevação de papel — 2026-11-16
+
+Resultados informados pelo responsável:
+- `auth.users` não possui gatilho de `INSERT` não interno;
+- RLS da tabela `public.profiles` está ativa e não é forçada;
+- `profiles.id` possui índice único de chave primária;
+- `Admins can manage all profiles` é política `ALL` para `public` e usa `is_admin_user()`;
+- `Users can update their own profile` permite `UPDATE` da linha cujo `auth.uid() = id`.
+
+**Risco a validar:** essa política de UPDATE não impede mudança do próprio `role` quando o papel autenticado também possui privilégio de UPDATE dessa coluna. A tela `/perfil` e o hook `useProfile` foram limitados a escrever `full_name` e `company_name`, mas a defesa precisa existir no Postgres, não apenas no frontend.
+
+Auditoria pendente no projeto oficial: execute `docs/sql/AUTH_ROLE_SECURITY_PREFLIGHT_READ_ONLY.sql`, que retorna permissões efetivas de alteração de `role`, código da função `is_admin_user()` e constraints de `profiles`, sem consultar registros de pessoas. **Não incluir privilégios de UPDATE para `role` a usuários comuns ao aplicar a correção**. Se já existirem, preparar uma mudança separada e revisável de `REVOKE`/concessão por coluna, preservando a edição de nome e empresa.
+
 ### Ordem obrigatória da publicação
 
 1. Examinar os resultados read-only de trigger, RLS, constraints e políticas do Supabase correto `gtfvhktgxqtdrnaxizch`.
