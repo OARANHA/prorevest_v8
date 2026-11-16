@@ -13,8 +13,6 @@ export function useAdminPermissions() {
   
   useEffect(() => {
     const checkSuperAdmin = async () => {
-      console.log('[ADMIN_PERMISSIONS] Iniciando verificação de permissões');
-      console.log('[ADMIN_PERMISSIONS] User:', user?.id, 'IsAdmin:', isAdmin);
       
       if (!user || !isAdmin) {
         console.log('[ADMIN_PERMISSIONS] Usuário não é admin ou não está logado');
@@ -31,17 +29,14 @@ export function useAdminPermissions() {
           .eq('id', user.id)
           .single();
 
-        console.log('[ADMIN_PERMISSIONS] Profile do usuário:', profile, 'Error:', error);
 
         if (!error && profile) {
           const isSuper = profile.role === 'super_admin';
-          console.log('[ADMIN_PERMISSIONS] Role encontrado:', profile.role, 'IsSuperAdmin:', isSuper);
           setIsSuperAdmin(isSuper);
         } else {
-          // Fallback: verificar metadata do usuário
-          const isSuper = user.user_metadata?.role === 'super_admin';
-          console.log('[ADMIN_PERMISSIONS] Fallback para metadata, IsSuperAdmin:', isSuper);
-          setIsSuperAdmin(isSuper);
+          // Metadados do usuario sao editaveis pelo proprio titular.
+          // Sem perfil administrativo confiavel, negar o privilegio.
+          setIsSuperAdmin(false);
         }
       } catch (error) {
         console.error('[ADMIN_PERMISSIONS] Erro ao verificar permissões de super admin:', error);
@@ -49,7 +44,6 @@ export function useAdminPermissions() {
         setIsSuperAdmin(false);
       } finally {
         setPermissionsLoading(false);
-        console.log('[ADMIN_PERMISSIONS] Verificação finalizada. IsSuperAdmin:', isSuperAdmin);
       }
     };
 
