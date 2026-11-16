@@ -15,6 +15,7 @@ const sql = read('docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql');
 const profileHook = read('app/hooks/useProfile.ts');
 const profileUI = read('app/routes/perfil.tsx');
 const securityPreflight = read('docs/sql/AUTH_ROLE_SECURITY_PREFLIGHT_READ_ONLY.sql');
+const adminPermissions = read('app/hooks/useAdminPermissions.ts');
 const roleLockdown = read('docs/sql/PROFILE_ROLE_LOCKDOWN_REVIEW_ONLY.sql');
 
 assert(!routes.includes('route("init-db"'), 'Rota de init-db ainda montada');
@@ -55,4 +56,5 @@ assert(roleLockdown.includes("has_column_privilege('authenticated', 'public.prof
 assert(roleLockdown.includes('with check ((select auth.uid()) = id)'), 'RLS UPDATE sem WITH CHECK explícito');
 assert(sql.includes("PRV-028: UPDATE de role ainda permitido"), 'Backfill não verifica bloqueio de autoelevação');
 
-console.log('PASS: 32 verificações estáticas de regressão Admin/Auth');
+assert(!adminPermissions.includes('user.user_metadata?.role'), 'Metadados editáveis concedem super_admin');
+console.log('PASS: 33 verificações estáticas de regressão Admin/Auth');
