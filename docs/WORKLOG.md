@@ -360,3 +360,13 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - O `MODULE_NOT_FOUND` envolvendo `node_modules.failed-pr3-*` foi visto num build anterior da pasta de produção, mas **o build final no checkout isolado concluiu com sucesso**; não assumir que esse diretório residual foi limpo ou que não há avisos.
 - **PENDENTE:** E2E autenticado (novo cadastro + confirmação de email + login; papéis admin e comum; leitura de 18 perfis; proteção de `role`; fluxo Studio). Smoke HTTP 200 e disponibilidade do PM2 não validam autorização, dados do painel ou cadastros reais.
 - Documentação pós-deploy foi atualizada diretamente na `main` em commits posteriores; esses commits documentais **não alteram o SHA do código que foi implantado**. Não atualizar a VPS com esses commits sem novo processo.
+
+## 2026-11-16 — Refatoração editorial de Blog e Produtos preparada em branch
+
+- Diagnosticados filtros de blog com `string[]` indevidamente tratados como objetos, busca local não aplicada, paginação sem filtros e fallback de post fictício. Rota de artigo podia buscar slug de rascunho e incrementava views por GET; sanitização `DOMPurify` só no cliente expunha HTML bruto no SSR.
+- Diagnosticados catálogo com filtro/slider/preços e amostras fictícias, filtro de categoria sem efeito e busca aplicada depois da paginação; detalhe de produto incluía preço, frete, reviews e produto mock, além de não filtrar arquivados na consulta pública.
+- Branch `feat/blog-products-experience-20261116` atualiza `blog.tsx`, `blog.$slug.tsx`, `catalogo.tsx`, `produto.$slug.tsx`, serviços de consulta pública e adiciona `safeBlogMarkdown.ts`. Nenhum SQL, produção ou Admin modificado.
+- A segurança de Markdown foi testada dinamicamente contra HTML bruto com `onerror`, `<script>`, URL `javascript:`, imagem `data:` e link HTTPS legítimo: **PASS**.
+- `node scripts/test-blog-products-static.mjs`: **30 PASS**. `npm run build -- --minify false` com env **sintético** em worktree isolada: **exit 0**. Smoke em porta local com env sintético: **6/6 HTTP 200** (`/`, `/blog`, `/blog?search=efeito`, `/catalogo`, `/catalogo?search=cimento`, `/catalogos`).
+- O `tsc --noEmit` global retorna erros preexistentes de múltiplas áreas. Nenhum diagnóstico reportado nas novas rotas e `safeBlogMarkdown.ts`; `blogService.ts` mantém erros preexistentes de tipos em métodos de categories/tags não usados na nova rota.
+- Documentação técnica `docs/BLOG_PRODUCTS_AUDIT.md` registra diagnóstico e critérios. PR, E2E real, conteúdo editorial, build minificado com env oficial e publicação ainda pendentes.
