@@ -32,7 +32,7 @@
 
 ## Critérios de revisão e evidências
 
-- `node scripts/test-blog-products-static.mjs`: 36 verificações estáticas de regressão em fontes públicas (filtros, ausência de mocks e preços, status dos conteúdos, segurança do Markdown, proteção de arquivados).
+- `node scripts/test-blog-products-static.mjs`: 41 verificações estáticas de regressão em fontes públicas (filtros, ausência de mocks e preços, status dos conteúdos, segurança do Markdown, proteção de arquivados).
 - Teste dinâmico do renderizador com payloads de HTML bruto, `onerror`, `javascript:` e `data:` no checkout isolado: **PASS**; links HTTPS continuam funcionando.
 - Build de validação cliente + SSR **sem minificação** com variáveis **sintéticas**: **PASS**. Esses artefatos NÃO são utilizáveis em produção. Build minificado com variáveis públicas oficiais deve ocorrer no procedimento root de release após aprovação.
 - `tsc --noEmit` após a alteração da vitrine Home: **86 diagnósticos globais**, sem diagnósticos nas rotas/componentes de Blog/Produtos modificados (`blog.tsx`, `blog.$slug.tsx`, `catalogo.tsx`, `produto.$slug.tsx`, `home_prorevest.tsx`, `FeaturedProducts.tsx`, `safeBlogMarkdown.ts`). O repositório já apresentava problemas globais fora do escopo desta PR.
@@ -52,3 +52,11 @@ Conferir no Admin: títulos de publicação, trechos com prefixos como “Títul
 3. Validar filtros com múltiplas páginas, responsividade, imagens e links no navegador.
 4. Obter aprovação expressa do responsável, integrar branch à `main` e publicar com backup/rollback e restart exclusivo de `prorevest-app`.
 5. Repetir smoke público e registrar SHA, backup e E2E. Não modificar SQL/produção para testar filtros.
+
+
+## Validação final da branch antes do merge — 2026-11-16
+
+- Após a correção da prévia privada de rascunhos: **41/41 verificações estáticas Blog/Produtos**, **39/39 Admin/Auth**.
+- Build cliente+SSR com `--minify false` e variáveis sintéticas, no checkout isolado: **exit 0**, incluindo prerender `/`. Não substitui build oficial.
+- Smoke em staging sintético após todos os ajustes: **8/8 HTTP 200**, rotas `/`, `/blog`, `/blog?search=efeito`, `/catalogo`, `/catalogo?sort=featured`, `/studio`, `/catalogos`, `/admin/blog-posts`.
+- A build minificada com ambiente público oficial e E2E com registros reais seguem como gates obrigatórios do script de deploy; não publicar artefatos sintéticos.
