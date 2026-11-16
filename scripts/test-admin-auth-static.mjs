@@ -15,6 +15,7 @@ const sql = read('docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql');
 const profileHook = read('app/hooks/useProfile.ts');
 const profileUI = read('app/routes/perfil.tsx');
 const securityPreflight = read('docs/sql/AUTH_ROLE_SECURITY_PREFLIGHT_READ_ONLY.sql');
+const roleLockdown = read('docs/sql/PROFILE_ROLE_LOCKDOWN_REVIEW_ONLY.sql');
 
 assert(!routes.includes('route("init-db"'), 'Rota de init-db ainda montada');
 assert(!routes.includes('route("init-profiles"'), 'Rota de backfill GET ainda montada');
@@ -46,4 +47,11 @@ assert(!profileUI.includes('role: profileData.role') && !profileUI.includes('pro
 assert(sql.includes("to_regprocedure('public.prorevest_create_auth_profile()')"), 'Migração pode sobrescrever função preexistente');
 assert(securityPreflight.includes("has_column_privilege('authenticated', 'public.profiles', 'role', 'UPDATE')"), 'Auditoria de alteração de role ausente');
 
-console.log('PASS: 25 verificações estáticas de regressão Admin/Auth');
+assert(roleLockdown.includes('revoke update on table public.profiles'), 'Tabela mantém UPDATE amplo');
+assert(roleLockdown.includes('revoke update (id, full_name, company_name, role, created_at, email)'), 'UPDATE colunar antigo não é revogado');
+assert(roleLockdown.includes('grant update (full_name, company_name)'), 'Edição de nome/empresa não é restaurada');
+assert(roleLockdown.includes("set search_path = ''") && roleLockdown.includes('from public.profiles'), 'Função admin sem search_path/schema fixos');
+assert(roleLockdown.includes("has_column_privilege('authenticated', 'public.profiles', 'role', 'UPDATE')"), 'Migração não verifica permissão de role');
+assert(sql.includes("PRV-028: UPDATE de role ainda permitido"), 'Backfill não verifica bloqueio de autoelevação');
+
+console.log('PASS: 31 verificações estáticas de regressão Admin/Auth');
