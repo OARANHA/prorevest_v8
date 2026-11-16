@@ -55,6 +55,8 @@ assert(roleLockdown.includes("set search_path = ''") && roleLockdown.includes('f
 assert(roleLockdown.includes("has_column_privilege('authenticated', 'public.profiles', 'role', 'UPDATE')"), 'Migração não verifica permissão de role');
 assert(roleLockdown.includes('with check ((select auth.uid()) = id)'), 'RLS UPDATE sem WITH CHECK explícito');
 assert(sql.includes("PRV-028: UPDATE de role ainda permitido"), 'Backfill não verifica bloqueio de autoelevação');
+assert(sql.includes(`replace(setting, '"', '') = 'search_path='`), 'Guarda de search_path nao aceita a representacao de valor vazio do PostgreSQL');
+assert(!sql.includes("'search_path=' = any(p.proconfig)"), 'Guarda legada rejeitaria search_path vazio valido');
 
 assert(!adminPermissions.includes('user.user_metadata?.role'), 'Metadados editáveis concedem super_admin');
-console.log('PASS: 33 verificações estáticas de regressão Admin/Auth');
+console.log('PASS: 35 verificações estáticas de regressão Admin/Auth');
