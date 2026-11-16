@@ -340,3 +340,11 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - `node scripts/test-admin-auth-static.mjs` rodou novamente no checkout isolado com **37/37 PASS, exit 0**.
 - Tentativa de `npm run build` minificado com variáveis **sintéticas** em broker VPS perdeu a sessão (`BROKER_DENIED: session_not_found`) antes de devolver exit code. **Não contar como build aprovado**. O build sem minificação anterior foi validado; produção exige build oficial com ambiente autorizado.
 - Ainda faltam E2E autenticado com conta administradora e cliente, teste de novo cadastro, confirmação do role RLS, build release minificado e autorização expressa de merge/deploy.
+
+## 2026-11-16 — Build minificado: limite do broker não é falha da VPS
+
+- Durante a preparação da PR #8, o checkout isolado do Agent Mesh mostrou erro de heap no build minificado com limite de 512 MB e cancelamento de sessão do broker com heap maior; isso **não** prova que o `npm run build` falhe na VPS normal.
+- O responsável confirmou que o build padrão já é usado com sucesso na VPS. Foi revertida a tentativa experimental de trocar minificação `terser` por `esbuild` no `vite.config.ts`; a configuração original foi mantida. O site de produção não foi modificado.
+- A implementação final da branch também espera o carregamento de sessão/permissão em `/admin` e não registra o objeto de usuário no console.
+- `node scripts/test-admin-auth-static.mjs` no checkout isolado após o revert: **39/39 PASS**, checkout SHA `42ae517b36cfe7a908cb0bef3a6ef0fbcfb97e64`.
+- **Gate pendente:** build `npm run build` com ambiente público oficial em release isolado executado pelo procedimento administrativo fora do broker limitado, staging smoke, PR merge/deploy controlado com backup, smoke real e E2E autenticado. Nenhum merge/deploy foi realizado.
