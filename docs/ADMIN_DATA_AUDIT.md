@@ -29,6 +29,59 @@ select
 
 A consulta não altera dados nem retorna e-mails/identidades. É uma verificação administrativa; exige permissão de consulta a `auth.users` e `public.profiles`.
 
+## Resultado confirmado pelo responsável — 2026-11-16
+
+Consulta de contagens executada pelo responsável no SQL Editor administrativo do Supabase **oficial** (`gtfvhktgxqtdrnaxizch`):
+
+| Métrica | Valor |
+|---|---:|
+| `contas_auth` | **18** |
+| `perfis` | **9** |
+| `contas_sem_perfil` | **9** |
+| `perfis_sem_conta` | **0** |
+
+**Interpretação:** há 18 registros em `auth.users`, mas 9 ainda não têm linha correspondente em `public.profiles`. Não concluir que os 18 são usuários ativos/confirmados ou que as 9 linhas visíveis pela RLS no navegador equivalem às 9 linhas administrativas do banco. A causa da ausência de perfis ainda não foi determinada.
+
+**Implicação para a PR:** não substituir a contagem em tempo real de `profiles` por `18` fixo. Enquanto não existir uma API segura com autorização administrativa para contar `auth.users`, manter o indicador `Perfis visíveis` e sua explicação.
+
+### Próxima verificação — somente leitura, sem exportar usuários
+
+Executar **somente no SQL Editor do projeto correto**:
+
+```sql
+-- Triggers de cadastro associados ao Auth (nomes e estados, sem dados pessoais)
+select tgname as gatilho,
+       case tgenabled
+         when 'O' then 'habilitado'
+         when 'D' then 'desabilitado'
+         when 'R' then 'replica'
+         when 'A' then 'sempre'
+         else 'outro'
+       end as estado
+from pg_trigger
+where tgrelid = 'auth.users'::regclass
+  and not tgisinternal
+order by tgname;
+
+-- Estado de RLS e quantidade de políticas da tabela profiles
+select c.relrowsecurity as rls_ativa,
+       c.relforcerowsecurity as rls_forcada,
+       (select count(*) from pg_policies p
+        where p.schemaname = 'public' and p.tablename = 'profiles') as numero_politicas
+from pg_class c
+join pg_namespace n on n.oid = c.relnamespace
+where n.nspname = 'public' and c.relname = 'profiles';
+
+-- Estrutura da tabela profiles, sem ler seus registros
+select column_name, data_type, is_nullable,
+       (column_default is not null) as tem_default
+from information_schema.columns
+where table_schema = 'public' and table_name = 'profiles'
+order by ordinal_position;
+```
+
+Não executar inserções, atualizações, criação de triggers ou alteração de RLS antes de inspecionar a estrutura e o processo de cadastro. Não compartilhar e-mails, IDs de usuários, chaves ou dados de autenticação.
+
 ## Antes de mostrar “Total de usuários cadastrados”
 
 1. Confirmar as quatro contagens acima na instância oficial.
