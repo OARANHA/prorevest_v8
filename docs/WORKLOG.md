@@ -397,3 +397,13 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Constatada e corrigida regressão potencial entre consulta pública `publishedOnly` e edição Admin de rascunhos. A prévia agora permanece no editor administrativo (sem URL pública), com Markdown seguro.
 - **41/41 regressões estáticas Blog/Produtos PASS**, **39/39 Admin/Auth PASS**, build `--minify false` sintético **exit 0** e staging sintético **8/8 HTTP 200** após o ajuste.
 - Revisão de diff sem segredos/elevação privilegiada adicionados. Build **minificado oficial** e smoke com registros reais continuam pendentes, como gate pré-deploy.
+
+## 2026-11-16 — Deploy PR #9 confirmado na ProRevest
+
+- Responsável executou `/opt/wandora/ops-workspace/deploy-prorevest-pr9-20261116.sh` em `root@serv` e apresentou saída **`=== DEPLOY SUCCESS ===`**.
+- Commit de merge publicado: **`c90fe9bc672077ceb0016d2cb8c224343023f0d1`**. Script reportou `pm2=online` após restart exclusivo de `prorevest-app`.
+- Backup gerado: `/opt/wandora/ops-workspace/prorevest-deploy-backups/20261116-194453-pr9-c90fe9bc672077ceb0016d2cb8c224343023f0d1`.
+- Pós-deploy: **10 HTTP 200** em `/`, `/blog`, `/catalogo`, `/catalogos`, `/studio`, `/paleta-cores`, `/login`, `/register`, `/admin` e `/admin/users`; **3 HTTP 404** em `/admin/make-admin`, `/admin/init-profiles`, `/debug-user`.
+- PR #9 havia passado **41 testes estáticos Blog/Produtos**, **39 Admin/Auth** e smoke isolado 8/8 antes da execução do script. O log fornecido corresponde à etapa final pós-deploy; o script inclui gates de build minificado oficial e staging, mas seus logs detalhados não foram anexados.
+- **E2E visual/funcional com artigos e produtos reais permanece pendente**, inclusive editor de rascunhos e navegação em dispositivos móveis. Sem SQL executado ou mudança de credenciais.
+- Os commits documentais posteriores ao deploy na `main` não alteram o SHA do código efetivamente publicado; não executar o script travado em SHA como release futura.
