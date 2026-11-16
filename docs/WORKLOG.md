@@ -310,3 +310,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - A pós-condição esperada da restrição de papel foi atendida segundo saída do banco. Ainda não houve E2E autenticado com contas admin/normal após a alteração.
 - Identificada incompatibilidade na guarda do SQL de sincronização: a comparação `'search_path=' = any(p.proconfig)` não reconhecia `search_path=\"\"`. Atualizada a guarda para normalizar aspas antes da comparação e adicionado teste estático de regressão.
 - **Etapa 2 ainda não executada**: trigger `auth.users` e backfill de contas sem perfil. A PR #8 permanece Draft, sem merge/deploy.
+
+## 2026-11-16 — Etapa 2 liberada para execução manual controlada
+
+- Ajustado o SQL de criação de perfil para aceitar `pg_proc.proconfig` com `search_path=""` por meio de `unnest(... ) AS cfg(setting)` e comparação normalizada; a versão antiga abortaria a pré-verificação.
+- Mudada a verificação final do trigger/backfill para depois do `COMMIT`, incluindo o indicador `gatilho_ativo`, além das quatro contagens. Nenhum SQL da etapa 2 foi executado nesta sessão.
+- `node scripts/test-admin-auth-static.mjs` executado em clone isolado: **37 verificações aprovadas**, saída exit 0.
+- PR #8 permanece Draft, sem merge/deploy. Aguardar execução da etapa 2 no SQL Editor do projeto oficial e retorno dos resultados agregados.
