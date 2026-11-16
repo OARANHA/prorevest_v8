@@ -51,3 +51,11 @@ Data: 2026-10-07
 Status: accepted
 
 A aplicação/PM2 roda atualmente em Node 20.19.5. O Node 22 utilizado pelo Wandora Agent Mesh está isolado em `/opt/wandora/node22`. Não alterar o Node global sem plano e teste de migração.
+
+## DEC-009 — Perfil deve ser criado na mesma transação do Auth (proposta)
+Data: 2026-11-16
+Status: proposed — depende de auditoria de triggers/RLS e aprovação da migração
+
+O cadastro de Auth não deve depender de callback do navegador para criar `public.profiles`, pois a confirmação por e-mail pode ocorrer sem sessão ativa e erros do cliente não garantem persistência. Proposta: trigger PostgreSQL auditado ao inserir `auth.users`, com papel inicial `customer`, sem confiar em metadados editáveis para autorização; backfill idempotente somente para registros sem perfil.
+
+Execução preparada em `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql`. Não executar nem marcar como accepted antes de verificar triggers/constraints/RLS no Supabase oficial e obter aprovação.

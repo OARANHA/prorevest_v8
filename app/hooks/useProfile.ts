@@ -1,18 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 import { useAuth } from '../contexts/AuthContext';
 
+// Esquema confirmado no Supabase oficial em 2026-11-16.
+// Campos de autenticação/permissão nunca são editáveis nesta API.
 export type Profile = {
   id: string;
-  full_name: string;
-  company_name: string;
+  full_name: string | null;
+  company_name: string | null;
+  email: string | null;
   role: string;
-  phone?: string;
-  cpf?: string;
-  cnpj?: string;
-  created_at: string;
-  updated_at: string;
+  created_at: string | null;
 };
+
+export type EditableProfile = Pick<Profile, 'full_name' | 'company_name'>;
 
 export function useProfile() {
   const { user } = useAuth();
@@ -20,93 +21,67 @@ export function useProfile() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (user) {
-      fetchProfile();
-    } else {
-      setLoading(false);
-      setProfile(null);
-    }
-  }, [user]);
-
   const fetchProfile = async () => {
-    try {
-      setLoading(true);
-      const { data, error } = await supabase
-        .from('profiles') // Corrigido: usando a tabela 'profiles' em vez de 'user_profiles'
-        .select('*')
-        .eq('id', user?.id)
-        .single();
+    if (!user?.id || !supabase) {
+      setProfile(null);
+      setLoading(false);
+      return;
+    }
 
-      if (error) throw error;
-      
-      setProfile(data);
-    } catch (err) {
-      setError((err as Error).message);
-      console.error('Error fetching profile:', err);
+    setLoading(true);
+    try {
+      const { data, error: queryError } = await supabase
+        .from('profiles')
+        .select('id, full_name, company_name, email, role, created_at')
+        .eq('id', user.id)
+        .maybeSingle();
+
+      if (queryError) throw queryError;
+      setProfile(data ?? null);
+      setError(null);
+    } catch (caught) {
+      setProfile(null);
+      setError(caught instanceof Error ? caught.message : 'Erro ao consultar o perfil.');
     } finally {
       setLoading(false);
     }
   };
 
-  const updateProfile = async (updates: Partial<Profile>) => {
+  useEffect(() => {
+    void fetchProfile();
+  }, [user?.id]);
+
+  const updateProfile = async (updates: EditableProfile) => {
+    if (!user?.id || !supabase) {
+      return { data: null, error: 'Sessão indisponível.' };
+    }
+
+    setLoading(true);
     try {
-      setLoading(true);
-      const { data, error } = await supabase
-        .from('profiles') // Corrigido: usando a tabela 'profiles' em vez de 'user_profiles'
-        .update(updates)
-        .eq('id', user?.id)
-        .select()
+      // Lista explícita de colunas editáveis impede alterações a role/id/email,
+      // inclusive se o chamador inserir propriedades inesperadas no objeto.
+      const { data, error: updateError } = await supabase
+        .from('profiles')
+        .update({
+          full_name: updates.full_name,
+          company_name: updates.company_name,
+        })
+        .eq('id', user.id)
+        .select('id, full_name, company_name, email, role, created_at')
         .single();
 
-      if (error) throw error;
-      
+      if (updateError) throw updateError;
       setProfile(data);
+      setError(null);
       return { data, error: null };
-    } catch (err) {
-      setError((err as Error).message);
-      console.error('Error updating profile:', err);
-      return { data: null, error: (err as Error).message };
+    } catch (caught) {
+      const message = caught instanceof Error ? caught.message : 'Erro ao atualizar o perfil.';
+      setError(message);
+      return { data: null, error: message };
     } finally {
       setLoading(false);
     }
   };
 
-  const createProfile = async (profileData: Omit<Profile, 'id' | 'created_at' | 'updated_at'>) => {
-    try {
-      setLoading(true);
-      const { data, error } = await supabase
-        .from('profiles') // Corrigido: usando a tabela 'profiles' em vez de 'user_profiles'
-        .insert([
-          {
-            id: user?.id,
-            ...profileData,
-            created_at: new Date().toISOString(),
-            updated_at: new Date().toISOString()
-          }
-        ])
-        .select()
-        .single();
-
-      if (error) throw error;
-      
-      setProfile(data);
-      return { data, error: null };
-    } catch (err) {
-      setError((err as Error).message);
-      console.error('Error creating profile:', err);
-      return { data: null, error: (err as Error).message };
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  return {
-    profile,
-    loading,
-    error,
-    fetchProfile,
-    updateProfile,
-    createProfile
-  };
+  return { profile, loading, error, fetchProfile, updateProfile };
 }

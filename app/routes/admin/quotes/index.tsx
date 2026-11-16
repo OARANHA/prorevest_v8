@@ -17,6 +17,7 @@ export default function AdminQuotes() {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredQuotes, setFilteredQuotes] = useState<Quote[]>([]);
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   // Carregar orçamentos
   useEffect(() => {
@@ -28,54 +29,9 @@ export default function AdminQuotes() {
         setFilteredQuotes(allQuotes);
       } catch (error) {
         console.error("Erro ao carregar orçamentos:", error);
-        // Fallback para dados simulados em caso de erro
-const mockQuotes: Quote[] = [
-          {
-            id: "1",
-            user_id: "user-123",
-            status: "signed",
-            notes: "Cliente satisfeito, projeto concluído.",
-            customer_name: "João Silva",
-            customer_email: "joao.silva@example.com",
-            subtotal: 1200,
-            discount: 100,
-            total: 1100,
-            items: [],
-            created_at: "2023-06-15T10:00:00Z",
-            updated_at: "2023-06-16T14:20:00Z"
-          },
-          {
-            id: "2",
-            user_id: "user-456",
-            status: "sent",
-            notes: "Aguardando aprovação do cliente.",
-            customer_name: "Maria Santos",
-            customer_email: "maria.santos@example.com",
-            subtotal: 850,
-            discount: 0,
-            total: 850,
-            items: [],
-            created_at: "2023-06-14T09:15:00Z",
-            updated_at: "2023-06-14T09:15:00Z"
-          },
-          {
-            id: "3",
-            user_id: "user-789",
-            status: "approved",
-            notes: "Cliente aprovou, aguardando assinatura.",
-            customer_name: "Carlos Oliveira",
-            customer_email: "carlos.oliveira@example.com",
-            subtotal: 2500,
-            discount: 250,
-            total: 2250,
-            items: [],
-            created_at: "2023-06-15T11:30:00Z",
-            updated_at: "2023-06-15T11:30:00Z"
-          }
-        ];
-        
-        setQuotes(mockQuotes);
-        setFilteredQuotes(mockQuotes);
+        setLoadError("Não foi possível carregar os orçamentos. Verifique a conexão e as permissões.");
+        setQuotes([]);
+        setFilteredQuotes([]);
       } finally {
         setLoading(false);
       }
@@ -159,6 +115,12 @@ const mockQuotes: Quote[] = [
           </button>
         </div>
       </div>
+
+      {loadError && (
+        <div role="alert" className="mb-6 rounded-lg border border-red-400/50 bg-red-950/30 p-4 text-red-100">
+          {loadError} Nenhum dado fictício foi exibido.
+        </div>
+      )}
 
       {/* Barra de busca */}
       <div className="mb-6">
@@ -244,15 +206,7 @@ const mockQuotes: Quote[] = [
       {/* Paginação */}
       <div className="mt-6 flex items-center justify-between">
         <div className="text-sm text-muted-foreground">
-          Mostrando 1 a {filteredQuotes.length} de {filteredQuotes.length} resultados
-        </div>
-        <div className="flex space-x-2">
-          <button className="px-3 py-1 border border-border rounded-md text-sm font-medium hover:bg-muted/50">
-            Anterior
-          </button>
-          <button className="px-3 py-1 border border-border rounded-md text-sm font-medium hover:bg-muted/50">
-            Próximo
-          </button>
+          Exibindo {filteredQuotes.length} orçamento(s) após o filtro
         </div>
       </div>
     </div>

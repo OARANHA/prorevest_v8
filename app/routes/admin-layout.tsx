@@ -120,7 +120,7 @@ const AdminNavLink = ({ to, icon: Icon, children, collapsed }: { to: string; ico
 };
 
 export default function AdminDashboard() {
-  const { user, isAdmin, signOut } = useAuth(); // Adicionado isAdmin
+  const { user, isAdmin, loading: authLoading, signOut } = useAuth();
   const [loading, setLoading] = useState(true);
   const [collapsed, setCollapsed] = useState(false);
 
@@ -129,7 +129,7 @@ export default function AdminDashboard() {
     setLoading(false);
   }, [user]);
 
-  if (loading) {
+  if (loading || authLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-dark-background">
         <svg className="animate-spin h-8 w-8 text-dark-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -141,7 +141,6 @@ export default function AdminDashboard() {
   }
 
   // Verificar se o usuário é administrador usando o contexto de autenticação
-  console.log("Verificando acesso administrativo:", { user, isAdmin });
 
   if (!user || !isAdmin) {
     return (

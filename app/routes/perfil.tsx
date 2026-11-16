@@ -17,53 +17,40 @@ export default function Perfil() {
   const [activeTab, setActiveTab] = useState<"profile" | "projects" | "preferences">("profile");
   const [isEditing, setIsEditing] = useState(false);
 
-  // Dados do perfil (do hook)
+  // O perfil possui somente campos existentes em public.profiles.
   const [profileData, setProfileData] = useState({
     full_name: "",
     email: "",
-    phone: "",
     company_name: "",
     role: "",
-    cpf: "",
-    cnpj: ""
   });
+  const [saveError, setSaveError] = useState<string | null>(null);
 
-  // Atualizar dados do perfil quando carregar
   useEffect(() => {
-    if (profile) {
-      setProfileData({
-        full_name: profile.full_name || "",
-        email: user?.email || "",
-        phone: profile.phone || "",
-        company_name: profile.company_name || "",
-        role: profile.role || "",
-        cpf: profile.cpf || "",
-        cnpj: profile.cnpj || ""
-      });
-    } else if (user) {
-      setProfileData({
-        full_name: user.user_metadata?.full_name || "",
-        email: user.email || "",
-        phone: "",
-        company_name: "",
-        role: "",
-        cpf: "",
-        cnpj: ""
-      });
-    }
-  }, [profile, user]);
+    if (!user) return;
+    setProfileData({
+      full_name: profile?.full_name || user.user_metadata?.full_name || "",
+      email: user.email || profile?.email || "",
+      company_name: profile?.company_name || "",
+      role: profile?.role || "customer",
+    });
+  }, [profile, user?.id]);
 
   const handleSave = async () => {
-    if (profile) {
-      await updateProfile({
-        full_name: profileData.full_name,
-        phone: profileData.phone,
-        company_name: profileData.company_name,
-        role: profileData.role,
-        cpf: profileData.cpf,
-        cnpj: profileData.cnpj
-      });
+    if (!profile) {
+      setSaveError("O perfil ainda não foi criado no banco.");
+      return;
     }
+
+    const result = await updateProfile({
+      full_name: profileData.full_name,
+      company_name: profileData.company_name,
+    });
+    if (result.error) {
+      setSaveError("Não foi possível salvar o perfil. Verifique as permissões de acesso.");
+      return;
+    }
+    setSaveError(null);
     setIsEditing(false);
   };
 
@@ -164,6 +151,11 @@ export default function Perfil() {
                   </button>
                 </div>
 
+                {saveError && (
+                  <p role="alert" className="mb-4 rounded-lg border border-red-500/40 p-3 text-red-700">
+                    {saveError}
+                  </p>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium mb-2">Nome Completo</label>
@@ -171,8 +163,8 @@ export default function Perfil() {
                       <input
                         type="text"
                         value={profileData.full_name}
-                        onChange={(e) => setProfileData({...profileData, full_name: e.target.value})}
-                        className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary"
+                        onChange={(e) => setProfileData({ ...profileData, full_name: e.target.value })}
+                        className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:ring-2 focus:ring-primary"
                       />
                     ) : (
                       <p className="px-4 py-2 bg-muted/50 rounded-lg">{profileData.full_name || "Não informado"}</p>
@@ -185,27 +177,13 @@ export default function Perfil() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Telefone</label>
-                    {isEditing ? (
-                      <input
-                        type="tel"
-                        value={profileData.phone}
-                        onChange={(e) => setProfileData({...profileData, phone: e.target.value})}
-                        className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary"
-                      />
-                    ) : (
-                      <p className="px-4 py-2 bg-muted/50 rounded-lg">{profileData.phone || "Não informado"}</p>
-                    )}
-                  </div>
-
-                  <div>
                     <label className="block text-sm font-medium mb-2">Empresa</label>
                     {isEditing ? (
                       <input
                         type="text"
                         value={profileData.company_name}
-                        onChange={(e) => setProfileData({...profileData, company_name: e.target.value})}
-                        className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary"
+                        onChange={(e) => setProfileData({ ...profileData, company_name: e.target.value })}
+                        className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:ring-2 focus:ring-primary"
                       />
                     ) : (
                       <p className="px-4 py-2 bg-muted/50 rounded-lg">{profileData.company_name || "Não informado"}</p>
@@ -213,45 +191,9 @@ export default function Perfil() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">Cargo</label>
-                    {isEditing ? (
-                      <input
-                        type="text"
-                        value={profileData.role}
-                        onChange={(e) => setProfileData({...profileData, role: e.target.value})}
-                        className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary"
-                      />
-                    ) : (
-                      <p className="px-4 py-2 bg-muted/50 rounded-lg">{profileData.role || "Não informado"}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">CPF</label>
-                    {isEditing ? (
-                      <input
-                        type="text"
-                        value={profileData.cpf}
-                        onChange={(e) => setProfileData({...profileData, cpf: e.target.value})}
-                        className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary"
-                      />
-                    ) : (
-                      <p className="px-4 py-2 bg-muted/50 rounded-lg">{profileData.cpf || "Não informado"}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">CNPJ</label>
-                    {isEditing ? (
-                      <input
-                        type="text"
-                        value={profileData.cnpj}
-                        onChange={(e) => setProfileData({...profileData, cnpj: e.target.value})}
-                        className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary"
-                      />
-                    ) : (
-                      <p className="px-4 py-2 bg-muted/50 rounded-lg">{profileData.cnpj || "Não informado"}</p>
-                    )}
+                    <label className="block text-sm font-medium mb-2">Papel de acesso</label>
+                    <p className="px-4 py-2 bg-muted/50 rounded-lg">{profileData.role}</p>
+                    <p className="mt-1 text-xs text-muted-foreground">Este campo não pode ser alterado pelo titular da conta.</p>
                   </div>
                 </div>
 

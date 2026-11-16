@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 
-import { supabase } from "../lib/supabaseClient";
 
 export const meta: MetaFunction = () => {
   return [
@@ -23,6 +22,7 @@ export default function Register() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const { signUp } = useAuth();
   const navigate = useNavigate();
 
@@ -50,35 +50,25 @@ export default function Register() {
     
     setIsLoading(true);
     setError("");
+    setSuccessMessage("");
     
     try {
-      console.log("Tentando registrar usuário:", formData.email);
-      const { error, data } = await signUp(formData.email, formData.password, formData.fullName);
-      console.log("Resultado do registro:", { error, data });
-      
-      if (error) {
-        setError(error.message);
+      const { error: registrationError, data } = await signUp(
+        formData.email.trim(),
+        formData.password,
+        formData.fullName
+      );
+
+      if (registrationError) {
+        setError(registrationError.message);
+      } else if (data.session?.user) {
+        navigate("/studio", { replace: true });
       } else {
-        // Registration successful
-        console.log("Registro bem-sucedido, verificando papel do usuário...");
-        // Verificar se o usuário é administrador para redirecionar corretamente
-        const { data: { session } } = await supabase.auth.getSession();
-        if (session?.user) {
-          const { data: profile, error: profileError } = await supabase
-            .from('profiles')
-            .select('role')
-            .eq('id', session.user.id)
-            .single();
-          
-          if (!profileError && profile?.role === 'admin') {
-            console.log("Usuário é administrador, redirecionando para /admin");
-            navigate("/admin");
-          } else {
-            navigate("/studio", { replace: true });
-          }
-        } else {
-          navigate("/studio", { replace: true });
-        }
+        // Quando a confirmação de e-mail é obrigatória, a conta pode
+        // existir no Auth sem uma sessão ativa. Não afirmar login.
+        setSuccessMessage(
+          "Se o cadastro foi recebido, você receberá um e-mail para confirmar o acesso. Verifique a caixa de entrada e o spam antes de fazer login."
+        );
       }
     } catch (err) {
       console.error("Erro ao registrar usuário:", err);
@@ -108,6 +98,14 @@ export default function Register() {
             {error && (
               <div className="mb-6 bg-destructive/10 text-destructive p-4 rounded-lg">
                 {error}
+              </div>
+            )}
+            {successMessage && (
+              <div role="status" className="mb-6 rounded-lg border border-green-600/30 bg-green-600/10 p-4 text-foreground">
+                <p>{successMessage}</p>
+                <Link to="/login" className="mt-2 inline-block font-medium text-primary underline">
+                  Ir para o login
+                </Link>
               </div>
             )}
             

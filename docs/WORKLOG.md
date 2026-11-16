@@ -222,3 +222,129 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Responsável confirmou no navegador os seis testes pós-deploy: Home/menus, Blog, Paleta→Studio, aplicação de cor com IA, login/recuperação de senha e catálogos (miniaturas/PDFs). Release aceita e operacionalmente encerrada.
 - Segredos não registrados na documentação. As configurações de ambiente permanecem gerenciadas fora do Git.
 - Trabalho futuro separado: alimentação das miniaturas de Instagram, dependente de acesso à conta oficial.
+
+## 2026-11-16 — Diagnóstico do Admin: números demonstrativos (branch, sem deploy)
+
+- `main` verificado em `4b75a7d` (release operacional de 28/10/2026 já documentada); branch `fix/admin-dashboard-real-metrics-20261116` criada a partir desse SHA.
+- Evidência visual do painel `/admin` coincidiu com valores hardcoded em `app/routes/admin/index.tsx`: 1.242 usuários, R$ 124.567,89, 2 orçamentos, percentuais, gráficos e atividades fictícios.
+- Dashboard da branch: removidos cartão e gráfico de receita e todos os demonstrativos da visão geral; métricas de perfis/quotes por contagem exata de linhas visíveis sob RLS, produtos pelo serviço atual; falhas exibidas como indisponibilidade e orçamentos recentes derivados de registros consultados.
+- Contagem `profiles` **não comprova** quantidade total de contas em `auth.users`; requer diagnóstico de sincronização e RLS no projeto oficial antes de afirmar total cadastrado. Nenhuma credencial do Supabase foi consultada/copiada.
+- Removido fallback de conta demo no `UserService`, exibido erro na tela de usuários quando a consulta falha; fallback de orçamentos fictícios removido de `/admin/quotes`.
+- `/admin/reports` deixou de mostrar indicadores de receita, vendas e crescimento simulados e informa que os relatórios dependem de dados reais verificados.
+- Registrada pendência P0 separada sobre operações `supabase.auth.admin` no frontend e log de senha temporária; não alteradas nesta branch.
+- **Verificações executadas:** revisão de diff dos sete commits; transpilação TypeScript/TSX dos cinco arquivos alterados sem erros; verificação de tipos focada com TypeScript (`--noEmit`, `vite/client`) concluída com exit 0 em clone isolado no workspace.
+- **Ainda pendente:** build completo, validação real de Supabase/RLS, E2E no navegador e aprovação explícita para merge/deploy. Nenhum merge, deploy ou alteração em produção.
+
+## 2026-11-16 — Continuação da correção do painel Admin (PR #8 Draft, sem deploy)
+
+- Revalidada a base `main` (`4b75a7d`) e a PR #8 (`fix/admin-dashboard-real-metrics-20261116`), sem merge nem modificação de produção.
+- `UserService.getAllUsers` agora pagina `profiles` em lotes de 500, diferencia e-mail ausente (null) de usuário inexistente, não usa conta demo e propaga erro de consulta. Perfis permanecem limitados pela RLS.
+- A tela `/admin/users` não afirma status de Auth/último login sem fonte verificada; removeu controles administrativos de bloquear/desbloquear/redefinir senha, que dependiam de `supabase.auth.admin` no frontend. Os métodos inseguros e log de senha temporária foram excluídos do serviço.
+- Removidos paginação sem ação e contadores incorretos de `/admin/users` e `/admin/quotes`; o cabeçalho administrativo não exibe mais três notificações fictícias e indica sessão ativa em vez de saúde do sistema.
+- Criado `docs/ADMIN_DATA_AUDIT.md` com SQL exclusivamente de leitura para comparar `auth.users` com `public.profiles` no projeto oficial, sem listar dados pessoais.
+- `npm ci` em clone isolado com cache limpo instalou 751 pacotes. Tentativa de build minificado perdeu a sessão do executor antes do resultado final. TypeScript direcionado aos 6 arquivos alterados com `noImplicitAny=false`: exit 0. A opção estrita ainda revela 8 avisos TS7006/TS7031 em arquivos legados importados (`AuthContext.tsx` e `logoService.ts`), fora do diff; o novo `profile` mapper foi anotado. A execução de 8 verificações estáticas de regressão passou.
+- Build cliente+SSR **sem minificação** em clone isolado, com variáveis Supabase sintéticas: exit 0. Smoke HTTP local de Home e quatro rotas admin (`/admin`, `/admin/users`, `/admin/quotes`, `/admin/reports`): 5/5 HTTP 200. Servidor local encerrado.
+- **PENDENTE/BLOQUEIO:** obter contagens reais do Supabase oficial, verificar RLS/autorização, rodar build minificado com variáveis públicas oficiais e testar fluxos E2E autenticados. O teste sintético não valida acesso ou registros reais.
+- PR #8 permanece rascunho. Não realizar merge ou deploy sem aprovação explícita.
+
+## 2026-11-16 — Resultado da auditoria de contas Auth vs profiles (PR #8)
+
+- Responsável executou consulta SQL exclusivamente de leitura no Supabase oficial `gtfvhktgxqtdrnaxizch` e informou: `contas_auth=18`, `perfis=9`, `contas_sem_perfil=9`, `perfis_sem_conta=0`.
+- Confirmada divergência de 9 contas sem perfil. Não há evidência suficiente para afirmar que todas as contas estão ativas/confirmadas, que o RLS do cliente retorna 9 perfis, ou qual rotina causou a ausência.
+- `docs/ADMIN_DATA_AUDIT.md` atualizado com resultados e comandos read-only para examinar triggers de `auth.users`, estado/políticas RLS e estrutura de `public.profiles` sem expor dados pessoais.
+- Nenhum backfill ou criação de trigger/RPC foi executado. Dashboard da branch mantém `Perfis visíveis` como consulta dinâmica, **sem** fixar o valor 18 ou expor `auth.users` ao navegador.
+- PR #8 permanece Draft, sem merge, deploy ou alteração no banco.
+
+## 2026-11-16 — Estrutura confirmada de profiles e ajuste do UserService (PR #8)
+
+- Resultado do `information_schema.columns` informado pelo responsável: `id uuid`, `full_name text`, `company_name text`, `role text` com default, `created_at timestamptz` com default e `email text`; **sem `updated_at`**.
+- Ajustado `UserProfile` ao esquema observado, removidas escritas de `updated_at` no serviço e retorno fictício desse atributo na listagem. Não foi alterado o Supabase nem foram criados os 9 perfis ausentes.
+- Pendentes os resultados dos gatilhos de `auth.users` e o estado de RLS/políticas de `profiles`; a causa da divergência entre Auth e profiles ainda não está comprovada.
+- PR #8 permanece Draft, sem merge/deploy.
+
+## 2026-11-16 — PR #8: correção de cadastro e segurança pronta para revisão (sem deploy)
+
+- Cadastro original do Auth persistia conta sem garantir perfil. `AuthContext` dependia de callback `onAuthStateChange` com escrita assíncrona e erros silenciosos; o helper foi retirado e a avaliação do papel de sessão movida para efeito separado com estado de carregamento.
+- `/register`: confirmação de e-mail é distinguida de sessão ativa, sem redirecionamento prematuro para Studio. `UserService` e `/admin/users` agora apenas consultam perfis acessíveis via RLS, com paginação real, sem ações privilegiadas não validadas.
+- Rotas `/admin/init-db`, `/admin/init-profiles`, `/admin/make-admin` e `/debug-user` removidas do roteador e desativadas em seus módulos; bootstrap/credencial de superadmin e `execute_sql` removidos de `DatabaseService` no HEAD. Nenhuma operação foi executada no Supabase oficial.
+- `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql`: proposta transacional não executada com guardas para trigger de INSERT preexistente e unicidade de `profiles.id`, função `SECURITY DEFINER` com `search_path` fechado e `EXECUTE` revogado a papéis públicos, role inicial `customer`, backfill idempotente de contas Auth sem perfis. Preserva perfis existentes.
+- Evidência fornecida pelo responsável do Supabase oficial: 18 Auth/9 profiles/9 sem perfil/0 órfãos. Ainda faltam nomes/estado dos triggers e RLS; sem isso não se libera a migração.
+- Testes realizados em clone isolado na VPS: TS direcionado exit 0; `node scripts/test-admin-auth-static.mjs`: 19 asserts passaram; build cliente+SSR **sem minificação** exit 0 com configuração pública **sintética**; smoke SSR HTTP 7/7 rotas esperadas 200 e 4/4 rotas legadas 404. Processo de testes encerrado.
+- PR #8 ainda Draft e sem merge. Faltam preflight de banco oficial, aprovação e aplicação da migração, E2E de cadastro com confirmação de e-mail + acesso admin por RLS, build minificado com env público real, aprovação explícita e deploy controlado.
+
+## 2026-11-16 — Preflight de trigger/RLS recebido e risco de UPDATE do papel
+
+- Preflight read-only do projeto oficial confirmado pelo responsável: `gatilhos_insert_auth=[]`; `profiles` com RLS ativa e não forçada; único `profiles_pkey` em `id`; políticas SELECT/UPDATE do próprio perfil e ALL para admin via `is_admin_user()`.
+- Revisão de código revelou que o frontend `/perfil` enviava `role` e campos inexistentes (`phone/cpf/cnpj`) em `useProfile.updateProfile`. Na branch PR #8 a UI passa a expor `role` somente para leitura, e o hook permite atualizar apenas `full_name` e `company_name`.
+- `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` recebeu guarda para não substituir função existente. A proposta ainda não foi executada no banco.
+- Criado `docs/sql/AUTH_ROLE_SECURITY_PREFLIGHT_READ_ONLY.sql` para verificar grants de UPDATE na coluna `role`, função `is_admin_user()` e constraints. O código UI sozinho não impede manipulação direta pela API; a mudança de grants no banco, se necessária, é bloqueio de publicação.
+- SQL oficial de migração e ajuste de RLS ainda exigem aprovação específica. Sem merge/deploy.
+
+## 2026-11-16 — Validação final da etapa de código e preflight de privilégios (PR #8)
+
+- Verificações confirmadas pelo responsável: nenhum trigger INSERT Auth, RLS de `profiles` ativa (não forçada), chave primária única em `id`; política `UPDATE` própria e `ALL` por `is_admin_user()` exigem investigação do privilégio efetivo de UPDATE em `role` (P0 PRV-028).
+- Alterados `app/hooks/useProfile.ts` e `app/routes/perfil.tsx` para restringir edição a `full_name` e `company_name`, removendo escrita de papel e campos inexistentes; UI expõe papel somente leitura. Isso não substitui a correção de GRANTs do banco se a coluna `role` estiver acessível a usuários comuns.
+- Guardas de `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` reforçadas para não sobrescrever função de trigger preexistente; nenhuma migração executada.
+- Teste estático no clone isolado: `node scripts/test-admin-auth-static.mjs` → **25 verificações PASS**. TypeScript direcionado aos módulos alterados → **0 diagnósticos, exit 0**.
+- Build completo cliente+SSR **sem minificação**, com variáveis Supabase sintéticas de teste: **exit 0** no HEAD que inclui alteração do hook e tela de perfil. Smoke HTTP local posterior: 7/7 rotas ativas com 200, 3/3 rotas legadas com 404; servidor local encerrado.
+- **PENDENTE:** SQL read-only `docs/sql/AUTH_ROLE_SECURITY_PREFLIGHT_READ_ONLY.sql` executado pelo responsável no projeto Supabase oficial; revisar função `is_admin_user()` e grants; eventual correção de privilégio de `role`; aprovar/aplicar migração de trigger/backfill; E2E autenticado; build minificado com config real; aprovação de merge/deploy.
+
+## 2026-11-16 — PRV-028 confirmado e mitigação SQL preparada
+
+- Responsável executou preflight somente leitura no Supabase oficial: `authenticated_pode_atualizar_tabela=true`, `authenticated_pode_atualizar_role=true`, `anon_pode_atualizar_role=true`. A política RLS autoriza atualização da própria linha por `auth.uid()=id`, mas sem restrição de coluna; risco confirmado de autoelevação do papel administrativo em sessões autenticadas.
+- Função `public.is_admin_user()` foi inspecionada: `SECURITY DEFINER`, consulta `profiles` sem qualificar schema, sem `search_path` em `proconfig`.
+- Preparado, **não executado**, `docs/sql/PROFILE_ROLE_LOCKDOWN_REVIEW_ONLY.sql`: transação que retira UPDATE geral e colunar de PUBLIC/anon/authenticated, concede UPDATE somente em `full_name`/`company_name` a authenticated, reescreve a função de admin com `search_path=''` e referências qualificadas e valida privilégios efetivos com assert.
+- `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` endurecido para abortar se qualquer role público puder atualizar `profiles.role`, ou se `is_admin_user()` permanecer sem `search_path` seguro.
+- Nenhuma conexão foi feita ao projeto oficial via conector Supabase do chat (ligado a outro projeto); sem DDL, backfill, merge ou deploy. A aprovação/aplicação da mitigação no projeto oficial é pré-requisito para publicação.
+
+## 2026-11-16 — Endurecimento adicional de privilégio na PR #8
+
+- Durante a revisão do fluxo de autorização, `useAdminPermissions` usava fallback de `user.user_metadata?.role === 'super_admin'`, metadado alterável pelo titular; fallback removido e falha de leitura agora resulta em negação de privilégio, sem logs detalhados de perfil.
+- Migração `PROFILE_ROLE_LOCKDOWN_REVIEW_ONLY.sql` agora também restringe explicitamente a policy de UPDATE do próprio perfil com `TO authenticated`, `USING (auth.uid()=id)` e `WITH CHECK (auth.uid()=id)`.
+- Testes em clone isolado da branch após alterações: `node scripts/test-admin-auth-static.mjs`: **33 verificações PASS**; TypeScript dirigido a hooks/Auth/Profile/Admin: **0 diagnósticos, exit 0**. Migrações SQL verificadas somente por invariantes estáticos; não houve execução em PostgreSQL do projeto.
+- As duas migrações permanecem pendentes de execução/validação pelo responsável no projeto Supabase oficial, em ordem obrigatória: bloqueio de role → trigger/backfill.
+
+## 2026-11-16 — Etapa 1 SQL aplicada e confirmada pelo responsável
+
+- Resultado informado do SQL oficial de lockdown: `authenticated_update_geral=false`, `authenticated_update_role=false`, `anon_update_role=false`, `authenticated_update_nome=true`, `authenticated_update_empresa=true`, `config_is_admin_user=[\"search_path=\\\"\\\"\"]`.
+- A pós-condição esperada da restrição de papel foi atendida segundo saída do banco. Ainda não houve E2E autenticado com contas admin/normal após a alteração.
+- Identificada incompatibilidade na guarda do SQL de sincronização: a comparação `'search_path=' = any(p.proconfig)` não reconhecia `search_path=\"\"`. Atualizada a guarda para normalizar aspas antes da comparação e adicionado teste estático de regressão.
+- **Etapa 2 ainda não executada**: trigger `auth.users` e backfill de contas sem perfil. A PR #8 permanece Draft, sem merge/deploy.
+
+## 2026-11-16 — Etapa 2 liberada para execução manual controlada
+
+- Ajustado o SQL de criação de perfil para aceitar `pg_proc.proconfig` com `search_path=""` por meio de `unnest(... ) AS cfg(setting)` e comparação normalizada; a versão antiga abortaria a pré-verificação.
+- Mudada a verificação final do trigger/backfill para depois do `COMMIT`, incluindo o indicador `gatilho_ativo`, além das quatro contagens. Nenhum SQL da etapa 2 foi executado nesta sessão.
+- `node scripts/test-admin-auth-static.mjs` executado em clone isolado: **37 verificações aprovadas**, saída exit 0.
+- PR #8 permanece Draft, sem merge/deploy. Aguardar execução da etapa 2 no SQL Editor do projeto oficial e retorno dos resultados agregados.
+
+## 2026-11-16 — Etapa 2 interrompida por função preexistente (P0001)
+
+- Responsável reportou erro da execução de `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql`: `P0001: Funcao prorevest_create_auth_profile ja existe; revisar antes de aplicar` dentro do primeiro bloco `DO` de pré-verificação.
+- O erro é a guarda intencional contra sobrescrita de função de nome conhecido. Como ocorre antes da DDL/DML, esta tentativa transacional não cria o gatilho nem faz backfill. A origem da função preexistente é desconhecida; não inferir que seja segura ou que o trigger já exista.
+- Criado `docs/sql/AUTH_PROFILE_EXISTING_FUNCTION_INSPECT_READ_ONLY.sql`: consulta única somente leitura que devolve assinatura, definição, owner, SECURITY DEFINER, `search_path`, privilégios EXECUTE, gatilhos não internos em `auth.users` e quatro contagens agregadas.
+- **Bloqueio ativo:** não repetir a etapa 2, não usar `DROP FUNCTION` nem `CREATE OR REPLACE`, sem revisar essa função e o estado dos triggers. Aguardar resultado da consulta para preparar continuação segura.
+- Etapa 1 de restrição de UPDATE em `role` continua com pós-condições confirmadas pelo responsável; PR #8 Draft, sem merge/deploy.
+
+## 2026-11-16 — Etapa 2 reconciliada: trigger presente e Auth/Profiles 18/18
+
+- O responsável enviou resultado read-only do banco oficial após P0001: função `prorevest_create_auth_profile()` existente como `SECURITY DEFINER`, `search_path=""`, dono `postgres`, `EXECUTE` negado a `anon` e `authenticated`; corpo correspondente ao SQL proposto, com `ON CONFLICT (id) DO NOTHING`.
+- Gatilho `prorevest_profile_after_auth_insert` já está instalado e habilitado (`O`), `AFTER INSERT ON auth.users FOR EACH ROW`, associado à função.
+- Contagens oficiais informadas: **18 contas Auth, 18 perfis, 0 contas sem perfil, 0 perfis órfãos**.
+- O erro P0001 indica apenas a guarda de não sobrescrita; a origem/ordem de instalação da função/gatilho não é identificável nos resultados. Não aplicar outro DDL/backfill por conta do erro.
+- Dados reconciliados no banco. **Ainda não comprovados:** cadastro novo E2E, RLS/visibilidade para uma sessão administrativa e uma comum, negação de UPDATE role na API, build minificado com variáveis reais, merge/deploy. Produção web não alterada.
+
+## 2026-11-16 — Validação de branch pós-reconciliação DB
+
+- A PR #8 e documentação viva foram atualizadas com a evidência administrativa de Auth/Profiles 18/18, 0 ausências e trigger habilitado. A origem/instante da instalação da função não foi inferida.
+- `node scripts/test-admin-auth-static.mjs` rodou novamente no checkout isolado com **37/37 PASS, exit 0**.
+- Tentativa de `npm run build` minificado com variáveis **sintéticas** em broker VPS perdeu a sessão (`BROKER_DENIED: session_not_found`) antes de devolver exit code. **Não contar como build aprovado**. O build sem minificação anterior foi validado; produção exige build oficial com ambiente autorizado.
+- Ainda faltam E2E autenticado com conta administradora e cliente, teste de novo cadastro, confirmação do role RLS, build release minificado e autorização expressa de merge/deploy.
+
+## 2026-11-16 — Build minificado: limite do broker não é falha da VPS
+
+- Durante a preparação da PR #8, o checkout isolado do Agent Mesh mostrou erro de heap no build minificado com limite de 512 MB e cancelamento de sessão do broker com heap maior; isso **não** prova que o `npm run build` falhe na VPS normal.
+- O responsável confirmou que o build padrão já é usado com sucesso na VPS. Foi revertida a tentativa experimental de trocar minificação `terser` por `esbuild` no `vite.config.ts`; a configuração original foi mantida. O site de produção não foi modificado.
+- A implementação final da branch também espera o carregamento de sessão/permissão em `/admin` e não registra o objeto de usuário no console.
+- `node scripts/test-admin-auth-static.mjs` no checkout isolado após o revert: **39/39 PASS**, checkout SHA `42ae517b36cfe7a908cb0bef3a6ef0fbcfb97e64`.
+- **Gate pendente:** build `npm run build` com ambiente público oficial em release isolado executado pelo procedimento administrativo fora do broker limitado, staging smoke, PR merge/deploy controlado com backup, smoke real e E2E autenticado. Nenhum merge/deploy foi realizado.
