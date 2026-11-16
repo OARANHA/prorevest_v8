@@ -317,3 +317,11 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Mudada a verificação final do trigger/backfill para depois do `COMMIT`, incluindo o indicador `gatilho_ativo`, além das quatro contagens. Nenhum SQL da etapa 2 foi executado nesta sessão.
 - `node scripts/test-admin-auth-static.mjs` executado em clone isolado: **37 verificações aprovadas**, saída exit 0.
 - PR #8 permanece Draft, sem merge/deploy. Aguardar execução da etapa 2 no SQL Editor do projeto oficial e retorno dos resultados agregados.
+
+## 2026-11-16 — Etapa 2 interrompida por função preexistente (P0001)
+
+- Responsável reportou erro da execução de `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql`: `P0001: Funcao prorevest_create_auth_profile ja existe; revisar antes de aplicar` dentro do primeiro bloco `DO` de pré-verificação.
+- O erro é a guarda intencional contra sobrescrita de função de nome conhecido. Como ocorre antes da DDL/DML, esta tentativa transacional não cria o gatilho nem faz backfill. A origem da função preexistente é desconhecida; não inferir que seja segura ou que o trigger já exista.
+- Criado `docs/sql/AUTH_PROFILE_EXISTING_FUNCTION_INSPECT_READ_ONLY.sql`: consulta única somente leitura que devolve assinatura, definição, owner, SECURITY DEFINER, `search_path`, privilégios EXECUTE, gatilhos não internos em `auth.users` e quatro contagens agregadas.
+- **Bloqueio ativo:** não repetir a etapa 2, não usar `DROP FUNCTION` nem `CREATE OR REPLACE`, sem revisar essa função e o estado dos triggers. Aguardar resultado da consulta para preparar continuação segura.
+- Etapa 1 de restrição de UPDATE em `role` continua com pós-condições confirmadas pelo responsável; PR #8 Draft, sem merge/deploy.
