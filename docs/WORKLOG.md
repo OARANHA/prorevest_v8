@@ -391,3 +391,9 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Agora `BlogService.getBlogPostBySlug` permite consulta administrativa de rascunhos usando o cliente autorizado existente, enquanto `/blog/:slug` passa explicitamente `{ publishedOnly: true }`.
 - O botão de pré-visualização do Admin não redireciona mais rascunhos à URL pública; mostra prévia no próprio editor, com o mesmo renderizador Markdown seguro, mantendo rascunho no banco. Não foi adicionado acesso público a rascunhos.
 - Adicionados testes estáticos para prevenir regressão. Publicação permanece pendente do build real e smoke.
+
+## 2026-11-16 — PR #9, revisão funcional final antes de publicação
+
+- Constatada e corrigida regressão potencial entre consulta pública `publishedOnly` e edição Admin de rascunhos. A prévia agora permanece no editor administrativo (sem URL pública), com Markdown seguro.
+- **41/41 regressões estáticas Blog/Produtos PASS**, **39/39 Admin/Auth PASS**, build `--minify false` sintético **exit 0** e staging sintético **8/8 HTTP 200** após o ajuste.
+- Revisão de diff sem segredos/elevação privilegiada adicionados. Build **minificado oficial** e smoke com registros reais continuam pendentes, como gate pré-deploy.
