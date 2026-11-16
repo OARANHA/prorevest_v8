@@ -12,9 +12,6 @@ const routes = [
   // Admin routes
   route("admin", "./routes/admin-layout.tsx", [
     index("./routes/admin/index.tsx"),
-    route("init-db", "./routes/admin/init-db.tsx"),
-    route("init-profiles", "./routes/admin/init-profiles.tsx"),
-    route("make-admin", "./routes/admin/make-admin.tsx"),
     route("products", "./routes/admin/products.tsx"),
     route("colors", "./routes/admin/colors.tsx"),
     route("textures", "./routes/admin/textures.tsx"),
@@ -104,8 +101,6 @@ const routes = [
   route("blog", "./routes/blog.tsx"),
   route("blog/:slug", "./routes/blog.$slug.tsx"),
   route("assinatura-orcamento", "./routes/assinatura-orcamento.tsx"),
-  route("debug-user", "./routes/debug-user.tsx"),
-  route("debug", "./routes/debug.tsx"),
   route("sustentabilidade", "./routes/sustentabilidade.tsx"),
   route("tecnicas-de-aplicacao", "./routes/tecnicas-de-aplicacao.tsx"),
   route("garantia", "./routes/garantia.tsx"),
