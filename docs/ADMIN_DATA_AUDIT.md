@@ -222,3 +222,15 @@ A execução da etapa 2 foi interrompida no bloco de pré-verificação com `P00
 **Diagnóstico seguinte:** executar apenas `docs/sql/AUTH_PROFILE_EXISTING_FUNCTION_INSPECT_READ_ONLY.sql` no SQL Editor de `gtfvhktgxqtdrnaxizch`. Retornar as três colunas JSON: `funcao_existente`, `gatilhos_auth` e `contagens_atuais`, ocultando segredos e identificadores pessoais caso estejam no corpo da função.
 
 **Não executar novamente** `PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` e não fazer `DROP FUNCTION` ou `CREATE OR REPLACE FUNCTION` até inspecionar a implementação existente. Nenhum backfill deve ser presumido como realizado nessa tentativa.
+
+### Verificação conclusiva da sincronização no banco — 2026-11-16
+
+O responsável executou o diagnóstico read-only `AUTH_PROFILE_EXISTING_FUNCTION_INSPECT_READ_ONLY.sql` no projeto Supabase oficial, após a tentativa da etapa 2 que retornou P0001 por função preexistente. O estado encontrado foi:
+
+- `public.prorevest_create_auth_profile()`: `RETURNS trigger`, proprietário `postgres`, `SECURITY DEFINER`, `search_path=""`, `EXECUTE` proibido para `anon` e `authenticated`. Sua definição coincide com a proposta de inserir em `public.profiles` com papel inicial `customer` e `ON CONFLICT (id) DO NOTHING`.
+- Gatilho `prorevest_profile_after_auth_insert`: presente, estado `O` (habilitado), `AFTER INSERT ON auth.users FOR EACH ROW`, chamando essa função.
+- Contagens administrativas atuais: `contas_auth=18`, `perfis=18`, `contas_sem_perfil=0`, `perfis_sem_conta=0`.
+
+**Interpretação:** o estado funcional pretendido da etapa 2 já está presente no banco. Não reexecutar a migração, não substituir a função e não inserir novamente os 9 perfis. O momento/mecanismo exato que criou a função e o gatilho não está demonstrado pelo preflight; não inferir a autoria a partir do erro P0001.
+
+**Pendências de release:** teste real de cadastro novo com confirmação de e-mail/primeiro login e perfil gerado, login de conta administradora com visualização de todos os perfis, verificação negativa da RLS com conta comum e bloqueio de UPDATE em `role`, build minificado oficial, revisão do diff e autorização expressa de deploy.
