@@ -34,7 +34,6 @@ export default function AdminUsers() {
       try {
         // Carregar usuários do Supabase
         const allUsers = await UserService.getAllUsers();
-        console.log("Usuários carregados do Supabase:", allUsers);
         setUsers(allUsers);
         setFilteredUsers(allUsers);
         
