@@ -215,3 +215,10 @@ Esses valores correspondem às pós-condições esperadas da etapa 1. Não repre
 
 **Não realizar merge/deploy de PR #8 antes do SQL e dos testes autenticados.**
 
+### Etapa 2 — Erro de função existente detectado em 2026-11-16
+
+A execução da etapa 2 foi interrompida no bloco de pré-verificação com `P0001: Funcao prorevest_create_auth_profile ja existe; revisar antes de aplicar`. Essa proteção evita a sobrescrita de uma função existente, cuja origem e segurança ainda não foram avaliadas.
+
+**Diagnóstico seguinte:** executar apenas `docs/sql/AUTH_PROFILE_EXISTING_FUNCTION_INSPECT_READ_ONLY.sql` no SQL Editor de `gtfvhktgxqtdrnaxizch`. Retornar as três colunas JSON: `funcao_existente`, `gatilhos_auth` e `contagens_atuais`, ocultando segredos e identificadores pessoais caso estejam no corpo da função.
+
+**Não executar novamente** `PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` e não fazer `DROP FUNCTION` ou `CREATE OR REPLACE FUNCTION` até inspecionar a implementação existente. Nenhum backfill deve ser presumido como realizado nessa tentativa.
