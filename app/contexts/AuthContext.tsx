@@ -26,6 +26,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isAdmin, setIsAdmin] = useState(false);
   const [sessionReady, setSessionReady] = useState(false);
   const [roleLoading, setRoleLoading] = useState(false);
+  const [roleCheckedFor, setRoleCheckedFor] = useState<string | null>(null);
 
   // Nunca gravar registros de Auth no navegador. A criação obrigatória de
   // public.profiles pertence ao gatilho revisado do banco, não ao callback.
@@ -72,11 +73,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (!user) {
       setIsAdmin(false);
       setRoleLoading(false);
+      setRoleCheckedFor(null);
       return;
     }
 
     let active = true;
     setIsAdmin(false);
+    setRoleCheckedFor(null);
     setRoleLoading(true);
 
     void (async () => {
@@ -93,7 +96,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         console.error('Não foi possível consultar o papel da sessão:', error);
         if (active) setIsAdmin(false);
       } finally {
-        if (active) setRoleLoading(false);
+        if (active) {
+          setRoleCheckedFor(user.id);
+          setRoleLoading(false);
+        }
       }
     })();
 
@@ -134,7 +140,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     signIn,
     signUp,
     signOut,
-    loading: !sessionReady || roleLoading,
+    loading: !sessionReady || (!!user && (roleLoading || roleCheckedFor !== user.id)),
     isAdmin
   };
 
