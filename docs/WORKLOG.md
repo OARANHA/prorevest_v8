@@ -246,3 +246,11 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Build cliente+SSR **sem minificação** em clone isolado, com variáveis Supabase sintéticas: exit 0. Smoke HTTP local de Home e quatro rotas admin (`/admin`, `/admin/users`, `/admin/quotes`, `/admin/reports`): 5/5 HTTP 200. Servidor local encerrado.
 - **PENDENTE/BLOQUEIO:** obter contagens reais do Supabase oficial, verificar RLS/autorização, rodar build minificado com variáveis públicas oficiais e testar fluxos E2E autenticados. O teste sintético não valida acesso ou registros reais.
 - PR #8 permanece rascunho. Não realizar merge ou deploy sem aprovação explícita.
+
+## 2026-11-16 — Resultado da auditoria de contas Auth vs profiles (PR #8)
+
+- Responsável executou consulta SQL exclusivamente de leitura no Supabase oficial `gtfvhktgxqtdrnaxizch` e informou: `contas_auth=18`, `perfis=9`, `contas_sem_perfil=9`, `perfis_sem_conta=0`.
+- Confirmada divergência de 9 contas sem perfil. Não há evidência suficiente para afirmar que todas as contas estão ativas/confirmadas, que o RLS do cliente retorna 9 perfis, ou qual rotina causou a ausência.
+- `docs/ADMIN_DATA_AUDIT.md` atualizado com resultados e comandos read-only para examinar triggers de `auth.users`, estado/políticas RLS e estrutura de `public.profiles` sem expor dados pessoais.
+- Nenhum backfill ou criação de trigger/RPC foi executado. Dashboard da branch mantém `Perfis visíveis` como consulta dinâmica, **sem** fixar o valor 18 ou expor `auth.users` ao navegador.
+- PR #8 permanece Draft, sem merge, deploy ou alteração no banco.
