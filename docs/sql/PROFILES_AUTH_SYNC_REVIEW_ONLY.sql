@@ -149,6 +149,10 @@ where not exists (
 )
 on conflict (id) do nothing;
 
+commit;
+
+-- Confirmar somente apos o COMMIT: resultado persistido da migração.
+-- Esperado: contas_sem_perfil = 0, perfis_sem_conta = 0, gatilho_ativo = true.
 -- Verificação agregada (sem dados pessoais). Esperado após a migração: 0 sem perfil.
 select
   (select count(*) from auth.users) as contas_auth,
@@ -158,9 +162,15 @@ select
   ) as contas_sem_perfil,
   (select count(*) from public.profiles p
      where not exists (select 1 from auth.users a where a.id = p.id)
-  ) as perfis_sem_conta;
-
-commit;
+  ) as perfis_sem_conta,
+  exists (
+    select 1
+    from pg_trigger t
+    where t.tgrelid = 'auth.users'::regclass
+      and t.tgname = 'prorevest_profile_after_auth_insert'
+      and t.tgenabled = 'O'
+      and not t.tgisinternal
+  ) as gatilho_ativo;
 
 -- Rollback do gatilho, caso necessário (executar separadamente e sob aprovação):
 -- begin;
