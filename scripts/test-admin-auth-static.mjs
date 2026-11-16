@@ -1,0 +1,39 @@
+// Verificações estáticas da PR #8 — sem conexão de rede/banco.
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+
+const read = (path) => readFileSync(path, 'utf8');
+
+const routes = read('app/routes.ts');
+const db = read('app/services/databaseService.ts');
+const auth = read('app/contexts/AuthContext.tsx');
+const signup = read('app/routes/register.tsx');
+const userService = read('app/services/userService.ts');
+const adminUsers = read('app/routes/admin/users.tsx');
+const adminIndex = read('app/routes/admin/index.tsx');
+const sql = read('docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql');
+
+assert(!routes.includes('route("init-db"'), 'Rota de init-db ainda montada');
+assert(!routes.includes('route("init-profiles"'), 'Rota de backfill GET ainda montada');
+assert(!routes.includes('route("make-admin"'), 'Rota de autoelevação ainda montada');
+assert(!routes.includes('route("debug-user"'), 'Rota de debug de login ainda montada');
+
+assert(!db.includes('initSuperAdmin') && !db.includes('createMissingProfiles'), 'Bootstrap legado permanece');
+assert(!db.includes("rpc('execute_sql'"), 'SQL dinâmico disponível no navegador');
+assert(!auth.includes('createOrUpdateProfile'), 'Criação de perfil ainda depende de evento Auth');
+assert(auth.includes("select('role')"), 'Leitura do papel da sessão não localizada');
+assert(signup.includes('data.session?.user') && signup.includes('successMessage'), 'Fluxo de confirmação pendente não tratado');
+
+assert(!userService.includes('supabase.auth.admin'), 'Operações Auth privilegiadas no browser');
+assert(!userService.includes('.update(') && !userService.includes('.insert('), 'UserService faz escrita de perfis');
+assert(userService.includes('.range(offset, offset + pageSize - 1)'), 'Paginação real de perfis ausente');
+assert(!adminUsers.includes('PermissionService'), 'Edição não auditada de permissões continua disponível');
+assert(!adminUsers.includes('Último Login'), 'Dados de Auth não auditados continuam na listagem');
+
+assert(adminIndex.includes('countVisibleRows("profiles")'), 'Contagem dinâmica de perfis ausente');
+assert(!adminIndex.includes('124567.89') && !adminIndex.includes('1242'), 'Dados fictícios no Admin');
+assert(sql.includes('on conflict (id) do nothing'), 'Backfill idempotente não encontrado');
+assert(sql.includes('raise exception'), 'Migração sem guardas de segurança');
+assert(sql.includes('revoke all on function'), 'Função SECURITY DEFINER não restrita');
+
+console.log('PASS: 19 verificações estáticas de regressão Admin/Auth');
