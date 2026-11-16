@@ -106,3 +106,5 @@ diagnóstico → proposta → alteração em Git → diff/revisão → build/tes
 - Auditoria detalhada: `docs/BLOG_PRODUCTS_AUDIT.md`. **Pendências:** revisão editorial de conteúdo e fichas existentes, testes reais e responsivos no navegador, build minificado com env oficial e aprovação para merge/deploy.
 
 - **Ampliação da auditoria de produtos na Home (branch em revisão):** as duas vitrines repetidas foram consolidadas em uma; removidas avaliações, preços, alegações de durabilidade, números `200+` e produtos fallback fictícios. A vitrine usa destaques reais não arquivados e mantém `#produtos`. A validação oficial e aprovação de deploy continuam pendentes.
+
+- **Ajuste pré-publicação do Blog:** consulta de slug passou a restringir `published` apenas na rota pública; Admin mantém edição de drafts e pré-visualização dentro da página de edição com Markdown seguro. Nenhuma prévia de rascunho por URL pública.
