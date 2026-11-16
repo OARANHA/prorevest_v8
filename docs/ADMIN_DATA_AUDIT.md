@@ -171,6 +171,21 @@ Resultados informados pelo responsável:
 
 Auditoria pendente no projeto oficial: execute `docs/sql/AUTH_ROLE_SECURITY_PREFLIGHT_READ_ONLY.sql`, que retorna permissões efetivas de alteração de `role`, código da função `is_admin_user()` e constraints de `profiles`, sem consultar registros de pessoas. **Não incluir privilégios de UPDATE para `role` a usuários comuns ao aplicar a correção**. Se já existirem, preparar uma mudança separada e revisável de `REVOKE`/concessão por coluna, preservando a edição de nome e empresa.
 
+### Resultado confirmado de privilégios — 2026-11-16
+
+Consultado pelo responsável no SQL Editor oficial:
+
+- `authenticated_pode_atualizar_tabela = true` e `authenticated_pode_atualizar_role = true`;
+- `anon_pode_atualizar_role = true` (o RLS normalmente impede UPDATE sem sessão, mas o grant é indevido);
+- `public.is_admin_user()` é `SECURITY DEFINER`, consulta `profiles.role = 'admin'` pelo `auth.uid()`, e `proconfig = null` (sem `search_path` fixo);
+- Constraints de `public.profiles`: PK `id`, FK `id` → `auth.users(id)` ON DELETE CASCADE.
+
+**P0 confirmado:** um usuário autenticado possui privilégio suficiente para tentar atualizar o próprio `role` para `admin` pela API, já que a política RLS do próprio perfil não restringe colunas. Não confundir o grant de `anon` com demonstração de atualização efetiva como visitante: falta row visibility no RLS para esse papel.
+
+Migração de correção transacional **preparada, não aplicada:** `docs/sql/PROFILE_ROLE_LOCKDOWN_REVIEW_ONLY.sql`. Revoga UPDATE geral e colunar de `PUBLIC`, `anon` e `authenticated`; devolve apenas UPDATE (`full_name`, `company_name`) a `authenticated`; reescreve a função de papel com tabelas qualificadas e `search_path=''`, preservando a checagem por `auth.uid()`. A transação aborta se `role` continuar alterável ou nome/empresa perderem UPDATE. Os papéis administrativos passam a exigir um endpoint seguro, ainda não implantado.
+
+**Sequência obrigatória:** backup/revisão → aprovar/aplicar `PROFILE_ROLE_LOCKDOWN_REVIEW_ONLY.sql` → conferir SQL de grants (ambos UPDATE de role = false) + login Admin/conta comum → aprovar/aplicar `PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` → conferir zero contas sem perfil → E2E do registro/login/Admin → build oficial → aprovação de merge/deploy. O script do trigger agora rejeita execução se a proteção de `role` e `search_path` estiver ausente.
+
 ### Ordem obrigatória da publicação
 
 1. Examinar os resultados read-only de trigger, RLS, constraints e políticas do Supabase correto `gtfvhktgxqtdrnaxizch`.
