@@ -370,3 +370,9 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - `node scripts/test-blog-products-static.mjs`: **30 PASS**. `npm run build -- --minify false` com env **sintético** em worktree isolada: **exit 0**. Smoke em porta local com env sintético: **6/6 HTTP 200** (`/`, `/blog`, `/blog?search=efeito`, `/catalogo`, `/catalogo?search=cimento`, `/catalogos`).
 - O `tsc --noEmit` global retorna erros preexistentes de múltiplas áreas. Nenhum diagnóstico reportado nas novas rotas e `safeBlogMarkdown.ts`; `blogService.ts` mantém erros preexistentes de tipos em métodos de categories/tags não usados na nova rota.
 - Documentação técnica `docs/BLOG_PRODUCTS_AUDIT.md` registra diagnóstico e critérios. PR, E2E real, conteúdo editorial, build minificado com env oficial e publicação ainda pendentes.
+
+### Ampliação de escopo: vitrine de produtos da Home
+
+- A auditoria encontrou `FeaturedProducts` e `ProductsSection` duplicando os destaques na Home, com preços, avaliações, `7 anos` e contagens `200+` sem fonte verificável, além de `fallbackProducts` inventado quando o Supabase falhava.
+- Removida `ProductsSection` duplicada, preservada âncora `#produtos` na única vitrine. `FeaturedProducts` refeito sem atributos comerciais/durabilidade/avaliação fictícios, com imagens e metadados cadastrados, e fallback apenas de navegação ao catálogo.
+- Consulta de destaque usa apenas `is_featured=true` e `is_archived=false`. Scripts de regressão expandidos a **36 verificações**. Build/testes da Home após a mudança precisam ser repetidos.
