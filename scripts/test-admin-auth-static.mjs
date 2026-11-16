@@ -57,6 +57,8 @@ assert(roleLockdown.includes('with check ((select auth.uid()) = id)'), 'RLS UPDA
 assert(sql.includes("PRV-028: UPDATE de role ainda permitido"), 'Backfill não verifica bloqueio de autoelevação');
 assert(sql.includes(`as cfg(setting)`) && sql.includes(`replace(cfg.setting, '"', '') = 'search_path='`), 'Guarda de search_path exige alias textual explicito para o PostgreSQL');
 assert(!sql.includes("'search_path=' = any(p.proconfig)"), 'Guarda legada rejeitaria search_path vazio valido');
+assert(sql.indexOf('commit;') < sql.lastIndexOf('as gatilho_ativo'), 'Verificação final deve ocorrer após o COMMIT');
+assert(sql.includes('as gatilho_ativo'), 'Verificação de trigger ativo ausente');
 
 assert(!adminPermissions.includes('user.user_metadata?.role'), 'Metadados editáveis concedem super_admin');
-console.log('PASS: 35 verificações estáticas de regressão Admin/Auth');
+console.log('PASS: 37 verificações estáticas de regressão Admin/Auth');
