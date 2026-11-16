@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Package, ShoppingCart, Users } from "lucide-react";
 import { supabase } from "../../lib/supabaseClient";
-import { ProductService } from "../../services/productService";
 
 export const meta: MetaFunction = () => [
   { title: "Dashboard - ProRevest" },
@@ -39,6 +38,21 @@ async function countVisibleRows(table: "profiles" | "quotes"): Promise<number> {
 
   if (error) throw error;
   if (count === null) throw new Error("Contagem não retornada");
+  return count;
+}
+
+async function countActiveProducts(): Promise<number> {
+  if (!supabase) {
+    throw new Error("Supabase não configurado");
+  }
+
+  const { count, error } = await supabase
+    .from("products")
+    .select("id", { count: "exact", head: true })
+    .eq("is_archived", false);
+
+  if (error) throw error;
+  if (count === null) throw new Error("Contagem de produtos não retornada");
   return count;
 }
 
@@ -81,7 +95,7 @@ export default function AdminHome() {
     async function loadDashboardData() {
       const results = await Promise.allSettled([
         countVisibleRows("profiles"),
-        ProductService.getProducts(),
+        countActiveProducts(),
         countVisibleRows("quotes"),
         loadRecentQuotes(),
       ]);
@@ -91,7 +105,7 @@ export default function AdminHome() {
       const [profiles, products, quotes, latest] = results;
       setMetrics({
         profiles: profiles.status === "fulfilled" ? profiles.value : null,
-        products: products.status === "fulfilled" ? products.value.length : null,
+        products: products.status === "fulfilled" ? products.value : null,
         quotes: quotes.status === "fulfilled" ? quotes.value : null,
       });
       setRecentQuotes(latest.status === "fulfilled" ? latest.value : null);
@@ -149,12 +163,12 @@ export default function AdminHome() {
         <Link to="/admin/products" className="block bg-slate-800/50 border border-slate-600 rounded-xl p-6 hover:border-yellow-400 transition-colors">
           <div className="flex items-start justify-between gap-3">
             <div>
-              <p className="text-sm font-medium text-slate-300 mb-2">Produtos no catálogo</p>
+              <p className="text-sm font-medium text-slate-300 mb-2">Produtos ativos no catálogo</p>
               <p className="text-2xl font-bold text-slate-100">{displayCount(metrics.products)}</p>
             </div>
             <Package className="h-8 w-8 text-yellow-400 shrink-0" aria-hidden="true" />
           </div>
-          <p className="text-sm text-slate-400 mt-4">Produtos retornados pelo serviço de catálogo.</p>
+          <p className="text-sm text-slate-400 mt-4">Contagem de produtos não arquivados, sujeitos à política RLS.</p>
         </Link>
 
         <Link to="/admin/quotes" className="block bg-slate-800/50 border border-slate-600 rounded-xl p-6 hover:border-purple-400 transition-colors">
