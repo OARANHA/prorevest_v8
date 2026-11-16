@@ -9,6 +9,8 @@ const product = read("app/routes/produto.$slug.tsx");
 const blogService = read("app/services/blogService.ts");
 const productService = read("app/services/productService.ts");
 const markdown = read("app/lib/safeBlogMarkdown.ts");
+const home = read("app/routes/home_prorevest.tsx");
+const featured = read("app/components/FeaturedProducts.tsx");
 
 let checks = 0;
 function check(condition, message) {
@@ -46,5 +48,12 @@ check(!product.includes("mockProduct") && !product.includes("mockReviews") && !p
 check(!/\bprice\b|R\$|Frete:|sedex/i.test(product), "Preço e frete não aparecem no detalhe");
 check(productService.includes(".eq('slug', slug)\n        .eq('is_archived', false)"), "Consulta pública do produto bloqueia arquivados");
 check(productService.includes(".neq('id', productId) // Excluímos o produto atual\n        .eq('is_archived', false)"), "Relacionados bloqueiam arquivados");
+
+check(!home.includes("fallbackProducts"), "Home nunca inventa produtos se Supabase falhar");
+check(!home.includes("ProductsSection") && home.includes("<FeaturedProducts"), "Home possui uma única vitrine de produtos");
+check(!home.includes("Mais de 200 produtos"), "Home não inventa contagem de produtos");
+check(home.includes(".eq('is_featured', true)") && home.includes(".eq('is_archived', false)"), "Vitrine usa destaques reais não arquivados");
+check(!featured.includes("R$") && !featured.includes("7 anos") && !featured.includes("avaliações"), "Vitrine não anuncia preço, durabilidade ou avaliações inventadas");
+check(featured.includes('id="produtos"') && featured.includes('to="/catalogo"'), "Âncora de produtos e catálogo permanecem navegáveis");
 
 console.log(`PASS: ${checks} verificações estáticas Blog/Produtos`);
