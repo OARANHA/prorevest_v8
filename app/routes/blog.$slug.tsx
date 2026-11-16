@@ -26,7 +26,7 @@ export async function loader({ params }: LoaderFunctionArgs): Promise<ArticleDat
   if (!params.slug) throw new Response("Artigo não encontrado", { status: 404 });
   try {
     // Leitura pública: artigos em rascunho/arquivados não devem ser acessíveis pelo slug.
-    const post = await BlogService.getBlogPostBySlug(params.slug);
+    const post = await BlogService.getBlogPostBySlug(params.slug, undefined, { publishedOnly: true });
     if (!post) throw new Response("Artigo não encontrado", { status: 404 });
 
     let related: BlogPost[] = [];
