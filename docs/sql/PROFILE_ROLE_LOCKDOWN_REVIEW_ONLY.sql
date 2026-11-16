@@ -36,6 +36,15 @@ grant update (full_name, company_name)
   on table public.profiles
   to authenticated;
 
+-- Exigir identidade e impedir que UPDATE altere a propriedade da linha.
+-- Se esta policy nao existir no banco correto, a transacao falha sem aplicar
+-- os demais passos (nao criar uma policy ampla por acidente).
+alter policy "Users can update their own profile"
+  on public.profiles
+  to authenticated
+  using ((select auth.uid()) = id)
+  with check ((select auth.uid()) = id);
+
 -- Corrigir a funcao usada pela politica "Admins can manage all profiles".
 -- CREATE OR REPLACE preserva o proprietario e os grants da funcao.
 -- O search_path vazio e todas as referencias qualificadas evitam depender
