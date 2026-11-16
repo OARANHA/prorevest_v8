@@ -2,7 +2,7 @@
 
 **Repositório:** `OARANHA/prorevest_v8`. **Branch:** `feat/blog-products-experience-20261116`.
 
-**Escopo:** blog público (`/blog`, `/blog/:slug`) e catálogo institucional (`/catalogo`, `/produto/:slug`). A biblioteca de catálogos digitais `/catalogos` (PIACERI/FLUA), Studio e telas do Admin foram preservadas. Nenhuma migração ou alteração de dados foi executada no Supabase.
+**Escopo:** blog público (`/blog`, `/blog/:slug`) e catálogo institucional (`/catalogo`, `/produto/:slug`). A biblioteca de catálogos digitais `/catalogos` (PIACERI/FLUA), Studio e demais telas do Admin foram preservados, com ajuste pontual na prévia privada do editor de posts. Nenhuma migração ou alteração de dados foi executada no Supabase.
 
 ## Diagnóstico no código anterior
 
@@ -23,11 +23,12 @@
 ## Implementação na branch
 
 - Blog: fonte única de posts **publicados**; categorias e tags extraídas desses registros; busca/categoria/tag via formulário GET; paginação consistente que preserva filtros; limites de página; estados distintos de erro, lista vazia e resultado filtrado.
+- Editor Admin: consulta por slug preserva acesso a rascunhos com autorização existente; botão **Visualizar** mostra prévia segura dentro do editor, sem redirecionar para `/blog/:slug?preview=true` e expor rascunhos publicamente.
 - Artigo: meta title/description/canonical/OG; 404 para slug não publicado; remoção do UPDATE de visualizações em GET; renderização Markdown consistente entre servidor e navegador com HTML bruto escapado e links/imagens restritos a esquemas seguros; artigos relacionados reais e CTAs úteis.
 - Catálogo: remoção total de preço/frete e cards fictícios. Produtos, categorias, acabamentos e totais consultados no Supabase. Filtros de nome, categoria e acabamento aplicados na consulta **antes** da paginação, ordenação por nome/destaque, URLs compartilháveis e estados de erro/vazio.
 - Produto: detalhe gerado exclusivamente do produto não arquivado, com imagens e cores cadastradas, acabamento, descrição e campos técnicos disponíveis. Sem alegações automáticas de rendimento/certificação, preços, avaliações simuladas nem cálculo de entrega. Contato pelo WhatsApp oficial e link ao Studio; **o produto não é selecionado automaticamente no Studio**.
 - Home: apenas uma vitrine `FeaturedProducts` com `id=produtos`, baseada em produtos efetivamente marcados `is_featured=true` e não arquivados; sem número arbitrário, preço, avaliação, durabilidade ou fallback de produtos fictícios. Mantida a âncora do menu e CTA ao catálogo/Studio.
-- Estados de erro e URLs canônicas melhorados; nenhuma credencial, DDL, assinatura de newsletter ou operação administrativa adicionada.
+- Estados de erro e URLs canônicas melhorados; nenhuma credencial, DDL, assinatura de newsletter ou operação administrativa privilegiada adicionada.
 
 ## Critérios de revisão e evidências
 
