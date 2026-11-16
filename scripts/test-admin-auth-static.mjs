@@ -52,6 +52,7 @@ assert(roleLockdown.includes('revoke update (id, full_name, company_name, role, 
 assert(roleLockdown.includes('grant update (full_name, company_name)'), 'Edição de nome/empresa não é restaurada');
 assert(roleLockdown.includes("set search_path = ''") && roleLockdown.includes('from public.profiles'), 'Função admin sem search_path/schema fixos');
 assert(roleLockdown.includes("has_column_privilege('authenticated', 'public.profiles', 'role', 'UPDATE')"), 'Migração não verifica permissão de role');
+assert(roleLockdown.includes('with check ((select auth.uid()) = id)'), 'RLS UPDATE sem WITH CHECK explícito');
 assert(sql.includes("PRV-028: UPDATE de role ainda permitido"), 'Backfill não verifica bloqueio de autoelevação');
 
-console.log('PASS: 31 verificações estáticas de regressão Admin/Auth');
+console.log('PASS: 32 verificações estáticas de regressão Admin/Auth');
