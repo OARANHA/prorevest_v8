@@ -222,3 +222,14 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Responsável confirmou no navegador os seis testes pós-deploy: Home/menus, Blog, Paleta→Studio, aplicação de cor com IA, login/recuperação de senha e catálogos (miniaturas/PDFs). Release aceita e operacionalmente encerrada.
 - Segredos não registrados na documentação. As configurações de ambiente permanecem gerenciadas fora do Git.
 - Trabalho futuro separado: alimentação das miniaturas de Instagram, dependente de acesso à conta oficial.
+
+## 2026-11-16 — Diagnóstico do Admin: números demonstrativos (branch, sem deploy)
+
+- `main` verificado em `4b75a7d` (release operacional de 28/10/2026 já documentada); branch `fix/admin-dashboard-real-metrics-20261116` criada a partir desse SHA.
+- Evidência visual do painel `/admin` coincidiu com valores hardcoded em `app/routes/admin/index.tsx`: 1.242 usuários, R$ 124.567,89, 2 orçamentos, percentuais, gráficos e atividades fictícios.
+- Dashboard da branch: removidos cartão e gráfico de receita e todos os demonstrativos da visão geral; métricas de perfis/quotes por contagem exata de linhas visíveis sob RLS, produtos pelo serviço atual; falhas exibidas como indisponibilidade e orçamentos recentes derivados de registros consultados.
+- Contagem `profiles` **não comprova** quantidade total de contas em `auth.users`; requer diagnóstico de sincronização e RLS no projeto oficial antes de afirmar total cadastrado. Nenhuma credencial do Supabase foi consultada/copiada.
+- Removido fallback de conta demo no `UserService`, exibido erro na tela de usuários quando a consulta falha; fallback de orçamentos fictícios removido de `/admin/quotes`.
+- `/admin/reports` deixou de mostrar indicadores de receita, vendas e crescimento simulados e informa que os relatórios dependem de dados reais verificados.
+- Registrada pendência P0 separada sobre operações `supabase.auth.admin` no frontend e log de senha temporária; não alteradas nesta branch.
+- **Ainda pendente:** revisão de diff, build/testes, validação real de Supabase/RLS, E2E no navegador e aprovação explícita para merge/deploy. Nenhum merge, deploy ou alteração em produção.
