@@ -152,6 +152,12 @@ A migração somente poderá ser aplicada **depois de verificar os gatilhos não
 
 A proposta cria um gatilho controlado do lado do Postgres para garantir `public.profiles` no mesmo ciclo de criação do Auth, com `role = 'customer'`, sem assumir permissões de `user_metadata`. O backfill insere apenas IDs de Auth ainda ausentes na tabela, com `ON CONFLICT (id) DO NOTHING`; não sobrescreve nomes, e-mails ou papéis de perfis existentes.
 
+### Preflight consolidado em uma consulta
+
+Use `docs/sql/AUTH_PROFILE_PREFLIGHT_READ_ONLY.sql` no SQL Editor do projeto oficial. Ele devolve **uma linha com quatro colunas JSON**: gatilhos de INSERT em Auth, estado RLS de profiles, políticas de profiles e índices únicos de profiles. Isso evita que o editor mostre apenas a última das consultas individuais. A consulta não modifica registros nem lista usuários.
+
+Revise eventuais expressões de política antes de compartilhar capturas, caso incluam alguma identidade pessoal fixa.
+
 ### Ordem obrigatória da publicação
 
 1. Examinar os resultados read-only de trigger, RLS, constraints e políticas do Supabase correto `gtfvhktgxqtdrnaxizch`.
