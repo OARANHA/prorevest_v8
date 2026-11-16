@@ -30,6 +30,8 @@ Status: `OPEN`, `INVESTIGATING`, `FIXED`, `WONTFIX`.
 | PRV-022 | P0 | INVESTIGATING | Navegação | Produção confirmada com 404 em `/studio/project/1` e `/novo-projeto`. Redirects de compatibilidade foram adicionados e validados em smoke HTTP local; pendente de deploy/smoke em produção. |
 | PRV-023 | P0 | INVESTIGATING | Auth/UI | Login, callback e cadastro enviavam usuários comuns para `/meus-projetos`; essa rota também renderizava `SiteHeader`/`SiteFooter` sobre o `AppLayout`, duplicando o cabeçalho e o rodapé. Patch redireciona usuário comum para `/studio` e remove wrappers duplicados nas telas Auth/Projetos. |
 | PRV-024 | P0 | RESOLVED | Studio/Paleta | Infinite scroll da Paleta ProRevest corrigido e validado em produção no fluxo real com projeto/imagem ativa. Novas cores carregam normalmente e o spinner não fica preso. Hotfix implantado no commit `3fe8967`. |
+| PRV-025 | P1 | INVESTIGATING | Admin/Dados | `/admin` exibiu usuários, receita, orçamentos, tendências, gráficos e atividades demonstrativas como métricas reais. Branch `fix/admin-dashboard-real-metrics-20261116` substitui o dashboard por consultas reais e retira receita; validação de build, RLS, contagem Auth vs `profiles` e E2E ainda pendentes. `/admin/quotes` também teve fallback fictício removido; `/admin/reports` foi marcado como indisponível até existirem fontes verificadas. |
+| PRV-026 | P0 | OPEN | Admin/Auth/Segurança | `UserService` possui operações `supabase.auth.admin` iniciadas no cliente e código que registra senha temporária em log. Revisar para endpoint servidor com autenticação/autorização explícitas ou desabilitar ações, sem adicionar credenciais ao frontend; não comprovado funcionamento das operações atuais. |
 
 ## Como atualizar
 
