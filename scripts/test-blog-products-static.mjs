@@ -30,7 +30,9 @@ check(blog.includes("Nenhum artigo encontrado"), "Estado sem resultados explíci
 check(article.includes("renderSafeBlogMarkdown"), "Artigo usa Markdown seguro também no SSR");
 check(!article.includes("incrementBlogPostViews"), "Loader GET não grava visualizações");
 check(article.includes("isRouteErrorResponse") && article.includes("status: 404"), "Artigo ausente retorna 404");
-check(blogService.includes(".eq('status', 'published')\n        .maybeSingle()"), "Slug público do artigo filtra status published");
+check(article.includes("getBlogPostBySlug(params.slug, undefined, { publishedOnly: true })"), "Consulta pública filtra published explicitamente");
+check(blogService.includes("if (options?.publishedOnly) query = query.eq('status', 'published')"), "Serviço restringe status somente para página pública");
+check(!blogService.includes(".eq('slug', slug)\n        .eq('status', 'published')"), "Serviço genérico não bloqueia rascunhos no Admin");
 check(markdown.includes("renderer.html =") && markdown.includes("escapeAttribute(html)"), "HTML bruto não é renderizado no SSR");
 check(markdown.includes("renderer.link =") && markdown.includes("safeUrl(href)"), "URLs de links são validadas");
 check(markdown.includes("renderer.image =") && markdown.includes("safeUrl(href, true)"), "Imagens não aceitam esquemas arbitrários");
