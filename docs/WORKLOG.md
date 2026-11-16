@@ -288,3 +288,11 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Teste estático no clone isolado: `node scripts/test-admin-auth-static.mjs` → **25 verificações PASS**. TypeScript direcionado aos módulos alterados → **0 diagnósticos, exit 0**.
 - Build completo cliente+SSR **sem minificação**, com variáveis Supabase sintéticas de teste: **exit 0** no HEAD que inclui alteração do hook e tela de perfil. Smoke HTTP local posterior: 7/7 rotas ativas com 200, 3/3 rotas legadas com 404; servidor local encerrado.
 - **PENDENTE:** SQL read-only `docs/sql/AUTH_ROLE_SECURITY_PREFLIGHT_READ_ONLY.sql` executado pelo responsável no projeto Supabase oficial; revisar função `is_admin_user()` e grants; eventual correção de privilégio de `role`; aprovar/aplicar migração de trigger/backfill; E2E autenticado; build minificado com config real; aprovação de merge/deploy.
+
+## 2026-11-16 — PRV-028 confirmado e mitigação SQL preparada
+
+- Responsável executou preflight somente leitura no Supabase oficial: `authenticated_pode_atualizar_tabela=true`, `authenticated_pode_atualizar_role=true`, `anon_pode_atualizar_role=true`. A política RLS autoriza atualização da própria linha por `auth.uid()=id`, mas sem restrição de coluna; risco confirmado de autoelevação do papel administrativo em sessões autenticadas.
+- Função `public.is_admin_user()` foi inspecionada: `SECURITY DEFINER`, consulta `profiles` sem qualificar schema, sem `search_path` em `proconfig`.
+- Preparado, **não executado**, `docs/sql/PROFILE_ROLE_LOCKDOWN_REVIEW_ONLY.sql`: transação que retira UPDATE geral e colunar de PUBLIC/anon/authenticated, concede UPDATE somente em `full_name`/`company_name` a authenticated, reescreve a função de admin com `search_path=''` e referências qualificadas e valida privilégios efetivos com assert.
+- `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` endurecido para abortar se qualquer role público puder atualizar `profiles.role`, ou se `is_admin_user()` permanecer sem `search_path` seguro.
+- Nenhuma conexão foi feita ao projeto oficial via conector Supabase do chat (ligado a outro projeto); sem DDL, backfill, merge ou deploy. A aprovação/aplicação da mitigação no projeto oficial é pré-requisito para publicação.
