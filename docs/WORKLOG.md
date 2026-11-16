@@ -254,3 +254,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - `docs/ADMIN_DATA_AUDIT.md` atualizado com resultados e comandos read-only para examinar triggers de `auth.users`, estado/políticas RLS e estrutura de `public.profiles` sem expor dados pessoais.
 - Nenhum backfill ou criação de trigger/RPC foi executado. Dashboard da branch mantém `Perfis visíveis` como consulta dinâmica, **sem** fixar o valor 18 ou expor `auth.users` ao navegador.
 - PR #8 permanece Draft, sem merge, deploy ou alteração no banco.
+
+## 2026-11-16 — Estrutura confirmada de profiles e ajuste do UserService (PR #8)
+
+- Resultado do `information_schema.columns` informado pelo responsável: `id uuid`, `full_name text`, `company_name text`, `role text` com default, `created_at timestamptz` com default e `email text`; **sem `updated_at`**.
+- Ajustado `UserProfile` ao esquema observado, removidas escritas de `updated_at` no serviço e retorno fictício desse atributo na listagem. Não foi alterado o Supabase nem foram criados os 9 perfis ausentes.
+- Pendentes os resultados dos gatilhos de `auth.users` e o estado de RLS/políticas de `profiles`; a causa da divergência entre Auth e profiles ainda não está comprovada.
+- PR #8 permanece Draft, sem merge/deploy.
