@@ -261,3 +261,13 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Ajustado `UserProfile` ao esquema observado, removidas escritas de `updated_at` no serviço e retorno fictício desse atributo na listagem. Não foi alterado o Supabase nem foram criados os 9 perfis ausentes.
 - Pendentes os resultados dos gatilhos de `auth.users` e o estado de RLS/políticas de `profiles`; a causa da divergência entre Auth e profiles ainda não está comprovada.
 - PR #8 permanece Draft, sem merge/deploy.
+
+## 2026-11-16 — PR #8: correção de cadastro e segurança pronta para revisão (sem deploy)
+
+- Cadastro original do Auth persistia conta sem garantir perfil. `AuthContext` dependia de callback `onAuthStateChange` com escrita assíncrona e erros silenciosos; o helper foi retirado e a avaliação do papel de sessão movida para efeito separado com estado de carregamento.
+- `/register`: confirmação de e-mail é distinguida de sessão ativa, sem redirecionamento prematuro para Studio. `UserService` e `/admin/users` agora apenas consultam perfis acessíveis via RLS, com paginação real, sem ações privilegiadas não validadas.
+- Rotas `/admin/init-db`, `/admin/init-profiles`, `/admin/make-admin` e `/debug-user` removidas do roteador e desativadas em seus módulos; bootstrap/credencial de superadmin e `execute_sql` removidos de `DatabaseService` no HEAD. Nenhuma operação foi executada no Supabase oficial.
+- `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql`: proposta transacional não executada com guardas para trigger de INSERT preexistente e unicidade de `profiles.id`, função `SECURITY DEFINER` com `search_path` fechado e `EXECUTE` revogado a papéis públicos, role inicial `customer`, backfill idempotente de contas Auth sem perfis. Preserva perfis existentes.
+- Evidência fornecida pelo responsável do Supabase oficial: 18 Auth/9 profiles/9 sem perfil/0 órfãos. Ainda faltam nomes/estado dos triggers e RLS; sem isso não se libera a migração.
+- Testes realizados em clone isolado na VPS: TS direcionado exit 0; `node scripts/test-admin-auth-static.mjs`: 19 asserts passaram; build cliente+SSR **sem minificação** exit 0 com configuração pública **sintética**; smoke SSR HTTP 7/7 rotas esperadas 200 e 4/4 rotas legadas 404. Processo de testes encerrado.
+- PR #8 ainda Draft e sem merge. Faltam preflight de banco oficial, aprovação e aplicação da migração, E2E de cadastro com confirmação de e-mail + acesso admin por RLS, build minificado com env público real, aprovação explícita e deploy controlado.
