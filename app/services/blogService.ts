@@ -109,6 +109,7 @@ export class BlogService {
         .from('blog_posts')
         .select('*')
         .eq('slug', slug)
+        .eq('status', 'published')
         .single();
 
       if (error) throw error;
