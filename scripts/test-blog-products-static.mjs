@@ -11,6 +11,7 @@ const productService = read("app/services/productService.ts");
 const markdown = read("app/lib/safeBlogMarkdown.ts");
 const home = read("app/routes/home_prorevest.tsx");
 const featured = read("app/components/FeaturedProducts.tsx");
+const adminEdit = read("app/routes/admin/blog-posts.$id.edit.tsx");
 
 let checks = 0;
 function check(condition, message) {
@@ -33,6 +34,9 @@ check(article.includes("isRouteErrorResponse") && article.includes("status: 404"
 check(article.includes("getBlogPostBySlug(params.slug, undefined, { publishedOnly: true })"), "Consulta pública filtra published explicitamente");
 check(blogService.includes("if (options?.publishedOnly) query = query.eq('status', 'published')"), "Serviço restringe status somente para página pública");
 check(!blogService.includes(".eq('slug', slug)\n        .eq('status', 'published')"), "Serviço genérico não bloqueia rascunhos no Admin");
+check(adminEdit.includes("renderSafeBlogMarkdown(actionData.previewPost.content"), "Prévia do editor sanitiza HTML no SSR");
+check(!adminEdit.includes('redirect(`/blog/${updatedPost.slug}?preview=true`)'), "Prévia não expõe rascunho em rota pública");
+check(adminEdit.includes("previewPost: {") && adminEdit.includes("postData.status = 'draft'"), "Prévia privada permanece rascunho");
 check(markdown.includes("renderer.html =") && markdown.includes("escapeAttribute(html)"), "HTML bruto não é renderizado no SSR");
 check(markdown.includes("renderer.link =") && markdown.includes("safeUrl(href)"), "URLs de links são validadas");
 check(markdown.includes("renderer.image =") && markdown.includes("safeUrl(href, true)"), "Imagens não aceitam esquemas arbitrários");
