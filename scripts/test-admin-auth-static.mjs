@@ -12,6 +12,9 @@ const userService = read('app/services/userService.ts');
 const adminUsers = read('app/routes/admin/users.tsx');
 const adminIndex = read('app/routes/admin/index.tsx');
 const sql = read('docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql');
+const profileHook = read('app/hooks/useProfile.ts');
+const profileUI = read('app/routes/perfil.tsx');
+const securityPreflight = read('docs/sql/AUTH_ROLE_SECURITY_PREFLIGHT_READ_ONLY.sql');
 
 assert(!routes.includes('route("init-db"'), 'Rota de init-db ainda montada');
 assert(!routes.includes('route("init-profiles"'), 'Rota de backfill GET ainda montada');
@@ -36,4 +39,11 @@ assert(sql.includes('on conflict (id) do nothing'), 'Backfill idempotente não e
 assert(sql.includes('raise exception'), 'Migração sem guardas de segurança');
 assert(sql.includes('revoke all on function'), 'Função SECURITY DEFINER não restrita');
 
-console.log('PASS: 19 verificações estáticas de regressão Admin/Auth');
+assert(!profileHook.includes('.update(updates)'), 'Atualização de perfil permite propriedades arbitrárias');
+assert(!profileHook.includes('updated_at') && !profileHook.includes('createProfile'), 'Perfil usa campos inexistentes ou criação pelo browser');
+assert(profileHook.includes('full_name: updates.full_name') && profileHook.includes('company_name: updates.company_name'), 'Allowlist de colunas editáveis ausente');
+assert(!profileUI.includes('role: profileData.role') && !profileUI.includes('profileData.cpf'), 'UI permite envio de role/CPF');
+assert(sql.includes("to_regprocedure('public.prorevest_create_auth_profile()')"), 'Migração pode sobrescrever função preexistente');
+assert(securityPreflight.includes("has_column_privilege('authenticated', 'public.profiles', 'role', 'UPDATE')"), 'Auditoria de alteração de role ausente');
+
+console.log('PASS: 25 verificações estáticas de regressão Admin/Auth');
