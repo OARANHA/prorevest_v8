@@ -131,3 +131,36 @@ Consequência no código: o `UserService` da PR #8 foi ajustado para não enviar
 - Notificações do cabeçalho: contador fixo removido.
 
 **Sem merge, deploy ou alteração de banco até revisão, testes e autorização específica.**
+
+
+## Preparação da correção integral — PR #8, ainda sem deploy
+
+O problema original não é apenas um número incorreto: `auth.users` possui contas que não têm a correspondente linha em `public.profiles`. O site depende de perfis para listagem administrativa e papel de acesso.
+
+### Alterações de código preparadas
+
+- Cadastro em `/register`: só redireciona ao Studio com sessão válida; quando confirmação por e-mail estiver pendente, apresenta orientação adequada.
+- `AuthContext`: não executa mais gravações silenciosas em `profiles` por `onAuthStateChange`; mantém leitura de papel em efeito separado, com estado de carregamento até a consulta terminar.
+- `/admin/users`: consulta somente leitura e paginada dos perfis acessíveis sob RLS. Ações administrativas de permissão/senha/bloqueio ficam indisponíveis até existir backend seguro.
+- Rotas legadas `/admin/init-db`, `/admin/init-profiles`, `/admin/make-admin` e `/debug-user` removidas do roteador e desativadas nos próprios módulos. Removidos bootstrap com credencial fixa e RPC `execute_sql` do serviço do browser.
+
+### Migração proposta — não executada
+
+Arquivo: `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql`.
+
+A migração somente poderá ser aplicada **depois de verificar os gatilhos não internos de INSERT em `auth.users`, as constraints de `profiles.id`, o papel padrão de `profiles.role` e as políticas de RLS**. Uma execução incompatível é bloqueada por guardas e transação. Não criar trigger redundante às cegas.
+
+A proposta cria um gatilho controlado do lado do Postgres para garantir `public.profiles` no mesmo ciclo de criação do Auth, com `role = 'customer'`, sem assumir permissões de `user_metadata`. O backfill insere apenas IDs de Auth ainda ausentes na tabela, com `ON CONFLICT (id) DO NOTHING`; não sobrescreve nomes, e-mails ou papéis de perfis existentes.
+
+### Ordem obrigatória da publicação
+
+1. Examinar os resultados read-only de trigger, RLS, constraints e políticas do Supabase correto `gtfvhktgxqtdrnaxizch`.
+2. Revisar e aprovar separadamente a migração SQL. Garantir possibilidade de rollback do gatilho e cópia de segurança do banco.
+3. Aplicar a migração aprovada **antes** de publicar o frontend que passou a depender dela.
+4. Repetir contagens agregadas no SQL Editor; conferir `contas_sem_perfil = 0`. Não presumir que as contagens sejam eternamente 18/18.
+5. Testar E2E com conta controlada: cadastro + confirmação de e-mail + primeiro login + perfil + listagem em `/admin/users`; conferir que conta comum não acessa dados de terceiros.
+6. Executar `npm ci`, `node scripts/test-admin-auth-static.mjs`, checagem de tipos e build **minificado com variáveis públicas oficiais** no processo de release, sem imprimir valores.
+7. Obter aprovação explícita para merge/deploy, usar script controlado de deploy com backup/rollback, realizar smoke de Studio/Auth/admin.
+
+**Não realizar merge/deploy de PR #8 antes do SQL e dos testes autenticados.**
+
