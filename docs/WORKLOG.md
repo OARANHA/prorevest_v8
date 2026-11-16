@@ -271,3 +271,11 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Evidência fornecida pelo responsável do Supabase oficial: 18 Auth/9 profiles/9 sem perfil/0 órfãos. Ainda faltam nomes/estado dos triggers e RLS; sem isso não se libera a migração.
 - Testes realizados em clone isolado na VPS: TS direcionado exit 0; `node scripts/test-admin-auth-static.mjs`: 19 asserts passaram; build cliente+SSR **sem minificação** exit 0 com configuração pública **sintética**; smoke SSR HTTP 7/7 rotas esperadas 200 e 4/4 rotas legadas 404. Processo de testes encerrado.
 - PR #8 ainda Draft e sem merge. Faltam preflight de banco oficial, aprovação e aplicação da migração, E2E de cadastro com confirmação de e-mail + acesso admin por RLS, build minificado com env público real, aprovação explícita e deploy controlado.
+
+## 2026-11-16 — Preflight de trigger/RLS recebido e risco de UPDATE do papel
+
+- Preflight read-only do projeto oficial confirmado pelo responsável: `gatilhos_insert_auth=[]`; `profiles` com RLS ativa e não forçada; único `profiles_pkey` em `id`; políticas SELECT/UPDATE do próprio perfil e ALL para admin via `is_admin_user()`.
+- Revisão de código revelou que o frontend `/perfil` enviava `role` e campos inexistentes (`phone/cpf/cnpj`) em `useProfile.updateProfile`. Na branch PR #8 a UI passa a expor `role` somente para leitura, e o hook permite atualizar apenas `full_name` e `company_name`.
+- `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` recebeu guarda para não substituir função existente. A proposta ainda não foi executada no banco.
+- Criado `docs/sql/AUTH_ROLE_SECURITY_PREFLIGHT_READ_ONLY.sql` para verificar grants de UPDATE na coluna `role`, função `is_admin_user()` e constraints. O código UI sozinho não impede manipulação direta pela API; a mudança de grants no banco, se necessária, é bloqueio de publicação.
+- SQL oficial de migração e ajuste de RLS ainda exigem aprovação específica. Sem merge/deploy.
