@@ -11,12 +11,14 @@ export type User = {
   last_sign_in_at: string | null;
 };
 
+// Colunas existentes em public.profiles, verificadas em 2026-11-16.
 export type UserProfile = {
   id: string;
   full_name: string | null;
+  company_name: string | null;
+  email: string | null;
   role: UserRole;
-  created_at: string;
-  updated_at: string;
+  created_at: string | null;
 };
 
 export class UserService {
@@ -83,10 +85,7 @@ export class UserService {
     try {
       const { data, error } = await supabase
         .from('profiles')
-        .update({
-          ...updates,
-          updated_at: new Date().toISOString()
-        })
+        .update(updates)
         .eq('id', userId)
         .select()
         .single();
@@ -149,7 +148,7 @@ export class UserService {
         full_name: profile.full_name || '',
         role: profile.role || 'customer',
         created_at: profile.created_at || null,
-        updated_at: profile.updated_at || null,
+        company_name: profile.company_name || null,
       })));
 
       if (data.length < pageSize) break;
@@ -193,10 +192,7 @@ export class UserService {
     try {
       const { data, error } = await supabase
         .from('profiles')
-        .update({
-          role,
-          updated_at: new Date().toISOString()
-        })
+        .update({ role })
         .eq('id', userId)
         .select()
         .single();
