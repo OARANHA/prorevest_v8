@@ -76,6 +76,6 @@ diagnóstico → proposta → alteração em Git → diff/revisão → build/tes
 ## Correção administrativa em revisão — 2026-11-16
 
 - PR #8 (Draft, branch `fix/admin-dashboard-real-metrics-20261116`) corrige indicadores fictícios de usuários/orçamentos, retira receita do dashboard e impede a apresentação de dados demonstrativos como reais. A produção permanece no baseline da release de 28/10.
-- A tela de usuários lista apenas perfis acessíveis conforme RLS, **não** o total confirmado de contas em `auth.users`. `docs/ADMIN_DATA_AUDIT.md` contém procedimento de auditoria somente leitura para o projeto Supabase oficial.
+- Auditoria administrativa informada pelo responsável em 2026-11-16 no Supabase oficial: **18 contas em `auth.users`; 9 perfis em `public.profiles`; 9 contas sem perfil; 0 perfis órfãos**. Não equivale ao número de usuários ativos/confirmados. A tela de usuários lista apenas perfis acessíveis conforme RLS, não o total de contas. `docs/ADMIN_DATA_AUDIT.md` registra os números e investigação somente leitura.
 - Chamadas administrativas de Auth no navegador foram retiradas da branch; redefinição/bloqueio administrativo requer implementação segura no servidor e não está liberado.
 - Validados: instalação isolada de dependências, build diagnóstico cliente+SSR **sem minificação** (exit 0) com configuração sintética, e smoke HTTP local 5/5 rotas. **Pendente:** build minificado oficial, RLS, contagens reais de Auth, E2E autenticado e aprovação expressa para merge/deploy.
