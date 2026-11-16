@@ -123,102 +123,42 @@ export class UserService {
    * NOTA: Esta função requer RLS policies adequadas no Supabase
    */
   static async getAllUsers(): Promise<any[]> {
-    try {
-      console.log("Iniciando busca de usuários...");
-      
-      // Tentativa principal: Buscar usuários da tabela profiles com email
-      try {
-        const { data: profiles, error: profileError } = await supabase
-          .from('profiles')
-          .select('*')
-          .order('created_at', { ascending: false });
+    if (!supabase) throw new Error('Serviço de usuários indisponível: Supabase não configurado.');
 
-        if (profileError) {
-          console.error('Erro ao buscar perfis:', profileError);
-          throw profileError;
-        }
-        
-        console.log("Usuários encontrados via profiles:", profiles?.length || 0);
-        
-        // Processar perfis com dados completos
-        const processedUsers = (profiles || []).map(profile => {
-          // Se o profile tem email, usa ele diretamente
-          if (profile.email && profile.email.trim() !== '') {
-            return {
-              id: profile.id,
-              email: profile.email,
-              full_name: profile.full_name || '',
-              role: profile.role || 'customer',
-              created_at: profile.created_at,
-              last_sign_in_at: profile.last_sign_in_at || null,
-              user_metadata: profile.user_metadata || {},
-              email_confirmed_at: profile.email_confirmed_at || null,
-              phone: profile.phone || null,
-              updated_at: profile.updated_at
-            };
-          }
-          
-          // Se não tem email ou está vazio, mostra indicador claro
-          return {
-            id: profile.id,
-            email: '[email não configurado]',
-            full_name: profile.full_name || '',
-            role: profile.role || 'customer',
-            created_at: profile.created_at,
-            last_sign_in_at: profile.last_sign_in_at || null,
-            user_metadata: profile.user_metadata || {},
-            email_confirmed_at: profile.email_confirmed_at || null,
-            phone: profile.phone || null,
-            updated_at: profile.updated_at
-          };
-        });
-        
-        return processedUsers;
-        
-      } catch (error) {
-        console.error('Erro na busca principal:', error);
-        
-        // Fallback: método simplificado
-        try {
-          console.log("Tentando método simplificado...");
-          const { data: simpleProfiles, error: simpleError } = await supabase
-            .from('profiles')
-            .select('id, full_name, role, created_at, updated_at')
-            .order('created_at', { ascending: false });
-            
-          if (simpleError) {
-            console.error('Erro no método simplificado:', simpleError);
-            throw simpleError;
-          }
-          
-          console.log("Usuários encontrados via método simplificado:", simpleProfiles?.length || 0);
-          
-          const simplifiedUsers = (simpleProfiles || []).map(profile => ({
-            id: profile.id,
-            email: '[execute migration para adicionar email]',
-            full_name: profile.full_name || '',
-            role: profile.role || 'customer',
-            created_at: profile.created_at,
-            last_sign_in_at: null,
-            user_metadata: {},
-            email_confirmed_at: null,
-            phone: null,
-            updated_at: profile.updated_at
-          }));
-          
-          return simplifiedUsers;
-        } catch (fallbackError) {
-          console.error('Erro no fallback:', fallbackError);
-          
-          // Não inventar usuários quando a consulta real falhar.
-          throw new Error('Não foi possível consultar os perfis cadastrados.', { cause: fallbackError });
-        }
-      }
-    } catch (error) {
-      console.error('Erro geral ao buscar usuários:', error);
-      throw error;
+    // O PostgREST pode limitar os resultados; percorrer as páginas
+    // evita confundir o limite de retorno com o total acessível por RLS.
+    const pageSize = 500;
+    const users: any[] = [];
+
+    for (let offset = 0; ; offset += pageSize) {
+      const { data, error } = await supabase
+        .from('profiles')
+        .select('*')
+        .order('created_at', { ascending: false })
+        .order('id', { ascending: false })
+        .range(offset, offset + pageSize - 1);
+
+      if (error) throw error;
+      if (!data) throw new Error('O servidor não retornou os perfis solicitados.');
+
+      users.push(...data.map(profile => ({
+        id: profile.id,
+        email: typeof profile.email === 'string' && profile.email.trim()
+          ? profile.email.trim()
+          : null,
+        full_name: profile.full_name || '',
+        role: profile.role || 'customer',
+        created_at: profile.created_at || null,
+        updated_at: profile.updated_at || null,
+      })));
+
+      if (data.length < pageSize) break;
     }
+
+    return users;
   }
+
+  // Perfis visíveis por RLS não equivalem necessariamente ao total de auth.users.
 
   /**
    * Obtém usuário por ID (apenas para administradores)
@@ -292,125 +232,8 @@ export class UserService {
     }
   }
 
-  /**
-   * Redefine a senha do usuário (apenas para administradores)
-   * Gera uma nova senha temporária e envia por e-mail
-   */
-  static async resetUserPassword(userId: string): Promise<void> {
-    try {
-      // Primeiro, obter o e-mail do usuário
-      const { data: authUsers, error: authError } = await supabase.auth.admin.listUsers();
-      if (authError) throw authError;
-      
-      const user = authUsers.users.find(u => u.id === userId);
-      if (!user) throw new Error('Usuário não encontrado');
-
-      // Gerar uma senha temporária
-      const tempPassword = this.generateTemporaryPassword();
-      
-      // Atualizar a senha do usuário
-      const { error: updateError } = await supabase.auth.admin.updateUserById(userId, {
-        password: tempPassword
-      });
-
-      if (updateError) throw updateError;
-
-      // Registrar a ação
-      await this.logUserAction(userId, 'password_reset', `Nova senha temporária: ${tempPassword}`);
-
-      // Aqui você poderia implementar o envio de e-mail com a nova senha
-      // Por enquanto, apenas exibimos no console
-      console.log(`Nova senha para ${user.email}: ${tempPassword}`);
-      
-      // Em um ambiente real, você enviaria por e-mail:
-      // await emailService.sendTempPassword(user.email, tempPassword);
-    } catch (error) {
-      console.error('Erro ao redefinir senha do usuário:', error);
-      throw error;
-    }
-  }
-
-  /**
-   * Gera uma senha temporária
-   */
-  private static generateTemporaryPassword(): string {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%';
-    let password = '';
-    for (let i = 0; i < 12; i++) {
-      password += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
-    return password;
-  }
-
-  /**
-   * Bloqueia um usuário (apenas para administradores)
-   */
-  static async blockUser(userId: string, reason?: string): Promise<void> {
-    try {
-      // Atualizar metadata do usuário para indicar que está bloqueado
-      const { error } = await supabase.auth.admin.updateUserById(userId, {
-        user_metadata: {
-          blocked: true,
-          blocked_reason: reason || '',
-          blocked_at: new Date().toISOString()
-        }
-      });
-
-      if (error) throw error;
-
-      // Opcional: registrar o bloqueio em uma tabela de logs
-      await this.logUserAction(userId, 'blocked', reason);
-    } catch (error) {
-      console.error('Erro ao bloquear usuário:', error);
-      throw error;
-    }
-  }
-
-  /**
-   * Desbloqueia um usuário (apenas para administradores)
-   */
-  static async unblockUser(userId: string): Promise<void> {
-    try {
-      // Método alternativo: atualizar apenas na tabela profiles
-      const { error: updateError } = await supabase
-        .from('profiles')
-        .update({
-          user_metadata: {
-            blocked: false,
-            blocked_reason: '',
-            blocked_at: null,
-            unblocked_at: new Date().toISOString()
-          }
-        })
-        .eq('id', userId);
-
-      if (updateError) {
-        console.error('Erro ao desbloquear usuário no profiles:', updateError);
-        throw updateError;
-      }
-
-      // Registrar o desbloqueio em uma tabela de logs
-      await this.logUserAction(userId, 'unblocked');
-      
-      console.log(`Desbloqueio solicitado para usuário ID: ${userId}`);
-      
-      // Em um ambiente real com SERVICE_KEY configurado:
-      // const { error } = await supabase.auth.admin.updateUserById(userId, {
-      //   user_metadata: {
-      //     blocked: false,
-      //     blocked_reason: '',
-      //     blocked_at: null,
-      //     unblocked_at: new Date().toISOString()
-      //   }
-      // });
-      
-      // Retornar mensagem informativa
-      throw new Error('Funcionalidade de desbloqueio requer configuração de SERVICE_KEY no servidor. Entre em contato com o administrador do sistema.');
-    } catch (error) {
-      console.error('Erro ao desbloquear usuário:', error);
-      throw error;
-    }
-  }
+  // Ações administrativas de Auth dependem de um endpoint no servidor
+  // com autorização verificada e não devem usar operações admin no navegador.
 
   /**
    * Registra ações do usuário em um log
@@ -458,19 +281,6 @@ export class UserService {
     }
   }
 
-  /**
-   * Verifica se um usuário está bloqueado
-   */
-  static async isUserBlocked(userId: string): Promise<boolean> {
-    try {
-      const { data: user, error } = await supabase.auth.admin.getUserById(userId);
-      
-      if (error) throw error;
-      
-      return user.user?.user_metadata?.blocked === true;
-    } catch (error) {
-      console.error('Erro ao verificar status de bloqueio do usuário:', error);
-      return false;
-    }
-  }
+  // Status de bloqueio exige consulta administrativa verificada no servidor.
+
 }
