@@ -348,3 +348,15 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - A implementação final da branch também espera o carregamento de sessão/permissão em `/admin` e não registra o objeto de usuário no console.
 - `node scripts/test-admin-auth-static.mjs` no checkout isolado após o revert: **39/39 PASS**, checkout SHA `42ae517b36cfe7a908cb0bef3a6ef0fbcfb97e64`.
 - **Gate pendente:** build `npm run build` com ambiente público oficial em release isolado executado pelo procedimento administrativo fora do broker limitado, staging smoke, PR merge/deploy controlado com backup, smoke real e E2E autenticado. Nenhum merge/deploy foi realizado.
+
+## 2026-11-16 — PR #8 efetivamente publicada no site institucional
+
+- Responsável autorizou a continuidade do fluxo de publicação e compilou o checkout isolado da PR #8 em `serv` com `npm run build` e configuração oficial, retornando `✓ built in 27.47s`.
+- O merge da PR #8 na `main` foi efetuado com SHA **`7a15951bf2a2649aabede0de89fa54247311f63a`**. A árvore Git do commit de merge coincidiu com a árvore do commit compilado `13e8fe3e26b3dbc73c37235b4c2749a46600c8b4`.
+- Smoke em staging, antes da publicação: **7 rotas HTTP 200** (`/`, `/login`, `/register`, `/admin`, `/admin/users`, `/studio`, `/catalogos`) e **3 HTTP 404** (`/admin/make-admin`, `/admin/init-profiles`, `/debug-user`), todas conforme esperado.
+- O responsável executou `bash /opt/wandora/ops-workspace/deploy-prorevest-pr8-20261116.sh` como root e retornou log **`=== DEPLOY SUCCESS ===`**, SHA `7a15951bf2a2649aabede0de89fa54247311f63a`, processo PM2 `prorevest-app` online.
+- Backup preservado: `/opt/wandora/ops-workspace/prorevest-deploy-backups/20261116-183307-pr8-7a15951bf2a2649aabede0de89fa54247311f63a`.
+- Smoke público pós-deploy reportado: **9/9 HTTP 200** (`/`, `/blog`, `/studio`, `/paleta-cores`, `/login`, `/register`, `/admin`, `/admin/users`, `/catalogos`) e **3/3 HTTP 404** nas rotas legadas `/admin/make-admin`, `/admin/init-profiles`, `/debug-user`.
+- O `MODULE_NOT_FOUND` envolvendo `node_modules.failed-pr3-*` foi visto num build anterior da pasta de produção, mas **o build final no checkout isolado concluiu com sucesso**; não assumir que esse diretório residual foi limpo ou que não há avisos.
+- **PENDENTE:** E2E autenticado (novo cadastro + confirmação de email + login; papéis admin e comum; leitura de 18 perfis; proteção de `role`; fluxo Studio). Smoke HTTP 200 e disponibilidade do PM2 não validam autorização, dados do painel ou cadastros reais.
+- Documentação pós-deploy foi atualizada diretamente na `main` em commits posteriores; esses commits documentais **não alteram o SHA do código que foi implantado**. Não atualizar a VPS com esses commits sem novo processo.
