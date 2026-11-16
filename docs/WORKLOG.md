@@ -325,3 +325,11 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Criado `docs/sql/AUTH_PROFILE_EXISTING_FUNCTION_INSPECT_READ_ONLY.sql`: consulta única somente leitura que devolve assinatura, definição, owner, SECURITY DEFINER, `search_path`, privilégios EXECUTE, gatilhos não internos em `auth.users` e quatro contagens agregadas.
 - **Bloqueio ativo:** não repetir a etapa 2, não usar `DROP FUNCTION` nem `CREATE OR REPLACE`, sem revisar essa função e o estado dos triggers. Aguardar resultado da consulta para preparar continuação segura.
 - Etapa 1 de restrição de UPDATE em `role` continua com pós-condições confirmadas pelo responsável; PR #8 Draft, sem merge/deploy.
+
+## 2026-11-16 — Etapa 2 reconciliada: trigger presente e Auth/Profiles 18/18
+
+- O responsável enviou resultado read-only do banco oficial após P0001: função `prorevest_create_auth_profile()` existente como `SECURITY DEFINER`, `search_path=""`, dono `postgres`, `EXECUTE` negado a `anon` e `authenticated`; corpo correspondente ao SQL proposto, com `ON CONFLICT (id) DO NOTHING`.
+- Gatilho `prorevest_profile_after_auth_insert` já está instalado e habilitado (`O`), `AFTER INSERT ON auth.users FOR EACH ROW`, associado à função.
+- Contagens oficiais informadas: **18 contas Auth, 18 perfis, 0 contas sem perfil, 0 perfis órfãos**.
+- O erro P0001 indica apenas a guarda de não sobrescrita; a origem/ordem de instalação da função/gatilho não é identificável nos resultados. Não aplicar outro DDL/backfill por conta do erro.
+- Dados reconciliados no banco. **Ainda não comprovados:** cadastro novo E2E, RLS/visibilidade para uma sessão administrativa e uma comum, negação de UPDATE role na API, build minificado com variáveis reais, merge/deploy. Produção web não alterada.
