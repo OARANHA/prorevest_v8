@@ -234,3 +234,15 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Registrada pendência P0 separada sobre operações `supabase.auth.admin` no frontend e log de senha temporária; não alteradas nesta branch.
 - **Verificações executadas:** revisão de diff dos sete commits; transpilação TypeScript/TSX dos cinco arquivos alterados sem erros; verificação de tipos focada com TypeScript (`--noEmit`, `vite/client`) concluída com exit 0 em clone isolado no workspace.
 - **Ainda pendente:** build completo, validação real de Supabase/RLS, E2E no navegador e aprovação explícita para merge/deploy. Nenhum merge, deploy ou alteração em produção.
+
+## 2026-11-16 — Continuação da correção do painel Admin (PR #8 Draft, sem deploy)
+
+- Revalidada a base `main` (`4b75a7d`) e a PR #8 (`fix/admin-dashboard-real-metrics-20261116`), sem merge nem modificação de produção.
+- `UserService.getAllUsers` agora pagina `profiles` em lotes de 500, diferencia e-mail ausente (null) de usuário inexistente, não usa conta demo e propaga erro de consulta. Perfis permanecem limitados pela RLS.
+- A tela `/admin/users` não afirma status de Auth/último login sem fonte verificada; removeu controles administrativos de bloquear/desbloquear/redefinir senha, que dependiam de `supabase.auth.admin` no frontend. Os métodos inseguros e log de senha temporária foram excluídos do serviço.
+- Removidos paginação sem ação e contadores incorretos de `/admin/users` e `/admin/quotes`; o cabeçalho administrativo não exibe mais três notificações fictícias e indica sessão ativa em vez de saúde do sistema.
+- Criado `docs/ADMIN_DATA_AUDIT.md` com SQL exclusivamente de leitura para comparar `auth.users` com `public.profiles` no projeto oficial, sem listar dados pessoais.
+- Verificação focada TypeScript dos módulos admin antes das últimas correções: exit 0. `npm ci` em clone isolado com cache limpo instalou 751 pacotes; tentativa de build minificado perdeu a sessão do executor antes do resultado final.
+- Build cliente+SSR **sem minificação** em clone isolado, com variáveis Supabase sintéticas: exit 0. Smoke HTTP local de Home e quatro rotas admin (`/admin`, `/admin/users`, `/admin/quotes`, `/admin/reports`): 5/5 HTTP 200. Servidor local encerrado.
+- **PENDENTE/BLOQUEIO:** obter contagens reais do Supabase oficial, verificar RLS/autorização, rodar build minificado com variáveis públicas oficiais e testar fluxos E2E autenticados. O teste sintético não valida acesso ou registros reais.
+- PR #8 permanece rascunho. Não realizar merge ou deploy sem aprovação explícita.
