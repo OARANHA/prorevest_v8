@@ -303,3 +303,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Migração `PROFILE_ROLE_LOCKDOWN_REVIEW_ONLY.sql` agora também restringe explicitamente a policy de UPDATE do próprio perfil com `TO authenticated`, `USING (auth.uid()=id)` e `WITH CHECK (auth.uid()=id)`.
 - Testes em clone isolado da branch após alterações: `node scripts/test-admin-auth-static.mjs`: **33 verificações PASS**; TypeScript dirigido a hooks/Auth/Profile/Admin: **0 diagnósticos, exit 0**. Migrações SQL verificadas somente por invariantes estáticos; não houve execução em PostgreSQL do projeto.
 - As duas migrações permanecem pendentes de execução/validação pelo responsável no projeto Supabase oficial, em ordem obrigatória: bloqueio de role → trigger/backfill.
+
+## 2026-11-16 — Etapa 1 SQL aplicada e confirmada pelo responsável
+
+- Resultado informado do SQL oficial de lockdown: `authenticated_update_geral=false`, `authenticated_update_role=false`, `anon_update_role=false`, `authenticated_update_nome=true`, `authenticated_update_empresa=true`, `config_is_admin_user=[\"search_path=\\\"\\\"\"]`.
+- A pós-condição esperada da restrição de papel foi atendida segundo saída do banco. Ainda não houve E2E autenticado com contas admin/normal após a alteração.
+- Identificada incompatibilidade na guarda do SQL de sincronização: a comparação `'search_path=' = any(p.proconfig)` não reconhecia `search_path=\"\"`. Atualizada a guarda para normalizar aspas antes da comparação e adicionado teste estático de regressão.
+- **Etapa 2 ainda não executada**: trigger `auth.users` e backfill de contas sem perfil. A PR #8 permanece Draft, sem merge/deploy.
