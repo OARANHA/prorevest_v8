@@ -102,14 +102,20 @@ export class BlogService {
     return this.getBlogPosts('published');
   }
 
-  static async getBlogPostBySlug(slug: string, client?: SupabaseClient): Promise<BlogPost | null> {
+  static async getBlogPostBySlug(
+    slug: string,
+    client?: SupabaseClient,
+    options?: { publishedOnly?: boolean },
+  ): Promise<BlogPost | null> {
     try {
       const supabaseClient = client || checkSupabaseConfig();
-      const { data, error } = await supabaseClient
+      let query = supabaseClient
         .from('blog_posts')
         .select('*')
-        .eq('slug', slug)
-        .single();
+        .eq('slug', slug);
+      // Apenas o loader público deve impor published; o editor administra rascunhos.
+      if (options?.publishedOnly) query = query.eq('status', 'published');
+      const { data, error } = await query.maybeSingle();
 
       if (error) throw error;
       return data || null;

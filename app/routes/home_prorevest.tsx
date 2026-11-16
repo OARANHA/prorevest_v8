@@ -206,186 +206,6 @@ const AboutSection = () => {
   );
 };
 
-// Componente ProductsSection
-const ProductsSection = ({ featuredProducts }: { featuredProducts: any[] }) => {
-  const [activeCategory, setActiveCategory] = useState("Todos");
-  const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);
-  
-  const categories = [
-    { name: "Todos", gradient: "from-gray-500 to-gray-600" },
-    { name: "Acrílicas", gradient: "from-blue-500 to-cyan-500" },
-    { name: "Esmaltes", gradient: "from-purple-500 to-pink-500" },
-    { name: "Texturizadas", gradient: "from-green-500 to-emerald-500" },
-    { name: "Especiais", gradient: "from-orange-500 to-amber-500" }
-  ];
-
-  return (
-    <section id="produtos" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-full mb-6 shadow-lg">
-            <i className="ri-palette-line text-xl mr-3"></i>
-            <span className="font-bold text-lg">PRODUTOS EM DESTAQUE</span>
-          </div>
-          <h2 className="text-4xl md:text-6xl font-light text-gray-900 mb-6">
-            Tintas em <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">Destaque</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4">
-            Conheça nossa seleção de tintas mais populares entre nossos clientes
-          </p>
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-            Descubra nossa linha completa de tintas com tecnologia de ponta e formulações inovadoras
-          </p>
-        </div>
-        
-        {/* Categorias com design moderno */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {categories.map((category) => (
-            <button
-              key={category.name}
-              className={`group relative px-8 py-4 rounded-2xl transition-all duration-500 whitespace-nowrap cursor-pointer transform hover:scale-105 ${
-                activeCategory === category.name 
-                  ? 'shadow-2xl scale-105' 
-                  : 'shadow-lg hover:shadow-xl'
-              }`}
-              onClick={() => setActiveCategory(category.name)}
-            >
-              <div className={`absolute inset-0 bg-gradient-to-r ${category.gradient} rounded-2xl`}></div>
-              <div className={`absolute inset-0 bg-white rounded-2xl transition-all duration-300 ${
-                activeCategory === category.name ? 'opacity-0' : 'opacity-90 group-hover:opacity-0'
-              }`}></div>
-              <span className={`relative z-10 font-semibold transition-colors duration-300 ${
-                activeCategory === category.name ? 'text-white' : 'text-gray-700'
-              }`}>
-                {category.name}
-              </span>
-            </button>
-          ))}
-        </div>
-        
-        {/* Cards de produtos com design vibrante */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {featuredProducts.length > 0 ? featuredProducts.map((product) => (
-            <div 
-              key={product.id} 
-              className="group relative cursor-pointer"
-              onMouseEnter={() => setHoveredProduct(product.id)}
-              onMouseLeave={() => setHoveredProduct(null)}
-            >
-              {/* Card com gradiente sutil */}
-              <div className={`bg-gradient-to-br ${product.bgLight || 'from-blue-50 to-cyan-50'} p-1 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3`}>
-                <div className="bg-white rounded-3xl overflow-hidden">
-                  {/* Badge de destaque */}
-                  <div className="absolute top-4 left-4 z-20">
-                    <div className={`bg-gradient-to-r ${product.gradient || 'from-blue-500 to-cyan-500'} text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg`}>
-                      Premium
-                    </div>
-                  </div>
-
-                  {/* Botões de ação que aparecem no hover */}
-                  <div className={`absolute top-4 right-4 z-20 flex flex-col space-y-2 transition-all duration-500 ${
-                    hoveredProduct === product.id ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
-                  }`}>
-                    <button className="p-3 bg-white rounded-full shadow-lg hover:bg-white transition-all duration-300 hover:scale-110">
-                      <i className="ri-heart-line text-gray-700 hover:text-red-500 transition-colors"></i>
-                    </button>
-                    <button className="p-3 bg-white rounded-full shadow-lg hover:bg-white transition-all duration-300 hover:scale-110">
-                      <i className="ri-search-line text-gray-700 hover:text-blue-500 transition-colors"></i>
-                    </button>
-                  </div>
-                  
-                  <div className="relative overflow-hidden">
-                    <img 
-                      src={product.image} 
-                      alt={product.name} 
-                      className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    
-                    {/* Overlay com informações que aparece no hover */}
-                    <div className={`absolute inset-0 bg-gradient-to-t ${product.gradient || 'from-blue-500 to-cyan-500'} transition-all duration-500 ${
-                      hoveredProduct === product.id ? 'opacity-90' : 'opacity-0'
-                    }`}>
-                      <div className={`absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 transform ${
-                        hoveredProduct === product.id ? 'translate-y-0' : 'translate-y-full'
-                      }`}>
-                        <h4 className="text-2xl font-bold mb-3">{product.name}</h4>
-                        <div className="space-y-2 mb-4">
-                          {product.features && product.features.map((feature: string, idx: number) => (
-                            <div key={idx} className="flex items-center">
-                              <i className="ri-check-line text-lg mr-2"></i>
-                              <span className="text-sm">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                        <Link to={`/produto/${product.slug}`}>
-                          <button className="w-full bg-white text-gray-900 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
-                            Ver Detalhes
-                          </button>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-2xl font-light text-gray-900 group-hover:text-gray-800 transition-colors">
-                        {product.name}
-                      </h3>
-                      <div className={`w-12 h-12 bg-gradient-to-r ${product.gradient || 'from-blue-500 to-cyan-500'} rounded-xl flex items-center justify-center shadow-md`}>
-                        <i className="ri-star-fill text-white"></i>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <p className={`text-lg font-medium text-gray-600`}>
-                        Consulte preço
-                      </p>
-                      <div className="flex items-center space-x-1">
-                        {[...Array(5)].map((_, i) => (
-                          <i key={i} className="ri-star-fill text-yellow-400 text-sm"></i>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )) : (
-            <div className="col-span-full text-center py-12">
-              <p className="text-gray-500 text-lg">Nenhum produto em destaque encontrado no momento.</p>
-              <Link to="/catalogo" className="mt-4 inline-block bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors">
-                Ver todos os produtos
-              </Link>
-            </div>
-          )}
-        </div>
-        
-        {/* CTA Final com design vibrante */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-white shadow-2xl overflow-hidden relative">
-            {/* Elementos decorativos */}
-            <div className="absolute top-10 right-10 w-20 h-20 bg-white/20 rounded-full animate-pulse"></div>
-            <div className="absolute bottom-10 left-10 w-16 h-16 bg-white/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-            
-            <div className="relative z-10">
-              <h3 className="text-3xl font-light mb-4">Explore Nossa Coleção Completa</h3>
-              <p className="text-xl mb-8 opacity-90">
-                Mais de 200 produtos disponíveis para transformar seu espaço
-              </p>
-              <Link to="/catalogo">
-                <button className="bg-white text-purple-600 px-10 py-4 rounded-2xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl transform hover:scale-105 text-lg">
-                  Ver Catálogo Completo
-                  <i className="ri-arrow-right-line ml-2"></i>
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // Componente ColorSection - Versão Melhorada
 const ColorSection = () => {
   const colorPalettes: ColorPalette[] = [
@@ -1060,103 +880,37 @@ const CACHE_DURATION = 5 * 60 * 1000; // 5 minutos
 // Componente Principal
 const ProrevestApp = () => {
   const [featuredProducts, setFeaturedProducts] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
 
-  // Carregar produtos em destaque do Supabase
   useEffect(() => {
-    let isMounted = true;
-
+    let active = true;
     const loadFeaturedProducts = async () => {
+      const now = Date.now();
+      if (productsCache && now - productsCache.timestamp < CACHE_DURATION) {
+        if (active) setFeaturedProducts(productsCache.data);
+        return;
+      }
       try {
-        // Verificar se há dados em cache válidos
-        const now = Date.now();
-        if (productsCache && (now - productsCache.timestamp) < CACHE_DURATION) {
-          if (isMounted) {
-            setFeaturedProducts(productsCache.data);
-            setLoading(false);
-          }
-          return;
-        }
-
-        setLoading(true);
         const { data, error } = await supabase
           .from('products')
-          .select(`
-            *,
-            categories!inner(name),
-            finishes!inner(name),
-            product_variants(
-              id,
-              image_url,
-              colors!inner(id, name, hex_code)
-            )
-          `)
+          .select('id,name,slug,description,image_url,is_featured,categories(name),finishes(name)')
           .eq('is_featured', true)
           .eq('is_archived', false)
+          .order('name')
           .limit(4);
 
-        if (!isMounted) return; // Evitar atualização de estado se componente foi desmontado
-
-        if (error) {
-          console.error('Erro ao carregar produtos em destaque:', error);
-          // Fallback para produtos estáticos em caso de erro
-          const fallbackProducts = [
-            {
-              id: "1",
-              name: "Tinta Acrílica Premium",
-              slug: "tinta-acrilica-premium",
-              description: "Tinta acrílica de alta qualidade para paredes internas",
-              image_url: "https://images.unsplash.com/photo-1580533826055-22ccda8309c3?auto=format&fit=crop&w=400&q=80",
-              categories: { name: "Acrílica" },
-              finishes: { name: "Fosco" },
-              product_variants: [{ colors: { name: "Branco", hex_code: "#FFFFFF" } }],
-              price: 99.90,
-              is_featured: true,
-              rating: 4.5,
-              reviews: 120
-            },
-            {
-              id: "2",
-              name: "Esmalte Sintético",
-              slug: "esmalte-sintetico",
-              description: "Esmalte sintético com acabamento brilhante",
-              image_url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80",
-              categories: { name: "Esmalte" },
-              finishes: { name: "Brilhante" },
-              product_variants: [{ colors: { name: "Preto", hex_code: "#000000" } }],
-              price: 129.90,
-              is_featured: true,
-              rating: 4.8,
-              reviews: 95
-            }
-          ];
-          setFeaturedProducts(fallbackProducts);
-          // Não armazenar em cache dados de fallback
-        } else {
-          const validData = data || [];
-          setFeaturedProducts(validData);
-          // Armazenar em cache apenas dados válidos
-          productsCache = {
-            data: validData,
-            timestamp: now
-          };
-        }
-      } catch (err) {
-        if (!isMounted) return;
-        console.error('Erro inesperado:', err);
-      } finally {
-        if (isMounted) {
-          setLoading(false);
-        }
+        if (error) throw error;
+        if (!active) return;
+        const confirmed = data || [];
+        setFeaturedProducts(confirmed);
+        productsCache = { data: confirmed, timestamp: now };
+      } catch (error) {
+        console.error('Falha ao consultar produtos reais em destaque:', error);
+        if (active) setFeaturedProducts([]);
       }
     };
-
-    loadFeaturedProducts();
-
-    return () => {
-      isMounted = false; // Cleanup para evitar memory leaks
-    };
-  }, []); // Dependências vazias - só executa uma vez na montagem
+    void loadFeaturedProducts();
+    return () => { active = false; };
+  }, []);
 
   useEffect(() => {
     // Rolar suavemente para âncoras
@@ -1199,29 +953,17 @@ const ProrevestApp = () => {
     };
   }, []);
 
-  // Função para converter produtos do banco para o formato esperado pelo FeaturedProducts
-  const convertProductForFeatured = (product: any) => {
-    const firstColor = product.product_variants?.[0]?.colors;
-    
-    return {
-      id: product.id,
-      name: product.name,
-      slug: product.slug || product.id,
-      description: product.description || '',
-      image: product.image_url || 
-            product.product_variants?.[0]?.image_url || 
-            "https://images.unsplash.com/photo-1513519880230-81f35f6cf9c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      category: product.categories?.name || 'Produto',
-      finish: product.finishes?.name || 'Padrão',
-      color: firstColor?.name || 'Sem cor',
-      hexCode: firstColor?.hex_code || '#000000',
-      price: product.price,
-      isFeatured: product.is_featured || false,
-      rating: product.rating || 4.5,
-      reviews: product.reviews || 0,
-      badges: product.badges || (product.is_featured ? ['Destaque'] : [])
-    };
-  };
+  // Somente propriedades realmente cadastradas são apresentadas na vitrine.
+  const convertProductForFeatured = (product: any) => ({
+    id: product.id,
+    name: product.name,
+    slug: product.slug,
+    description: product.description || '',
+    image: product.image_url || undefined,
+    category: product.categories?.name || undefined,
+    finish: product.finishes?.name || undefined,
+    isFeatured: product.is_featured === true,
+  });
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-orange-50 via-white to-blue-50">
@@ -1234,7 +976,6 @@ const ProrevestApp = () => {
         products={featuredProducts.map(convertProductForFeatured)}
       />
       <AboutSection />
-      <ProductsSection featuredProducts={featuredProducts.map(convertProductForFeatured)} />
 
       {/* Calculadora Mágica */}
       <section className="py-20 bg-gradient-to-br from-orange-50 to-blue-50">

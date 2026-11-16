@@ -360,3 +360,40 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - O `MODULE_NOT_FOUND` envolvendo `node_modules.failed-pr3-*` foi visto num build anterior da pasta de produção, mas **o build final no checkout isolado concluiu com sucesso**; não assumir que esse diretório residual foi limpo ou que não há avisos.
 - **PENDENTE:** E2E autenticado (novo cadastro + confirmação de email + login; papéis admin e comum; leitura de 18 perfis; proteção de `role`; fluxo Studio). Smoke HTTP 200 e disponibilidade do PM2 não validam autorização, dados do painel ou cadastros reais.
 - Documentação pós-deploy foi atualizada diretamente na `main` em commits posteriores; esses commits documentais **não alteram o SHA do código que foi implantado**. Não atualizar a VPS com esses commits sem novo processo.
+
+## 2026-11-16 — Refatoração editorial de Blog e Produtos preparada em branch
+
+- Diagnosticados filtros de blog com `string[]` indevidamente tratados como objetos, busca local não aplicada, paginação sem filtros e fallback de post fictício. Rota de artigo podia buscar slug de rascunho e incrementava views por GET; sanitização `DOMPurify` só no cliente expunha HTML bruto no SSR.
+- Diagnosticados catálogo com filtro/slider/preços e amostras fictícias, filtro de categoria sem efeito e busca aplicada depois da paginação; detalhe de produto incluía preço, frete, reviews e produto mock, além de não filtrar arquivados na consulta pública.
+- Branch `feat/blog-products-experience-20261116` atualiza `blog.tsx`, `blog.$slug.tsx`, `catalogo.tsx`, `produto.$slug.tsx`, serviços de consulta pública e adiciona `safeBlogMarkdown.ts`. Nenhum SQL, produção ou Admin modificado.
+- A segurança de Markdown foi testada dinamicamente contra HTML bruto com `onerror`, `<script>`, URL `javascript:`, imagem `data:` e link HTTPS legítimo: **PASS**.
+- `node scripts/test-blog-products-static.mjs`: **30 PASS**. `npm run build -- --minify false` com env **sintético** em worktree isolada: **exit 0**. Smoke em porta local com env sintético: **6/6 HTTP 200** (`/`, `/blog`, `/blog?search=efeito`, `/catalogo`, `/catalogo?search=cimento`, `/catalogos`).
+- O `tsc --noEmit` global retorna erros preexistentes de múltiplas áreas. Nenhum diagnóstico reportado nas novas rotas e `safeBlogMarkdown.ts`; `blogService.ts` mantém erros preexistentes de tipos em métodos de categories/tags não usados na nova rota.
+- Documentação técnica `docs/BLOG_PRODUCTS_AUDIT.md` registra diagnóstico e critérios. PR, E2E real, conteúdo editorial, build minificado com env oficial e publicação ainda pendentes.
+
+### Ampliação de escopo: vitrine de produtos da Home
+
+- A auditoria encontrou `FeaturedProducts` e `ProductsSection` duplicando os destaques na Home, com preços, avaliações, `7 anos` e contagens `200+` sem fonte verificável, além de `fallbackProducts` inventado quando o Supabase falhava.
+- Removida `ProductsSection` duplicada, preservada âncora `#produtos` na única vitrine. `FeaturedProducts` refeito sem atributos comerciais/durabilidade/avaliação fictícios, com imagens e metadados cadastrados, e fallback apenas de navegação ao catálogo.
+- Consulta de destaque usa apenas `is_featured=true` e `is_archived=false`. Scripts de regressão expandidos a **36 verificações**. Build/testes da Home após a mudança precisam ser repetidos.
+
+### Fechamento da revisão da PR #9 — validação depois da vitrine Home
+
+- `node scripts/test-blog-products-static.mjs` após a alteração da Home: **36/36 PASS**, exit 0.
+- `tsc --noEmit` global: 86 diagnósticos, **zero** nos arquivos atualizados de Blog, catálogo, produto, Home e renderizador Markdown. Problemas globais antigos fora do escopo continuam.
+- `fetch_pr_patch` e comparação com `main`: alterações limitadas a Blog/Produtos/Home, services de leitura, testes e documentação; nenhuma linha adicionada detectada como chave privada, `service_role` ou chamada administrativa privilegiada.
+- Build e 6 smokes HTTP com env **sintético** foram concluídos antes do ajuste final da Home. A repetição do build sem minificação após a Home iniciou, mas a leitura de resultado pelo conector retornou erro interno. **Não classificar a última compilação como aprovada**.
+- PR #9 permanece **Draft**, sem merge/deploy; para produção ainda faltam build oficial/minificado com variáveis públicas corretas, smoke e E2E visual com dados reais de artigos e produtos, revisão de conteúdo legado HTML, aceite explícito do responsável.
+
+### Revisão pré-publicação: regressão de edição e prévia de rascunhos corrigida
+
+- A inspeção de referências `git grep getBlogPostBySlug` revelou que o Admin também usa o método ao editar por slug; a implementação inicial que obrigava `status=published` nesse serviço afetaria o editor.
+- Agora `BlogService.getBlogPostBySlug` permite consulta administrativa de rascunhos usando o cliente autorizado existente, enquanto `/blog/:slug` passa explicitamente `{ publishedOnly: true }`.
+- O botão de pré-visualização do Admin não redireciona mais rascunhos à URL pública; mostra prévia no próprio editor, com o mesmo renderizador Markdown seguro, mantendo rascunho no banco. Não foi adicionado acesso público a rascunhos.
+- Adicionados testes estáticos para prevenir regressão. Publicação permanece pendente do build real e smoke.
+
+## 2026-11-16 — PR #9, revisão funcional final antes de publicação
+
+- Constatada e corrigida regressão potencial entre consulta pública `publishedOnly` e edição Admin de rascunhos. A prévia agora permanece no editor administrativo (sem URL pública), com Markdown seguro.
+- **41/41 regressões estáticas Blog/Produtos PASS**, **39/39 Admin/Auth PASS**, build `--minify false` sintético **exit 0** e staging sintético **8/8 HTTP 200** após o ajuste.
+- Revisão de diff sem segredos/elevação privilegiada adicionados. Build **minificado oficial** e smoke com registros reais continuam pendentes, como gate pré-deploy.

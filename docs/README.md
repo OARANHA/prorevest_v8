@@ -12,6 +12,10 @@ Esta pasta é a fonte de verdade operacional do projeto `prorevest_v8`.
 6. `WORKLOG.md` — o que foi feito recentemente.
 7. `SESSION_START.md` — checklist para retomar trabalho sem depender de chat anterior.
 
+## Auditorias por área
+
+- `BLOG_PRODUCTS_AUDIT.md` — diagnóstico, melhorias e validações de Blog e Produtos (branch em revisão, não publicada).
+
 ## Regra de manutenção
 
 A documentação deve ser atualizada no mesmo ciclo da mudança que altera o estado do projeto.

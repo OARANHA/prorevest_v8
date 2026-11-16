@@ -1,596 +1,242 @@
-import type { MetaFunction } from "react-router-dom";
-import type { LoaderFunctionArgs } from "react-router-dom";
-import { Link, useLoaderData, useNavigate, useSearchParams } from "react-router-dom";
-import { useState } from "react";
-import { Search, Grid, List, SlidersHorizontal, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Header } from '../components/Header';
-import { Layout } from '../components/Layout';
-import { ProductService, type ProductWithDetails } from '../services/productService';
-import { SortDropdown } from '../components/SortDropdown';
-import { ProductGrid } from '../components/ProductGrid';
-import InstagramSection from '../components/InstagramSection';
+import type { LoaderFunctionArgs, MetaFunction } from "react-router-dom";
+import { Form, Link, useLoaderData, useNavigation } from "react-router-dom";
+import { ArrowRight, BookOpen, Layers3, Search, SlidersHorizontal, Sparkles } from "lucide-react";
+import { supabase } from "../lib/supabaseClient";
 
-interface PaintType {
+type CatalogProduct = {
   id: string;
   name: string;
-  description: string;
-  applications: string[];
-  features: string[];
-  coverage: string;
-  drying_time: string;
-  price_per_liter: number;
-  image_url?: string;
-  category: 'primer' | 'acrylic' | 'enamel' | 'textured' | 'varnish';
-  is_featured?: boolean;
-}
-
-interface LoaderData {
-  paintTypes: PaintType[];
-  products: ProductWithDetails[];
-  productsTotal: number;
-  currentPage: number;
-  itemsPerPage: number;
-}
-
-export const meta: MetaFunction = () => {
-  return [
-    { title: "Catálogo de Produtos - Prorevest" },
-    { name: "description", content: "Explore nossa linha completa de produtos para revestimentos industriais." },
-  ];
+  slug: string;
+  description: string | null;
+  image_url: string | null;
+  is_featured: boolean;
+  categories: { name: string } | null;
+  finishes: { name: string } | null;
 };
+type CatalogOption = { id: string; name: string };
+type Filters = { search: string; category: string; finish: string; sort: string };
+type LoaderData = {
+  products: CatalogProduct[];
+  categories: CatalogOption[];
+  finishes: CatalogOption[];
+  filters: Filters;
+  currentPage: number;
+  totalPages: number;
+  total: number;
+  error: boolean;
+};
+
+const PAGE_SIZE = 12;
+
+export const meta: MetaFunction = () => [
+  { title: "Produtos e acabamentos | ProRevest" },
+  { name: "description", content: "Conheça as tintas, texturas e revestimentos ProRevest. Filtre por categoria e acabamento, consulte informações técnicas e experimente cores no Studio." },
+  { property: "og:title", content: "Catálogo de produtos ProRevest" },
+  { property: "og:type", content: "website" },
+  { tagName: "link", rel: "canonical", href: "https://prorevesttintas.com.br/catalogo" },
+];
+
+function parsePage(input: string | null): number {
+  const value = Number(input);
+  return Number.isSafeInteger(value) && value > 0 ? Math.min(value, 10000) : 1;
+}
+
+function catalogPageUrl(page: number, filters: Filters): string {
+  const query = new URLSearchParams();
+  if (filters.search) query.set("search", filters.search);
+  if (filters.category) query.set("category", filters.category);
+  if (filters.finish) query.set("finish", filters.finish);
+  if (filters.sort !== "name") query.set("sort", filters.sort);
+  if (page > 1) query.set("page", String(page));
+  const params = query.toString();
+  return params ? `/catalogo?${params}#produtos` : "/catalogo#produtos";
+}
 
 export async function loader({ request }: LoaderFunctionArgs): Promise<LoaderData> {
   const url = new URL(request.url);
-  const page = parseInt(url.searchParams.get('page') || '1');
-  const itemsPerPage = 12;
-  const offset = (page - 1) * itemsPerPage;
-
-  // Dados estáticos dos tipos de tinta
-  const paintTypes: PaintType[] = [
-    {
-      id: "primer",
-      name: "Prime/Selador",
-      description: "Base preparatória que garante aderência e uniformidade",
-      image_url: "/images/products/primer.jpg",
-      category: "primer",
-      is_featured: true,
-      features: ["Excelente aderência", "Secagem rápida", "Fácil aplicação"],
-      applications: ["Paredes internas", "Madeira", "Metal"],
-      coverage: "12-15 m²/L",
-      drying_time: "2-4 horas",
-      price_per_liter: 45.90
-    },
-    {
-      id: "acrilica",
-      name: "Tinta Acrílica",
-      description: "Tinta à base de água com alta durabilidade",
-      image_url: "/images/products/acrilica.jpg",
-      category: "acrylic",
-      is_featured: true,
-      features: ["Resistente ao tempo", "Lavável", "Baixo odor"],
-      applications: ["Paredes externas", "Paredes internas", "Fachadas"],
-      coverage: "10-12 m²/L",
-      drying_time: "1-2 horas",
-      price_per_liter: 89.90
-    },
-    {
-      id: "esmalte",
-      name: "Esmalte Sintético",
-      description: "Acabamento brilhante e resistente",
-      image_url: "/images/products/esmalte.jpg",
-      category: "enamel",
-      price_per_liter: 95.90,
-      is_featured: true,
-      features: ["Alto brilho", "Resistente", "Lavável"],
-      applications: ["Madeira", "Metal", "Portas", "Janelas"],
-      coverage: "8-10 m²/L",
-      drying_time: "4-6 horas"
-    },
-    {
-      id: "texturizada",
-      name: "Tinta Texturizada",
-      description: "Cria efeitos decorativos únicos",
-      image_url: "/images/products/texturizada.jpg",
-      category: "textured",
-      price_per_liter: 120.90,
-      is_featured: false,
-      features: ["Efeito textura", "Disfarça imperfeições", "Decorativa"],
-      applications: ["Paredes internas", "Paredes externas", "Decoração"],
-      coverage: "6-8 m²/L",
-      drying_time: "3-5 horas"
-    },
-    {
-      id: "verniz",
-      name: "Verniz",
-      description: "Proteção transparente para madeira",
-      image_url: "/images/products/verniz.jpg",
-      category: "varnish",
-      price_per_liter: 75.90,
-      is_featured: false,
-      features: ["Transparente", "Proteção UV", "Realça a madeira"],
-      applications: ["Madeira", "Móveis", "Pisos"],
-      coverage: "12-15 m²/L",
-      drying_time: "2-4 horas"
-    }
-  ];
-
-  let products: any[] = [];
-  let productsTotal = 0;
+  const filters: Filters = {
+    search: (url.searchParams.get("search") || "").trim().slice(0, 80),
+    category: (url.searchParams.get("category") || "").trim().slice(0, 80),
+    finish: (url.searchParams.get("finish") || "").trim().slice(0, 80),
+    sort: url.searchParams.get("sort") === "featured" ? "featured" : "name",
+  };
+  const requestedPage = parsePage(url.searchParams.get("page"));
 
   try {
-    console.log('🔍 Carregando produtos no catálogo...');
-    const productService = new ProductService();
-    
-    const productsResult = await productService.getProductsWithTotal({
-      limit: itemsPerPage,
-      offset: offset
-    });
-    products = productsResult.products;
-    productsTotal = productsResult.total;
-    
-    console.log('✅ Produtos carregados:', {
-      products: products.length,
-      total: productsTotal,
-      page,
-      offset
-    });
-  } catch (error) {
-    console.error('❌ Erro ao carregar dados do banco de dados:', error);
-    // Retorna arrays vazios se houver erro na conexão
-    products = [];
-    productsTotal = 0;
-  }
+    if (!supabase) throw new Error("Supabase indisponível");
 
-  return {
-    paintTypes,
-    products,
-    productsTotal,
-    currentPage: page,
-    itemsPerPage
-  };
+    const [categoriesResult, finishesResult] = await Promise.all([
+      supabase.from("categories").select("id,name").eq("is_archived", false).order("name"),
+      supabase.from("finishes").select("id,name").eq("is_archived", false).order("name"),
+    ]);
+    if (categoriesResult.error) throw categoriesResult.error;
+    if (finishesResult.error) throw finishesResult.error;
+
+    const applyFilters = (query: any) => {
+      let result = query.eq("is_archived", false);
+      if (filters.category) result = result.eq("category_id", filters.category);
+      if (filters.finish) result = result.eq("finish_id", filters.finish);
+      if (filters.search) result = result.ilike("name", `%${filters.search.replace(/[%_]/g, "\\$&")}%`);
+      return result;
+    };
+
+    const { count, error: countError } = await applyFilters(
+      supabase.from("products").select("id", { count: "exact", head: true }),
+    );
+    if (countError) throw countError;
+
+    const total = count ?? 0;
+    const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    const currentPage = Math.min(requestedPage, totalPages);
+
+    let productQuery = applyFilters(
+      supabase.from("products").select("id,name,slug,description,image_url,is_featured,categories(name),finishes(name)"),
+    );
+    if (filters.sort === "featured") productQuery = productQuery.order("is_featured", { ascending: false });
+    productQuery = productQuery.order("name", { ascending: true })
+      .range((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE - 1);
+    const { data, error } = await productQuery;
+    if (error) throw error;
+
+    return {
+      products: (data || []) as unknown as CatalogProduct[],
+      categories: (categoriesResult.data || []) as CatalogOption[],
+      finishes: (finishesResult.data || []) as CatalogOption[],
+      filters, currentPage, totalPages, total, error: false,
+    };
+  } catch (error) {
+    console.error("Falha ao carregar o catálogo público:", error);
+    return { products: [], categories: [], finishes: [], filters, currentPage: 1, totalPages: 1, total: 0, error: true };
+  }
 }
 
-const HeroSection = () => {
+function ProductImage({ product }: { product: CatalogProduct }) {
   return (
-    <section className="relative min-h-[70vh] flex items-center overflow-hidden pt-20">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{backgroundImage: "url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1920&q=80')"}}
-      >
-        <div className="absolute inset-0 bg-black/40"></div>
+    <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-stone-200 via-stone-100 to-slate-100">
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-slate-400">
+        <Layers3 className="h-11 w-11" aria-hidden="true" />
+        <span className="text-xs">Imagem não disponível</span>
       </div>
-      
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
-        <div className="text-center">
-          <h1 className="text-5xl md:text-7xl font-normal text-white mb-6 leading-tight">
-            Nosso <span className="text-orange-400">Catálogo</span><br/>
-            Completo
-          </h1>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Descubra nossa extensa coleção de produtos para revestimentos industriais
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/studio">
-              <button className="bg-orange-600 text-white px-8 py-4 rounded-lg hover:bg-orange-700 transition-all duration-300 text-lg">
-                Acesse StudioProRevest
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const FilterSidebar = ({ 
-  searchTerm, 
-  setSearchTerm, 
-  selectedCategory, 
-  setSelectedCategory, 
-  priceRange, 
-  setPriceRange, 
-  clearFilters, 
-  activeFiltersCount
-}: any) => {
-  const categories = [
-    { id: "primer", name: "Prime/Selador" },
-    { id: "acrylic", name: "Tinta Acrílica" },
-    { id: "enamel", name: "Tinta Esmalte" },
-    { id: "textured", name: "Tinta Texturizada" },
-    { id: "varnish", name: "Verniz" }
-  ];
-
-  return (
-    <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
-      <h3 className="text-2xl font-normal text-gray-900 mb-8">Filtros</h3>
-      
-      <div className="mb-8">
-        <label htmlFor="catalog-search" className="block text-sm font-medium text-gray-700 mb-3">Buscar Produtos</label>
-        <div className="relative">
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-          <input
-            id="catalog-search"
-            name="search"
-            type="text"
-            placeholder="Digite o nome do produto..."
-            className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </div>
-      </div>
-
-      <div className="mb-8">
-        <label htmlFor="catalog-category" className="block text-sm font-medium text-gray-700 mb-3">Categoria</label>
-        <select 
-          id="catalog-category"
-          name="category"
-          className="w-full p-3 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-300"
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-        >
-          <option value="Todos">Todas as categorias</option>
-          {
-            [
-              { id: "primer", name: "Prime/Selador" },
-              { id: "acrylic", name: "Tinta Acrílica" },
-              { id: "enamel", name: "Tinta Esmalte" },
-              { id: "textured", name: "Tinta Texturizada" },
-              { id: "varnish", name: "Verniz" }
-            ].map(category => (
-              <option key={category.id} value={category.name}>{category.name}</option>
-            ))
-          }
-        </select>
-      </div>
-
-      <div className="mb-8">
-        <label htmlFor="price-per-liter" className="block text-sm font-medium text-gray-700 mb-3">
-          Preço por Litro: R$ {priceRange[0]} - R$ {priceRange[1]}
-        </label>
-        <input
-          id="price-per-liter"
-          name="pricePerLiter"
-          type="range"
-          min="0"
-          max="100"
-          step="5"
-          value={priceRange[1]}
-          onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
-          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
-        />
-      </div>
-
-      {activeFiltersCount > 0 && (
-        <button
-          onClick={clearFilters}
-          className="w-full bg-gray-100 text-gray-700 py-3 px-6 rounded-xl hover:bg-gray-200 transition-all duration-300 font-medium"
-        >
-          Limpar Filtros ({activeFiltersCount})
-        </button>
-      )}
+      {product.image_url && <img src={product.image_url} alt={`Produto ${product.name}`} loading="lazy" className="relative h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" onError={(event) => { event.currentTarget.style.display = "none"; }} />}
+      {product.is_featured && <span className="absolute left-4 top-4 rounded-full bg-orange-600 px-3 py-1 text-xs font-semibold text-white shadow">Destaque</span>}
     </div>
   );
-};
-
-const ProductCard = ({ paintType }: { paintType: PaintType }) => {
-  return (
-    <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group">
-      <div className="aspect-[4/3] overflow-hidden">
-        <img 
-          src={paintType.image_url} 
-          alt={paintType.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-      </div>
-      
-      <div className="p-6">
-        <div className="flex items-center justify-between mb-3">
-          <h3 className="text-xl font-semibold text-gray-900">{paintType.name}</h3>
-          {paintType.is_featured && (
-            <span className="bg-orange-100 text-orange-600 text-xs font-medium px-2 py-1 rounded-full">
-              Destaque
-            </span>
-          )}
-        </div>
-        
-        <p className="text-gray-600 mb-4 line-clamp-2">{paintType.description}</p>
-        
-        <div className="space-y-3 mb-4">
-          <div className="flex items-center text-sm text-gray-500">
-            <span className="font-medium">Rendimento:</span>
-            <span className="ml-2">{paintType.coverage}</span>
-          </div>
-          <div className="flex items-center text-sm text-gray-500">
-            <span className="font-medium">Secagem:</span>
-            <span className="ml-2">{paintType.drying_time}</span>
-          </div>
-        </div>
-        
-        <div className="flex flex-wrap gap-1 mb-4">
-          {paintType.features.slice(0, 3).map((feature, index) => (
-            <span key={index} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">
-              {feature}
-            </span>
-          ))}
-        </div>
-        
-        <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-orange-600">
-            R$ {paintType.price_per_liter.toFixed(2)}
-            <span className="text-sm font-normal text-gray-500">/L</span>
-          </div>
-          
-          <Link
-            to={`/produto/${paintType.id}`}
-            className="bg-orange-600 text-white px-4 py-2 rounded-xl hover:bg-orange-700 transition-colors text-sm font-medium"
-          >
-            Ver Detalhes
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-
-const Pagination = ({ 
-  currentPage, 
-  totalItems, 
-  itemsPerPage, 
-  onPageChange 
-}: {
-  currentPage: number;
-  totalItems: number;
-  itemsPerPage: number;
-  onPageChange: (page: number) => void;
-}) => {
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
-  
-  if (totalPages <= 1) return null;
-
-  const getVisiblePages = () => {
-    const delta = 2;
-    const range = [];
-    const rangeWithDots = [];
-
-    for (let i = Math.max(2, currentPage - delta); 
-         i <= Math.min(totalPages - 1, currentPage + delta); 
-         i++) {
-      range.push(i);
-    }
-
-    if (currentPage - delta > 2) {
-      rangeWithDots.push(1, '...');
-    } else {
-      rangeWithDots.push(1);
-    }
-
-    rangeWithDots.push(...range);
-
-    if (currentPage + delta < totalPages - 1) {
-      rangeWithDots.push('...', totalPages);
-    } else {
-      rangeWithDots.push(totalPages);
-    }
-
-    return rangeWithDots;
-  };
-
-  return (
-    <div className="flex items-center justify-center space-x-2 mt-8">
-      <button
-        onClick={() => onPageChange(currentPage - 1)}
-        disabled={currentPage === 1}
-        className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        <ChevronLeft className="h-4 w-4 mr-1" />
-        Anterior
-      </button>
-
-      {getVisiblePages().map((page, index) => (
-        <button
-          key={index}
-          onClick={() => typeof page === 'number' && onPageChange(page)}
-          disabled={page === '...'}
-          className={`px-3 py-2 text-sm font-medium rounded-lg ${
-            page === currentPage
-              ? 'bg-orange-600 text-white'
-              : page === '...'
-              ? 'text-gray-400 cursor-default'
-              : 'text-gray-500 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-700'
-          }`}
-        >
-          {page}
-        </button>
-      ))}
-
-      <button
-        onClick={() => onPageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-        className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        Próxima
-        <ChevronRight className="h-4 w-4 ml-1" />
-      </button>
-    </div>
-  );
-};
+}
 
 export default function Catalogo() {
-  const { paintTypes, products, productsTotal, currentPage, itemsPerPage } = useLoaderData<LoaderData>();
-  const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  
-  // Debug: verificar dados carregados
-  console.log('🔍 Dados carregados no componente:', {
-    products: products?.length || 0,
-    productsTotal
-  });
-  
-  if (products && products.length > 0) {
-    console.log('📦 Primeiro produto no componente:', products[0]);
-  }
-  
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("Todos");
-  const [priceRange, setPriceRange] = useState([0, 100]);
-  const [sortBy, setSortBy] = useState("name");
-  const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
-  const [showFilters, setShowFilters] = useState(false);
-
-
-  // Função para navegar para uma página específica
-  const handlePageChange = (page: number) => {
-    const newSearchParams = new URLSearchParams(searchParams);
-    newSearchParams.set('page', page.toString());
-    navigate(`/catalogo?${newSearchParams.toString()}`);
-  };
-
-
-  // Filtrar produtos reais do banco de dados
-  const filteredProducts = products.filter(product => {
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.description?.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    // Removido filtro por categoria pois a propriedade não existe em ProductWithDetails
-    const matchesCategory = selectedCategory === "Todos";
-    
-    return matchesSearch && matchesCategory;
-  });
-
-
-  // Ordenar produtos reais
-  const sortedProducts = [...filteredProducts].sort((a, b) => {
-    switch (sortBy) {
-      case "name":
-        return a.name.localeCompare(b.name);
-      case "featured":
-        return (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0);
-      default:
-        return 0;
-    }
-  });
-
-  const clearFilters = () => {
-    setSearchTerm("");
-    setSelectedCategory("Todos");
-    setPriceRange([0, 100]);
-  };
-
-  const activeFiltersCount = [
-    searchTerm,
-    selectedCategory !== "Todos" ? selectedCategory : ""
-  ].filter(Boolean).length;
-
-  const featuredPaintTypes = paintTypes.filter(paintType => paintType.is_featured);
+  const { products, categories, finishes, filters, currentPage, totalPages, total, error } = useLoaderData<typeof loader>();
+  const navigation = useNavigation();
+  const hasFilters = Boolean(filters.search || filters.category || filters.finish || filters.sort !== "name");
 
   return (
-    <Layout showHeaderFooter={false}>
-      <div className="min-h-screen bg-gray-50">
-        <HeroSection />
-        
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="flex flex-col lg:flex-row gap-8">
-            <div className="lg:w-1/4">
-              <FilterSidebar 
-                searchTerm={searchTerm}
-                setSearchTerm={setSearchTerm}
-                selectedCategory={selectedCategory}
-                setSelectedCategory={setSelectedCategory}
-                priceRange={priceRange}
-                setPriceRange={setPriceRange}
-                clearFilters={clearFilters}
-                activeFiltersCount={activeFiltersCount}
-              />
-            </div>
-            
-            <div className="lg:w-3/4">
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-                <div className="flex items-center gap-4">
-                  <div>
-                    <h2 className="text-3xl font-normal text-gray-900 mb-2">
-                      Nossos Produtos
-                    </h2>
-                    <p className="text-gray-600">
-                      {sortedProducts.length} produto{sortedProducts.length !== 1 ? 's' : ''} encontrado{sortedProducts.length !== 1 ? 's' : ''}
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <SortDropdown 
-                    sortBy={sortBy} 
-                    setSortBy={setSortBy}
-                    showColors={false}
-                  />
-                  
-                  <div className="flex bg-white rounded-xl border border-gray-200 p-1">
-                    <button
-                      onClick={() => setViewMode("grid")}
-                      className={`p-2 rounded-lg transition-colors ${
-                        viewMode === "grid" 
-                          ? "bg-orange-100 text-orange-600" 
-                          : "text-gray-400 hover:text-gray-600"
-                      }`}
-                    >
-                      <Grid className="h-5 w-5" />
-                    </button>
-                    <button
-                      onClick={() => setViewMode("list")}
-                      className={`p-2 rounded-lg transition-colors ${
-                        viewMode === "list" 
-                          ? "bg-orange-100 text-orange-600" 
-                          : "text-gray-400 hover:text-gray-600"
-                      }`}
-                    >
-                      <List className="h-5 w-5" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {sortedProducts.length === 0 ? (
-                <div className="text-center py-16">
-                  <div className="text-gray-400 mb-4">
-                    <Search className="h-16 w-16 mx-auto mb-4" />
-                    <h3 className="text-xl font-medium text-gray-900 mb-2">
-                      Nenhum produto encontrado
-                    </h3>
-                    <p className="text-gray-600 mb-6">
-                      Tente ajustar os filtros ou buscar por outros termos
-                    </p>
-                    <button
-                      onClick={clearFilters}
-                      className="bg-orange-600 text-white px-6 py-3 rounded-xl hover:bg-orange-700 transition-colors"
-                    >
-                      Limpar Filtros
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <ProductGrid 
-                  products={sortedProducts}
-                  viewMode={viewMode}
-                />
-              )}
-              
-              {/* Paginação para produtos */}
-              <Pagination
-                currentPage={currentPage}
-                totalItems={productsTotal}
-                itemsPerPage={itemsPerPage}
-                onPageChange={handlePageChange}
-              />
-            </div>
+    <main className="min-h-screen bg-[#f7f5f1] text-slate-900">
+      <section className="relative overflow-hidden bg-[#152331] text-white">
+        <div className="pointer-events-none absolute -right-16 -top-28 h-80 w-80 rounded-full bg-orange-500/15 blur-3xl" />
+        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-orange-300">Materiais e acabamentos</p>
+          <h1 className="max-w-4xl text-5xl font-semibold tracking-tight sm:text-7xl">O material certo para <span className="font-serif italic font-normal text-orange-300">cada ideia.</span></h1>
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-300">Explore o catálogo ProRevest, encontre acabamentos para seu projeto e leve suas referências de cores ao Studio.</p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Link to="/studio" className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-6 py-3 font-semibold hover:bg-orange-700">Experimentar no Studio <ArrowRight className="h-4 w-4" /></Link>
+            <Link to="/catalogos" className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 font-semibold hover:bg-white/10"><BookOpen className="h-4 w-4" />Catálogos digitais PIACERI e FLUA</Link>
           </div>
         </div>
-        
-        <div className="mt-24">
-          <InstagramSection />
+      </section>
+
+      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
+        <div className="grid gap-8 lg:grid-cols-[270px_minmax(0,1fr)]">
+          <aside aria-label="Filtros de produtos" className="self-start rounded-2xl border border-[#e7e1d7] bg-white p-6 shadow-sm lg:sticky lg:top-24">
+            <h2 className="mb-6 flex items-center gap-2 text-xl font-semibold"><SlidersHorizontal className="h-5 w-5 text-orange-600" />Refine sua busca</h2>
+            <Form method="get" action="/catalogo" role="search" className="space-y-5">
+              <label className="block text-sm font-semibold text-slate-700">
+                Nome do produto
+                <span className="relative mt-2 block">
+                  <Search className="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
+                  <input type="search" name="search" key={filters.search} defaultValue={filters.search} maxLength={80} placeholder="Buscar produtos" className="w-full rounded-xl border border-slate-300 py-3 pl-10 pr-3 font-normal text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-600" />
+                </span>
+              </label>
+              <label className="block text-sm font-semibold text-slate-700">
+                Categoria
+                <select name="category" key={filters.category} defaultValue={filters.category} className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-3 py-3 font-normal text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-600">
+                  <option value="">Todas as categorias</option>
+                  {categories.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+                </select>
+              </label>
+              <label className="block text-sm font-semibold text-slate-700">
+                Acabamento
+                <select name="finish" key={filters.finish} defaultValue={filters.finish} className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-3 py-3 font-normal text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-600">
+                  <option value="">Todos os acabamentos</option>
+                  {finishes.map((f) => <option key={f.id} value={f.id}>{f.name}</option>)}
+                </select>
+              </label>
+              <label className="block text-sm font-semibold text-slate-700">
+                Ordenação
+                <select name="sort" key={filters.sort} defaultValue={filters.sort} className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-3 py-3 font-normal text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-600">
+                  <option value="name">Nome (A–Z)</option>
+                  <option value="featured">Destaques primeiro</option>
+                </select>
+              </label>
+              <button type="submit" disabled={navigation.state !== "idle"} className="w-full rounded-xl bg-orange-600 px-5 py-3 font-semibold text-white transition hover:bg-orange-700 disabled:opacity-60">{navigation.state === "idle" ? "Aplicar filtros" : "Buscando..."}</button>
+            </Form>
+            {hasFilters && <Link to="/catalogo#produtos" className="mt-5 inline-block text-sm font-semibold text-orange-700 underline underline-offset-4">Limpar filtros</Link>}
+            <p className="mt-6 border-t border-slate-200 pt-5 text-xs leading-relaxed text-slate-500">Catálogo institucional sem preços. Informações de aplicação e disponibilidade devem ser confirmadas para cada produto.</p>
+          </aside>
+
+          <section id="produtos" aria-labelledby="heading-produtos" className="min-w-0 scroll-mt-24">
+            <div className="mb-7 flex flex-wrap items-end justify-between gap-4 border-b border-slate-300 pb-6">
+              <div><p className="mb-2 text-xs font-bold uppercase tracking-[0.22em] text-orange-700">Catálogo ProRevest</p><h2 id="heading-produtos" className="text-3xl font-semibold tracking-tight sm:text-4xl">Nossos produtos</h2></div>
+              {!error && <p role="status" className="text-sm text-slate-600">{total} {total === 1 ? "produto encontrado" : "produtos encontrados"}</p>}
+            </div>
+
+            {error ? (
+              <div role="alert" className="rounded-2xl border border-amber-200 bg-white p-10 text-center">
+                <h3 className="mb-2 text-xl font-semibold">Catálogo temporariamente indisponível</h3>
+                <p className="text-slate-600">Não foi possível consultar os produtos neste momento.</p>
+                <Link to="/catalogo" className="mt-5 inline-block font-semibold text-orange-700 underline">Tentar novamente</Link>
+              </div>
+            ) : products.length === 0 ? (
+              <div className="rounded-2xl border border-slate-200 bg-white p-10 text-center">
+                <Search className="mx-auto mb-4 h-10 w-10 text-slate-400" />
+                <h3 className="mb-2 text-xl font-semibold">Nenhum produto encontrado</h3>
+                <p className="text-slate-600">Ajuste a busca ou explore o catálogo sem filtros.</p>
+                <Link to="/catalogo" className="mt-5 inline-block font-semibold text-orange-700 underline">Ver todos os produtos</Link>
+              </div>
+            ) : (
+              <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                {products.map((product) => (
+                  <article key={product.id} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#e7e1d7] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                    <Link to={`/produto/${product.slug}`} aria-label={`Conhecer ${product.name}`}>
+                      <ProductImage product={product} />
+                    </Link>
+                    <div className="flex flex-1 flex-col p-5">
+                      <p className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-orange-700">{product.categories?.name || "Revestimento ProRevest"}</p>
+                      <Link to={`/produto/${product.slug}`} className="mb-3 block"><h3 className="text-xl font-semibold leading-snug text-slate-900 group-hover:text-orange-700">{product.name}</h3></Link>
+                      {product.description && <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-slate-600">{product.description}</p>}
+                      {product.finishes?.name && <p className="mb-4 text-sm text-slate-600"><span className="font-semibold">Acabamento:</span> {product.finishes.name}</p>}
+                      <Link to={`/produto/${product.slug}`} className="mt-auto inline-flex items-center gap-2 font-semibold text-orange-700 hover:text-orange-800">Ver informações <ArrowRight className="h-4 w-4" /></Link>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+
+            {!error && totalPages > 1 && (
+              <nav aria-label="Paginação dos produtos" className="mt-10 flex flex-wrap items-center justify-center gap-2">
+                {currentPage > 1 ? <Link to={catalogPageUrl(currentPage - 1, filters)} className="rounded-lg border border-slate-300 bg-white px-4 py-2 hover:bg-orange-50">Anterior</Link> : <span className="rounded-lg border border-slate-200 px-4 py-2 text-slate-400">Anterior</span>}
+                {Array.from({ length: totalPages }, (_, i) => i + 1).filter((page) => totalPages <= 7 || page === 1 || page === totalPages || Math.abs(page - currentPage) <= 1).map((page) => (
+                  <Link key={page} aria-current={page === currentPage ? "page" : undefined} to={catalogPageUrl(page, filters)} className={`rounded-lg border px-4 py-2 ${page === currentPage ? "border-orange-600 bg-orange-600 text-white" : "border-slate-300 bg-white hover:bg-orange-50"}`}>{page}</Link>
+                ))}
+                {currentPage < totalPages ? <Link to={catalogPageUrl(currentPage + 1, filters)} className="rounded-lg border border-slate-300 bg-white px-4 py-2 hover:bg-orange-50">Próxima</Link> : <span className="rounded-lg border border-slate-200 px-4 py-2 text-slate-400">Próxima</span>}
+              </nav>
+            )}
+          </section>
         </div>
+
+        <section className="mt-16 flex flex-col items-start justify-between gap-6 rounded-3xl bg-[#162232] p-8 text-white sm:p-12 lg:flex-row lg:items-center">
+          <div className="max-w-2xl"><p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-orange-300">Do produto à aplicação</p><h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Visualize possibilidades no seu ambiente.</h2><p className="mt-4 text-slate-300">Leve uma foto do espaço ao Studio e experimente cores e efeitos ProRevest antes de decidir.</p></div>
+          <Link to="/studio" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-orange-600 px-7 py-4 font-semibold text-white hover:bg-orange-700"><Sparkles className="h-5 w-5" /> Abrir Studio</Link>
+        </section>
       </div>
-    </Layout>
+    </main>
   );
 }

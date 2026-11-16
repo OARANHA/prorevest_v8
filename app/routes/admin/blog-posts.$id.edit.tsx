@@ -7,6 +7,7 @@ import { BlogService, type BlogPost } from "../../services/blogService";
 import { supabase } from "../../lib/supabaseClient";
 import { supabaseServerClient } from "../../lib/supabaseServerClient";
 import { ImageUploadService } from "../../services/imageUploadService";
+import { renderSafeBlogMarkdown } from "../../lib/safeBlogMarkdown";
 
 export const meta: MetaFunction = ({ data }: any) => {
   return [
@@ -113,10 +114,14 @@ export async function action({ params, request }: ActionFunctionArgs) {
       const updatedPost = await BlogService.updateBlogPost(postToUpdate.id, postData, supabaseServerClient);
       return redirect('/admin/blog-posts');
     } else if (intent === 'preview') {
-      // Salvar como rascunho e redirecionar para preview
+      // Manter rascunhos privados: a prévia é exibida dentro do editor administrativo.
       postData.status = 'draft';
       const updatedPost = await BlogService.updateBlogPost(postToUpdate.id, postData, supabaseServerClient);
-      return redirect(`/blog/${updatedPost.slug}?preview=true`);
+      return { previewPost: {
+        title: updatedPost.title,
+        excerpt: updatedPost.excerpt,
+        content: updatedPost.content,
+      } };
     }
   } catch (error) {
     console.error('Error updating blog post:', error);
@@ -129,7 +134,7 @@ export async function action({ params, request }: ActionFunctionArgs) {
 
 export default function EditBlogPost() {
   const { post, categories } = useLoaderData() as { post: BlogPost; categories: string[] };
-  const actionData = useActionData() as { error?: string } | undefined;
+  const actionData = useActionData() as { error?: string; previewPost?: { title: string; excerpt: string; content: string } } | undefined;
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -290,6 +295,15 @@ export default function EditBlogPost() {
         <div className="bg-red-900/20 border border-red-700/50 rounded-lg p-6 m-8">
           <p className="text-red-400 text-lg">{actionData.error}</p>
         </div>
+      )}
+
+      {actionData?.previewPost && (
+        <section aria-label="Pré-visualização privada do artigo" className="mx-8 mt-6 rounded-2xl border border-orange-500/40 bg-white p-6 text-slate-900 shadow-xl">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-orange-700">Prévia privada — rascunho não publicado</p>
+          <h2 className="mb-3 text-3xl font-semibold">{actionData.previewPost.title}</h2>
+          {actionData.previewPost.excerpt && <p className="mb-5 text-lg text-slate-600">{actionData.previewPost.excerpt}</p>}
+          <div className="prose prose-slate max-w-none" dangerouslySetInnerHTML={{ __html: renderSafeBlogMarkdown(actionData.previewPost.content || "") }} />
+        </section>
       )}
 
       {/* Main Content */}
