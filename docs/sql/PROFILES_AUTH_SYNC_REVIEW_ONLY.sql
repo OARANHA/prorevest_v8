@@ -24,6 +24,25 @@ begin
     raise exception 'public.profiles.id ausente; abortando';
   end if;
 
+  -- Impedir backfill/trigger enquanto usuarios puderem mudar seu role para admin.
+  -- Aplicar antes PROFILE_ROLE_LOCKDOWN_REVIEW_ONLY.sql e validar o resultado.
+  if has_column_privilege('authenticated', 'public.profiles', 'role', 'UPDATE')
+     or has_column_privilege('anon', 'public.profiles', 'role', 'UPDATE')
+  then
+    raise exception 'PRV-028: UPDATE de role ainda permitido; corrija os grants antes do backfill';
+  end if;
+
+  if not exists (
+    select 1 from pg_proc p
+    join pg_namespace n on n.oid = p.pronamespace
+    where n.nspname = 'public'
+      and p.proname = 'is_admin_user'
+      and p.pronargs = 0
+      and 'search_path=' = any(p.proconfig)
+  ) then
+    raise exception 'PRV-028: is_admin_user ainda nao tem search_path seguro';
+  end if;
+
   -- Não substituir uma função previamente instalada sob o mesmo nome.
   if to_regprocedure('public.prorevest_create_auth_profile()') is not null then
     raise exception 'Funcao prorevest_create_auth_profile ja existe; revisar antes de aplicar';
