@@ -10,7 +10,8 @@ export default defineConfig({
     tsconfigPaths()
   ],
   build: {
-    minify: 'terser',
+    // Esbuild é o minificador padrão do Vite 5 e evita picos de memória do Terser.
+    minify: 'esbuild',
     sourcemap: false,
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
