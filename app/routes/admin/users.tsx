@@ -29,6 +29,7 @@ export default function AdminUsers() {
   const [confirmAction, setConfirmAction] = useState<{ type: string; user: any; reason?: string } | null>(null);
   const [actionLoading, setActionLoading] = useState(false);
   const [notification, setNotification] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   // Carregar usuários e permissões
   useEffect(() => {
@@ -49,6 +50,7 @@ export default function AdminUsers() {
         setModules(allModules);
       } catch (error) {
         console.error("Erro ao carregar dados:", error);
+        setLoadError("Não foi possível consultar os usuários ou permissões. Confira o acesso ao Supabase e as políticas RLS.");
       } finally {
         setLoading(false);
       }
@@ -253,6 +255,12 @@ export default function AdminUsers() {
           </div>
         </div>
       </div>
+
+      {loadError && (
+        <div role="alert" className="mb-6 rounded-lg border border-red-400/50 bg-red-950/30 p-4 text-red-100">
+          {loadError}
+        </div>
+      )}
 
       {/* Barra de busca */}
       <div className="mb-6">
