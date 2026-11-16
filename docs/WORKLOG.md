@@ -296,3 +296,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Preparado, **não executado**, `docs/sql/PROFILE_ROLE_LOCKDOWN_REVIEW_ONLY.sql`: transação que retira UPDATE geral e colunar de PUBLIC/anon/authenticated, concede UPDATE somente em `full_name`/`company_name` a authenticated, reescreve a função de admin com `search_path=''` e referências qualificadas e valida privilégios efetivos com assert.
 - `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` endurecido para abortar se qualquer role público puder atualizar `profiles.role`, ou se `is_admin_user()` permanecer sem `search_path` seguro.
 - Nenhuma conexão foi feita ao projeto oficial via conector Supabase do chat (ligado a outro projeto); sem DDL, backfill, merge ou deploy. A aprovação/aplicação da mitigação no projeto oficial é pré-requisito para publicação.
+
+## 2026-11-16 — Endurecimento adicional de privilégio na PR #8
+
+- Durante a revisão do fluxo de autorização, `useAdminPermissions` usava fallback de `user.user_metadata?.role === 'super_admin'`, metadado alterável pelo titular; fallback removido e falha de leitura agora resulta em negação de privilégio, sem logs detalhados de perfil.
+- Migração `PROFILE_ROLE_LOCKDOWN_REVIEW_ONLY.sql` agora também restringe explicitamente a policy de UPDATE do próprio perfil com `TO authenticated`, `USING (auth.uid()=id)` e `WITH CHECK (auth.uid()=id)`.
+- Testes em clone isolado da branch após alterações: `node scripts/test-admin-auth-static.mjs`: **33 verificações PASS**; TypeScript dirigido a hooks/Auth/Profile/Admin: **0 diagnósticos, exit 0**. Migrações SQL verificadas somente por invariantes estáticos; não houve execução em PostgreSQL do projeto.
+- As duas migrações permanecem pendentes de execução/validação pelo responsável no projeto Supabase oficial, em ordem obrigatória: bloqueio de role → trigger/backfill.
