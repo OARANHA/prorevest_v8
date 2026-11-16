@@ -2,20 +2,12 @@ import type { MetaFunction } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import { Calendar, Mail, Search, User } from "lucide-react";
 import { UserService } from "../../services/userService";
+import type { UserProfile } from "../../services/userService";
 
 export const meta: MetaFunction = () => [
   { title: "Gestão de Usuários - ProRevest" },
   { name: "description", content: "Perfis cadastrados e visíveis no sistema ProRevest" },
 ];
-
-type VisibleProfile = {
-  id: string;
-  email: string | null;
-  full_name: string;
-  company_name: string | null;
-  role: string;
-  created_at: string | null;
-};
 
 const roleNames: Record<string, string> = {
   admin: "Administrador",
@@ -25,7 +17,7 @@ const roleNames: Record<string, string> = {
 };
 
 export default function AdminUsers() {
-  const [users, setUsers] = useState<VisibleProfile[]>([]);
+  const [users, setUsers] = useState<UserProfile[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
@@ -34,7 +26,7 @@ export default function AdminUsers() {
     let active = true;
 
     void UserService.getAllUsers()
-      .then((result: VisibleProfile[]) => {
+      .then((result: UserProfile[]) => {
         if (active) {
           setUsers(result);
           setLoadError(null);
