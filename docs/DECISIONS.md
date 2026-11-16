@@ -59,3 +59,7 @@ Status: proposed — depende de auditoria de triggers/RLS e aprovação da migra
 O cadastro de Auth não deve depender de callback do navegador para criar `public.profiles`, pois a confirmação por e-mail pode ocorrer sem sessão ativa e erros do cliente não garantem persistência. Proposta: trigger PostgreSQL auditado ao inserir `auth.users`, com papel inicial `customer`, sem confiar em metadados editáveis para autorização; backfill idempotente somente para registros sem perfil.
 
 Execução preparada em `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql`. Não executar nem marcar como accepted antes de verificar triggers/constraints/RLS no Supabase oficial e obter aprovação.
+
+### Atualização de DEC-009 — 2026-11-16
+
+Status: **accepted / estado observado em produção**. Consulta read-only no Supabase oficial confirmou a função `public.prorevest_create_auth_profile()` com `SECURITY DEFINER`, `search_path` vazio e execução pública bloqueada, trigger `AFTER INSERT` em `auth.users` habilitado e contagens de Auth/Profiles 18/18 sem perfis ausentes. A tentativa de migração retornou `P0001` por função preexistente: não atribuir a essa tentativa a instalação original nem reexecutar backfill. A integração frontend correspondente entrou em produção na PR #8 (`7a15951`). A eficácia de cadastro real e RLS ainda requer E2E autenticado.
