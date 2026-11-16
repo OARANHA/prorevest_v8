@@ -232,4 +232,5 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - Removido fallback de conta demo no `UserService`, exibido erro na tela de usuários quando a consulta falha; fallback de orçamentos fictícios removido de `/admin/quotes`.
 - `/admin/reports` deixou de mostrar indicadores de receita, vendas e crescimento simulados e informa que os relatórios dependem de dados reais verificados.
 - Registrada pendência P0 separada sobre operações `supabase.auth.admin` no frontend e log de senha temporária; não alteradas nesta branch.
-- **Ainda pendente:** revisão de diff, build/testes, validação real de Supabase/RLS, E2E no navegador e aprovação explícita para merge/deploy. Nenhum merge, deploy ou alteração em produção.
+- **Verificações executadas:** revisão de diff dos sete commits; transpilação TypeScript/TSX dos cinco arquivos alterados sem erros; verificação de tipos focada com TypeScript (`--noEmit`, `vite/client`) concluída com exit 0 em clone isolado no workspace.
+- **Ainda pendente:** build completo, validação real de Supabase/RLS, E2E no navegador e aprovação explícita para merge/deploy. Nenhum merge, deploy ou alteração em produção.
