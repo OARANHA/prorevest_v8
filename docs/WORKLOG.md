@@ -279,3 +279,12 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` recebeu guarda para não substituir função existente. A proposta ainda não foi executada no banco.
 - Criado `docs/sql/AUTH_ROLE_SECURITY_PREFLIGHT_READ_ONLY.sql` para verificar grants de UPDATE na coluna `role`, função `is_admin_user()` e constraints. O código UI sozinho não impede manipulação direta pela API; a mudança de grants no banco, se necessária, é bloqueio de publicação.
 - SQL oficial de migração e ajuste de RLS ainda exigem aprovação específica. Sem merge/deploy.
+
+## 2026-11-16 — Validação final da etapa de código e preflight de privilégios (PR #8)
+
+- Verificações confirmadas pelo responsável: nenhum trigger INSERT Auth, RLS de `profiles` ativa (não forçada), chave primária única em `id`; política `UPDATE` própria e `ALL` por `is_admin_user()` exigem investigação do privilégio efetivo de UPDATE em `role` (P0 PRV-028).
+- Alterados `app/hooks/useProfile.ts` e `app/routes/perfil.tsx` para restringir edição a `full_name` e `company_name`, removendo escrita de papel e campos inexistentes; UI expõe papel somente leitura. Isso não substitui a correção de GRANTs do banco se a coluna `role` estiver acessível a usuários comuns.
+- Guardas de `docs/sql/PROFILES_AUTH_SYNC_REVIEW_ONLY.sql` reforçadas para não sobrescrever função de trigger preexistente; nenhuma migração executada.
+- Teste estático no clone isolado: `node scripts/test-admin-auth-static.mjs` → **25 verificações PASS**. TypeScript direcionado aos módulos alterados → **0 diagnósticos, exit 0**.
+- Build completo cliente+SSR **sem minificação**, com variáveis Supabase sintéticas de teste: **exit 0** no HEAD que inclui alteração do hook e tela de perfil. Smoke HTTP local posterior: 7/7 rotas ativas com 200, 3/3 rotas legadas com 404; servidor local encerrado.
+- **PENDENTE:** SQL read-only `docs/sql/AUTH_ROLE_SECURITY_PREFLIGHT_READ_ONLY.sql` executado pelo responsável no projeto Supabase oficial; revisar função `is_admin_user()` e grants; eventual correção de privilégio de `role`; aprovar/aplicar migração de trigger/backfill; E2E autenticado; build minificado com config real; aprovação de merge/deploy.
