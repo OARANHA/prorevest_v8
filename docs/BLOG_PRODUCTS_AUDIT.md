@@ -60,3 +60,11 @@ Conferir no Admin: títulos de publicação, trechos com prefixos como “Títul
 - Build cliente+SSR com `--minify false` e variáveis sintéticas, no checkout isolado: **exit 0**, incluindo prerender `/`. Não substitui build oficial.
 - Smoke em staging sintético após todos os ajustes: **8/8 HTTP 200**, rotas `/`, `/blog`, `/blog?search=efeito`, `/catalogo`, `/catalogo?sort=featured`, `/studio`, `/catalogos`, `/admin/blog-posts`.
 - A build minificada com ambiente público oficial e E2E com registros reais seguem como gates obrigatórios do script de deploy; não publicar artefatos sintéticos.
+
+## Publicação confirmada — 2026-11-16
+
+- PR #9 mesclada à `main` no merge `c90fe9bc672077ceb0016d2cb8c224343023f0d1` e executada no terminal root do responsável. Log apresentado concluiu com `=== DEPLOY SUCCESS ===`, `pm2=online` e backup preservado.
+- Backup: `/opt/wandora/ops-workspace/prorevest-deploy-backups/20261116-194453-pr9-c90fe9bc672077ceb0016d2cb8c224343023f0d1`.
+- Smoke público: **10/10 HTTP 200** em `/`, `/blog`, `/catalogo`, `/catalogos`, `/studio`, `/paleta-cores`, `/login`, `/register`, `/admin`, `/admin/users`; **3/3 HTTP 404** em `/admin/make-admin`, `/admin/init-profiles`, `/debug-user`.
+- Evidências pré-release: **41/41 testes estáticos Blog/Produtos**, **39/39 Admin/Auth**, build sem minificação sintético e 8 rotas de staging 200; o script de release exigiu build minificado oficial e staging como condições para chegar à linha `DEPLOY SUCCESS`. Logs detalhados dessas duas etapas não foram compartilhados nesta conversa.
+- **Pendente:** E2E com dados editoriais e técnicos reais; testar draft/slug preview interno no Admin, filtros, paginação, imagens e navegação responsiva. HTTP 200 não confirma funcionalidade interna das rotas nem presença de registros no banco.
