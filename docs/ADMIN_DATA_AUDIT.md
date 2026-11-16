@@ -90,6 +90,30 @@ Consequência no código: o `UserService` da PR #8 foi ajustado para não enviar
 
 **Ainda necessários, do mesmo bloco de auditoria:** saída dos gatilhos não internos da tabela `auth.users` e resultado de `rls_ativa`, `rls_forcada` e `numero_politicas` para `public.profiles`.
 
+## Continuidade do incidente original — cadastro concluído sem aparecer no Admin
+
+**Correção de escopo:** o problema relatado já era que usuários conseguiam criar contas, mas não apareciam na gestão de usuários. O indicador falso era um sintoma adicional; a PR #8, até este ponto, não resolve a ausência de perfis. A auditoria de 18 contas Auth e 9 perfis quantifica a divergência existente.
+
+### Caminho de código verificado
+
+- `app/contexts/AuthContext.tsx`: `signUp` (linhas 172-185 na revisão de 2026-11-16) chama apenas `supabase.auth.signUp`, sem inserção/garantia de perfil na operação de cadastro.
+- `app/contexts/AuthContext.tsx`: criação do perfil depende de callback `onAuthStateChange` quando há `session.user` (linhas 114-127), que executa `createOrUpdateProfile` sem aguardar o resultado. Se a consulta, inserção ou atualização falhar, o helper só registra o erro e retorna sem reportar falha ao fluxo de cadastro.
+- `app/services/userService.ts`: `getAllUsers` consulta exclusivamente `public.profiles`; logo uma conta em `auth.users` sem perfil não aparece na listagem administrativa.
+- `app/services/databaseService.ts`: existe método legado de recuperação de perfis que tenta chamar RPC `execute_sql` pelo cliente; **não executar** sem auditoria. `/admin/init-profiles` invoca o método em loader GET, portanto é fluxo legado de escrita e deve ser isolado até uma solução segura.
+- `app/routes/admin/make-admin.tsx`: rota legada tenta atualizar `profiles.role` da própria conta em loader; revisar e desabilitar como ação de elevação de privilégios sem autorização explícita no servidor.
+
+**Inferência técnica limitada:** a implementação frontend não garante perfil no momento do cadastro; isso torna possível a divergência observada. Não comprova que inexista trigger no banco nem qual erro/RLS impediu cada uma das 9 criações.
+
+### Correção permanente proposta
+
+1. Verificar os gatilhos não internos de `auth.users`, a definição de função associada e políticas RLS de `public.profiles`, no projeto correto, **somente leitura**.
+2. Garantir criação atômica de perfil no lado do banco na inserção de `auth.users` ou fluxo servidor equivalente, sem privilégio de cliente, com perfil inicial `customer` e e-mail/nome provenientes de Auth. Não elevar privilégios automaticamente.
+3. Preparar backfill idempotente exclusivamente das contas sem perfil, após confirmar a regra de criação e os dados de cadastro. Não alterar contas existentes nem sobrescrever papéis ou nomes.
+4. Remover dependência do cadastro em callback silencioso, evitar atualizações involuntárias de nomes de perfis existentes e reportar falha de provisionamento quando couber.
+5. Testar cadastro com confirmação de e-mail, primeiro login, criação de perfil, listagem no Admin, conta sem perfil, RLS com conta comum e falhas/duplicação.
+
+**Sem aplicar DDL, backfill, mudanças em RLS ou elevação de privilégios com os dados disponíveis.**
+
 ## Antes de mostrar “Total de usuários cadastrados”
 
 1. Confirmar as quatro contagens acima na instância oficial.
