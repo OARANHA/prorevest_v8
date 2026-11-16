@@ -31,7 +31,7 @@ export class UserService {
       if (error) throw error;
       if (!data) throw new Error('O Supabase não retornou os perfis solicitados.');
 
-      profiles.push(...data.map((row) => ({
+      profiles.push(...data.map((row: UserProfile) => ({
         id: row.id,
         full_name: row.full_name ?? null,
         company_name: row.company_name ?? null,
