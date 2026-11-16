@@ -7,6 +7,7 @@ const read = (path) => readFileSync(path, 'utf8');
 const routes = read('app/routes.ts');
 const db = read('app/services/databaseService.ts');
 const auth = read('app/contexts/AuthContext.tsx');
+const adminLayout = read('app/routes/admin-layout.tsx');
 const signup = read('app/routes/register.tsx');
 const userService = read('app/services/userService.ts');
 const adminUsers = read('app/routes/admin/users.tsx');
@@ -61,4 +62,7 @@ assert(sql.indexOf('commit;') < sql.lastIndexOf('as gatilho_ativo'), 'Verificaç
 assert(sql.includes('as gatilho_ativo'), 'Verificação de trigger ativo ausente');
 
 assert(!adminPermissions.includes('user.user_metadata?.role'), 'Metadados editáveis concedem super_admin');
-console.log('PASS: 37 verificações estáticas de regressão Admin/Auth');
+assert(adminLayout.includes('loading: authLoading') && adminLayout.includes('loading || authLoading'), 'Admin não espera verificação do papel');
+assert(!adminLayout.includes('console.log("Verificando acesso administrativo:"'), 'Admin registra dados de usuario no console');
+
+console.log('PASS: 39 verificações estáticas de regressão Admin/Auth');
