@@ -108,23 +108,22 @@ export const AdminHeader = () => {
           {/* Indicador de Status */}
           <div className="hidden md:flex items-center space-x-2 px-3 py-1.5 bg-slate-800/50 rounded-full border border-slate-700/50">
             <div className="h-2 w-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-xs text-slate-300 font-medium">Online</span>
+            <span className="text-xs text-slate-300 font-medium">Sessão ativa</span>
           </div>
 
           {/* Separador */}
           <div className="h-6 w-px bg-slate-700/50"></div>
 
-          {/* Notificações */}
-          <button className="p-2.5 text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all duration-200 relative group">
+          {/* Notificações sem integração validada: não exibir contagem fictícia. */}
+          <button type="button" disabled aria-label="Notificações indisponíveis"
+            title="Notificações indisponíveis"
+            className="p-2.5 text-slate-600 cursor-not-allowed rounded-lg">
             <BellIcon className="h-5 w-5" />
-            <span className="absolute top-1.5 right-1.5 h-2 w-2 bg-red-500 rounded-full border border-slate-900"></span>
-            <span className="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full text-[8px] font-bold text-white flex items-center justify-center border border-slate-900">
-              3
-            </span>
           </button>
-          
+
           {/* Configurações */}
-          <button className="p-2.5 text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all duration-200 group">
+          <button className="p-2.5 text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all duration-200 group"
+            onClick={() => navigate('/admin/settings')} title="Configurações">
             <CogIcon className="h-5 w-5 group-hover:rotate-90 transition-transform duration-300" />
           </button>
 
