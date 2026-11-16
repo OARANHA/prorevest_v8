@@ -206,15 +206,7 @@ export default function AdminQuotes() {
       {/* Paginação */}
       <div className="mt-6 flex items-center justify-between">
         <div className="text-sm text-muted-foreground">
-          Mostrando 1 a {filteredQuotes.length} de {filteredQuotes.length} resultados
-        </div>
-        <div className="flex space-x-2">
-          <button className="px-3 py-1 border border-border rounded-md text-sm font-medium hover:bg-muted/50">
-            Anterior
-          </button>
-          <button className="px-3 py-1 border border-border rounded-md text-sm font-medium hover:bg-muted/50">
-            Próximo
-          </button>
+          Exibindo {filteredQuotes.length} orçamento(s) após o filtro
         </div>
       </div>
     </div>
