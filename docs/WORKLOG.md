@@ -384,3 +384,10 @@ Revisar diff, buildar e testar Studio/Auth antes de qualquer deploy.
 - `fetch_pr_patch` e comparação com `main`: alterações limitadas a Blog/Produtos/Home, services de leitura, testes e documentação; nenhuma linha adicionada detectada como chave privada, `service_role` ou chamada administrativa privilegiada.
 - Build e 6 smokes HTTP com env **sintético** foram concluídos antes do ajuste final da Home. A repetição do build sem minificação após a Home iniciou, mas a leitura de resultado pelo conector retornou erro interno. **Não classificar a última compilação como aprovada**.
 - PR #9 permanece **Draft**, sem merge/deploy; para produção ainda faltam build oficial/minificado com variáveis públicas corretas, smoke e E2E visual com dados reais de artigos e produtos, revisão de conteúdo legado HTML, aceite explícito do responsável.
+
+### Revisão pré-publicação: regressão de edição e prévia de rascunhos corrigida
+
+- A inspeção de referências `git grep getBlogPostBySlug` revelou que o Admin também usa o método ao editar por slug; a implementação inicial que obrigava `status=published` nesse serviço afetaria o editor.
+- Agora `BlogService.getBlogPostBySlug` permite consulta administrativa de rascunhos usando o cliente autorizado existente, enquanto `/blog/:slug` passa explicitamente `{ publishedOnly: true }`.
+- O botão de pré-visualização do Admin não redireciona mais rascunhos à URL pública; mostra prévia no próprio editor, com o mesmo renderizador Markdown seguro, mantendo rascunho no banco. Não foi adicionado acesso público a rascunhos.
+- Adicionados testes estáticos para prevenir regressão. Publicação permanece pendente do build real e smoke.
