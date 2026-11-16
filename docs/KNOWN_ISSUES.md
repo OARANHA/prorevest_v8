@@ -11,7 +11,7 @@ Status: `OPEN`, `INVESTIGATING`, `FIXED`, `WONTFIX`.
 | PRV-003 | P0 | INVESTIGATING | Studio | `/studio` e `/studioprorevest` apontavam para implementações diferentes. Patch torna `/studio` canônico e mantém redirects legados; build cliente+SSR e smoke HTTP local validados, pendente de teste funcional com Supabase/IA reais. |
 | PRV-004 | P0 | INVESTIGATING | Auth | Supabase estava com Site URL em localhost e sem Redirect URLs; configuração corrigida no dashboard em 2026-10-07. Código de recovery foi ajustado para usar `PASSWORD_RECOVERY`/sessão e compilou; pendente de teste ponta a ponta por e-mail. |
 | PRV-005 | P0 | INVESTIGATING | Auth | Login/callback/sessão precisam de teste ponta a ponta. Callback transportava token manualmente e login ignorava `?redirect=`; patches compilados na branch, pendentes de teste ponta a ponta. |
-| PRV-006 | P1 | OPEN | Catálogo | Filtro/slider de preço não faz sentido para o site institucional; produtos não devem ter preço aqui. |
+| PRV-006 | P1 | FIXED IN BRANCH / RELEASE PENDING | Catálogo | Na branch `feat/blog-products-experience-20261116`, o catálogo institucional `/catalogo` foi refeito com dados reais, filtros de nome/categoria/acabamento e sem preço/slider ou fichas demonstrativas. Detalhes `/produto/:slug` também não exibem preços, fretes ou avaliações mock. Build isolado sem minificação e testes estáticos aprovados; depende de PR, revisão visual e deploy. |
 | PRV-007 | P1 | OPEN | Home | Produtos em destaque podem apresentar estado vazio. |
 | PRV-008 | P1 | OPEN | Contato | Números divergentes aparecem em conteúdo antigo. Oficial: (51) 98660-5758. |
 | PRV-009 | P1 | OPEN | Social | Instagram deve apontar para @prorevestoficial. |
