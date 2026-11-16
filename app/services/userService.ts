@@ -141,7 +141,7 @@ export class UserService {
       if (error) throw error;
       if (!data) throw new Error('O servidor não retornou os perfis solicitados.');
 
-      users.push(...data.map(profile => ({
+      users.push(...data.map((profile: any) => ({
         id: profile.id,
         email: typeof profile.email === 'string' && profile.email.trim()
           ? profile.email.trim()
