@@ -678,7 +678,8 @@ export class ProductService {
             colors(*)
           )
         `)
-        .eq('slug', slug);
+        .eq('slug', slug)
+        .eq('is_archived', false);
 
       if (error) throw error;
       
@@ -804,6 +805,7 @@ export class ProductService {
         `)
         .or(`category_id.eq.${currentProduct.category_id},finish_id.eq.${currentProduct.finish_id}`)
         .neq('id', productId) // Excluímos o produto atual
+        .eq('is_archived', false)
         .limit(limit);
 
       if (error) {
